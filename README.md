@@ -1,4 +1,4 @@
-<h1 align="center"> Projeto XXXXXXXXX </h1>
+<h1 align="center"> Projeto Faísca </h1>
 
 - ### [Documentação React](https://pt-br.reactjs.org/docs/getting-started.html)
   
