@@ -1,0 +1,17 @@
+
+
+.PurpTxt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.PurpTxt > p {
+    color: white;
+    width: 50%;
+    font-size: 3.6vh;
+}
+
+

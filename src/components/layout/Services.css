@@ -1,0 +1,16 @@
+
+.Services {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    width: 70%;
+
+}
+
+.Services > p {
+    font-size: 3vh;
+    color: white;
+    text-align: left;
+    font-family: 'Allegin', sans-serif !important;
+}
