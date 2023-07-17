@@ -1,0 +1,28 @@
+.Contact p {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.LowTextAux{
+    width: 10%;
+    position: relative;
+}
+
+.HighText {
+    width: 25%;
+    font-size: 4.5vh;
+}
+
+
+.LowText {
+    font-size: 1.6vh;
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+}
+
+.Contact {
+    display: flex;
+    justify-content: center;
+}

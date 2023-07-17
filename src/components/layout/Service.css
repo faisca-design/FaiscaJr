@@ -1,0 +1,19 @@
+.Service {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.Service > p {
+    text-align: left;
+    color: white;
+    font-size: 2.6vh;
+    height: 3vh;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.Service > hr {
+    margin-left: 0;
+    width: 100%;
+}
