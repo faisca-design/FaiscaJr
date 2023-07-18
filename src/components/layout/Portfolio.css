@@ -1,0 +1,76 @@
+@font-face {
+    font-family:'Chillax';
+    src: url('Chillax-Regular.otf');
+}
+
+@font-face {
+    font-family:'Allegin';
+    src: url('Allegin.otf');
+}
+
+.container{
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Chillax';
+}
+
+.home{
+    background-image: url("Cabeçalho.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.projeto{
+    background-color: #20181B;
+    padding: 125px;
+    padding-left: 227px;
+    padding-right: 227px; 
+}
+
+.projetoTitle{
+    color:white;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 200;
+    font-family: 'Chillax';
+}
+
+.projetoTitle span{
+    font-family: 'Allegin';
+}
+
+.img-carimbo{
+    padding-top: 125px;
+    width: 1000px;
+    height: 585px;
+}
+
+.slider{
+    background-color: #20181B;
+    padding: 125px;
+    padding-left: 227px;
+    padding-right: 227px; 
+}
+
+.depoimentosTitle{
+    text-align: left;
+    color:white;
+    font-size: 50px;
+    font-family: 'Allegin';
+    font-weight: 200;
+}
+
+.depoimentosText{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    border: solid;
+    border-width: 1px;
+    border-color: white;
+    text-align: center;
+    font-weight: 100;
+    color: white;
+}
