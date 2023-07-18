@@ -1,0 +1,44 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.containerTitulo{
+    font-weight: 1000;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.titulo{
+    font-weight: 100;
+}
+
+.containerImagens{
+    display: flex;
+
+}
+
+.imagem1{
+    width: 683px;
+    height: 758px;
+}
+.imagem2{
+    width: 683px;
+    height: 758px;
+    margin-left: 100px;
+}
+
+.barra{
+    border: none; /* Remove a borda padrão */
+    height: 2px; /* Define a altura da barra horizontal */
+    background-color:white; /* Define a cor de fundo da barra horizontal */
+}
