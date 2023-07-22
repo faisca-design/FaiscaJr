@@ -1,7 +1,7 @@
 import styles from '../styles/Issue19.module.css'
-import capa from '../components/img/Capa.png'
-import cracha from '../components/img/cracha.png'
-import xicara from '../components/img/xicara.png'
+import Image from 'next/image'
+//import cracha from './img/cracha.png'
+//import xicara from './img/xicara.png'
 
 function Issue19 ()
 {
@@ -9,22 +9,24 @@ function Issue19 ()
         <div>
             <div className={styles.containerText}>
                 <h1>
-                    site------
+                    site
                 </h1>
+                <hr className={styles.bar} width={199}/>
                 <h1>
-                    identidade visual ---------
+                    identidade visual
                 </h1>
+                <hr className={styles.bar} width={199}/>
                 <h1>
                     rótulo
                 </h1>
             </div>
             <div>
                 <div className={styles.upperImages}>
-                    <img className={styles.smallImage1} src={capa} alt="cartão de visitas"/>
-                    <img className={styles.smallImage2} src={cracha} alt="feed do instagram"/>
+                    <Image className={styles.smallImage1} src="/img/Capa.png" width={680} height={785} alt="cartão de visitas"/>
+                    <Image className={styles.smallImage2} src="/img/cracha.png" width={680} height={785} alt="feed do instagram"/>
                 </div>
                 <div className={styles.lowerImages}>
-                    <img className={styles.image} src={xicara} alt="cartão de visitas"/>
+                    <Image className={styles.image} src="/img/xicara.png" width={1468} height={906} alt="cartão de visitas"/>
                 </div>
             </div>
         </div>

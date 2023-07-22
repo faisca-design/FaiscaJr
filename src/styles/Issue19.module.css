@@ -41,3 +41,7 @@
     width: 1468px;
     height: 906px;
 }
+.bar{
+    display: flex;
+    margin: 50px;
+}
