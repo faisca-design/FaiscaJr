@@ -1,6 +1,5 @@
 import styles from '../styles/Issue20.module.css'
-import CartaoVisitas from '../components/img/cartaoDeVisitas.png'
-import InstagramFeed from '../components/img/instagramPostFeed.png'
+import Image from 'next/image'
 
 function Issue20 ()
 {
@@ -10,17 +9,18 @@ function Issue20 ()
                 <h1 className={styles.titulo}>
                     força
                 </h1>
-                <hr className={styles.barra}/>
+                <hr className={styles.bar} width={199}/>
                 <h1 className={styles.titulo}>
-                    energia ---------
+                    energia
                 </h1>
+                <hr className={styles.bar} width={199}/>
                 <h1 className={styles.titulo}>
                     vibrante
                 </h1>
             </div>
             <div className={styles.containerImagens}>
-                <img className={styles.imagem1} src={CartaoVisitas} alt="cartão de visitas"/>
-                <img className={styles.imagem2} src={InstagramFeed} alt="feed do instagram"/>
+                <img className={styles.imagem1} src="/img/cartaoDeVisitas.png" width={683} height={758} alt="cartão de visitas"/>
+                <img className={styles.imagem2} src="/img/instagramPostFeed.png" width={683} height={758} alt="feed do instagram"/>
             </div>
         </div>
     )

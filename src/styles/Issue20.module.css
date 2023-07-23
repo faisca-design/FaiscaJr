@@ -27,18 +27,11 @@
 
 }
 
-.imagem1{
-    width: 683px;
-    height: 758px;
-}
 .imagem2{
-    width: 683px;
-    height: 758px;
     margin-left: 100px;
 }
 
-.barra{
-    border: none; /* Remove a borda padrão */
-    height: 2px; /* Define a altura da barra horizontal */
-    background-color:white; /* Define a cor de fundo da barra horizontal */
+.bar{
+    display: flex;
+    margin: 50px;
 }
