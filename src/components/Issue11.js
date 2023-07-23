@@ -1,5 +1,5 @@
 import styles from '../styles/Issue11.module.css'
-import logoFaisca from '../components/img/faisca.png'
+import Image from 'next/image'
 
 function Issue11 ()
 {
@@ -7,7 +7,7 @@ function Issue11 ()
         <div className={styles.preenchimento}>
             <div className={styles.container}>
                 <div className={styles.containerImagem}>
-                    <img className={styles.imagem} src={logoFaisca} alt="logo faisca"/>
+                    <img src="/img/faisca.png" width={378} height={378} alt="logo faisca"/>
                 </div>
                 <div className={styles.containerParagrafo}>
                    <p className={styles.paragrafo}>
