@@ -1,9 +1,5 @@
 import styles from "../styles/Issue14.module.css";
-import brasil  from "../components/img/brasil.png";
-import nejPoa from "../components/img/nej poa.png";
-import fejers from "../components/img/fejers.png";
-import sla from "../components/img/sla.png";
-import faisca from "../components/img/faisca.png"
+import Image from "next/image";
 
 
 function Issue14 ()
@@ -11,7 +7,7 @@ function Issue14 ()
     return (
         <div className={styles.container}>
             <div className={styles.containerImagem}>
-                <img className={styles.imagem} src={faisca} alt="imagem"/>
+                <img className={styles.imagem} src="/img/faisca.png" width={469.72} height={561} alt="imagem"/>
             </div>
             <div className={styles.containerParagrafo}>
                 <h1 className={styles.titulo}>
@@ -27,10 +23,10 @@ function Issue14 ()
                 </p>
                 
                 <div className={styles.conjuntoImagens}>
-                    <img className={styles.brasil} src={brasil} alt="brasil"/>
-                    <img className={styles.nej} src={nejPoa} alt="NejPoa"/>
-                    <img className={styles.fejers} src={fejers} alt="Fejers"/>
-                    <img className={styles.vetor} src={sla} alt="SLA"/>
+                    <img src="/img/brasil.png" width={119} height={108} alt="brasil"/>
+                    <img src="/img/NejPoa.png" width={112} height={102} alt="NejPoa"/>
+                    <img src="/img/fejers.png" width={162} height={75} alt="Fejers"/>
+                    <img src="/img/sla.png" width={96} height={110} alt="SLA"/>
                 </div>
                 
             </div>
