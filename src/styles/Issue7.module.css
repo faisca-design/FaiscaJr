@@ -1,0 +1,56 @@
+.container{
+    color: white;
+}
+
+.containerTitle{
+    margin-bottom: 250px;
+}
+
+.title{
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.subTitle{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.bar{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.containerImages{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.imageRow{
+    display: flex;
+    flex-direction: column;
+}
+
+.imageBlock{
+    display: flex;
+    flex-direction: column;
+}
+
+.smallImageBlock{
+    display: flex;
+}
+
+.image{
+    padding: 8px;
+}
