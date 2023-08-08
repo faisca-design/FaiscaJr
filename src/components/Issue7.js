@@ -20,15 +20,40 @@ function Issue7 ()
             </h1>
             <div className={styles.containerImages}>
                 <div className={styles.imageRow}>
-                    <img className={styles.image}  src="/img/RetanguloIlustrativo.png" width={440} height={530} alt="imagem temporaria de testes"/>
-                    <img className={styles.image} src="/img/RetanguloIlustrativo.png" width={440} height={775} alt="imagem temporaria de testes"/>
+                    <figure className={styles.figure}>
+                        <label className={styles.text}>
+                            Nome do Projeto
+                        </label>
+                        <img className={styles.image}  src="/img/RetanguloIlustrativo.png" width={440} height={530} alt="imagem temporaria de testes"/>
+                    </figure>
+                    <figure className={styles.figure}>
+                        <label className={styles.text}>
+                            Nome do Projeto
+                        </label>
+                        <img className={styles.image} src="/img/RetanguloIlustrativo.png" width={440} height={775} alt="imagem temporaria de testes"/>
+                    </figure>
                 </div>
                 <div className={styles.imageBlock}>
                     <div className={styles.smallImageBlock}>
-                        <img className={styles.image} src="/img/RetanguloIlustrativo.png" width={440} height={826} alt="imagem temporaria de testes"/>
-                        <img className={styles.image} src="/img/RetanguloIlustrativo.png" width={377} height={826} alt="imagem temporaria de testes"/>
+                        <figure className={styles.figure}>
+                            <label className={styles.text}>
+                                Nome do Projeto
+                            </label>
+                            <img className={styles.image} src="/img/RetanguloIlustrativo.png" width={440} height={826} alt="imagem temporaria de testes"/>
+                        </figure>
+                        <figure className={styles.figure}>
+                            <label className={styles.text}>
+                                Nome do Projeto
+                            </label>
+                            <img className={styles.image} src="/img/RetanguloIlustrativo.png" width={377} height={826} alt="imagem temporaria de testes"/>
+                        </figure>
                     </div>
-                    <img className={styles.image} src="/img/RetanguloIlustrativo.png" width={885} height={473} alt="imagem temporaria de testes"/>
+                    <figure className={styles.figure}>
+                         <label className={styles.text}>
+                            Nome do Projeto
+                        </label>
+                        <img className={styles.image} src="/img/RetanguloIlustrativo.png" width={885} height={473} alt="imagem temporaria de testes"/>
+                    </figure>
                 </div>
             </div>
         </div>
