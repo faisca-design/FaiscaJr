@@ -1,0 +1,50 @@
+@font-face {
+    font-family:'Chillax';
+    src: url('../../public/uploads/Chillax-Regular.otf');
+}
+
+@font-face {
+    font-family:'Allegin';
+    src: url('../../public/uploads/Allegin.otf');
+}
+
+.container{
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Chillax';
+    background-color: #20181B;
+}
+
+.slider{
+    background-color: #20181B;
+    padding: 125px;
+    padding-left: 227px;
+    padding-right: 227px; 
+}
+
+.depoimentosTitle{
+    padding-bottom: -30px;
+}
+
+
+.depoimentosTitle{
+    text-align: left;
+    color:white;
+    font-size: 50px;
+    font-family: 'Allegin';
+    font-weight: 100;
+}
+
+.depoimentosText{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    border: solid;
+    border-width: 1px;
+    border-color: white;
+    text-align: center;
+    font-weight: 100;
+    color: white;
+}
