@@ -1,0 +1,49 @@
+@font-face {
+    font-family:'Chillax';
+    src: url('../../public/uploads/Chillax-Regular.otf');
+}
+
+@font-face {
+    font-family:'Allegin';
+    src: url('../../public/uploads/Allegin.otf');
+}
+
+.container{
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Chillax';
+    background-color: #20181B;
+}
+
+.home{
+    background-image: url("../../public/uploads/Cabeçalho.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.projeto{
+    background-color: #20181B;
+    padding: 125px;
+    padding-left: 227px;
+    padding-right: 227px; 
+}
+
+.projetoTitle{
+    color:white;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 200;
+    font-family: 'Chillax';
+}
+
+.projetoTitle span{
+    font-family: 'Allegin';
+}
+
+.img-carimbo{
+    padding-top: 125px;
+    width: 1000px;
+    height: 585px;
+}
