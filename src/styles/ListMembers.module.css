@@ -1,0 +1,17 @@
+.ListStyle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.EquipeText {
+    font-weight: 500;
+    font-size: 37px;
+}
+
+.vazio{
+    font-size: 1px;
+    margin-left: 135px;
+}
