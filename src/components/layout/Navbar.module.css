@@ -1,7 +1,7 @@
 .navbar{
     display: flex;
     flex-direction: column;
-    background-color: #1E181A;
+    background-color: #3f241c;
     padding: 1em;
 }
 
@@ -14,4 +14,21 @@
 .item{
     color: white;
     margin-right: 1em;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.fixedHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 }
