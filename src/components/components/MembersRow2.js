@@ -23,14 +23,14 @@ function MembersRow2({ members }) {
         imagem={sexto.imagem}
         nome={sexto.nome}
         ciclo={sexto.ciclo}
-        marginLeft="1%"
+        marginLeft=".1%"
       />
       <MakeCard
         key={2}
         imagem={setimo.imagem}
         nome={setimo.nome}
         ciclo={setimo.ciclo}
-        marginLeft="1%"
+        marginLeft=".1%"
       />
       <MakeCard
         key={3}
@@ -44,7 +44,7 @@ function MembersRow2({ members }) {
         imagem={nono.imagem}
         nome={nono.nome}
         ciclo={nono.ciclo}
-        marginLeft="1%"
+        marginLeft=".1%"
       />
       <MakeCard
         key={5}

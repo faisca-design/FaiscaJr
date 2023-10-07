@@ -6,7 +6,7 @@ function Index() {
     <div className={style.container}>
 
           <CardsDisposition/>
-
+  
     </div>
   );
 }
