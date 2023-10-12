@@ -16,34 +16,42 @@
     background-color: #20181B;
 }
 
-.home{
-    background-image: url("../../public/uploads/Cabeçalho.png");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-}
-
-.projeto{
+.logo{
     background-color: #20181B;
-    padding: 125px;
-    padding-left: 227px;
-    padding-right: 227px; 
+    padding: 200px;
+    padding-left: 300px;
+    padding-right: 250px; 
+    align-items: center;
 }
 
-.projetoTitle{
-    color:white;
-    text-align: center;
-    font-size: 50px;
-    font-weight: 200;
+.img-logo{
+    margin-top: -225px;
+    margin-bottom: -375px;
+    padding-left: 150px;
+}
+
+.title1{
+    color: white;
     font-family: 'Chillax';
+    font-weight: 200;
+    letter-spacing: 0.1cm;
+    margin-left: -42px;
 }
 
-.projetoTitle span{
-    font-family: 'Allegin';
+.title2{
+    font-family: 'Chillax';
+    color: white;
+    padding-left: 625px;
+    font-size: 65px;
+    line-height: 1.8cm;
 }
 
-.img-carimbo{
-    padding-top: 125px;
-    width: 1000px;
-    height: 585px;
+.title3{
+    font-family: 'Chillax';
+    color: white;
+    padding-left: 625px;
+    font-weight: 100;
+    font-size: 18px;
+    text-align: justify;
+    margin-top: -55px;
 }
