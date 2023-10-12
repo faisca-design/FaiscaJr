@@ -3,21 +3,21 @@ import Image from 'next/image'
 //import cracha from './img/cracha.png'
 //import xicara from './img/xicara.png'
 
-function Issue19 ()
+function Issue19 ({titulo1, titulo2, titulo3})
 {
     return(
         <div>
             <div className={styles.containerText}>
-                <h1>
-                    site
+                <h1 className={styles.text}>
+                    {titulo1}
                 </h1>
                 <hr className={styles.bar} width={199}/>
-                <h1>
-                    identidade visual
+                <h1 className={styles.text}>
+                    {titulo2}
                 </h1>
                 <hr className={styles.bar} width={199}/>
-                <h1>
-                    rótulo
+                <h1 className={styles.text}>
+                    {titulo3}
                 </h1>
             </div>
             <div>

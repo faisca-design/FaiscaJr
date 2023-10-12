@@ -43,5 +43,9 @@
 }
 .bar{
     display: flex;
-    margin: 50px;
+    margin: 161px;
+}
+
+.text{
+    font-size: 3em;
 }
