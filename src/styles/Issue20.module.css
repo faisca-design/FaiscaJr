@@ -20,6 +20,7 @@
 
 .titulo{
     font-weight: 100;
+    font-size: 3em;
 }
 
 .containerImagens{
@@ -33,5 +34,5 @@
 
 .bar{
     display: flex;
-    margin: 50px;
+    margin: 171px;
 }

@@ -1,21 +1,21 @@
 import styles from '../styles/Issue20.module.css'
 import Image from 'next/image'
 
-function Issue20 ()
+function Issue20 ({titulo1, titulo2, titulo3})
 {
     return(
         <div className={styles.container}>
             <div className={styles.containerTitulo}>
                 <h1 className={styles.titulo}>
-                    força
+                    {titulo1}
                 </h1>
                 <hr className={styles.bar} width={199}/>
                 <h1 className={styles.titulo}>
-                    energia
+                    {titulo2}
                 </h1>
                 <hr className={styles.bar} width={199}/>
                 <h1 className={styles.titulo}>
-                    vibrante
+                    {titulo3}
                 </h1>
             </div>
             <div className={styles.containerImagens}>
