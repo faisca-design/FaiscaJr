@@ -15,7 +15,7 @@ function MembersRow1({ members }) {
         imagem={primeiro.imagem}
         nome={primeiro.nome}
         ciclo={primeiro.ciclo}
-        marginLeft="20  %"
+        marginLeft="20%"
       />
       <MakeCard
         key={1}
