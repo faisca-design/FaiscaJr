@@ -1,0 +1,111 @@
+.container{
+    color: white;
+}
+
+.containerTitle{
+    margin-bottom: 250px;
+}
+
+.title{
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.subTitle{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.bar{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.containerImages{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.imageRow{
+    display: flex;
+    flex-direction: column;
+}
+
+.imageBlock{
+    display: flex;
+    flex-direction: column;
+}
+
+.smallImageBlock{
+    display: flex;
+}
+
+.image{
+    padding: 8px;
+}
+
+.figure{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding: 15px;
+}
+ .text{
+    position: relative;
+    display: flex;
+    bottom: -497px;
+    right: 38px;
+    font-size: 30px;
+    color: white;
+ }   
+
+ .text2{
+    position: relative;
+    display: flex;
+    bottom: -724px;
+    right: 299px;
+    font-size: 30px;
+    color: white;
+}
+ 
+.text3{
+    position: relative;
+    display: flex;
+    bottom: -694px;
+    right: -15px;
+    font-size: 30px;
+    color: white;
+    rotate: 90deg;
+}
+
+.text4{
+    position: relative;
+    display: flex;
+    bottom: -75px;
+    right: 235px;
+    font-size: 30px;
+    color: white;
+}
+
+.text5{
+    position: relative;
+    display: flex;
+    bottom: -435px;
+    right: 72px;
+    font-size: 30px;
+    color: white;
+}
+
+
