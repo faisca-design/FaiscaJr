@@ -1,6 +1,8 @@
 import PurposeText from "@components/PurposeText"
 import AboutFaisca from "@components/AboutFaisca"
 import MembersArea from "@components/MembersArea"
+import Structure from "@components/Structure"
+
 import styles from "./about.module.css"
 
 function SobreNos(){
@@ -9,6 +11,7 @@ function SobreNos(){
             <PurposeText />
             <AboutFaisca />
             <MembersArea />
+            <Structure />
         </>
     )
 }
