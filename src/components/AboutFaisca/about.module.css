@@ -1,0 +1,47 @@
+.preenchimento{
+    padding: 5%;
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.containerImagem{
+    width: 40%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.containerParagrafo{
+    width: 60%;
+    color: white;
+}
+
+.containerParagrafoTamanho{
+    height: 378px;
+    width: 870px;
+}
+
+
+.fraseDestaque{
+    color:#D45827 ;
+}
+
+.paragrafo{
+   font-size: 25px;
+   margin: 0px;
+   text-align: justify;
+}
+
+.paragrafo:first-child{
+    margin-bottom: 1.5vw;
+}
