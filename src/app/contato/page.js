@@ -1,5 +1,9 @@
+import ContactText from "@/components/ContactText"
+
 function Contato(){
-    return <h1>Contato</h1>
+    return (
+        <ContactText />
+    )
 }
 
 export default Contato
