@@ -1,7 +1,10 @@
 import React from 'react'
+import styles from './banner.module.css'
 
 export default function BannerFaisca() {
   return (
-    <h1>Espaço destinado pro BannerFaisca</h1>
+    <div className={styles.box}>
+      Espaço destinado pro BannerFaisca
+    </div>
   )
 }

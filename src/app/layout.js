@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import styles from "./pages.module.css"
+import styles from "@styles/pages.module.css"
 
 export default function Layout({ children }) {
     return (
@@ -10,7 +10,7 @@ export default function Layout({ children }) {
             </head>
             <body style={{margin:0}}>
                 <Navbar/>
-                    <div className={styles.pageContainer}>
+                    <div className={styles.page}>
                         {children}
                     </div>
                 <Footer/>
