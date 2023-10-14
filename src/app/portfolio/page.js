@@ -1,5 +1,11 @@
+import PortfolioBanners from "@components/PortfolioBanners"
+
 function Portfolio(){
-  return <h1>Portfólio</h1>
+  return (
+    <>
+      <PortfolioBanners/>
+    </>
+  )
 }
 
 export default Portfolio

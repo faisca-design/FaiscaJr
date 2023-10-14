@@ -3,6 +3,9 @@
     min-height: 80vh;
     display: flex;
     flex-direction: column;
-    padding: 50px 0;
     gap: 100px;
+}
+
+.withPadding{
+    padding: 50px 0;
 }
