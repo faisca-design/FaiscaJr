@@ -1,6 +1,6 @@
-import ProjectBanner from "@/components/ProjectBanner";
-import ProjectPurpose from "@/components/ProjectPurpose";
-
+import ProjectBanner from "@components/ProjectBanner";
+import ProjectPurpose from "@components/ProjectPurpose";
+import ProjectServices from "@components/ProjectServices"
  
 export default function Page({params}) {
   return (
@@ -10,6 +10,11 @@ export default function Page({params}) {
       </p>
       <ProjectBanner/>
       <ProjectPurpose/>
+      <ProjectServices
+        titulo1 ="titulo1"
+        titulo2 ="titulo2"
+        titulo3 ="titulo3"
+      />
     </>
   )
 }
