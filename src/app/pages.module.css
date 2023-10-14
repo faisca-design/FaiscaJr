@@ -1,0 +1,4 @@
+.pageContainer{
+    padding-top: var(--header-size);
+    padding-bottom: var(--footer-size);
+}

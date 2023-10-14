@@ -27,7 +27,7 @@ function Navbar() {
           </li>
           <li>
             <Link
-              href="/sobrenos"
+              href="/sobre-nos"
               className={`${styles.link} ${selectedItem === 'sobrenos' ? styles.bold : ''}`}
               onClick={() => handleItemClick('sobrenos')}
             >
