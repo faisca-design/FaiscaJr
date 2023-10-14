@@ -1,0 +1,15 @@
+.purpTxt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.purpTxt > p {
+    color: white;
+    width: 50%;
+    font-size: 3.6vh;
+}
+
+

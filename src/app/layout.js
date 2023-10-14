@@ -8,7 +8,7 @@ export default function Layout({ children }) {
             <head>
                 <title>Next.js</title>
             </head>
-            <body style={{margin:0}}>
+            <body>
                 <Navbar/>
                     <div className={styles.page}>
                         {children}

@@ -1,5 +1,10 @@
+import PurposeText from "@/components/PurposeText"
+import styles from "./about.module.css"
+
 function SobreNos(){
-    return <h1>Sobre nós</h1>
+    return (
+        <PurposeText />
+    )
 }
 
 export default SobreNos
