@@ -1,4 +1,8 @@
 .page{
     background-color: #1E181A;
     min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    gap: 100px;
 }

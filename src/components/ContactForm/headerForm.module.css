@@ -1,0 +1,32 @@
+.headerForm{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.headerFormTxt{
+    width: 40vw;
+    display: flex;
+    justify-content: right;
+    
+}
+
+.headerFormHR{
+    width: 60vw;
+    margin: auto;
+    margin-bottom: 6vh;
+}
+
+.hr {
+    background-color: black;
+}
+
+.lowTxt {
+    font-size: 1.4vw;
+
+}
+.headerFormTxt > p {
+    font-size: 1.8vw;
+    text-align: left;
+    color: white;
+}
