@@ -1,8 +1,8 @@
 import styles from './Footer.module.css';
-import emailIcon from '@public/img/footerIcons/emailIcon.png';
-import instagramIcon from '@public/img/footerIcons/instagramIcon.png';
-import linkedinIcon from '@public/img/footerIcons/linkedinIcon.png';
-import behanceIcon from '@public/img/footerIcons/behanceIcon.png';
+import emailIcon from '@img/footerIcons/emailIcon.png';
+import instagramIcon from '@img/footerIcons/instagramIcon.png';
+import linkedinIcon from '@img/footerIcons/linkedinIcon.png';
+import behanceIcon from '@img/footerIcons/behanceIcon.png';
 import Image from 'next/image';
 
 function Footer(){

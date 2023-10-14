@@ -1,10 +1,10 @@
 import '../styles/globals.css'
 
-import BannerFaisca from '@/components/BannerFaisca'
-import LearnMoreSection from '@/components/LearnMoreSection'
-import OurServices from '@/components/OurServices'
-import Cases from "@/components/Cases"
-import Img from "@public/img/RetanguloIlustrativo.png"
+import BannerFaisca from '@components/BannerFaisca'
+import LearnMoreSection from '@components/LearnMoreSection'
+import OurServices from '@components/OurServices'
+import Cases from "@components/Cases"
+import Img from "@img/RetanguloIlustrativo.png"
 
 export default function Home() {
   return (

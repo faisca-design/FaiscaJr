@@ -1,5 +1,5 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Footer from "@components/Footer";
+import Navbar from "@components/Navbar";
 import styles from "@styles/pages.module.css"
 import "@styles/globals.css"
 
