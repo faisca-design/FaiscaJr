@@ -1,4 +1,5 @@
-import {IoMail, FaInstagram, FaLinkedin, FaBehance} from 'react-icons/fa'
+import {FaInstagram, FaLinkedin, FaBehance} from 'react-icons/fa'
+import { GrMail } from 'react-icons/gr';
 import styles from './Footer.module.css'
 
 function Footer(){
@@ -7,7 +8,7 @@ function Footer(){
             <ul className={styles.social_list}>
                 <li>
                     <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer">
-                        <IoMail style={{ color: '#d45827' }}/>
+                        <GrMail style={{ color: '#d45827' }}/>
                     </a>
                 </li>
                 <li>
@@ -30,4 +31,4 @@ function Footer(){
     )
 }
 
-export default Footer
+export default Footer;
