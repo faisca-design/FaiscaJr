@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.containerTitulo{
+    font-weight: 1000;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.titulo{
+    font-weight: 100;
+    font-size: 3em;
+}
+
+.containerImagens{
+    display: flex;
+
+}
+
+.imagem2{
+    margin-left: 100px;
+}
+
+.bar{
+    display: flex;
+    margin: 171px;
+}
