@@ -5,6 +5,7 @@ import LearnMoreSection from '@components/LearnMoreSection'
 import OurServices from '@components/OurServices'
 import Cases from "@components/Cases"
 import Img from "@img/RetanguloIlustrativo.png"
+import HomeCarousel from '@/components/HomeCarrousel'
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         nomeprojeto4="projeto4"
         nomeprojeto5="projeto5"
       />
+      <HomeCarousel/>
     </>
   )
 }
