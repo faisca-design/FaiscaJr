@@ -1,5 +1,5 @@
-import PortfolioBanners from "@components/PortfolioBanners"
-import PortfolioCarousel from "@components/PortfolioCarousel"
+import PortfolioBanners from "@components/portfolio/PortfolioBanners"
+import PortfolioCarousel from "@components/portfolio/PortfolioCarousel"
 
 function Portfolio(){
   return (

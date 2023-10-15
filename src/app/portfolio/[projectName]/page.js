@@ -1,11 +1,11 @@
-import ProManegers from "@/components/ProManagers";
-import ProjectBanner from "@components/ProjectBanner";
-import ProjectPurpose from "@components/ProjectPurpose";
-import ProjectServices from "@components/ProjectServices"
-import ProjectValues from "@components/ProjectValues"
+import ProManegers from "@components/projeto/ProjectManagers";
+import ProjectBanner from "@components/projeto/ProjectBanner";
+import ProjectPurpose from "@components/projeto/ProjectPurpose";
+import ProjectServices from "@components/projeto/ProjectServices"
+import ProjectValues from "@components/projeto/ProjectValues"
+import ProjectCarousel from "@components/projeto/ProjectCarousel";
 import GenericButton from "@components/GenericButton"
 import styles from "./styles.module.css"
-import ProjectCarousel from "@/components/ProjectCarousel";
 
 export default function Page({params}) {
   const projetistas = ["Fulano da Silvinha", "Ciclaninho dos Santos"];

@@ -4,7 +4,7 @@ import styles from './listMembers.module.css'
 function ListMembers({ members }) {
 
     return (
-        <div class={styles.ListStyle}>
+        <div className={styles.ListStyle}>
             {members.map((members, index) => (
                 <MakeCard
                     key={index}

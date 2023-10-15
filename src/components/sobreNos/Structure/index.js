@@ -1,7 +1,7 @@
-import salaFaisca from '@img/sala.jpg';
-import laboratorioFaisca from '@img/laboratorio.jpg';
-import bibliotecaFaisca from '@img/biblioteca.jpg';
-import labModFaisca from '@img/labmod.jpg';
+import salaFaisca from '@img/sobreNos/sala.jpg';
+import laboratorioFaisca from '@img/sobreNos/laboratorio.jpg';
+import bibliotecaFaisca from '@img/sobreNos/biblioteca.jpg';
+import labModFaisca from '@img/sobreNos/labmod.jpg';
 import Image from 'next/image';
 import styles from "./structure.module.css"
 

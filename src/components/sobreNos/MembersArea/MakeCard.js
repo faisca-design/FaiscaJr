@@ -9,11 +9,11 @@ function MakeCard({ imagem, nome, ciclo, marginLeft }) {
       };
 
     return (
-        <div style={cardStyle} class={styles.card}>
-            <div class={styles.cardImg}>
-                <div class={styles.cardText}>
-                    <h2 class={styles.Nomes}>{nome}</h2>
-                    <p class={styles.Ciclo}>{ciclo}</p>
+        <div style={cardStyle} className={styles.card}>
+            <div className={styles.cardImg}>
+                <div className={styles.cardText}>
+                    <h2 className={styles.Nomes}>{nome}</h2>
+                    <p className={styles.Ciclo}>{ciclo}</p>
                 </div>
                 <Image src={imagem} alt={nome} width={156} height={156} />
             </div>

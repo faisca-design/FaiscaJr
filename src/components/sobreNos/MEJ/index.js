@@ -1,17 +1,18 @@
 import styles from "./mej.module.css";
-import brasil from "@img/brasil.png"
-import NejPoa from "@img/NejPoa.png"
-import fejers from "@img/fejers.png"
-import sla from "@img/sla.png"
+import brasil from "@img/sobreNos/brasil.png"
+import NejPoa from "@img/sobreNos/NejPoa.png"
+import fejers from "@img/sobreNos/fejers.png"
+import sla from "@img/sobreNos/sla.png"
+import img from "@img/sobreNos/faisca.png"
 
 import Image from "next/image";
 
-function Issue14 ()
+function MEJ ()
 {
     return (
         <div className={styles.container}>
             <div className={styles.containerImagem}>
-                <img className={styles.imagem} src="/img/faisca.png" width={469.72} height={561} alt="imagem"/>
+                <Image className={styles.imagem} src={img} width={469.72} height={561} alt="imagem"/>
             </div>
             <div className={styles.containerParagrafo}>
                 <h1 className={styles.titulo}>
@@ -37,4 +38,4 @@ function Issue14 ()
         </div>
     )
 }
-export default Issue14
+export default MEJ

@@ -1,8 +1,8 @@
-import PurposeText from "@components/PurposeText"
-import AboutFaisca from "@components/AboutFaisca"
-import MembersArea from "@components/MembersArea"
-import Structure from "@components/Structure"
-import MEJ from "@components/MEJ"
+import PurposeText from "@/components/sobreNos/PurposeText"
+import AboutFaisca from "@components/sobreNos/AboutFaisca"
+import MembersArea from "@components/sobreNos/MembersArea"
+import Structure from "@/components/sobreNos/Structure"
+import MEJ from "@components/sobreNos/MEJ"
 
 import styles from "@styles/pages.module.css"
 

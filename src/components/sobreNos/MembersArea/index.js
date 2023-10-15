@@ -2,7 +2,7 @@ import MembersRow1 from './MembersRow1';
 import MembersRow2 from './MembersRow2';
 import MembersRow3 from './MembersRow3';
 import MembersRow4 from './MembersRow4';
-import FOTO from '@img/Foto01.png'
+import FOTO from '@img/sobreNos/Foto01.png'
 
 //CONSTANTE QUE ARMAZENA A LISTA COM TODOS OS MEMBROS
 const membros = [

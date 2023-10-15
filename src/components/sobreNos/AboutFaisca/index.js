@@ -1,13 +1,14 @@
 import styles from './about.module.css'
 import Image from 'next/image'
+import img from "@img/sobreNos/faisca.png"
 
-function Issue11 ()
+function AboutFaisca ()
 {
     return (
         <div className={styles.preenchimento}>
             <div className={styles.container}>
                 <div className={styles.containerImagem}>
-                    <img src="/img/faisca.png" width={378} height={378} alt="logo faisca"/>
+                    <Image src={img} width={378} height={378} alt="logo faisca"/>
                 </div>
                 <div className={styles.containerParagrafo}>
                    <p className={styles.paragrafo}>
@@ -32,4 +33,4 @@ function Issue11 ()
     )
 }
 
-export default Issue11
+export default AboutFaisca
