@@ -47,7 +47,7 @@ collections:
     label: "Membros da Faísca" # Nome usado na label do Netlify 
     folder: "content/membros" # Local da pasta onde vão estar os arquivos
     create: true # Permite que usuários criem arquivos nesse local
-    slug: "{{fields.nome}}" 
+    slug: "{{fields.nome_membro}}" 
     fields: 
       - {label: "Nome", name: "nome_membro", widget: "string"}
       - {label: "Cargo", name: "cargo_membro", widget: "relation", collection: "cargos", search_fields: ["cargo"], value_field: "{{cargo}}"}
@@ -69,7 +69,7 @@ collections:
     label: "Projetos da Faísca" # Nome usado na label do Netlify 
     folder: "content/projetos" # Local da pasta onde vão estar os arquivos
     create: true # Permite que usuários criem arquivos nesse local
-    slug: "{{fields.nome}}" 
+    slug: "{{fields.nome_projeto}}" 
     fields: 
       - {label: "Nome do projeto", name: "nome_projeto", widget: "string"}
       - {label: "Propósito do projeto", name: "proposito_projeto", widget: "markdown"}
