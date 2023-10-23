@@ -45,7 +45,7 @@ collections:
   - name: "membros" # Nome usado da rota
     extension: "json"
     description: "Coleção que vai conter todos os membros da Faísca."
-    label: "Membros da Faísca" # Nome usado na label do Netlify 
+    label: "Membros" # Nome usado na label do Netlify 
     folder: "content/membros" # Local da pasta onde vão estar os arquivos
     create: true # Permite que usuários criem arquivos nesse local
     editor:
@@ -59,7 +59,7 @@ collections:
   - name: "cargos" # Nome usado da rota
     extension: "json"
     description: "Coleção que vai conter todos os cargos da Faísca."
-    label: "Cargos da Faísca" # Nome usado na label do Netlify 
+    label: "Cargos" # Nome usado na label do Netlify 
     folder: "content/cargos" # Local da pasta onde vão estar os arquivos
     create: true # Permite que usuários criem arquivos nesse local
     editor:
@@ -71,7 +71,7 @@ collections:
   - name: "projetos" # Nome usado da rota
     extension: "json"
     description: "Coleção que vai conter os projetos da Faísca."
-    label: "Projetos da Faísca" # Nome usado na label do Netlify 
+    label: "Projetos" # Nome usado na label do Netlify 
     folder: "content/projetos" # Local da pasta onde vão estar os arquivos
     create: true # Permite que usuários criem arquivos nesse local
     editor:
