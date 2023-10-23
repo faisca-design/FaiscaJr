@@ -21,8 +21,8 @@ collections:
     description: "Coleção que vai conter todos as informação da pagina principal do site da Faísca."
     label: "Página principal" # Nome usado na label do Netlify 
     folder: "content/homePage" # Local da pasta onde vão estar os arquivos
-    create: true # Permite que usuários criem arquivos nesse local
-    slug: "homePage" # Nome que vai ficar no URL da página
+    create: false # Permite que usuários criem arquivos nesse local
+    slug: "{{Pagina principal}}" # Nome que vai ficar no URL da página
     fields: # Campos disponíveis no Netlify
       - label: "Nossos serviços" 
         name: "servicos_home" 
@@ -73,28 +73,28 @@ collections:
     fields: 
       - {label: "Nome do projeto", name: "nome_projeto", widget: "string"}
       - {label: "Propósito do projeto", name: "proposito_projeto", widget: "markdown"}
-      - label: "servicos_projeto"
-        name: 'Serviços prestados'
+      - label: "Serviços prestados"
+        name: 'servicos_projeto'
         min: 3
         max: 3
         widget: "list"
         fields:
           - {label: "Serviço", name: "servico_projeto", widget: 'string' }
 
-      - label: "caracteristicas_projeto"
-        name: 'Características do projeto'
+      - label: "Características do projeto"
+        name: 'caracteristicas_projeto'
         widget: "list"
         min: 3
         max: 3
         fields:
           - {label: "Característica", name: "caracteristica_projeto", widget: 'string' }
 
-      - {label: "Gerente do projeto", name: "gerente_projeto", widget: "relation", collection: "membros", search_fields: ["nome_membro", "cargo_membro"], value_field: "{{nome_membro}}"}
+      - {label: "Gerente do projeto", name: "gerente_projeto", widget: "relation", collection: "membros", search_fields: ["nome_membro"], value_field: "{{nome_membro}}", display_fields: ["{{nome_membro}} - {{cargo_membro}}"]}
 
-      - label: "projetistas_projeto"
-        name: 'Projetistas envolvidos'
+      - label: "Projetistas envolvidos"
+        name: 'projetistas_projeto'
         min: 1
         max: 2
         widget: "list"
         fields:
-          - {label: "Projetista", name: "projetista_projeto", widget: "relation", collection: "membros", search_fields: ["nome_membro"], value_field: "{{nome_membro}}"}
+          - {label: "Projetista", name: "projetista_projeto", widget: "relation", collection: "membros", search_fields: ["nome_membro"], value_field: "{{nome_membro}}", display_fields: ["{{nome_membro}} - {{cargo_membro}}"]}
