@@ -1,0 +1,62 @@
+{
+  "proposito_projeto": "Melhorar a acessibilidade e usabilidade de um site, tornando-o inclusivo para todos os usuários, independentemente de suas habilidades ou deficiências.",
+  "Serviços prestados": [
+    {
+      "servico_projeto": " site"
+    },
+    {
+      "servico_projeto": "identidade visual"
+    },
+    {
+      "servico_projeto": "rótulo"
+    }
+  ],
+  "caracteristicas_projeto": [
+    {
+      "caracteristica_projeto": "a"
+    },
+    {
+      "caracteristica_projeto": "b"
+    },
+    {
+      "caracteristica_projeto": "c"
+    }
+  ],
+  "gerente_projeto": "Felipe Faísca",
+  "projetistas_projeto": [
+    {
+      "projetista_projeto": "Fernanda Faísca"
+    }
+  ],
+  "servicos_projeto": [
+    {
+      "servico_projeto": "a"
+    },
+    {
+      "servico_projeto": "b"
+    },
+    {
+      "servico_projeto": "c"
+    }
+  ],
+  "Projetistas envolvidos": [
+    {
+      "projetista_projeto": "Felipe Faísca"
+    },
+    {
+      "projetista_projeto": "Fernanda Faísca"
+    }
+  ],
+  "nome_projeto": "Projeto 1",
+  "Características do projeto": [
+    {
+      "caracteristica_projeto": "força"
+    },
+    {
+      "caracteristica_projeto": "energia"
+    },
+    {
+      "caracteristica_projeto": "vibrante"
+    }
+  ]
+}
