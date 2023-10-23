@@ -22,7 +22,8 @@ collections:
     label: "Página principal" # Nome usado na label do Netlify 
     folder: "content/homePage" # Local da pasta onde vão estar os arquivos
     create: false # Permite que usuários criem arquivos nesse local
-    slug: "{{Pagina principal}}" # Nome que vai ficar no URL da página
+    editor:
+      preview: false
     fields: # Campos disponíveis no Netlify
       - label: "Nossos serviços" 
         name: "servicos_home" 
@@ -47,6 +48,8 @@ collections:
     label: "Membros da Faísca" # Nome usado na label do Netlify 
     folder: "content/membros" # Local da pasta onde vão estar os arquivos
     create: true # Permite que usuários criem arquivos nesse local
+    editor:
+      preview: false
     slug: "{{fields.nome_membro}}" 
     fields: 
       - {label: "Nome", name: "nome_membro", widget: "string"}
@@ -59,6 +62,8 @@ collections:
     label: "Cargos da Faísca" # Nome usado na label do Netlify 
     folder: "content/cargos" # Local da pasta onde vão estar os arquivos
     create: true # Permite que usuários criem arquivos nesse local
+    editor:
+      preview: false
     slug: "{{fields.cargo}}" 
     fields: 
       - {label: "Cargo", name: "cargo", widget: "string"}
@@ -69,6 +74,8 @@ collections:
     label: "Projetos da Faísca" # Nome usado na label do Netlify 
     folder: "content/projetos" # Local da pasta onde vão estar os arquivos
     create: true # Permite que usuários criem arquivos nesse local
+    editor:
+      preview: false
     slug: "{{fields.nome_projeto}}" 
     fields: 
       - {label: "Nome do projeto", name: "nome_projeto", widget: "string"}
