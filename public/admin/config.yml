@@ -89,7 +89,7 @@ collections:
         fields:
           - {label: "Característica", name: "caracteristica_projeto", widget: 'string' }
 
-      - {label: "Nome do gerente de projeto", name: "nome_gerente_projeto", widget: "string"}
+      - {label: "Gerente do projeto", name: "gerente_projeto", widget: "relation", collection: "membros", search_fields: ["nome_membro", "cargo_membro"], value_field: "{{nome_membro}}"}
 
       - label: "projetistas_projeto"
         name: 'Projetistas envolvidos'
