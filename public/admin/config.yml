@@ -5,7 +5,7 @@ backend:
 publish_mode: editorial_workflow # Para fazer um esquema de revisão de novas edições
 media_folder: "public/uploads" # Onde os arquivos de mídia serão armazenados
 public_folder: "/uploads" # Onde a parte de mídia vai poder ser acessada
-display_url: https://exemplos-da-ide.netlify.app/ # URL que será mostrado no UI do Netlify
+display_url: https://faiscadesignjr.com.br/ # URL que será mostrado no UI do Netlify
 
 slug:
   encoding: "ascii"
@@ -16,22 +16,85 @@ search: false
 locale: 'pt'
 
 collections:
-  - name: "modelos" # Nome usado da rota
+  - name: "home" # Nome usado da rota
     extension: "json"
-    description: "Coleção que vai conter todos os campos disponíveis no Netlify CMS."
-    label: "Todos os modelos" # Nome usado na label do Netlify 
-    folder: "content/exemplos" # Local da pasta onde vão estar os arquivos
-    create: true # Permite que usuários criem arquivos nesse local
-    slug: "{{fields.nome}}" # Nome que vai ficar no URL da página
+    description: "Coleção que vai conter todos as informação da pagina principal do site da Faísca."
+    label: "Página principal" # Nome usado na label do Netlify 
+    folder: "content/homePage" # Local da pasta onde vão estar os arquivos
+    create: false # Permite que usuários criem arquivos nesse local
+    slug: "homePage" # Nome que vai ficar no URL da página
     fields: # Campos disponíveis no Netlify
-      - {label: "Boolean", name: "bool", widget: "boolean", default: true}
-      - {label: 'Cor', name: 'cor', widget: 'color', enableAlpha: true, allowInput: true}
-      - {label: "Título", name: "titulo", widget: "string"}
-      - {label: "Datas com horário", name: "data", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL"}
-      - {label: "Arquivos", name: "arquivos", widget: "file", default: "/uploads/neander_VHDL.pdf"}
-      - {label: "Imagem", name: "imagem", widget: "image"}
-      - {label: "Localização", name: "localizacao", widget: "map"}
-      - {label: "Conteúdo", name: "conteudo", widget: "markdown"}
-      - {label: "Números", name: "numeros", widget: "number", default: 100, value_type: "float", min: 0, max: 100, step: 0.5}
-      - {label: "Seleção", name: "selecao", widget: "select", multiple: true, min: 2, max: 3, options: ["um","dois","três"], default: ["dois"]}
-      - {label: "Texto", name: "texto", widget: "text"}
+      - label: "Nossos serviços" 
+        name: "servicos_home" 
+        widget: "list"
+        min: 1 
+        max: 7
+        field: {label: "Nome do serviço", name: "nome_servico", widget: "string"}
+      
+      - label: "Projetos em destaque"
+        name: "projetos_home"
+        collapsed: false
+        widget: "list"
+        min: 1
+        max: 5
+        fields:
+          - {label: "Nome do projeto", name: "nome_projeto", widget: "string"}
+          - {label: "Imagem do projeto", name: "imagem_projeto", widget: "image"}
+
+  - name: "membros" # Nome usado da rota
+    extension: "json"
+    description: "Coleção que vai conter todos os membros da Faísca."
+    label: "Membros da Faísca" # Nome usado na label do Netlify 
+    folder: "content/membros" # Local da pasta onde vão estar os arquivos
+    create: true # Permite que usuários criem arquivos nesse local
+    slug: "{{fields.nome}}" 
+    fields: 
+      - {label: "Nome", name: "nome_membro", widget: "string"}
+      - {label: "Cargo", name: "cargo_membro", widget: "relation", collection: "cargos", search_fields: ["cargo"], value_field: "{{cargo}}"}
+      - {label: "Foto", name: "foto_membro", widget: "image"}
+
+  - name: "cargos" # Nome usado da rota
+    extension: "json"
+    description: "Coleção que vai conter todos os cargos da Faísca."
+    label: "Cargos da Faísca" # Nome usado na label do Netlify 
+    folder: "content/cargos" # Local da pasta onde vão estar os arquivos
+    create: true # Permite que usuários criem arquivos nesse local
+    slug: "{{fields.cargo}}" 
+    fields: 
+      - {label: "Cargo", name: "cargo", widget: "string"}
+
+  - name: "projetos" # Nome usado da rota
+    extension: "json"
+    description: "Coleção que vai conter os projetos da Faísca."
+    label: "Projetos da Faísca" # Nome usado na label do Netlify 
+    folder: "content/projetos" # Local da pasta onde vão estar os arquivos
+    create: true # Permite que usuários criem arquivos nesse local
+    slug: "{{fields.nome}}" 
+    fields: 
+      - {label: "Nome do projeto", name: "nome_projeto", widget: "string"}
+      - {label: "Propósito do projeto", name: "proposito_projeto", widget: "markdown"}
+      - label: "servicos_projeto"
+        name: 'Serviços prestados'
+        min: 3
+        max: 3
+        widget: "list"
+        fields:
+          - {label: "Serviço", name: "servico_projeto", widget: 'string' }
+
+      - label: "caracteristicas_projeto"
+        name: 'Características do projeto'
+        widget: "list"
+        min: 3
+        max: 3
+        fields:
+          - {label: "Característica", name: "caracteristica_projeto", widget: 'string' }
+
+      - {label: "Nome do gerente de projeto", name: "nome_gerente_projeto", widget: "string"}
+
+      - label: "projetistas_projeto"
+        name: 'Projetistas envolvidos'
+        min: 1
+        max: 2
+        widget: "list"
+        fields:
+          - {label: "Projetista", name: "projetista_projeto", widget: "relation", collection: "membros", search_fields: ["nome_membro"], value_field: "{{nome_membro}}"}
