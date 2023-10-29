@@ -21,7 +21,7 @@ collections:
     description: "Coleção que vai conter todos as informações da página principal do site da Faísca."
     label: "Página principal" # Nome usado na label do Netlify 
     folder: "content/homePage" # Local da pasta onde vão estar os arquivos
-    create: false # Permite que usuários criem arquivos nesse local
+    create: true # Permite que usuários criem arquivos nesse local
     editor:
       preview: false
     fields: # Campos disponíveis no Netlify
