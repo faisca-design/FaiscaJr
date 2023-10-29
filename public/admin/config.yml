@@ -60,7 +60,7 @@ collections:
     editor:
       preview: false
     fields: # Campos disponíveis no Netlify
-      - label: "4 principais projetos" 
+      - label: "Grandes projetos" 
         name: "portfolio_projetos" 
         widget: "list"
         min: 4
