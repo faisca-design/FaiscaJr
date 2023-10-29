@@ -1,0 +1,17 @@
+{
+  "servicos_home": [
+    {
+      "servico": "Identidade visual"
+    }
+  ],
+  "projetos_home": [
+    {
+      "projeto_destaque": "Projeto 4"
+    }
+  ],
+  "projetos_carrossel": [
+    {
+      "projeto_carrossel": "Projeto 2"
+    }
+  ]
+}
