@@ -39,7 +39,7 @@ collections:
         min: 1
         max: 5
         fields:
-          - {label: "Projeto", name: "projeto_destaque", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}  {{imagem_projeto}}"]}
+          - {label: "Projeto", name: "projeto_destaque", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}"]}
 
       - label: "Projetos para o carrossel"
         name: "projetos_carrossel"
@@ -48,7 +48,7 @@ collections:
         min: 1
         max: 5
         fields:
-          - {label: "Projeto", name: "projeto_carrossel", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}  {{imagem_projeto}}"]}
+          - {label: "Projeto", name: "projeto_carrossel", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}"]}
 
   - name: "portfolio" # Nome usado da rota
     extension: "json"
@@ -65,7 +65,7 @@ collections:
         min: 1 
         max: 7
         field: 
-          - {label: "Nome do projeto", name: "projeto_destaque", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}  {{imagem_projeto}}"]}
+          - {label: "Nome do projeto", name: "projeto_destaque", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}"]}
           - {label: "Título", name: "titulo_projeto", widget: "string"}
           - {label: "Subtítulo", name: "subtitulo_projeto", widget: "string"}
       
@@ -76,7 +76,7 @@ collections:
         min: 1
         max: 5
         fields:
-          - {label: "Projeto", name: "projeto_destaque", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}  {{imagem_projeto}}"]}
+          - {label: "Projeto", name: "projeto_destaque", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}"]}
 
       - label: "Projetos para o carrossel"
         name: "projetos_carrossel"
@@ -85,7 +85,7 @@ collections:
         min: 1
         max: 5
         fields:
-          - {label: "Projeto", name: "projeto_carrossel", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}  {{imagem_projeto}}"]}
+          - {label: "Projeto", name: "projeto_carrossel", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}"]}
 
   - name: "membros" # Nome usado da rota
     extension: "json"
