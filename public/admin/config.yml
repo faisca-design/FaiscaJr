@@ -21,6 +21,7 @@ collections:
     description: "Coleção que vai conter todos as informações da página principal do site da Faísca."
     label: "Página principal" # Nome usado na label do Netlify 
     folder: "content/homePage" # Local da pasta onde vão estar os arquivos
+    slug: "{{homePage}}"
     create: true # Permite que usuários criem arquivos nesse local
     editor:
       preview: false
@@ -56,6 +57,7 @@ collections:
     description: "Coleção que vai conter as informação da pagina de portfólio do site da Faísca."
     label: "Porfólio" # Nome usado na label do Netlify 
     folder: "content/portfolio" # Local da pasta onde vão estar os arquivos
+    slug: "{{portfolioPage}}"
     create: true # Permite que usuários criem arquivos nesse local
     editor:
       preview: false
