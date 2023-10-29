@@ -30,7 +30,7 @@ collections:
         widget: "list"
         min: 1 
         max: 7
-        field: 
+        fields: 
         - {label: "Serviço", name: "servico", widget: "relation", collection: "servicos", search_fields: ["servico"], value_field: "{{servico}}"}
       
       - label: "Projetos em destaque"
