@@ -39,8 +39,7 @@ collections:
         min: 1
         max: 5
         fields:
-          - {label: "Nome do projeto", name: "nome_projeto", widget: "string"}
-          - {label: "Imagem do projeto", name: "imagem_projeto", widget: "image"}
+          - {label: "Projeto", name: "projeto_destaque", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}  {{imagem_projeto}}"]}
 
   - name: "membros" # Nome usado da rota
     extension: "json"
@@ -79,6 +78,7 @@ collections:
     slug: "{{fields.nome_projeto}}" 
     fields: 
       - {label: "Nome do projeto", name: "nome_projeto", widget: "string"}
+      - {label: "Imagem do projeto", name: "imagem_projeto", widget: "image"}
       - {label: "Propósito do projeto", name: "proposito_projeto", widget: "markdown"}
       - label: "Serviços prestados"
         name: 'servicos_projeto'
