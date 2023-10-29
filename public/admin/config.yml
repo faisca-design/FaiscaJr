@@ -41,6 +41,15 @@ collections:
         fields:
           - {label: "Projeto", name: "projeto_destaque", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}  {{imagem_projeto}}"]}
 
+      - label: "Projetos para o carrossel"
+        name: "projetos_carrossel"
+        collapsed: false
+        widget: "list"
+        min: 1
+        max: 5
+        fields:
+          - {label: "Projeto", name: "projeto_carrossel", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}  {{imagem_projeto}}"]}
+
   - name: "membros" # Nome usado da rota
     extension: "json"
     description: "Coleção que vai conter todos os membros da Faísca."
@@ -105,3 +114,12 @@ collections:
         widget: "list"
         fields:
           - {label: "Projetista", name: "projetista_projeto", widget: "relation", collection: "membros", search_fields: ["nome_membro"], value_field: "{{nome_membro}}", display_fields: ["{{nome_membro}} - {{cargo_membro}}"]}
+
+      - label: "Projetos relacionados (irão para o carrossel)"
+        name: "relacionados_projetos"
+        collapsed: false
+        widget: "list"
+        min: 1
+        max: 5
+        fields:
+          - {label: "Projeto", name: "projeto_carrossel", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}  {{imagem_projeto}}"]}
