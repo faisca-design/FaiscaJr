@@ -55,7 +55,7 @@ collections:
     description: "Coleção que vai conter as informação da pagina de portfólio do site da Faísca."
     label: "Porfólio" # Nome usado na label do Netlify 
     folder: "content/portfolio" # Local da pasta onde vão estar os arquivos
-    create: false # Permite que usuários criem arquivos nesse local
+    create: true # Permite que usuários criem arquivos nesse local
     editor:
       preview: false
     fields: # Campos disponíveis no Netlify
