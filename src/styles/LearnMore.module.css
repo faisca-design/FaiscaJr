@@ -19,3 +19,11 @@
   font-Family: 'Allegin';
   font-weight: 100;
 }
+
+@media (max-width: 450px){
+  .textAbout {
+    font-size: 25px;
+  }
+
+  
+}
