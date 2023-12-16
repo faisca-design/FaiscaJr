@@ -1,9 +1,15 @@
 .container{
     color: white;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .containerTitle{
     margin-bottom: 250px;
+    font-size: 1.5em;
 }
 
 .title{
@@ -39,16 +45,30 @@
 
 .imageRow{
     display: flex;
-    flex-direction: column;
+    width: 1050px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+    .imageRow {
+      flex-direction: column;
+      width: 500px;
+    }
+    .containerTitle{
+        display: none;
+    }
+    .bar{
+        display: none;
+    }
+    .subTitle{
+        flex-direction: column;
+        font-size: 2.5em;
+    }
 }
 
 .imageBlock{
     display: flex;
     flex-direction: column;
-}
-
-.smallImageBlock{
-    display: flex;
 }
 
 .image{
@@ -66,46 +86,9 @@
     position: relative;
     display: flex;
     bottom: -497px;
-    right: 38px;
+    right: 290px;
     font-size: 30px;
     color: white;
  }   
-
- .text2{
-    position: relative;
-    display: flex;
-    bottom: -724px;
-    right: 299px;
-    font-size: 30px;
-    color: white;
-}
- 
-.text3{
-    position: relative;
-    display: flex;
-    bottom: -694px;
-    right: -15px;
-    font-size: 30px;
-    color: white;
-    rotate: 90deg;
-}
-
-.text4{
-    position: relative;
-    display: flex;
-    bottom: -75px;
-    right: 235px;
-    font-size: 30px;
-    color: white;
-}
-
-.text5{
-    position: relative;
-    display: flex;
-    bottom: -435px;
-    right: 72px;
-    font-size: 30px;
-    color: white;
-}
 
 

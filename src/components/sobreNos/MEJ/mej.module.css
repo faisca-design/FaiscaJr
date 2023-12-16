@@ -2,18 +2,9 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
+    flex-wrap: nowrap;
     justify-content: center;
     padding: 5%;
-}
-
-.containerImagem{
-    width: 40%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
 }
 
 .imagem{
@@ -22,22 +13,18 @@
 }
 
 .containerParagrafo{
-    width: 60%;
     color: white;
-   /*border-left: 1px solid white;
-    padding-left: 50px;*/
 }
 .paragrafo{
-    font-size: 25px;
+    font-size: 2em;
     margin: 0px;
     text-align: justify;
-    width: 925px;
-    height: 250px;
+    margin-bottom: 2em;
  }
 
  .titulo{
-    font-size: 2vw;
-    margin: 0px;
+    font-size: 5em;
+    margin-bottom: 0.7em;
     text-align: justify;
     height: 90px;
     width: 129px;
@@ -45,8 +32,52 @@
 
  .conjuntoImagens{
     margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
  }
 
  .conjuntoImagens img{
-    margin-right: 100px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
  }
+
+ .bar{
+    height: 700px;
+    border-left: 2px solid;
+    color: white;
+    margin: 0px 5em;
+}
+
+ @media (max-width: 767px) {
+    .container {
+      flex-direction: column;
+    }
+    .bar{
+        display: none;
+    }
+    .containerParagrafo{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .imagem{
+        margin-bottom: 4em;
+    }
+    .conjuntoImagens{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 2em;
+    }
+    .paragrafo{
+        margin-bottom: 2em;
+    }
+  }

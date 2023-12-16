@@ -11,9 +11,8 @@ function MEJ ()
 {
     return (
         <div className={styles.container}>
-            <div className={styles.containerImagem}>
-                <Image className={styles.imagem} src={img} width={469.72} height={561} alt="imagem"/>
-            </div>
+            <Image className={styles.imagem} src={img} width={469.72} height={561} alt="imagem"/>
+            <div className={styles.bar}/>
             <div className={styles.containerParagrafo}>
                 <h1 className={styles.titulo}>
                     MEJ
