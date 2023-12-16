@@ -1,5 +1,7 @@
-.box{
-    background-color: azure;
-    padding: 20px;
-    text-align: center;
+.item {
+    height: 10rem;
+    background: #4dc7a0;
+    padding: 1rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
