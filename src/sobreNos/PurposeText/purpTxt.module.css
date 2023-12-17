@@ -1,0 +1,22 @@
+.purpTxt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.purpTxt > p {
+    color: white;
+    width: 50%;
+    font-size: 3.6vh;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+
+    .purpTxt > p {
+        width: 90%;
+        text-align: left;
+    }
+
+  }

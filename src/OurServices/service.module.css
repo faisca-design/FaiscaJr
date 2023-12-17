@@ -1,0 +1,37 @@
+.service {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.service > p {
+    text-align: left;
+    color: white;
+    font-size: 2.6vh;
+    height: 3vh;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.service > hr {
+    margin-left: 0;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 600px) {
+    .service > hr {
+      display: none;
+    }
+
+
+    .service {
+        justify-content: center;
+    }
+
+    .service > p {
+        text-align: center;
+        margin-top: 2vh;
+    }
+
+  }

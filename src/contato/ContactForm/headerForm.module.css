@@ -1,0 +1,61 @@
+.headerForm{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vh;
+}
+
+.headerFormTxt{
+    width: 40vw;
+    display: flex;
+    justify-content: right;
+    
+}
+
+.headerFormHR{
+    width: 60vw;
+    margin: auto;
+    margin-bottom: 6vh;
+}
+
+.hr {
+    background-color: black;
+}
+
+.lowTxt {
+    font-size: 1.4vw;
+
+}
+.headerFormTxt > p {
+    font-size: 1.8vw;
+    text-align: left;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+
+    .hr {
+        display: none;
+    }
+
+    .headerFormHR{
+        display: none;
+    }
+
+    .headerFormTxt{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+
+    .headerFormTxt > p {
+        font-size: 5vw;
+    }
+
+    .lowTxt {
+        font-size: 3.235vw;
+    }
+
+
+  }

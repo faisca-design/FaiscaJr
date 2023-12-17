@@ -1,0 +1,103 @@
+.form{
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    width: 60vw;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vh;
+    width: 100%;
+    align-items: center;
+    
+}
+
+.row input, .row select{
+    height: 70% !important; 
+    width: 32%;
+    box-sizing:content-box;
+    background-color: #D9D9D9;
+}
+
+.form ::placeholder{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+
+.row > input, .row > select, .form > input, .form > textarea{
+    
+    height: 7vh;
+    border-radius: 15px;
+    border-style: hidden;
+    background-color: #D9D9D9;
+}
+
+.form > textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 7vh;
+    overflow-y: hidden;
+}
+
+.submit {
+    background-color: #D45827 !important;
+    margin-top: 3vh !important;
+    color: white;
+
+}
+
+.form > input, .form > textarea {
+    margin-top: 1.5vh;
+}
+
+#projects, #howDidUMeet, #date{
+    text-align: center;
+    color: black;
+}
+
+
+input[type="date"]:not(.has-value):before{
+    color: rgb(0, 0, 0);
+    content: attr(placeholder);
+}
+
+input[type="date"]:not(.has-value):valid:before{
+    content: attr(none);
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .row{
+        flex-direction: column;
+        justify-content: center;
+        height: 20vh;
+        width: 100%;
+        align-items: center;
+    }
+
+
+    .row > input, .row > select, .form > input, .form > textarea{
+
+        width: 100% ; 
+        margin-top: 2vh;
+        border-radius: 4vw;
+    }
+
+    .form{
+        margin: auto;
+        align-items: center;
+        width: 80vw;
+    }
+
+    .submit {
+        width: 70% !important;
+    }
+    
+  }
