@@ -22,28 +22,28 @@ function MembersRow4({ members }) {
         imagem={DecOitavo.imagem}
         nome={DecOitavo.nome}
         ciclo={DecOitavo.ciclo}
-        marginLeft=".1%"
+        marginLeft="0%"
       />
       <MakeCard
         key={2}
         imagem={DecNono.imagem}
         nome={DecNono.nome}
         ciclo={DecNono.ciclo}
-        marginLeft=".1%"
+        marginLeft="0%"
       />
       <MakeCard
         key={3}
         imagem={Vigesimo.imagem}
         nome={Vigesimo.nome}
         ciclo={Vigesimo.ciclo}
-        marginLeft="15%"
+        marginLeft="170px"
       />
       <MakeCard
         key={4}
         imagem={VigPrimeiro.imagem}
         nome={VigPrimeiro.nome}
         ciclo={VigPrimeiro.ciclo}
-        marginLeft=".1%"
+        marginLeft="0px"
       />
       <h1 className={styles.vazio}>.</h1>
     </div>

@@ -9,34 +9,35 @@ function MembersRow1({ members }) {
 
   return (
     <div className={styles.ListStyle}>
+      
       <h1 className={styles.EquipeText}>Nossa <br></br>Equipe</h1>
       <MakeCard
         key={0}
         imagem={primeiro.imagem}
         nome={primeiro.nome}
         ciclo={primeiro.ciclo}
-        marginLeft="20%"
+        marginLeft="100px"
       />
       <MakeCard
         key={1}
         imagem={segundo.imagem}
         nome={segundo.nome}
         ciclo={segundo.ciclo}
-        marginLeft=".1%"
+        marginLeft="0px"
       />
       <MakeCard
         key={2}
         imagem={terceiro.imagem}
         nome={terceiro.nome}
         ciclo={terceiro.ciclo}
-        marginLeft="13.5%"
+        marginLeft="105px"
       />
       <MakeCard
         key={3}
         imagem={quarto.imagem}
         nome={quarto.nome}
         ciclo={quarto.ciclo}
-        marginLeft=".1%"
+        marginLeft="0px"
       />
     </div>
   );
