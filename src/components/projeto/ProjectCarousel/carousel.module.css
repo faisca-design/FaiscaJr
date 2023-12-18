@@ -1,0 +1,31 @@
+.projetos{
+    width: 100%;
+    height: 100%;
+    padding-left: 13vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.projetosTitle{
+    text-align: left;
+    color:white;
+    font-size: 50px;
+    font-family: 'Allegin';
+    font-weight: 200;
+    padding-bottom: 25px;
+}
+
+.item {
+    padding-right: 25px;
+}
+
+.imgcarimbo{
+    width: 1000px;
+    height: 585px;
+}
+
+@media only screen and (max-width: 600px) {
+    .projetos{
+        padding-left: 2vh;
+    }
+}    

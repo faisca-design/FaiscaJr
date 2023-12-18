@@ -1,7 +1,62 @@
+.depoimentos{
+    background-color: #20181B;
+    padding: 125px;
+    padding-bottom: 200px;
+}
+
+.depoimentosTitle{
+    text-align: left;
+    color:white;
+    font-size: 50px;
+    font-family: 'Allegin';
+    font-weight: 200;
+    padding-bottom: 40px;
+    font-family: 'Allegin';
+}
+
+.depoimentosText{
+    padding-right: 75px;
+    padding-left: 75px;
+    padding-top: 115px;
+    padding-bottom: 115px;
+    border: solid;
+    border-width: 0.5px;
+    border-color: white;
+    text-align: center;
+    font-weight: 100;
+}
+
 .item {
     height: 10rem;
-    background: #4dc7a0;
-    padding: 1rem;
+    padding-right: 30px;
+    background: transparent;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+<<<<<<< Updated upstream
    }
+=======
+    padding-bottom: 150px;
+}
+
+@media only screen and (max-width: 600px) {
+    .depoimentos{
+        padding: 25px;
+    }
+
+    .depoimentosTitle{
+        text-align: center;
+    }
+
+    .depoimentosText{
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
+        padding-bottom: 220px;
+        border-width: 0px;
+        border-color: white;
+        text-align: center;
+        font-weight: 100;
+        margin-bottom: 50px;
+    }
+}
+>>>>>>> Stashed changes

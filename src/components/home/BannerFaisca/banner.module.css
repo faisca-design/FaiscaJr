@@ -9,8 +9,8 @@
 
 .logo{
     padding: 200px;
-    padding-left: 300px;
-    padding-right: 300px; 
+    padding-left: 150px;
+    padding-right: 150px; 
     align-items: center;
 }
 
@@ -46,3 +46,40 @@
     text-align: justify;
     margin-top: -55px;
 }
+
+@media only screen and (max-width: 600px) {
+    .container{
+        flex-direction: column;
+        padding: 5px;
+    }
+    
+    .logo{
+        padding: 0px;
+        padding-left: 0px;
+        padding-right: 0px; 
+    }
+    
+    .imglogo{
+        height: 350px;
+        width: 350px;
+        padding-left: 300px;
+    }
+    
+    .title1{
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+    }
+    
+    .title2{
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+    }
+    
+    .title3{
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+    }
+}    
