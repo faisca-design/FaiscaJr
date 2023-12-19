@@ -3,3 +3,96 @@
     padding: 20px;
     text-align: center;
 }
+
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #1E181A;
+}
+
+.logo{
+    padding: 200px;
+    padding-left: 150px;
+    padding-right: 150px; 
+    align-items: center;
+}
+
+.imglogo{
+    margin-top: -225px;
+    margin-bottom: -375px;
+    padding-left: 150px;
+}
+
+.title1{
+    color: white;
+    padding-left: 75px;
+    font-weight: 200;
+    letter-spacing: 0.1cm;
+    margin-left: 5px;
+    font-family: 'Chillax';
+    font-weight: 300;
+}
+
+.title2{
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 55px;
+    padding-left: 800px;
+    font-size: 65px;
+    font-weight: 600;
+    line-height: 1.8cm;
+}
+
+.title3{
+    color: white;
+    padding-left: 800px;
+    font-weight: 100;
+    font-size: 18px;
+    text-align: justify;
+    margin-top: -55px;
+    line-height: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        flex-direction: column;
+        padding: 5px;
+    }
+    
+    .logo{
+        padding: 0px;
+        padding-left: 0px;
+        padding-right: 0px; 
+    }
+    
+    .imglogo{
+        height: 426px;
+        width: 426px;
+        padding-left: 300px;
+    }
+    
+    .title1{
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    .title2{
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+        font-size: 75px;
+        line-height: 78px;
+        padding-bottom: 25px;
+    }
+    
+    .title3{
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+    }
+}    

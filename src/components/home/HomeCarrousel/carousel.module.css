@@ -1,5 +1,84 @@
-.box{
-    background-color: azure;
-    padding: 20px;
+.depoimentos{
+    background-color: #20181B;
+    padding: 125px;
+    padding-bottom: 200px;
+}
+
+.depoimentosTitle{
+    text-align: left;
+    color:white;
+    font-size: 50px;
+    font-family: 'Allegin';
+    font-weight: 200;
+    padding-bottom: 40px;
+}
+
+.depoimentosText{
+    font-family: Chillax;
     text-align: center;
+    font-weight: 100;
+    color: white;
+    line-height: 35px;
+    font-size: 25px;
+}
+
+.clientName{
+    font-family: Chillax;
+    color: white;
+    padding-top: 5px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.item {
+    padding: 100px;
+    height: 10rem;
+    background: transparent;
+    border: solid;
+    border-width: 1px;
+    border-color: white;
+    margin-right: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .depoimentos{
+        padding: 25px;
+    }
+
+    .depoimentosTitle{
+        text-align: center;
+    }
+
+    .depoimentosText{
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
+        padding-bottom: 220px;
+        border-width: 0px;
+        border-color: white;
+        text-align: center;
+        font-weight: 100;
+        margin-bottom: 50px;
+    }
+
+    .item {
+        padding: 20px;
+        padding-bottom: 500px;
+        height: 10rem;
+        background: transparent;
+        border: none;
+        border-width: 0px;
+        border-color: white;
+        margin-right: 30px;
+    }
+
+    .clientName{
+        font-family: Chillax;
+        color: white;
+        padding-top: 25px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 25px;
+    }
 }

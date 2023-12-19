@@ -1,5 +1,6 @@
-.box{
-    background-color: azure;
-    padding: 20px;
-    text-align: center;
-}
+.ProjectBanner{
+    background-image: url("./../../../../public/img/projeto/Cabeçalho.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}       
