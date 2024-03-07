@@ -1,22 +1,22 @@
-.purpose{
-    padding: 35px;
+.purpose {
+    padding: 5vh; /* Alterado para usar unidades de vh */
 }
 
-.projetoTitle{
-    color:white;
+.projetoTitle {
+    color: white;
     text-align: center;
-    font-size: 50px;
+    font-size: 3.26vw; /* Alterado para usar unidades de vw */
     font-weight: 200;
     font-family: 'Chillax';
-    padding-top: 50px;
+    padding-top: 6.94vh; /* Alterado para usar unidades de vh */
 }
 
-.projetoTitle span{
+.projetoTitle span {
     font-family: 'Allegin';
 }
 
-.imgcarimbo{
-    padding-top: 125px;
+.imgcarimbo {
+    padding-top: 17.36vh; 
     margin: auto;
     display: block;
     width: 1470px;
@@ -25,21 +25,21 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .imgcarimbo{
-        padding-top: 50px;
+    .imgcarimbo {
+        padding-top: 6.94vh; 
         margin: auto;
         display: block;
-        width: 500px;
-        height: 500px;
+        width: 41.67vw; 
+        height: 41.67vw; 
         align-items: center;
     }
 
-    .projetoTitle{
-        color:white;
+    .projetoTitle {
+        color: white;
         text-align: center;
-        font-size: 40px;
+        font-size: 3.89vw; 
         font-weight: 200;
         font-family: 'Chillax';
-        padding-top: 50px;
+        padding-top: 6.94vh; 
     }
-}    
+}

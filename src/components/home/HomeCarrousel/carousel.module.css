@@ -1,84 +1,87 @@
-.depoimentos{
+.depoimentos {
     background-color: #20181B;
-    padding: 125px;
-    padding-bottom: 200px;
+    padding: 25vh;
+    padding-bottom: 40vh;
+    padding-bottom: 5vh;
+    margin-bottom: 80px;
 }
 
-.depoimentosTitle{
+.depoimentosTitle {
     text-align: left;
-    color:white;
-    font-size: 50px;
+    color: white;
+    font-size: 2.5vw;
     font-family: 'Allegin';
     font-weight: 200;
-    padding-bottom: 40px;
+    padding-bottom: 5vh;
 }
 
-.depoimentosText{
+.depoimentosText {
     font-family: Chillax;
     text-align: center;
     font-weight: 100;
     color: white;
     line-height: 35px;
-    font-size: 25px;
+    font-size: 2.5vh;
+    margin-bottom: 50px;
 }
 
-.clientName{
+.clientName {
     font-family: Chillax;
     color: white;
     padding-top: 5px;
     text-align: center;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 2.5vh;
 }
 
 .item {
-    padding: 100px;
-    height: 10rem;
+    padding: 10vh;
+    height: 10vh;
     background: transparent;
     border: solid;
     border-width: 1px;
     border-color: white;
-    margin-right: 30px;
+    margin-right: 3vw;
+    padding-bottom: 150px;
 }
 
 @media only screen and (max-width: 600px) {
-    .depoimentos{
-        padding: 25px;
+    .depoimentos {
+        padding: 5vh;
     }
 
-    .depoimentosTitle{
+    .depoimentosTitle {
         text-align: center;
     }
 
-    .depoimentosText{
+    .depoimentosText {
         padding-right: 0px;
         padding-left: 0px;
         padding-top: 0px;
-        padding-bottom: 220px;
-        border-width: 0px;
-        border-color: white;
+        padding-bottom: 22vh;
+        border: none;
         text-align: center;
         font-weight: 100;
-        margin-bottom: 50px;
+        margin-bottom: 5vh;
     }
 
     .item {
-        padding: 20px;
-        padding-bottom: 500px;
-        height: 10rem;
+        padding: 5vh;
+        padding-bottom: 50vh;
+        height: 10vh;
         background: transparent;
         border: none;
         border-width: 0px;
         border-color: white;
-        margin-right: 30px;
+        margin-right: 3vw;
     }
 
-    .clientName{
+    .clientName {
         font-family: Chillax;
         color: white;
         padding-top: 25px;
         text-align: center;
         font-weight: 400;
-        font-size: 25px;
+        font-size: 2.5vh;
     }
 }
