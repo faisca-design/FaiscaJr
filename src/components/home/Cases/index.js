@@ -1,5 +1,6 @@
 import styles from './cases.module.css'
 import Image from 'next/image'
+import GenericButton from '@/components/GenericButton'
 
 function Cases ({titulo1, titulo2, imagem, imagem2, imagem3, imagem4, imagem5, imagem6, nomeprojeto1, nomeprojeto2, nomeprojeto3, nomeprojeto4, nomeprojeto5, nomeprojeto6})
 {
@@ -7,16 +8,16 @@ function Cases ({titulo1, titulo2, imagem, imagem2, imagem3, imagem4, imagem5, i
         <div className={styles.container}>
             <div className={styles.containerTitle}>
               <h1 className={styles.title}>
-                  encontramos soluções ideias
+                  encontramos   <span className={styles.altText}> soluções ideias</span>
               </h1>
               <h1 className={styles.title}>
                   para cada tipo de desafio
               </h1>
             </div>
             <h1 className={styles.subTitle}>
-                <span>{titulo1}</span>
+            <span className={styles.altText}>{titulo1}</span>
                <hr className={styles.bar} width={500} />
-                <span>{titulo2}</span>
+               <span className={styles.altText}>{titulo2}</span>
             </h1>
             <div className={styles.imageRow}>
                 <figure className={styles.figure}>
@@ -50,12 +51,13 @@ function Cases ({titulo1, titulo2, imagem, imagem2, imagem3, imagem4, imagem5, i
                     </label>
                 </figure>
                 <figure className={styles.figure}>
-                    <Image className={styles.image}  src={imagem6} width={440} height={530} alt="imagem temporaria de testes"/>
+                    <Image className={styles.image}  src={imagem5} width={440} height={530} alt="imagem temporaria de testes"/>
                         <label className={styles.text}>
-                        {nomeprojeto6}
+                        {nomeprojeto5}
                     </label>
                 </figure>
             </div>
+            <GenericButton ButtonText="Mais Projetos"/>
         </div>
     )
 }
