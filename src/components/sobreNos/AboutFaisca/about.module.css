@@ -21,6 +21,7 @@
    margin: 0px;
    text-align: justify;
    color: white;
+   line-height: 1.5;
 }
 
 .paragrafo:first-child{
