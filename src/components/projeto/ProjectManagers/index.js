@@ -23,7 +23,7 @@ function ProManegers({ ProGerente, projetista }) {
             <h2
               className={styles.Names}
               key={index}
-              style={{ marginBottom: index === array.length - 1 ? '40px' : '0' }}
+              style={{ marginBottom: index === array.length - 1 ? '35px' : '0' }}
             >
               {projetista}
             </h2>

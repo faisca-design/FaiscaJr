@@ -40,34 +40,20 @@
     margin: 0 1.2vw;
   }
   
-  @media (max-width: 768px) {
-    .titles {
-      font-size: 3vw; 
-    }
-  
-    .manager,
-    .Names {
-      font-size: 2.5vw; 
-    }
-
-    .line {
-        height: 0px;
-      }
-  }
-  
-  
   @media (max-width: 576px) {
     .titles {
-      font-size: 4vw; 
+      font-size: 7.5vw; 
     }
   
     .manager,
     .Names {
-      font-size: 3vw; 
+      font-size: 5.5vw; 
     }
 
     .line {
         height: 0px;
+        width: 0vw;
+
       }
   }
   
