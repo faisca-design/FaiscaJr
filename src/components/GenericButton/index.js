@@ -10,7 +10,7 @@ function GenericButton({ ButtonText, OutLink }) {
         <div>
             {/* <button className={styles.redirect} onClick={handleButtonClick}> comentei pq ta com erro :(*/}
             <button className={styles.redirect}>
-                <BsArrowUpRight size={15} color="#000" />
+                <BsArrowUpRight size="2vh" color="#000" />
                 <p className={styles.buttonText}> {ButtonText} </p>
 
             </button>

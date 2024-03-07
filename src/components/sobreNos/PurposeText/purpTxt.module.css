@@ -1,14 +1,18 @@
-.purpTxt{
+.purpTxt {
     display: flex;
     align-items: center;
     justify-content: center;
-
-}
-
-.purpTxt > p {
+  }
+  
+  .purpTxt p {
     color: white;
-    width: 50%;
-    font-size: 3.6vh;
-}
-
-
+    width: 60%;
+    font-size: 4.6vh;
+    text-align: center;
+    margin-top: 6vh;
+  }
+  
+  .altText{
+    font-Family: 'Allegin';
+    font-weight: 100;
+  }
