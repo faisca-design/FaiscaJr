@@ -29,15 +29,15 @@
         padding-top: 6.94vh; 
         margin: auto;
         display: block;
-        width: 41.67vw; 
-        height: 41.67vw; 
+        width: 75vw; 
+        height: 50vh; 
         align-items: center;
     }
 
     .projetoTitle {
         color: white;
         text-align: center;
-        font-size: 3.89vw; 
+        font-size: 5.89vw; 
         font-weight: 200;
         font-family: 'Chillax';
         padding-top: 6.94vh; 
