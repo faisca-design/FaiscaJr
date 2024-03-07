@@ -14,7 +14,6 @@ export default function ProjectPurpose() {
         alt={'nome'}
         width={1000}
         height={585}
-        style={{ width: '80vw', height: '76.36vh' }} // Definindo o tamanho da imagem em vw e vh
       />
     </div>
   );

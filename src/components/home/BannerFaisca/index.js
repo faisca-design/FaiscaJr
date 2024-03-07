@@ -17,14 +17,6 @@ export default function BannerFaisca() {
             alt={'nome'} 
             width={853} 
             height={687} 
-            style={{ 
-              width: '45vw', 
-              height: '75vh', 
-              '@media only screen and (max-width: 600px)': {
-                width: '25vw', 
-                height: '25vh', 
-              }
-            }} 
           />
         </div>
         <div>
