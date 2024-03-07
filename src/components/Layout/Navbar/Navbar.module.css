@@ -1,7 +1,7 @@
 .navbar{
     display: flex;
     flex-direction: column;
-    background-color: #3f241c;
+    background-color: transparent;
     padding: 1em;
 }
 
@@ -26,8 +26,9 @@
 }
 
 .fixedHeader {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     z-index: 100;
 }

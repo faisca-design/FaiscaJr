@@ -106,6 +106,7 @@ input[type="date"]:not(.has-value):valid:before{
     font-size: 1vw;
 }
 
+
 @media screen and (max-width: 600px) {
 
     .row{
