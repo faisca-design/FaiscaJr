@@ -2,10 +2,17 @@
     font-size: large;
     display: flex;
     flex-direction: column;
-    height: 60vh;
     width: 60vw;
     margin: auto;
 }
+
+.mainDiv {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
 
 .row{
     display: flex;
@@ -17,7 +24,7 @@
     
 }
 
-.row input, .row select {
+.row input, .row select{
     height: 70% !important; 
     width: 32%;
     box-sizing:content-box;
@@ -30,12 +37,19 @@
 }
 
 
-.row > input, .row > select, .Form > input{
+.row > input, .row > select, .form > input, .form > textarea{
     
     height: 7vh;
     border-radius: 15px;
     border-style: hidden;
     background-color: #D9D9D9;
+}
+
+.form > textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 7vh;
+    overflow-y: hidden;
 }
 
 .submit {
@@ -45,7 +59,7 @@
 
 }
 
-.form > input {
+.form > input, .form > textarea {
     margin-top: 1.5vh;
 }
 
@@ -53,3 +67,71 @@
     text-align: center;
     color: black;
 }
+
+
+input[type="date"]:not(.has-value):before{
+    color: rgb(0, 0, 0);
+    content: attr(placeholder);
+}
+
+input[type="date"]:not(.has-value):valid:before{
+    content: attr(none);
+}
+
+
+.rectangleSuccess {
+    background-color: #D472A8;
+    width: 40%;
+    height: 7vh;
+    border-radius: 15px;
+    margin-top: 5vh;
+    text-align: center;
+    color: white;
+    line-height: 7vh;
+    margin-left: 30%;
+    font-size: 1vw;
+    display: none;
+}
+
+.rectangleFailed {
+    background-color: #E01D1D;
+    width: 40%;
+    height: 7vh;
+    border-radius: 15px;
+    margin-top: 5vh;
+    text-align: center;
+    color: white;
+    line-height: 7vh;
+    margin-left: 30%;
+    font-size: 1vw;
+}
+
+@media screen and (max-width: 600px) {
+
+    .row{
+        flex-direction: column;
+        justify-content: center;
+        height: 20vh;
+        width: 100%;
+        align-items: center;
+    }
+
+
+    .row > input, .row > select, .form > input, .form > textarea{
+
+        width: 100% ; 
+        margin-top: 2vh;
+        border-radius: 4vw;
+    }
+
+    .form{
+        margin: auto;
+        align-items: center;
+        width: 80vw;
+    }
+
+    .submit {
+        width: 70% !important;
+    }
+    
+  }

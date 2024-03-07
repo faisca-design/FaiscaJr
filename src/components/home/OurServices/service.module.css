@@ -17,3 +17,21 @@
     margin-left: 0;
     width: 100%;
 }
+
+
+@media screen and (max-width: 600px) {
+    .service > hr {
+      display: none;
+    }
+
+
+    .service {
+        justify-content: center;
+    }
+
+    .service > p {
+        text-align: center;
+        margin-top: 2vh;
+    }
+
+  }
