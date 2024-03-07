@@ -28,4 +28,18 @@
     .projetos {
         padding-left: 2vh;
     }
+
+    .projetosTitle {
+        text-align: left;
+        color: white;
+        font-size: 7.5vw; 
+        font-family: 'Allegin';
+        font-weight: 200;
+        padding-bottom: 2.08vh; 
+    }
+
+    .imgcarimbo {
+        width: 585px; 
+        height: 585px; 
+    }
 }

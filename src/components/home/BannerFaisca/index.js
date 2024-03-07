@@ -18,11 +18,11 @@ export default function BannerFaisca() {
             width={853} 
             height={687} 
             style={{ 
-              width: '45vw', // Define largura relativa à tela para desktop
-              height: '75vh', // Define altura relativa à tela para desktop
+              width: '45vw', 
+              height: '75vh', 
               '@media only screen and (max-width: 600px)': {
-                width: '426px', // Reseta a largura para tamanho automático em dispositivos móveis
-                height: '426px', // Reseta a altura para tamanho automático em dispositivos móveis
+                width: '25vw', 
+                height: '25vh', 
               }
             }} 
           />
