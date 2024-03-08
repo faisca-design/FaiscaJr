@@ -98,9 +98,10 @@
     position: relative;
     display: flex;
     bottom: -497px;
-    right: 27vh;
+    right: 23vh;
     font-size: 30px;
     color: white;
+    font-weight: 500;
  }   
 
 
