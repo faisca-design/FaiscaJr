@@ -8,7 +8,7 @@ function Cases ({titulo1, titulo2, imagem, imagem2, imagem3, imagem4, imagem5, i
         <div className={styles.container}>
             <div className={styles.containerTitle}>
               <h1 className={styles.title}>
-                  encontramos   <span className={styles.altText}> soluções ideias</span>
+                  encontramos<span className={styles.altText}>soluções ideias</span>
               </h1>
               <h1 className={styles.title}>
                   para cada tipo de desafio

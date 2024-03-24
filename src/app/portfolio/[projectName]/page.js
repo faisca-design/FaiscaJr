@@ -4,7 +4,7 @@ import ProjectPurpose from "@components/projeto/ProjectPurpose";
 import ProjectServices from "@components/projeto/ProjectServices"
 import ProjectValues from "@components/projeto/ProjectValues"
 import ProjectCarousel from "@components/projeto/ProjectCarousel";
-import GenericButtonOutLink from "@components/GenericButtonOutLink"
+import GenericButton from "@/components/GenericButton";
 import styles from "./styles.module.css"
 
 export default function Page({ params }) {
@@ -30,7 +30,7 @@ export default function Page({ params }) {
 
       <div className={styles.container}>
         <ProManegers ProGerente="Fulano da Silvinha" projetista={projetistas} />
-        <GenericButtonOutLink ButtonText="Veja mais no nosso behance!" OutLink="https://www.behance.net/" />
+        <GenericButton ButtonText={"Veja mais no nosso behance!"} OutLink={'youtube.com'}/>
       </div>
 
       <ProjectCarousel />
