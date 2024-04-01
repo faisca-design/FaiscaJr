@@ -61,7 +61,8 @@
 @media only screen and (max-width: 600px) {
     .container{
         flex-direction: column;
-        padding: 5px;
+        padding: 25px;
+        overflow-x: hidden!important;
     }
     
     .logo{
@@ -71,10 +72,10 @@
     }
     
     .imglogo{
-        padding-left: 350px;
-        padding-top: 250px;
-        width: 450px;
-        height: 450px;
+        padding-left: 200px;
+        margin-bottom: -350px;
+        width: 381px;
+        height: 303px;
     }
     
     .title1{
@@ -92,7 +93,7 @@
         font-size: 75px;
         line-height: 78px;
         padding-bottom: 25px;
-        margin-top: -190px;
+        
     }
     
     .title3{

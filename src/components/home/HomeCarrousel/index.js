@@ -16,14 +16,15 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
 
 const Slider = (props) => {
     const PartnersConfig = {
-        loop: true,
-        nav: true, 
-        dots: false,
+        loop: false,
+        nav: true,
+	    navText:["<",">"],
+        dots: true,
         autoplay: true,
         autoplayTimeout: 5000,
         autoplaySpeed: 2000,
-        autoplayHoverPause: true,
-        responsiveClass: true,
+        autoplayHoverPause: false,
+        responsiveClass: false,
         mouseDrag: true,
         touchDrag: true,
         responsive: {
@@ -37,15 +38,20 @@ const Slider = (props) => {
                 items: 1,
             },
         },
-        navContainerClass: 'owl-nav',
-        navClass: [`${styles.owlPrev}`, `${styles.owlNext}`],
-        navText: ['<', '>'], // Textos das setas
     };
 
     return (
         <div className={styles.depoimentos}>
             <h2 className={styles.depoimentosTitle}>O QUE NOSSOS CLIENTES TEM A DIZER</h2>
             <OwlCarousel className={styles.slider} {...PartnersConfig}>
+                <div className={styles.item}>
+                    <h2 className={styles.depoimentosText}>
+                        “Trabalhar com a faísca foi uma excelente experiência, o resultado superou
+                        toda e qualquer expectativa. Nos impactou de tal forma que buscamos estabelecer
+                        uma parceria e recomendamos o trabalho sempre que possível”
+                        <h2 className={styles.clientName}>Equipe IECBiot</h2>
+                    </h2>
+                </div>
                 <div className={styles.item}>
                     <h2 className={styles.depoimentosText}>
                         “Trabalhar com a faísca foi uma excelente experiência, o resultado superou

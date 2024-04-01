@@ -43,16 +43,19 @@
     border-color: white;
     margin-right: 3vw;
     padding-bottom: 150px;
+    margin-left: 15px;
 }
 
 @media only screen and (max-width: 600px) {
     .depoimentos {
-        padding: 5vh;
+        padding: 0px;
+        margin-top: 50px;
     }
 
     .depoimentosTitle {
         text-align: center;
         font-size: 5.5vh;
+        margin-bottom: -50px;
     }
 
     .depoimentosText {
@@ -67,14 +70,16 @@
     }
 
     .item {
-        padding: 5vh;
+        padding: 8vh;
+        height: 8vh;
+        margin-left: 5px;
+        margin-left: 5px;
         padding-bottom: 50vh;
         height: 10vh;
         background: transparent;
-        border: none;
-        border-width: 0px;
+        border: solid;
+        border-width: 0;
         border-color: white;
-        margin-right: 3vw;
     }
 
     .clientName {
