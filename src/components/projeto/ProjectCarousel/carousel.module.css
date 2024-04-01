@@ -20,7 +20,7 @@
 }
 
 .imgcarimbo {
-    width: 100vw; 
+    width: 585px; 
     height: 585px; 
 }
 
@@ -39,7 +39,7 @@
     }
 
     .imgcarimbo {
-        width: 585px; 
-        height: 585px; 
+        width: 2px; 
+        height: 250px; 
     }
 }
