@@ -30,7 +30,7 @@ export default function Page({ params }) {
 
       <div className={styles.container}>
         <ProManegers ProGerente="Fulano da Silvinha" projetista={projetistas} />
-        <GenericButton ButtonText={"Veja mais no nosso behance!"} OutLink={'youtube.com'}/>
+        <GenericButton ButtonText={"Veja mais no nosso behance!"} OutLink={'/portfolio/oiiiQueridos'}/>
       </div>
 
       <ProjectCarousel />
