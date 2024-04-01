@@ -53,13 +53,13 @@ const Slider = (props) => {
         <OwlCarousel   className={styles.slider}
             {...PartnersConfig2}   >
           <div className={styles.item}>
-            <Image className={styles.imgcarimbo} src={proj1} alt={'nome'} width={1000} height={585}/>
+            <Image className={styles.imgcarimbo} src={proj1} alt={'nome'} />
           </div>
           <div className={styles.item}>
-            <Image className={styles.imgcarimbo} src={proj2} alt={'nome'} width={1000} height={585}/>
+            <Image className={styles.imgcarimbo} src={proj2} alt={'nome'} />
           </div>
           <div className={styles.item}>
-            <Image className={styles.imgcarimbo} src={proj3} alt={'nome'} width={1000} height={585}/>
+            <Image className={styles.imgcarimbo} src={proj3} alt={'nome'} />
           </div>
         </OwlCarousel>
       </div>
