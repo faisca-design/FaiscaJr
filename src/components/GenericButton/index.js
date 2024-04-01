@@ -1,22 +1,27 @@
-import { BsArrowUpRight } from "react-icons/bs";
-import styles from './GenericButton.module.css'
+'use client'
 
-function GenericButton({ ButtonText, OutLink }) {
-    function handleButtonClick () {
-        window.open( OutLink , '_blank');
-    };
+import { BsArrowUpRight } from "react-icons/bs";
+import styles from './GenericButton.module.css';
+import { usePathname } from 'next/navigation'
+import Link from 'next/link';
+
+
+function GenericButton({ ButtonText, pathWay }) {
+    const pathname = usePathname()
 
     return (
-        <div>
-            {/* <button className={styles.redirect} onClick={handleButtonClick}> comentei pq ta com erro :(*/}
-            <button className={styles.redirect}>
-                <BsArrowUpRight size="2vh" color="#000" />
-                <p className={styles.buttonText}> {ButtonText} </p>
-
-            </button>
-
-        </div>
-    );
+        <nav>
+            <ul>
+                <li>
+                    <Link className={`${styles.redirect} link ${pathname === '/' ? 'active' : ''}`} href="/portfolio/oiiiQueridos">
+                        <BsArrowUpRight size="2vh" color="#000" />
+                        <p className={styles.buttonText}> {ButtonText} </p>
+                    </Link>
+                </li>
+            </ul>
+        </nav>
+    )
 }
+
 
 export default GenericButton;

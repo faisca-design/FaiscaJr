@@ -8,6 +8,8 @@
   padding-bottom: .5vw;
   display: flex;
   border: 0;
+  background-color: white;
+  text-decoration: none;
   transition: transform 0,2s;
 }
 
