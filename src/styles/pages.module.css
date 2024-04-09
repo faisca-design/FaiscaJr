@@ -1,9 +1,20 @@
 .page{
-    background-color: #1E181A;
     min-height: 80vh;
     display: flex;
     flex-direction: column;
     gap: 100px;
+    height: 300vh;
+    height: 300vh;
+    height: 2000vh;
+    background: 
+    radial-gradient(circle at 100% 2%, #9e431e, transparent 5%),
+    radial-gradient(circle at -10% 12%, #9e431e, transparent 10%),
+    radial-gradient(circle at 100% 20%, #9e431e, transparent 10%),
+    radial-gradient(circle at -10% 40%, #9e431e, transparent 15%),
+    radial-gradient(circle at 100% 60%, #9e431e, transparent 15%),
+    radial-gradient(circle at -10% 80%, #9e431e, transparent 15%),
+    radial-gradient(circle at 100% 100%, #9e431e, transparent 10%),
+    #1E181A;
 }
 
 .withPadding{
