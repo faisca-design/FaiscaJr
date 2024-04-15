@@ -1,20 +1,15 @@
 import { BsArrowUpRight } from "react-icons/bs";
-import styles from './GenericOutLink.module.css'
-import Link from 'next/link';
+import styles from './GenericOutLink.module.css';
 
-function GenericButtonOutLink({ ButtonText, outLink}) {
-
+function GenericOutLink({ buttonText, outLink }) {
     return (
         <div>
-            <Link href={outLink} passHref>
-            <button className={styles.redirect}>
+            <a href={outLink} className={styles.redirect} target="_blank" rel="noopener noreferrer">
                 <BsArrowUpRight size="2vh" color="#000" />
-                <p className={styles.buttonText}> {ButtonText} </p>
-
-            </button>
-            </Link>
+                <p className={styles.buttonText}> {buttonText} </p>
+            </a>
         </div>
     );
 }
 
-export default GenericButtonOutLink;
+export default GenericOutLink;

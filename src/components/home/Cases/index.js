@@ -57,7 +57,7 @@ function Cases ({titulo1, titulo2, imagem, imagem2, imagem3, imagem4, imagem5, i
                     </label>
                 </figure>
             </div>
-            <GenericButton ButtonText="Mais Projetos"/>
+            <GenericButton ButtonText="Mais Projetos" pathWay="/portfolio"/>
         </div>
     )
 }

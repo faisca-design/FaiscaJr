@@ -4,8 +4,8 @@ import ProjectPurpose from "@components/projeto/ProjectPurpose";
 import ProjectServices from "@components/projeto/ProjectServices"
 import ProjectValues from "@components/projeto/ProjectValues"
 import ProjectCarousel from "@components/projeto/ProjectCarousel";
-import GenericButton from "@/components/GenericButton";
-import styles from "./styles.module.css"
+import GenericOutLink from "@/components/GenericButtonOutLink";
+import styles from "./styles.module.css";
 
 export default function Page({ params }) {
   const projetistas = ["Fulano da Silvinha", "Ciclaninho dos Santos"];
@@ -30,7 +30,7 @@ export default function Page({ params }) {
 
       <div className={styles.container}>
         <ProManegers ProGerente="Fulano da Silvinha" projetista={projetistas} />
-        <GenericButton ButtonText={"Veja mais no nosso behance!"} OutLink={'/portfolio/oiiiQueridos'}/>
+        <GenericOutLink buttonText="Ir para o Behance" outLink="https://www.behance.net/" />
       </div>
 
       <ProjectCarousel />
