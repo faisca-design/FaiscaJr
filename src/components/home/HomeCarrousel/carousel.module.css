@@ -58,8 +58,8 @@
     }
 
     .depoimentosText {
-        padding-right: 0px;
-        padding-left: 0px;
+        padding-right: -50px;
+        padding-left: -50px;
         padding-top: 0px;
         padding-bottom: 22vh;
         border: none;
@@ -69,10 +69,10 @@
     }
 
     .item {
-        padding: 8vh;
+        padding: 5vh;
         height: 8vh;
-        margin-left: 5px;
-        margin-left: 5px;
+        margin-left: 1px;
+        margin-left: 1px;
         padding-bottom: 50vh;
         height: 10vh;
         background: transparent;
