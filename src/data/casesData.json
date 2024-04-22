@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "imagem": "./../../public/img/home/Cases/1.png",
+    "nomeProjeto": "Jeikoa"
+  },
+  {
+    "id": 2,
+    "imagem": "./../../public/img/home/Cases/2.png",
+    "nomeProjeto": "Coco Nude"
+  },
+  {
+    "id": 3,
+    "imagem": "./../../public/img/home/Cases/3.png",
+    "nomeProjeto": "Núcleo Impulso"
+  },
+  {
+    "id": 4,
+    "imagem": "./../../public/img/home/Cases/4.png",
+    "nomeProjeto": "Chamas da Insignificância"
+  },
+  {
+    "id": 5,
+    "imagem": "./../../public/img/home/Cases/5.png",
+    "nomeProjeto": "Bako Bebidas"
+  },
+  {
+    "id": 6,
+    "imagem": "./../../public/img/home/Cases/6.png",
+    "nomeProjeto": "Spotlight"
+  }
+]

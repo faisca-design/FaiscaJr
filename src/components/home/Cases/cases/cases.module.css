@@ -1,0 +1,42 @@
+.imageContainer {
+    position: relative;
+    width: 71vh;
+}
+
+.projectName {
+    font-weight: 500;
+    font-size: 3.2vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 4vh;
+    color: white;
+}
+
+.grayscaleImage {
+    filter: grayscale(100%);
+    transition: filter 0.4s ease-in-out;
+}
+
+.colorfulImage {
+    filter: grayscale(0%);
+    transition: filter 0.4s ease-in-out;
+}
+
+@media (max-width: 576px) {
+    .imageContainer {
+        width: 72vw;
+        justify-content: center;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .projectName {
+        font-weight: 500;
+        font-size: 2.3vh;
+        left: 50%; 
+        transform: translateX(-50%); 
+        text-align: center; 
+    }
+}

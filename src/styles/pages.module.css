@@ -3,9 +3,7 @@
     display: flex;
     flex-direction: column;
     gap: 100px;
-    height: 300vh;
-    height: 300vh;
-    height: 2000vh;
+    height: 100%;
     background: 
     radial-gradient(circle at 100% 2%, #9e431e, transparent 5%),
     radial-gradient(circle at -10% 12%, #9e431e, transparent 10%),
