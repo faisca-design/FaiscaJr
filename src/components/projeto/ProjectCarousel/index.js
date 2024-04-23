@@ -42,9 +42,6 @@ const Slider = (props) => {
         items: 3,
       },
     },
-    navContainerClass: `${styles.owlNav}`,
-    navClass: [`${styles.owlPrev}`, `${styles.owlNext}`],
-    navText: ['', ''],
   };
 
     return (

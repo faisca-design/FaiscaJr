@@ -5,7 +5,7 @@
 .projetoTitle {
     color: white;
     text-align: center;
-    font-size: 3.26vw; /* Alterado para usar unidades de vw */
+    font-size: 2.7vw; /* Alterado para usar unidades de vw */
     font-weight: 200;
     font-family: 'Chillax';
     padding-top: 6.94vh; /* Alterado para usar unidades de vh */
@@ -21,8 +21,8 @@
     padding-top: 17.36vh; 
     margin: auto;
     display: block;
-    width: 85vw;
-    height: 103vh;
+    width: 76.6vw;
+    height: 80vh;
     align-items: center;
 }
 

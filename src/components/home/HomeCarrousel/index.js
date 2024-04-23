@@ -18,7 +18,6 @@ const Slider = (props) => {
     const PartnersConfig = {
         loop: false,
         nav: true,
-	    navText:["<",">"],
         dots: true,
         autoplay: true,
         autoplayTimeout: 5000,

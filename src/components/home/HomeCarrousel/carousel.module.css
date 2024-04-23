@@ -1,7 +1,7 @@
 .depoimentos {
     padding: 25vh;
     padding-bottom: 40vh;
-    padding-bottom: 5vh;
+    padding-bottom: 16vh;
     margin-bottom: 80px;
 }
 
@@ -53,7 +53,7 @@
 
     .depoimentosTitle {
         text-align: center;
-        font-size: 5.5vh;
+        font-size: 5vh;
         margin-bottom: -50px;
     }
 
@@ -65,7 +65,7 @@
         border: none;
         text-align: center;
         font-weight: 100;
-        margin-bottom: 5vh;
+        margin-bottom: 4.8vh;
     }
 
     .item {
