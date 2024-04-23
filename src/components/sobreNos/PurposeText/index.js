@@ -2,7 +2,7 @@ import styles from "./purpTxt.module.css"
 
 function PurpTxt(){
     return(
-        <div className={styles.purpText}>
+        <div className={styles.purpTxt}>
                 <p>  
                 nós projetamos <span className='Allegin'>experiências valiosas </span>para a vida das pessoas.
                  com uma abordagem <span className='Allegin'>estratégica</span>, utilizamos <span className='Allegin'>pesquisa</span> de experiência de usuário, 

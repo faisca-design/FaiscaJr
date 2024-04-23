@@ -9,6 +9,15 @@
     color: white;
     width: 50%;
     font-size: 3.6vh;
+    text-align: center;
+    line-height: normal;
 }
 
+@media screen and (max-width: 600px) {
 
+    .purpTxt > p {
+        width: 90%;
+        text-align: left;
+    }
+
+  }
