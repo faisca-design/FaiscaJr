@@ -9,6 +9,10 @@ function ContactText(){
                 <div className={styles.lowTextAux}>
                     <p className={styles.lowText}> { TextLow } </p>
                 </div>
+  
+                <div className={styles.Separator}>
+                  <hr className={styles.HRSeparator}/>
+                </div>
         </div>
     )
 
