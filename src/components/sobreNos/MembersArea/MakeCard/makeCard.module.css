@@ -1,0 +1,29 @@
+.card{
+    padding: 2vh;
+    margin-bottom: 2vh;
+    width: 12.1%;
+  }
+  
+  .cardImg{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cardText{
+    background-color: #6C6060;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .Nomes {
+    font-weight: 440;
+    font-size: 2.2vh;
+    margin-top: 2vh;
+  }
+  
+  .Ciclo{
+    margin-bottom: 2vh;
+    font-size: 2.2vh;;
+    font-weight: 100;
+  }
