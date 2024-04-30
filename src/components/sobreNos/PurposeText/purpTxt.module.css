@@ -1,19 +1,23 @@
-.purpTxt {
+.purpTxt{
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 1.2;
-  }
-  
-  .purpTxt p {
+
+}
+
+.purpTxt > p {
     color: white;
-    width: 60%;
-    font-size: 4.6vh;
+    width: 50%;
+    font-size: 3.6vh;
     text-align: center;
-    margin-top: 6vh;
-  }
-  
-  .altText{
-    font-Family: 'Allegin';
-    font-weight: 100;
+    line-height: normal;
+}
+
+@media screen and (max-width: 600px) {
+
+    .purpTxt > p {
+        width: 90%;
+        text-align: left;
+    }
+
   }
