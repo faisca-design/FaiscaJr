@@ -1,7 +1,7 @@
 .headerForm{
     display: flex;
     flex-direction: row;
-    margin-top: 5vh;
+    margin-top: 0;
 }
 
 .headerFormTxt{
@@ -22,11 +22,11 @@
 }
 
 .lowTxt {
-    font-size: 1vw;
+    font-size: 1.4vw;
 
 }
 .headerFormTxt > p {
-    font-size: 1.5vw;
+    font-size: 1.8vw;
     text-align: left;
     color: white;
 }

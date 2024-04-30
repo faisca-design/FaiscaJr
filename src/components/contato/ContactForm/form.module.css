@@ -40,7 +40,7 @@
 .row > input, .row > select, .form > input, .form > textarea{
     
     height: 7vh;
-    border-radius: 15px;
+    border-radius: 20px;
     border-style: hidden;
     background-color: #D9D9D9;
 }
@@ -56,6 +56,7 @@
     background-color: #D45827 !important;
     margin-top: 3vh !important;
     color: white;
+    height: 7vh;
 
 }
 
@@ -83,7 +84,7 @@ input[type="date"]:not(.has-value):valid:before{
     background-color: #D472A8;
     width: 40%;
     height: 7vh;
-    border-radius: 15px;
+    border-radius: 20px;
     margin-top: 5vh;
     text-align: center;
     color: white;
@@ -97,7 +98,7 @@ input[type="date"]:not(.has-value):valid:before{
     background-color: #E01D1D;
     width: 40%;
     height: 7vh;
-    border-radius: 15px;
+    border-radius: 20px;
     margin-top: 5vh;
     text-align: center;
     color: white;
@@ -106,23 +107,22 @@ input[type="date"]:not(.has-value):valid:before{
     font-size: 1vw;
 }
 
-
 @media screen and (max-width: 600px) {
 
     .row{
         flex-direction: column;
         justify-content: center;
-        height: 20vh;
+        height: 30vh;
         width: 100%;
         align-items: center;
     }
 
 
     .row > input, .row > select, .form > input, .form > textarea{
-
+        height: 12vh !important;
         width: 100% ; 
         margin-top: 2vh;
-        border-radius: 4vw;
+        border-radius: 20px;
     }
 
     .form{
@@ -133,6 +133,7 @@ input[type="date"]:not(.has-value):valid:before{
 
     .submit {
         width: 70% !important;
+        height: 12vh;
     }
     
   }
