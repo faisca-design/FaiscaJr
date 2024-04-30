@@ -1,7 +1,8 @@
 .projetos {
-    width: 100vw;
+    width: 90vw;
     height: 100vh;
-    padding-left: 13vh;
+    padding-right: 0px;
+    padding-left: 8.9vw;
     padding-top: 10vh; 
     padding-bottom: 10vh;
 }
@@ -11,12 +12,13 @@
     color: white;
     font-size: 3.1vw; 
     font-family: 'Allegin';
+    padding-left: 2.08vw ;
     font-weight: 200;
     padding-bottom: 2.08vh; 
 }
 
 .item {
-    padding-right: 2.08vw; 
+    padding-left: 2.08vw; 
 }
 
 .imgcarimbo {
