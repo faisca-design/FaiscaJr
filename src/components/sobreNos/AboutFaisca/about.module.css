@@ -5,11 +5,19 @@
 
 .container{
    margin-bottom: 3vh;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
 }
 
 .containerImagem{
-    float: left;
-    margin-right: 15vh;
+    margin-right: 6vh;
 }
 
 .fraseDestaque{
@@ -25,5 +33,31 @@
 }
 
 .paragrafo:first-child{
-    margin-bottom: 1.5vw;
+    margin-bottom: .5vw;
+}
+
+@media (max-width: 576px) {
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+     }
+     
+     .containerImagem{
+        margin-right: 0;
+    }
+
+    .paragrafo{
+        font-size: 1.8vh;
+        text-align: left;
+     }
+
+    .preenchimento{
+        padding: 10%;
+    }   
+
+    .paragrafo:first-child{
+        margin-bottom: 1.5vw;
+    }
+    
 }
