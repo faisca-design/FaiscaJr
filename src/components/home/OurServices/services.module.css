@@ -8,9 +8,12 @@
 }
 
 .services > p {
-    font-size: 3vh;
+    font-size: 3.46vh;
     color: white;
     text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     font-family: 'Allegin', sans-serif !important;
     margin-bottom: 2vh;
 }
