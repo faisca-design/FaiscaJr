@@ -2,61 +2,111 @@
     color: white;
     margin-top: 0;
     margin-bottom: 0;
+    
 }
 
-.lowTextAux{
+/* .lowTextAux{
     width: 10%;
     position: relative;
+} */
+
+.lowTextAux{
+    width: 40%;
+    position: relative;
+    align-items: center;
+    margin-top: 2vh;
 }
+
+/* .highText {
+    width: 25%;
+    font-size: 4.5vh;
+} */
 
 .highText {
-    width: 25%;
-    font-size: 4.6vh;
-    line-height: 1.5;
+    width: 40%;
+    text-align: left;
+    font-size: 4.2vw
 }
 
 
-.lowText {
+/* .lowText {
     font-size: 1.6vh;
     position: absolute;
     bottom: 0;
     text-align: left;
+} */
+
+.lowText {
+    font-size: 1.95vw;
+    position: relative;
+    bottom: 0;
+    text-align: left;
+    margin-top: 2vw;
+}
+ 
+
+.HRSeparator {
+    background-color: black;
+    width: 100%;
+    margin-top: 5vh;
+}
+
+.Separator {
+    visibility: hidden;
+    width: 100%;
+    height: 10vh;
 }
 
 .contact {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-
-.altText{
-    font-Family: 'Allegin';
-    font-weight: 100;
-  }
-
 @media screen and (max-width: 600px) {
 
-    .highText {
+/*     .highText {
         width: 90%;
         text-align: left;
-    }
+    } */
 
-    .contact {
+/*     .contact {
         flex-direction: column;
         margin-left: 10vw;
-    }
+    } */
 
-    .lowText {
+/*     .lowText {
         font-size: 1.95vh;
         position: relative;
         bottom: 0;
         text-align: left;
  
-    }
+    } */
 
-    .lowTextAux{
+   /*  .lowTextAux{
         width: 90%;
         position: relative;
+    } */
+
+    .Separator {
+        visibility: visible;
+        width: 40%;
+        align-items: center;
     }
 
+    .highText {
+        font-size: 8vw
+    }
 
+    .lowText {
+        font-size: 4vw;
+    }
+    
+    .lowTextAux{
+        width: 70%;
+    }
+
+    .highText {
+        width: 70%;
+    }
   }
