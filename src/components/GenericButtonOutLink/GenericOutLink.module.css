@@ -27,14 +27,14 @@
 
 @media (max-width: 576px) {
   .buttonText{
-    font-size: 4.5vw;
+    font-size: 4.2vw;
     margin-left: 1vw;
   }
 
   .redirect{
     padding-left: 6.5vw;
     padding-right: 6.5vw;
-    padding-top: 4vw;
-    padding-bottom: 4vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
   }
 }

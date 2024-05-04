@@ -2,50 +2,107 @@
     color: white;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    width: 78%;
     align-content: center;
-    justify-content: center;
-    align-items: center
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7%;
 }
 
 .upperImages{
     display: flex;
     flex-direction: row;
     align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 4%;
+}
+
+.containerImages{
+    width: 78%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .smallImage1{
-    width: 680px;
-    height: 785px;
+    width: 48%;
+    height: auto;
 }
 
 .smallImage2{
-    width: 680px;
-    height: 785px;
-    margin-left: 108px;
+    width: 48%;
+    height: auto;
 }
 
 .lowerImages{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    padding: 100px;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .image{
-    width: 1468px;
-    height: 906px;
+    width: 100%;
+    height: auto;
+    margin-top: auto;
 }
 .bar{
     display: flex;
-    margin: 161px;
+    margin: 4%;
+    width: 15%;
 }
 
 .text{
-    font-size: 3em;
+    font-size: 5vh;
+    font-weight: normal;
 }
+
+@media (max-width: 576px) {
+    .containerText{
+        display: flex;
+        flex-direction: column;
+        width: 78%;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 7%;
+    }
+
+    .text{
+        font-size: 4vh;
+       margin-bottom: 12%;
+    }
+
+    .bar{
+        display: none;
+    }
+
+    .upperImages{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10%;
+    }
+
+    .containerImages{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .smallImage1{
+        width: 100%;
+        height: auto;
+    }
+    
+    .smallImage2{
+        width: 100%;
+        height: auto;
+    }
+  }

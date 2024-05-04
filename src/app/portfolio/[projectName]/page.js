@@ -15,19 +15,19 @@ export default function Page({ params }) {
       <ProjectBanner />
       <ProjectPurpose />
       <ProjectServices
-        titulo1="titulo1"
-        titulo2="titulo2"
-        titulo3="titulo3"
+        titulo1="site"
+        titulo2="identidade visual"
+        titulo3="rótulo"
       />
       <ProjectValues
-        titulo1="titulo1"
-        titulo2="titulo2"
-        titulo3="titulo3"
+        titulo1="força"
+        titulo2="energia vibrante"
+        titulo3="vibrante"
       />
 
       <div className={styles.container}>
         <ProManegers ProGerente="Fulano da Silvinha" projetista={projetistas} />
-        <GenericOutLink buttonText="Ir para o Behance" outLink="https://www.behance.net/" />
+        <GenericOutLink buttonText="veja mais no nosso Behance!" outLink="https://www.behance.net/" />
       </div>
 
       <ProjectCarousel />
