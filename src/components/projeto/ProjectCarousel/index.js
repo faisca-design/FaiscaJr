@@ -50,13 +50,13 @@ const Slider = (props) => {
         <OwlCarousel   className={styles.slider}
             {...PartnersConfig2}   >
           <div className={styles.item}>
-            <Image className={styles.imgcarimbo} src={proj1} alt={'nome'} />
+            <Image className={styles.imgcarimbo} src={proj1} alt={'nome'}  />
           </div>
           <div className={styles.item}>
             <Image className={styles.imgcarimbo} src={proj2} alt={'nome'} />
           </div>
           <div className={styles.item}>
-            <Image className={styles.imgcarimbo} src={proj3} alt={'nome'} />
+            <Image className={styles.imgcarimbo} src={proj3} alt={'nome'}  />
           </div>
         </OwlCarousel>
       </div>

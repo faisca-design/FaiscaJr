@@ -1,47 +1,48 @@
 .projetos {
-    width: 90vw;
+    width: 100vw; 
     height: 100vh;
-    padding-right: 0px;
-    padding-left: 8.9vw;
-    padding-top: 10vh; 
+    padding-right: auto;
+    padding-left: 5vw; 
+    padding-top: 10vh;
     padding-bottom: 10vh;
-}
-
-.projetosTitle {
+  }
+  
+  .projetosTitle {
     text-align: left;
     color: white;
-    font-size: 3.1vw; 
+    font-size: 3.1vw;
     font-family: 'Allegin';
-    padding-left: 2.08vw ;
+    padding-left: 3vw; 
     font-weight: 200;
-    padding-bottom: 2.08vh; 
-}
-
-.item {
-    padding-left: 2.08vw; 
-}
-
-.imgcarimbo {
-    width: 585px; 
-    height: 585px; 
-}
-
-@media only screen and (max-width: 600px) { 
+    padding-bottom: 2.08vh;
+  }
+  
+  .item {
+    padding-left: 3vw; 
+  }
+  
+  .imgcarimbo {
+    width: 100%; 
+    height: auto; 
+  }
+  
+  @media only screen and (max-width: 600px) {
     .projetos {
-        padding-left: 2vh;
+      padding-left: 2vh;
     }
-
+  
     .projetosTitle {
-        text-align: left;
-        color: white;
-        font-size: 7.5vw; 
-        font-family: 'Allegin';
-        font-weight: 200;
-        padding-bottom: 2.08vh; 
+      text-align: left;
+      color: white;
+      font-size: 7.5vw;
+      font-family: 'Allegin';
+      font-weight: 200;
+      padding-bottom: 2.08vh;
     }
-
+  
     .imgcarimbo {
-        width: 2px; 
-        height: 180px; 
+      width: 100%; 
+      height: auto; 
     }
-}
+  }
+  
