@@ -2,15 +2,10 @@ import Image from 'next/image'
 import styles from './makeCard.module.css'
 
 
-function MakeCard({ imagem, nome, ciclo, marginLeft, marginRight }) {
-    
-    const cardStyle = {
-        marginLeft: marginLeft, 
-        marginRight: marginRight,
-      };
+function MakeCard({ imagem, nome, ciclo}) {
 
     return (
-        <div style={cardStyle} className={styles.card}>
+        <div className={styles.card}>
             <div className={styles.cardImg}>
                 <div className={styles.cardText}>
                     <h2 className={styles.Nomes}>{nome}</h2>

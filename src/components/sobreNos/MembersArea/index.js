@@ -1,56 +1,30 @@
 import styles from './cards.module.css'
-import foto from '@img/sobreNos/Foto01.png'
 import MakeCard from './MakeCard';
+import membersData from './../../../data/membersData.json'
 
 
 function Cards() {
 
     return (
 
-        <section className={styles.container}>
-            <div className={styles.row}>
-                <h2 className={styles.title}>Nossa <br></br>Equipe</h2>
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="10%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="11%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="0%" />
+        <div>
+            <h2 className={styles.title}>Nossa Equipe</h2>
+            <h1 className={styles.subTittle}>Estas são as pessoas que fazem a Faísca acontecer.</h1>
+            <section className={styles.container}>
+                <div className={styles.row}>
+                    {membersData.map((DMembers) => (
+                        <MakeCard
+                            key={DMembers.id}
+                            imagem={`/img/sobreNos/members/${DMembers.id}.png`}
+                            nome={DMembers.nome}
+                            ciclo={DMembers.ciclo}
+                        />
+                    ))}
+                </div>
 
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="6%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="6%" marginRight="0%" />
 
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="12%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="9%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="6%" marginRight="0%" />
-
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="18%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="9%" />
-
-                {/* a partir daqui repete o padrão */}
-                
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="30%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="11%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="0%" />
-
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="6%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="0%" marginRight="0%" />
-                <MakeCard imagem={foto} nome="gleydson" ciclo="diretor" marginLeft="6%" marginRight="0%" />
-            </div>
-
-        </section>
-
+            </section>
+        </div>
     )
 }
 

@@ -1,7 +1,7 @@
 .card{
-    padding: 2vh;
-    margin-bottom: 2vh;
-    width: 12.1%;
+    margin-left: 1%;
+    margin-bottom: 3%;
+    width: 15.4%;
   }
   
   .cardImg{
@@ -18,13 +18,14 @@
   
   .Nomes {
     font-weight: 440;
-    font-size: 2.2vh;
-    margin-top: 2vh;
+    font-size: 2.4vh;
+    margin-top: 3vh;
+    margin-bottom: .5vh;
   }
   
   .Ciclo{
-    margin-bottom: 2vh;
-    font-size: 2.2vh;;
+    margin-bottom: 3vh;
+    font-size: 2.4vh;;
     font-weight: 100;
   }
 
