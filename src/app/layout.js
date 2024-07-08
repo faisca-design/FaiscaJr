@@ -7,7 +7,7 @@ export default function Layout({ children }) {
     return (
         <html lang="pt-br">
             <head>
-                <title>Next.js</title>
+                <title>Faísca</title>
             </head>
             <body style={{margin:0}}>
                     <Navbar/>

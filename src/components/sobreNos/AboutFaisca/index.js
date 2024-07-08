@@ -1,12 +1,12 @@
 import styles from './about.module.css'
 import Image from 'next/image'
-import img from "@img/sobreNos/Logo-Faisca.png"
+import img from "@img/sobreNos/LogoVertical.svg"
 
 function AboutFaisca() {
     return (
         <div className={styles.preenchimento}>
             <div className={styles.container}>
-                <Image className={styles.containerImagem} src={img} width={350} height={350} alt="logo faisca" />
+                <Image className={styles.containerImagem} src={img} width={330} height={330} alt="logo faisca" />
                 <div className={styles.text}>
                     <p className={styles.paragrafo}>
                         A Faísca é uma empresa júnior de design da UFRGS
