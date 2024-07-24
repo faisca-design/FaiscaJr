@@ -13,6 +13,10 @@
     line-height: normal;
 }
 
+.Allegin{
+    font-family: Allegin;
+}
+
 @media screen and (max-width: 600px) {
 
     .purpTxt > p {
