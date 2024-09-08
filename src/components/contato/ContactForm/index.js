@@ -12,6 +12,7 @@ function Form() {
     const [phone, setPhone] = useState("");
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
     const [showFailureMessage, setShowFailureMessage] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
 
 
@@ -39,6 +40,7 @@ function Form() {
 
     const handleButtonClick = (e) => {
         // Trigger form submission when the button is clicked
+        setIsSubmitted(true); // Mark as submitted
         setShowFailureMessage(true);
         setShowSuccessMessage(false); // Reset success message visibility
         handleFormSubmit(e);
@@ -47,7 +49,7 @@ function Form() {
     return(
         <div className={styles.mainDiv}>
             <HeaderForm />
-            <form className={styles.form} action="" onSubmit={showSuccess}>
+            <form className={`${styles.form} ${isSubmitted ? styles.submitted : ''}`} action="" onSubmit={showSuccess}>
 
                 <div className={styles.row}>
                     <input type="text" required placeholder="Nome" />
