@@ -48,6 +48,13 @@
     font-family: 'Chillax', sans-serif !important;
 }
 
+.form.submitted input:invalid, .form.submitted textarea:invalid {
+    background-image: url(../../../../public/img/form/invalidForm.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 20px;
+}
+
 .form > textarea {
     max-width: 100%;
     min-width: 100%;
