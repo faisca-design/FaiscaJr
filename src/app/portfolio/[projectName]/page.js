@@ -6,14 +6,23 @@ import ProjectValues from "@components/projeto/ProjectValues"
 import ProjectCarousel from "@components/projeto/ProjectCarousel";
 import GenericOutLink from "@/components/GenericButtonOutLink";
 import styles from "./styles.module.css";
+import imagemCarimbo from './../../../../public/img/projeto/CarimboPreto.png';
+import imagemCapa from './../../../../public/img/projeto/Cabeçalho.png';
 
 export default function Page({ params }) {
   const projetistas = ["Fulano da Silvinha", "Ciclaninho dos Santos"];
 
   return (
     <>
-      <ProjectBanner />
-      <ProjectPurpose />
+      <ProjectBanner 
+        imagem={imagemCapa}
+      />
+      <ProjectPurpose 
+        texto="Promover transformação social através da força das raízes brasileiras,
+        realçando sua energia moderna e vibrante."
+        imagem={imagemCarimbo}
+      />
+
       <ProjectServices
         titulo1="site"
         titulo2="identidade visual"
