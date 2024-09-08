@@ -31,6 +31,7 @@
     background-color: #D9D9D9;
 }
 
+
 .form ::placeholder{
     text-align: center;
     color: rgb(0, 0, 0);
@@ -43,6 +44,8 @@
     border-radius: 20px;
     border-style: hidden;
     background-color: #D9D9D9;
+    font-size: 1vw;
+    font-family: 'Chillax', sans-serif !important;
 }
 
 .form > textarea {
@@ -50,6 +53,16 @@
     min-width: 100%;
     min-height: 7vh;
     overflow-y: hidden;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* .row > select{
+    border-right: 16px solid transparent;
+} */
+
+.form > textarea::placeholder {
+    line-height: 6vh;
 }
 
 .submit {

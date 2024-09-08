@@ -7,16 +7,19 @@
 .service > p {
     text-align: left;
     color: white;
-    font-size: 1.5vw;
+    font-size: 1.518vw;
     height: 3vh;
-    margin-top: .6vw;
+    margin-top: 1vh;
     margin-bottom: 0;
+    
 }
 
 .service > hr {
     margin-left: 0;
     width: 100%;
     border-top: 1px #fff;
+    margin-top: 0px;
+
 }
 
 
@@ -32,8 +35,7 @@
 
     .service > p {
         text-align: center;
-        font-size: 4.7vw;
-        margin-top: 3vh;
+        margin-top: 2vh;
     }
 
   }
