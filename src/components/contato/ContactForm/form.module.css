@@ -25,7 +25,7 @@
 }
 
 .row input, .row select{
-    height: 70% !important; 
+    height: 75% !important; 
     width: 32%;
     box-sizing:content-box;
     background-color: #D9D9D9;
@@ -41,11 +41,18 @@
 .row > input, .row > select, .form > input, .form > textarea{
     
     height: 7vh;
-    border-radius: 20px;
+    border-radius: 15px;
     border-style: hidden;
     background-color: #D9D9D9;
     font-size: 1vw;
     font-family: 'Chillax', sans-serif !important;
+}
+
+.form.submitted input:invalid, .form.submitted textarea:invalid {
+    background-image: url(../../../../public/img/form/invalidForm.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 20px;
 }
 
 .form > textarea {
@@ -136,6 +143,7 @@ input[type="date"]:not(.has-value):valid:before{
         width: 100% ; 
         margin-top: 2vh;
         border-radius: 20px;
+        font-size: 3.72vw;
     }
 
     .form{
