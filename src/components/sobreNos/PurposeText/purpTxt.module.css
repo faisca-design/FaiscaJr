@@ -8,7 +8,7 @@
 .purpTxt > p {
     color: white;
     width: 50%;
-    font-size: 3.6vh;
+    font-size: 3.17vw;
     text-align: center;
     line-height: normal;
 }
@@ -22,6 +22,7 @@
     .purpTxt > p {
         width: 90%;
         text-align: left;
+        font-size: 7.53vw;
     }
 
   }
