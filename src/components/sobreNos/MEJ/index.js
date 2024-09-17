@@ -3,7 +3,7 @@ import brasil from "@img/sobreNos/brasil.png"
 import NejPoa from "@img/sobreNos/NejPoa.png"
 import fejers from "@img/sobreNos/fejers.png"
 import sla from "@img/sobreNos/sla.png"
-import img from "@img/sobreNos/rectangleLogo.png"
+import img from "@img/sobreNos/MEJ/MEJ.jpg"
 
 import Image from "next/image";
 
