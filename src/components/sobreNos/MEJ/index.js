@@ -27,10 +27,10 @@ function MEJ ()
                 </p>
                 
                 <div className={styles.conjuntoImagens}>
-                    <Image src={brasil} width={99} height={88} alt="brasil" />
-                    <Image src={NejPoa} width={82} height={82} alt="NejPoa" />
-                    <Image src={fejers} width={142} height={55} alt="Fejers" />
-                    <Image src={sla} width={76} height={90} alt="SLA" />
+                    <Image className={styles.logos} src={brasil} width={99} height={88} alt="brasil" />
+                    <Image className={styles.logos} src={NejPoa} width={82} height={82} alt="NejPoa" />
+                    <Image className={styles.logos} src={fejers} width={142} height={55} alt="Fejers" />
+                    <Image className={styles.logos} src={sla} width={76} height={90} alt="SLA" />
                 </div>
                 
             </div>
