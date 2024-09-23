@@ -1,4 +1,4 @@
-"use client";
+"use client"; 
 
 import React, { useState } from 'react';
 import Container from '../Container';
@@ -7,15 +7,29 @@ import Link from 'next/link';
 
 function Navbar() {
   const [selectedItem, setSelectedItem] = useState('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
+    setIsMobileMenuOpen(false);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
     <nav className={`${styles.navbar} ${styles.fixedHeader}`}>
       <Container>
-        <ul className={styles.list}>
+        {/* Botão Mobile */}
+        <button 
+          className={styles.mobileMenuButton} 
+          onClick={toggleMobileMenu}
+        >
+          {isMobileMenuOpen ? '✖' : '☰'}
+        </button>
+
+        <ul className={`${styles.list} ${isMobileMenuOpen ? styles.mobileOpen : ''}`}>
           <li>
             <Link
               href="/"
@@ -54,7 +68,7 @@ function Navbar() {
           </li>
           <li>
             <Link
-              href="faisca"
+              href="/faisca"
               className={`${styles.link} ${selectedItem === 'faisca' ? styles.bold : ''}`}
               onClick={() => handleItemClick('faisca')}
             >
