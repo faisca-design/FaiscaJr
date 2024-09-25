@@ -1,20 +1,10 @@
-.page{
-    min-height: 80vh;
+.page {
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
     gap: 100px;
-    height: 100%;
-    background: 
-    radial-gradient(circle at 100% 2%, #9e431e, transparent 5%),
-    radial-gradient(circle at -10% 12%, #9e431e, transparent 10%),
-    radial-gradient(circle at 100% 20%, #9e431e, transparent 10%),
-    radial-gradient(circle at -10% 40%, #9e431e, transparent 15%),
-    radial-gradient(circle at 100% 60%, #9e431e, transparent 15%),
-    radial-gradient(circle at -10% 80%, #9e431e, transparent 15%),
-    radial-gradient(circle at 100% 100%, #9e431e, transparent 10%),
-    #1E181A;
+    position: relative; 
 }
 
-.withPadding{
-    padding: 50px 0;
-}
+
+
