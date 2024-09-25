@@ -1,6 +1,5 @@
 import styles from "./LearnMore.module.css";
 import GenericButton from "@components/GenericButton";
-import GenericButtonOutLink from "@/components/GenericButtonOutLink";
 
 function LearnMoreSection() {
   return (
