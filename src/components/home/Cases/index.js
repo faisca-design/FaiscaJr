@@ -1,9 +1,19 @@
-import styles from './cases.module.css';
+"use client"
+
+import { useState, useEffect } from 'react';
+import styles from './layoutCases.module.css';
 import Cases from './cases';
 import GenericButton from '@/components/GenericButton';
 import casesData from './../../../data/casesData.json';
 
 function CasesArea({ leftTittle, rightTittle }) {
+    const [randomCases, setRandomCases] = useState([]);
+
+    useEffect(() => {                                                                  //lógica para selecionar 6 cases aleatorios entre todos disponiveis
+        const shuffledCases = [...casesData].sort(() => 0.5 - Math.random());
+        setRandomCases(shuffledCases.slice(0, 6));
+    }, []);
+
     return (
         <section className={styles.container}>
             <h1 className={styles.phrase}>
@@ -15,11 +25,12 @@ function CasesArea({ leftTittle, rightTittle }) {
                 <h1><span className={styles.altText}>{rightTittle}</span></h1>
             </div>
             <div className={styles.lista}>
-                {casesData.map((DCases) => (
+                {randomCases.map((DCase) => (
                     <Cases
-                        key={DCases.id}
-                        imag={`/img/home/Cases/${DCases.id}.png`}
-                        ProjectName={DCases.nomeProjeto}
+                        key={DCase.id}
+                        imag={DCase.imagem}
+                        ProjectName={DCase.nomeProjeto}
+                        projectPath={DCase.projectLink}
                     />
                 ))}
             </div>
