@@ -1,219 +1,202 @@
 [
     {
       "id": 1,
-      "imagem": "'./../../public/img/sobreNos/Foto01.png'",
-      "nome": "gleydson Campos",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/Rebecca.jpg",
+      "nome": "Rebecca",
+      "ciclo": "membro"
     },
     {
       "id": 2,
-      "imagem": "'./../../public/img/sobreNos/Foto01.png'",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/MarinaR.jpg",
+      "nome": "Marina R.",
+      "ciclo": "membro"
     },
     {
       "id": 3,
-      "imagem": "'./../../public/img/sobreNos/Foto01.png'",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/Duda Weyh.jpg",
+      "nome": "Duda Weyh",
+      "ciclo": "membro"
     },
     {
       "id": 4,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/Helena.jpg",
+      "nome": "Helena",
+      "ciclo": "membro"
     },
     {
       "id": 5,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/Vinicius.jpg",
+      "nome": "Vinícius",
+      "ciclo": "membro"
     },
     {
       "id": 6,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/Lucas.jpg",
+      "nome": "Lucas",
+      "ciclo": "membro"
     },
     {
       "id": 7,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/Veronica.jpg",
+      "nome": "Verônica",
+      "ciclo": "membro"
     },
     {
       "id": 8,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/Isadora.jpg",
+      "nome": "Isadora",
+      "ciclo": "membro"
     },
     {
       "id": 9,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/JuliaRohden.jpg",
+      "nome": "Julia Rohden",
+      "ciclo": "membro"
     },
     {
       "id": 10,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/JuliaSantAnna.jpg",
+      "nome": "Julia Sant'anna",
+      "ciclo": "membro"
     },
     {
       "id": 11,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/LauraCorino.jpg",
+      "nome": "Laura Corino",
+      "ciclo": "membro"
     },
     {
       "id": 12,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/LucioLee.jpg",
+      "nome": "Lucio Lee",
+      "ciclo": "membro"
     },
     {
       "id": 13,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/LuisaReis.jpg",
+      "nome": "Luísa Reis",
+      "ciclo": "membro"
     },
     {
       "id": 14,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/NathaliaBaltar.jpg",
+      "nome": "Nathália Baltar",
+      "ciclo": "membro"
     },
     {
       "id": 15,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/RafaelaMarion.jpg",
+      "nome": "Rafaela Marion",
+      "ciclo": "membro"
     },
     {
       "id": 16,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/RaissaBortholo.jpg",
+      "nome": "Raissa Bortholo",
+      "ciclo": "membro"
     },
     {
       "id": 17,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/RaquelRamos.jpg",
+      "nome": "Raquel Ramos",
+      "ciclo": "membro"
     },
     {
       "id": 18,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/Tauane.jpg",
+      "nome": "Tauane",
+      "ciclo": "membro"
     },
     {
       "id": 19,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/TiagoLoPrete.jpg",
+      "nome": "Thiago Lo Prete",
+      "ciclo": "membro"
     },
     {
       "id": 20,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/AmandaCoradi.jpg",
+      "nome": "Amanda Coradi",
+      "ciclo": "membro"
     },
     {
       "id": 21,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/AmandaReis.jpg",
+      "nome": "Amanda Reis",
+      "ciclo": "membro"
     },
     {
       "id": 22,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/AnaChedid.jpg",
+      "nome": "Ana Chedid",
+      "ciclo": "membro"
     },
     {
       "id": 23,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/AnaSalgueiro.jpg",
+      "nome": "Ana Salgueiro",
+      "ciclo": "membro"
     },
     {
       "id": 24,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/CarlosVargas.jpg",
+      "nome": "Carlos Vargas",
+      "ciclo": "membro"
     },
     {
       "id": 25,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/FabricioFernandes.jpg",
+      "nome": "Fabrício Fernandes",
+      "ciclo": "membro"
     },
     {
       "id": 26,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/GabrielaCezar.jpg",
+      "nome": "Gabriela Cezar",
+      "ciclo": "membro"
     },
     {
       "id": 27,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/GabrielliTeixeira.jpg",
+      "nome": "Gabrielli Teixeira",
+      "ciclo": "membro"
     },
     {
       "id": 28,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/HannahLerm.jpg",
+      "nome": "Hannah Lerm",
+      "ciclo": "membro"
     },
     {
       "id": 29,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/HenriqueBranchi.jpg",
+      "nome": "Henrique Branchi",
+      "ciclo": "membro"
     },
     {
       "id": 30,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/IsaSchaan.jpg",
+      "nome": "Isa Schaan",
+      "ciclo": "membro"
     },
     {
       "id": 31,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/JorgeSchaan.jpg",
+      "nome": "Jorge Schaan",
+      "ciclo": "membro"
     },
     {
       "id": 32,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/JoaoAccorsi.jpg",
+      "nome": "Jõao Accorsi",
+      "ciclo": "membro"
     },
+   
     {
       "id": 33,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
-    },
-    {
-      "id": 34,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
-    },
-    {
-      "id": 35,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
-    },
-    {
-      "id": 36,
-      "imagem": "foto",
-      "nome": "gleydson",
-      "ciclo": "diretor"
+      "imagem": "/img/sobreNos/members/JuliaFraga.jpg",
+      "nome": "Julia Fraga",
+      "ciclo": "membro"
     }
   ]
   

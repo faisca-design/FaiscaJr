@@ -1,9 +1,7 @@
 import Image from 'next/image'
 import styles from './makeCard.module.css'
 
-
 function MakeCard({ imagem, nome, ciclo}) {
-
     return (
         <div className={styles.card}>
             <div className={styles.cardImg}>
@@ -11,12 +9,10 @@ function MakeCard({ imagem, nome, ciclo}) {
                     <h2 className={styles.Nomes}>{nome}</h2>
                     <p className={styles.Ciclo}>{ciclo}</p>
                 </div>
-                <Image src={imagem} alt={nome} width={156} height={156} layout='responsive' />
+                <Image src={imagem} alt={nome} width={0} height={0} layout='responsive' />
             </div>
-        </div >
-
+        </div>
     )
-
-};
+}
 
 export default MakeCard;
