@@ -1,6 +1,6 @@
 import styles from './project.module.css'
 import Image from 'next/image'
-import capa from '@img/projeto/Capa.png'
+import capa from '@img/projeto/capa.png'
 import cracha from '@img/projeto/cracha.png'
 import xicara from '@img/projeto/xicara.png'
 
