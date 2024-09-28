@@ -9,6 +9,7 @@ function Form() {
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
     const [showFailureMessage, setShowFailureMessage] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isDisabled, setIsDisabled] = useState(false);  // Estado para controlar a desativação do botão
 
     const [formData, setFormData] = useState({
         name: "",
@@ -22,8 +23,16 @@ function Form() {
 
     const formatPhoneNumber = (inputNumber) => {
         const cleanedNumber = inputNumber.replace(/\D/g, '');
-        const formattedNumber = `(${cleanedNumber.slice(0, 2)}) ${cleanedNumber.slice(2, 7)}-${cleanedNumber.slice(7)}`;
-        return formattedNumber;
+
+        if (cleanedNumber.length === 0) {
+            return "";  // Retorna string vazia se não houver números
+        } else if (cleanedNumber.length <= 2) {
+            return `(${cleanedNumber}`;
+        } else if (cleanedNumber.length <= 7) {
+            return `(${cleanedNumber.slice(0, 2)}) ${cleanedNumber.slice(2)}`;
+        } else {
+            return `(${cleanedNumber.slice(0, 2)}) ${cleanedNumber.slice(2, 7)}-${cleanedNumber.slice(7, 11)}`;
+        }
     };
 
     const handleInputChange = (e) => {
@@ -39,7 +48,6 @@ function Form() {
     };
 
     const sendEmail = () => {
-        // Captura a data e formata para dd/mm/aaaa
         const [year, month, day] = formData.deadline.split("-");
         const formattedDeadline = `${day}/${month}/${year}`;
         const templateParams = {
@@ -62,11 +70,37 @@ function Form() {
             });
     };
 
+    const areFieldsEmpty = () => {
+        const { name, email, phone, projectType, deadline, howDidUMeet, projectDetails } = formData;
+        return (
+            name.trim() === "" || 
+            email.trim() === "" || 
+            phone.trim() === "" || 
+            projectType.trim() === "" || 
+            deadline.trim() === "" || 
+            howDidUMeet.trim() === "" || 
+            projectDetails.trim() === ""
+        );
+    };
+
     const showSuccess = (e) => {
         e.preventDefault();
+
+        if (areFieldsEmpty()) {
+            setShowFailureMessage(true);
+            setShowSuccessMessage(false);
+            return;
+        }
+    
         setShowSuccessMessage(true);
-        setShowFailureMessage(false); // Reset failure message visibility
-        sendEmail(); // Enviar o e-mail após mostrar a mensagem de sucesso
+        setShowFailureMessage(false);
+        sendEmail();
+
+        // Desabilitar o botão e configurar o timer para 1 minuto
+        setIsDisabled(true);
+        setTimeout(() => {
+            setIsDisabled(false);  // Reativa o botão após 1 minuto
+        }, 60000);
     };
 
     return (
@@ -76,21 +110,18 @@ function Form() {
                 <div className={styles.row}>
                     <input 
                         type="text" 
-                        required 
                         placeholder="Nome" 
                         name="name"
                         onChange={handleInputChange}
                     />
                     <input 
                         type="email" 
-                        required 
                         placeholder="E-mail" 
                         name="email"
                         onChange={handleInputChange}
                     />
                     <input
                         type="tel"
-                        required
                         placeholder="Telefone"
                         value={phone}
                         onChange={handlePhoneChange}
@@ -111,7 +142,6 @@ function Form() {
                     </select>
 
                     <input 
-                        required 
                         type="date" 
                         placeholder="Prazo de Entrega:" 
                         id={styles.date}
@@ -133,13 +163,17 @@ function Form() {
                 <textarea
                     className={styles.aboutProject}
                     rows="4"
-                    required
                     placeholder="Nos conte mais detalhes sobre o seu projeto!"
                     name="projectDetails"
                     onChange={handleInputChange}
                 ></textarea>
 
-                <input className={styles.submit} type="submit" placeholder="Enviar"/>
+                <input 
+                    className={styles.submit} 
+                    type="submit" 
+                    value="Enviar" 
+                    disabled={isDisabled}  // Desabilita o botão se isDisabled for true
+                />
             </form>
 
             {showSuccessMessage && (
