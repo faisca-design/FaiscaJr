@@ -5,6 +5,8 @@
     flex-wrap: nowrap;
     justify-content: center;
     padding: 5%;
+    margin-top: 12vh;
+    margin-bottom: 15vh;
 }
 
 .containerParagrafo{
@@ -33,6 +35,10 @@
     width: 50%;
  }
 
+ .logos{
+    height: 20%;
+    width: 20%;
+ }
 
  .bar{
     height: 68vh;
@@ -52,13 +58,15 @@
         color: white;
         display: flex;
         flex-direction: column;
+        width: 80%;
         flex-wrap: nowrap;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
+        align-content: left;
+        justify-content: left;
+        align-items: left;
     }
     .imagem{
         margin-bottom: 4em;
+        width: 80%;
     }
     .conjuntoImagens{
         margin-top: 10px;
@@ -70,5 +78,9 @@
     }
     .paragrafo{
         margin-bottom: 2em;
+        font-size: 2.84vw;
+    }
+    .titulo{
+        font-size: 7.58vw;
     }
   }

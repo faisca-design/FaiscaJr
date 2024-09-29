@@ -3,7 +3,7 @@ import brasil from "@img/sobreNos/brasil.png"
 import NejPoa from "@img/sobreNos/NejPoa.png"
 import fejers from "@img/sobreNos/fejers.png"
 import sla from "@img/sobreNos/sla.png"
-import img from "@img/sobreNos/rectangleLogo.png"
+import img from "@img/sobreNos/MEJ/MEJ.jpg"
 
 import Image from "next/image";
 
@@ -27,10 +27,10 @@ function MEJ ()
                 </p>
                 
                 <div className={styles.conjuntoImagens}>
-                    <Image src={brasil} width={99} height={88} alt="brasil" />
-                    <Image src={NejPoa} width={82} height={82} alt="NejPoa" />
-                    <Image src={fejers} width={142} height={55} alt="Fejers" />
-                    <Image src={sla} width={76} height={90} alt="SLA" />
+                    <Image className={styles.logos} src={brasil} width={99} height={88} alt="brasil" />
+                    <Image className={styles.logos} src={NejPoa} width={82} height={82} alt="NejPoa" />
+                    <Image className={styles.logos} src={fejers} width={142} height={55} alt="Fejers" />
+                    <Image className={styles.logos} src={sla} width={76} height={90} alt="SLA" />
                 </div>
                 
             </div>

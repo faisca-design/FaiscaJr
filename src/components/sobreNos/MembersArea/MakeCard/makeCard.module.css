@@ -30,12 +30,18 @@
   }
 
   @media (max-width: 576px) {
+
+    .Nomes{
+      font-size: 2.4vh;
+    }
+
+    .Ciclo{
+      font-size: 2.4vh;
+    }
  
     .card{
       width: 40%;
-      margin-left: 0;
-      margin-right: 0;
+      margin: 3%;
     }
-
     
   }

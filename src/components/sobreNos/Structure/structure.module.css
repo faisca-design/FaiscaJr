@@ -1,76 +1,45 @@
-.containerStyle {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 20px;
-    max-width: 2000px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 120px;
-  }
-  
-  .imageStyle {
-    margin-right: 50px;
-  }
-  
-  .textContainerStyle {
-    max-width: 40%;
-  }
-  
-  .introTextContainerStyle {
-    max-width: 70%;
-    text-align: center;
-    color: white; 
-  }
-  
-  .leftContainerStyle {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .middleContainerStyle {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .rightContainerStyle {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-  }
-  
-  /* Alteração para tornar todos os textos brancos */
-  .containerStyle h1,
-  .containerStyle p {
-    color: white;
-  }
-  
-  /* Adicionando estilos de fonte */
-  .containerStyle h1,
-  .textContainerStyle h1 {
-    font-size: 6vh;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 73%;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.introContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.introContainer h1 {
+  font-size: 2.025vw;
+  margin-top: 15vh;
+  font-weight: 500;
+  margin-bottom: 2.2vw;
+}
+
+.introContainer p {
+  text-align: center;
+  font-size: 1vw;
+  width: 100%;
+  font-weight: normal;
+  line-height: normal;
+}
+
+@media (max-width: 576px) {
+  .introContainer h1 {
+    font-size: 7.05vw;
+    margin-top: 7vh;
     font-weight: 500;
   }
   
-  .textContainerStyle p {
-    font-size: 2.3vh;
-    font-weight: 400;
-    margin-top: 2vh;
-    margin-right: 1.5vh;
+  .introContainer p {
+    text-align: left;
+    font-size: 3.52vw;
   }
-  
-  .rightContainerStyle h1 {
-    font-size: 6vh;
-    font-weight: 500;
-  }
-  
-  .subTitle {
-    font-size: 3.5vh;
-    font-weight: 100;
-    color: white;
-    margin-top: 1vh;
-  }
-  
+
+}

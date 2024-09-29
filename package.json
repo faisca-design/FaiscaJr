@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^4.40.2",
+    "emailjs-com": "^3.2.0",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "jquery": "^3.7.1",

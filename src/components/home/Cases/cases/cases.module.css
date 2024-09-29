@@ -1,42 +1,79 @@
+.projectLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 .imageContainer {
     position: relative;
     width: 71vh;
-}
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
 
-.projectName {
-    font-weight: 500;
-    font-size: 3.2vh;
+  .imageContainer:hover {
+    transform: scale(1.05);
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  
+  .imageContainer:hover .image {
+    transform: scale(1.1);
+  }
+  
+  .imageOverlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .imageContainer:hover .imageOverlay::before {
+    opacity: 0;
+  }
+  
+  .textContainer {
     position: absolute;
     bottom: 0;
     left: 0;
-    margin: 0;
-    padding: 4vh;
+    padding: 2em;
+    width: 100%;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .textTitle {
+    font-size: 1.518vw;
+    font-weight: 500;
     color: white;
-}
-
-.grayscaleImage {
-    filter: grayscale(100%);
-    transition: filter 0.4s ease-in-out;
-}
-
-.colorfulImage {
-    filter: grayscale(0%);
-    transition: filter 0.4s ease-in-out;
-}
-
-@media (max-width: 576px) {
+    line-height: 1.2;
+  }
+  
+  .imageContainer:hover .textContainer {
+    opacity: 0;
+  }
+  
+  @media (max-width: 576px) {
     .imageContainer {
-        width: 72vw;
-        justify-content: center;
-        text-align: center;
-        justify-items: center;
+      width: 72vw;
+      justify-content: center;
+      text-align: center;
+      justify-items: center;
     }
-
-    .projectName {
-        font-weight: 500;
-        font-size: 2.3vh;
-        left: 50%; 
-        transform: translateX(-50%); 
-        text-align: center; 
+  
+    .textTitle {
+      font-size: 4.7vw;
+      text-align: center;
     }
-}
+  }
+  

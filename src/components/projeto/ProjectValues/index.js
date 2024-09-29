@@ -1,11 +1,7 @@
 import styles from './values.module.css'
-
-import cartao from "@img/projeto/cartaoDeVisitas.png"
-import post from "@img/projeto/instagramPostFeed.png"
-
 import Image from 'next/image'
 
-function Issue20 ({titulo1, titulo2, titulo3})
+function Issue20 ({titulo1, titulo2, titulo3, imageLeft, imageRight})
 {
     return(
         <div className={styles.container}>
@@ -18,8 +14,8 @@ function Issue20 ({titulo1, titulo2, titulo3})
             </div>
             
             <div className={styles.containerImagens}>
-                <Image className={styles.imagem1} src={cartao}  alt="cartão de visitas"/>
-                <Image className={styles.imagem2} src={post} alt="feed do instagram"/>
+                <Image className={styles.imagem1} src={imageLeft}  alt="cartão de visitas"/>
+                <Image className={styles.imagem2} src={imageRight} alt="feed do instagram"/>
             </div>
         </div>
     )

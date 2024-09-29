@@ -1,10 +1,7 @@
 import styles from './project.module.css'
 import Image from 'next/image'
-import capa from '@img/projeto/Capa.png'
-import cracha from '@img/projeto/cracha.png'
-import xicara from '@img/projeto/xicara.png'
 
-function Issue19({ titulo1, titulo2, titulo3 }) {
+function Issue19({ titulo1, titulo2, titulo3, imageLeft, imageRight, imageBottom }) {
     return (
         <div>
             <div className={styles.containerText}>
@@ -17,11 +14,11 @@ function Issue19({ titulo1, titulo2, titulo3 }) {
 
             <div className={styles.containerImages}>
                 <div className={styles.upperImages}>
-                    <Image className={styles.smallImage1} src={capa} alt="cartão de visitas" />
-                    <Image className={styles.smallImage2} src={cracha} alt="feed do instagram" />
+                    <Image className={styles.smallImage1} src={imageLeft} alt="cartão de visitas" />
+                    <Image className={styles.smallImage2} src={imageRight} alt="feed do instagram" />
                 </div>
                 <div className={styles.lowerImages}>
-                    <Image className={styles.image} src={xicara} alt="cartão de visitas" />
+                    <Image className={styles.image} src={imageBottom} alt="cartão de visitas" />
                 </div>
             </div>
         </div>

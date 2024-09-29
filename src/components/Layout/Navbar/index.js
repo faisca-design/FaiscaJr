@@ -4,23 +4,39 @@ import React, { useState } from 'react';
 import Container from '../Container';
 import styles from './Navbar.module.css';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'; // Importa o hook para pegar o caminho atual
 
 function Navbar() {
   const [selectedItem, setSelectedItem] = useState('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const pathname = usePathname(); // Usa o hook para obter o pathname atual
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
+    setIsMobileMenuOpen(false);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
     <nav className={`${styles.navbar} ${styles.fixedHeader}`}>
       <Container>
-        <ul className={styles.list}>
+        {/* Botão Mobile */}
+        <button 
+          className={styles.mobileMenuButton} 
+          onClick={toggleMobileMenu}
+        >
+          {isMobileMenuOpen ? '✖' : '☰'}
+        </button>
+
+        <ul className={`${styles.list} ${isMobileMenuOpen ? styles.mobileOpen : ''}`}>
           <li>
             <Link
               href="/"
-              className={`${styles.link} ${selectedItem === 'inicio' ? styles.bold : ''}`}
-              onClick={() => handleItemClick('inicio')}
+              className={`${styles.link} ${pathname === '/' ? styles.bold : ''}`}
             >
               início
             </Link>
@@ -28,8 +44,7 @@ function Navbar() {
           <li>
             <Link
               href="/sobre-nos"
-              className={`${styles.link} ${selectedItem === 'sobrenos' ? styles.bold : ''}`}
-              onClick={() => handleItemClick('sobrenos')}
+              className={`${styles.link} ${pathname === '/sobre-nos' ? styles.bold : ''}`}
             >
               sobre nós
             </Link>
@@ -37,8 +52,7 @@ function Navbar() {
           <li>
             <Link
               href="/portfolio"
-              className={`${styles.link} ${selectedItem === 'portfolio' ? styles.bold : ''}`}
-              onClick={() => handleItemClick('portfolio')}
+              className={`${styles.link} ${pathname === '/portfolio' ? styles.bold : ''}`}
             >
               portfólio
             </Link>
@@ -46,15 +60,14 @@ function Navbar() {
           <li>
             <Link
               href="/contato"
-              className={`${styles.link} ${selectedItem === 'contato' ? styles.bold : ''}`}
-              onClick={() => handleItemClick('contato')}
+              className={`${styles.link} ${pathname === '/contato' ? styles.bold : ''}`}
             >
               contato
             </Link>
           </li>
           <li>
             <Link
-              href="faisca"
+              href="/faisca"
               className={`${styles.link} ${selectedItem === 'faisca' ? styles.bold : ''}`}
               onClick={() => handleItemClick('faisca')}
             >
