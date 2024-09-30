@@ -2,10 +2,18 @@
     font-size: large;
     display: flex;
     flex-direction: column;
-    height: 60vh;
     width: 60vw;
     margin: auto;
 }
+
+.mainDiv {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-bottom: 25vh;
+}
+
 
 .row{
     display: flex;
@@ -17,11 +25,29 @@
     
 }
 
-.row input, .row select {
-    height: 70% !important; 
+.row input, .row select{
+    height: 75% !important; 
     width: 32%;
     box-sizing:content-box;
     background-color: #D9D9D9;
+}
+
+
+.row select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+.submit:disabled {
+    background-color: #cccccc; 
+    cursor: not-allowed; 
+    color: #666666; 
+}
+
+.row select::-ms-expand {
+    display: none;
 }
 
 .form ::placeholder{
@@ -30,22 +56,48 @@
 }
 
 
-.row > input, .row > select, .Form > input{
+.row > input, .row > select, .form > input, .form > textarea{
     
     height: 7vh;
     border-radius: 15px;
     border-style: hidden;
     background-color: #D9D9D9;
+    font-size: 1vw;
+    text-align: center;
+    font-family: 'Chillax', sans-serif !important;
+}
+
+.form.submitted input:invalid, .form.submitted textarea:invalid {
+    background-image: url(../../../../public/img/form/invalidForm.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 20px;
+}
+
+.form > textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 7vh;
+    overflow-y: hidden;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+
+.form > textarea::placeholder {
+    line-height: 6vh;
 }
 
 .submit {
     background-color: #D45827 !important;
     margin-top: 3vh !important;
     color: white;
+    height: 7vh;
+    transition: background-color 0.3s ease;
 
 }
 
-.form > input {
+.form > input, .form > textarea {
     margin-top: 1.5vh;
 }
 
@@ -53,3 +105,78 @@
     text-align: center;
     color: black;
 }
+
+
+input[type="date"]:not(.has-value):before{
+    color: rgb(0, 0, 0);
+    content: attr(placeholder);
+}
+
+input[type="date"]:not(.has-value):valid:before{
+    content: attr(none);
+}
+
+
+.rectangleSuccess {
+    background-color: #D472A8;
+    width: 40%;
+    height: 7vh;
+    border-radius: 20px;
+    margin-top: 5vh;
+    text-align: center;
+    color: white;
+    line-height: 7vh;
+    margin-left: 30%;
+    font-size: 1vw;
+    display: none;
+}
+
+.rectangleFailed {
+    background-color: #E01D1D;
+    width: 40%;
+    height: 7vh;
+    border-radius: 20px;
+    margin-top: 5vh;
+    text-align: center;
+    color: white;
+    line-height: 7vh;
+    margin-left: 30%;
+    font-size: 1vw;
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+
+    .row{
+        flex-direction: column;
+        justify-content: center;
+        height: 30vh;
+        width: 100%;
+        align-items: center;
+    }
+
+
+    .row > input, .row > select, .form > input, .form > textarea{
+        height: 12vh;
+        width: 100% ; 
+        margin-top: 2vh;
+        border-radius: 20px;
+        font-size: 3.72vw;
+    }
+
+    .form{
+        margin: auto;
+        align-items: center;
+        width: 80vw;
+    }
+
+    .form > textarea{
+        height: 12vh;
+    }
+
+    .submit {
+        width: 70% !important;
+        height: 6vh !important;
+    }
+    
+  }

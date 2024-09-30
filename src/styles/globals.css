@@ -20,7 +20,7 @@ margin-block-end: 0;
 padding: 0;
 border: 0;
 font-size: 100%;
-font: inherit;
+font-family: Chillax;
 vertical-align: baseline;
 }
 
@@ -32,8 +32,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 display: block;
 }
+
 body {
 line-height: 1;
+
 }
 ol, ul {
 list-style: none;
@@ -49,4 +51,50 @@ content: none;
 table {
 border-collapse: collapse;
 border-spacing: 0;
+}
+
+
+div .owl-nav{
+    align-items: center;
+}
+.owl-nav{
+    color: white !important;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    font-size: 60px;
+    font-weight: 300;
+    margin-top: -20vh;
+}
+
+.owl-next {
+    margin-left: 40vw; 
+}
+
+.owl-prev {
+    margin-right: 40vw;
+}
+
+
+@media (max-width: 576px) {
+    div .owl-nav{
+        align-items: center;
+    }
+    .owl-nav{
+        color: white !important;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        font-size: 60px;
+        font-weight: 300;
+        margin-top: -70px;
+    }
+
+    .owl-next {
+        margin-left: 100px; 
+    }
+
+    .owl-prev {
+        margin-right: 100px;
+    }
 }

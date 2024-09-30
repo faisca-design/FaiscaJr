@@ -1,9 +1,17 @@
-import styles from './project.module.css'
+import styles from './project.module.css';
+import Image from 'next/image';
 
-export default function ProjectPurpose() {
+export default function ProjectPurpose({imagem, texto, erro}) {
   return (
-    <div className={styles.box}>
-      Espaço destinado pro ProjectPurpose
+    <div className={styles.purpose}>
+      <h1 className={styles.projetoTitle}>
+          {texto}
+         </h1>
+      <Image
+        className={styles.imgcarimbo}
+        src={imagem}
+        alt={erro}
+      />
     </div>
-  )
+  );
 }

@@ -1,0 +1,40 @@
+.redirect{
+  justify-content: center;
+  align-items: center;
+  border-radius: 35px;
+  padding-left: 1.3vw;
+  padding-right: 1.3vw;
+  padding-top: .5vw;
+  padding-bottom: .5vw;
+  display: flex;
+  border: 0;
+  background-color: white;
+  text-decoration: none;
+  transition: transform 0,2s;
+  cursor: pointer;
+}
+
+.redirect:hover {
+  transform: scale(1.01)
+}
+
+.buttonText{
+  text-decoration: none;
+  font-size: 1.1vw;
+  margin-left: .5vw;
+  font-weight: 400;
+}
+
+@media (max-width: 576px) {
+  .buttonText{
+    font-size: 4.2vw;
+    margin-left: 1vw;
+  }
+
+  .redirect{
+    padding-left: 6.5vw;
+    padding-right: 6.5vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+  }
+}

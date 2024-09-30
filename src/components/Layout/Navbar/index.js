@@ -4,23 +4,41 @@ import React, { useState } from 'react';
 import Container from '../Container';
 import styles from './Navbar.module.css';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+
+import menu from "@img/mobileNavbarIcons/MenuNavbarCell.png"
+import close from "@img/mobileNavbarIcons/CloseNavbarCell.png"
+import faisca from "@img/mobileNavbarIcons/mobile_icon_header.png"
 
 function Navbar() {
-  const [selectedItem, setSelectedItem] = useState('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-  const handleItemClick = (item) => {
-    setSelectedItem(item);
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
     <nav className={`${styles.navbar} ${styles.fixedHeader}`}>
       <Container>
-        <ul className={styles.list}>
+        <button
+          className={styles.mobileMenuButton}
+          onClick={toggleMobileMenu}
+        >
+          <Image
+            src={isMobileMenuOpen ? close : menu}
+            alt={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+            width={isMobileMenuOpen ? 25 : 40} 
+            height={0} 
+          />
+        </button>
+
+        <ul className={`${styles.list} ${isMobileMenuOpen ? styles.mobileOpen : ''}`}>
           <li>
             <Link
               href="/"
-              className={`${styles.link} ${selectedItem === 'inicio' ? styles.bold : ''}`}
-              onClick={() => handleItemClick('inicio')}
+              className={`${styles.link} ${pathname === '/' ? styles.bold : ''}`}
             >
               início
             </Link>
@@ -28,8 +46,7 @@ function Navbar() {
           <li>
             <Link
               href="/sobre-nos"
-              className={`${styles.link} ${selectedItem === 'sobrenos' ? styles.bold : ''}`}
-              onClick={() => handleItemClick('sobrenos')}
+              className={`${styles.link} ${pathname === '/sobre-nos' ? styles.bold : ''}`}
             >
               sobre nós
             </Link>
@@ -37,8 +54,7 @@ function Navbar() {
           <li>
             <Link
               href="/portfolio"
-              className={`${styles.link} ${selectedItem === 'portfolio' ? styles.bold : ''}`}
-              onClick={() => handleItemClick('portfolio')}
+              className={`${styles.link} ${pathname === '/portfolio' ? styles.bold : ''}`}
             >
               portfólio
             </Link>
@@ -46,23 +62,25 @@ function Navbar() {
           <li>
             <Link
               href="/contato"
-              className={`${styles.link} ${selectedItem === 'contato' ? styles.bold : ''}`}
-              onClick={() => handleItemClick('contato')}
+              className={`${styles.link} ${pathname === '/contato' ? styles.bold : ''}`}
             >
               contato
             </Link>
           </li>
           <li>
-            <Link
-              href="faisca"
-              className={`${styles.link} ${selectedItem === 'faisca' ? styles.bold : ''}`}
-              onClick={() => handleItemClick('faisca')}
+            <a
+              href="https://www.instagram.com/faiscadesignjr/"
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               @faísca
-            </Link>
+            </a>
           </li>
         </ul>
+
       </Container>
+      <Image src={faisca} alt="error" width={65} height={0} className={styles.iconFaisca} />
     </nav>
   );
 }

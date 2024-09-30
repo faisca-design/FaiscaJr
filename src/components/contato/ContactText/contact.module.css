@@ -2,27 +2,81 @@
     color: white;
     margin-top: 0;
     margin-bottom: 0;
+    
 }
+
 
 .lowTextAux{
-    width: 10%;
+    width: 40%;
     position: relative;
+    align-items: center;
+    margin-top: 2vh;
 }
 
+
 .highText {
-    width: 25%;
-    font-size: 4.5vh;
+    width: 40%;
+    text-align: left;
+    font-size: 2.7vw
 }
 
 
 .lowText {
-    font-size: 1.6vh;
-    position: absolute;
+    font-size:  1vw;
+    position: relative;
     bottom: 0;
     text-align: left;
+    margin-top: 2vw;
+}
+ 
+
+.HRSeparator {
+    background-color: black;
+    width: 95%;
+    margin-top: 5vh;
+    overflow-x: hidden;
+}
+
+.Separator {
+    visibility: hidden;
+    width: 100%;
+    height: 10vh;
 }
 
 .contact {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25vh;
+    padding-top: 25vh;
 }
+
+.Allegin{
+    font-family: Allegin;
+}
+
+@media screen and (max-width: 600px) {
+
+    .Separator {
+        visibility: visible;
+        width: 40%;
+        align-items: center;
+    }
+
+    .highText {
+        font-size: 8vw
+    }
+
+    .lowText {
+        font-size: 4vw;
+    }
+    
+    .lowTextAux{
+        width: 70%;
+    }
+
+    .highText {
+        width: 70%;
+    }
+  }

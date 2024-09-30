@@ -1,5 +1,49 @@
-.box{
-    background-color: azure;
-    padding: 20px;
+.purpose {
+    padding: 5vh; /* Alterado para usar unidades de vh */
+}
+
+.projetoTitle {
+    color: white;
     text-align: center;
+    font-size: 2.7vw; /* Alterado para usar unidades de vw */
+    font-weight: 200;
+    font-family: 'Chillax';
+    padding-top: 6.94vh; /* Alterado para usar unidades de vh */
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
+
+.projetoTitle span {
+    font-family: 'Allegin';
+}
+
+.imgcarimbo {
+    padding-top: 17.36vh; 
+    margin: auto;
+    display: block;
+    width: 80%;
+    height: auto;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .imgcarimbo {
+        padding-top: 6.94vh; 
+        margin: auto;
+        display: block;
+        width: 100%; 
+        height: auto; 
+        align-items: center;
+    }
+
+    .projetoTitle {
+        color: white;
+        text-align: center;
+        font-size: 6.50vw; 
+        font-weight: 200;
+        font-family: 'Chillax';
+        padding-top: 6.94vh; 
+        padding-left: 1px;
+        padding-right: 1px;
+    }
 }

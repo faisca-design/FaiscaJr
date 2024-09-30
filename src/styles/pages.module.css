@@ -1,11 +1,10 @@
-.page{
-    background-color: #1E181A;
-    min-height: 80vh;
+.page {
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
     gap: 100px;
+    position: relative; 
 }
 
-.withPadding{
-    padding: 50px 0;
-}
+
+

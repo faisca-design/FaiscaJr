@@ -1,22 +1,24 @@
+'use client'
+
 import { BsArrowUpRight } from "react-icons/bs";
-import styles from './GenericButton.module.css'
+import styles from './GenericButton.module.css';
+import Link from 'next/link';
 
-function GenericButton({ ButtonText, OutLink }) {
-    function handleButtonClick () {
-        window.open( OutLink , '_blank');
-    };
-
+function GenericButton({ ButtonText, pathWay }) {
     return (
-        <div>
-            {/* <button className={styles.redirect} onClick={handleButtonClick}> comentei pq ta com erro :(*/}
-            <button className={styles.redirect}>
-                <BsArrowUpRight size={15} color="#000" />
-                <p className={styles.buttonText}> {ButtonText} </p>
-
-            </button>
-
-        </div>
+        <nav>
+            <ul>
+                <li>
+                    <Link className={styles.redirect} href={pathWay || '#'} passHref>
+                        <BsArrowUpRight size="2vh" color="#000" />
+                        <p className={styles.buttonText}>{ButtonText}</p>
+                    </Link>
+                </li>
+            </ul>
+        </nav>
     );
 }
 
 export default GenericButton;
+
+

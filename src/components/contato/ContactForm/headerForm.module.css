@@ -1,7 +1,7 @@
 .headerForm{
     display: flex;
     flex-direction: row;
-
+    margin-top: 0;
 }
 
 .headerFormTxt{
@@ -22,11 +22,38 @@
 }
 
 .lowTxt {
-    font-size: 1.4vw;
-
+    font-size: 1vw;
 }
 .headerFormTxt > p {
-    font-size: 1.8vw;
+    font-size: 1.518vw;
     text-align: left;
     color: white;
 }
+
+@media screen and (max-width: 600px) {
+
+    .hr {
+        display: none;
+    }
+
+    .headerFormHR{
+        display: none;
+    }
+
+    .headerFormTxt{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+
+    .headerFormTxt > p {
+        font-size: 4.95vw;
+    }
+
+    .lowTxt {
+        font-size: 3.42vw;
+    }
+
+  }
