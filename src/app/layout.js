@@ -10,14 +10,14 @@ export default function Layout({ children }) {
             <head>
                 <title>Faísca</title>
             </head>
-            <body style={{margin: 0, padding: 0, backgroundColor: '#1E181A', minHeight: '100vh'}}>      {/* propriedades adicionadas para o bakcground funcionar :(*/}
-                <div style={{position: 'relative', minHeight: '100vh'}}>
+            <body style={{ margin: 0, padding: 0, backgroundColor: '#1E181A', minHeight: '100vh' }}>      {/* propriedades adicionadas para o bakcground funcionar :(*/}
+                <div style={{ position: 'relative', minHeight: '100vh' }}>
                     <DynamicBackground />
-                    <Navbar/>
+                    <Navbar />
                     <div className={styles.page}>
                         {children}
                     </div>
-                    <Footer/>
+                    <Footer />
                 </div>
             </body>
         </html>
