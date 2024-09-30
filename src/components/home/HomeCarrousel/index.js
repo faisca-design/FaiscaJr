@@ -12,7 +12,7 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
 
 const HomeCarousel = ({ depoimentos }) => {
     const PartnersConfig = {
-        loop: false,
+        loop: true,
         nav: true,
         dots: true,
         autoplay: true,
