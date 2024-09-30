@@ -1,47 +1,70 @@
 .preenchimento{
-    padding: 5%;
+    width: 73%;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    margin-bottom: 6%;
+    margin-top: 6%;
 }
 
 
 .container{
+   margin-bottom: 3vh;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+.text{
     display: flex;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .containerImagem{
-    width: 40%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-
+    margin-right: 6vh;
 }
-
-.containerParagrafo{
-    width: 60%;
-    color: white;
-}
-
-.containerParagrafoTamanho{
-    height: 378px;
-    width: 870px;
-}
-
 
 .fraseDestaque{
     color:#D45827 ;
 }
 
 .paragrafo{
-   font-size: 25px;
+   font-size: 2.3vh;
    margin: 0px;
-   text-align: justify;
+   text-align:left;
+   color: white;
+   line-height: normal;
 }
 
 .paragrafo:first-child{
-    margin-bottom: 1.5vw;
+    margin-bottom: .5vw;
+}
+
+@media (max-width: 576px) {
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+     }
+     
+     .containerImagem{
+        margin-right: 0;
+    }
+
+    .paragrafo{
+        font-size: 3.52vw;
+        text-align: left;
+     }
+
+    .preenchimento{
+        width: 75%;
+    }   
+
+    .paragrafo:first-child{
+        margin-bottom: 1.5vw;
+    }
+    
 }

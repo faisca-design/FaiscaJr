@@ -3,9 +3,11 @@
 const webpack = require("webpack");
 
 const nextConfig = {
+  experimental: {
+    appDir: true,
+  },
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {appDir: true},
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.plugins.push(
      new webpack.ProvidePlugin({

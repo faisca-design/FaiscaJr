@@ -1,14 +1,17 @@
 import styles from './project.module.css';
 import Image from 'next/image';
-import cracha from './../../../../public/img/projeto/cracha.png'
 
-export default function ProjectPurpose() {
+export default function ProjectPurpose({imagem, texto, erro}) {
   return (
-    <div className={styles.Purpose}>
+    <div className={styles.purpose}>
       <h1 className={styles.projetoTitle}>
-            Promover transformação social através <br></br>da <span>força</span> das raízes brasileiras,
-            realçando <br></br>sua <span>energia moderna</span> e <span>vibrante</span>. </h1>
-      <Image className={styles.imgcarimbo} src={cracha} alt={'nome'} width={1000} height={585}/>
+          {texto}
+         </h1>
+      <Image
+        className={styles.imgcarimbo}
+        src={imagem}
+        alt={erro}
+      />
     </div>
-  )
+  );
 }

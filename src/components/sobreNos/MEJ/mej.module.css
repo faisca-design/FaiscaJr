@@ -1,52 +1,89 @@
-.container{
+.container {
     display: flex;
-    align-items: center;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    padding: 5%;
-}
-
-.containerImagem{
-    width: 40%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    color: white;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15vh;
+    margin-bottom: 25vh;
     align-items: center;
 }
 
-.imagem{
-  width: 469.72px;
-  height: 561px;
-}
-
-.containerParagrafo{
-    width: 60%;
+.bar {
+    height: 81vh;
+    border-left: 1px solid;
     color: white;
-   /*border-left: 1px solid white;
-    padding-left: 50px;*/
+    margin: 0px 5em;
 }
-.paragrafo{
-    font-size: 25px;
-    margin: 0px;
-    text-align: justify;
-    width: 925px;
-    height: 250px;
- }
 
- .titulo{
-    font-size: 2vw;
-    margin: 0px;
-    text-align: justify;
-    height: 90px;
-    width: 129px;
- }
+.rightContent h1 {
+    font-size: 2.7vw;
+    font-weight: 500;
+    margin-bottom: 2.3vh;
+}
 
- .conjuntoImagens{
-    margin-top: 10px;
- }
+.rightContent p {
+    font-size: 1vw;
+    font-weight: 300;
+    line-height: normal;
+}
 
- .conjuntoImagens img{
-    margin-right: 100px;
- }
+.apoiadores {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 4.3vh;
+    width: 75%;
+}
+
+.imge {
+    width: 100%; 
+    height: auto; 
+}
+
+.logos {
+    width: auto;
+    height: 4.5vw; 
+}
+
+@media (max-width: 576px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bar {
+        display: none;
+    }
+
+    .rightContent h1 {
+        font-size: 7.52vw;
+        margin-top: 3.3vh;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .rightContent p {
+        font-size: 2.82vw;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .imge {
+        width: 80%; 
+        height: auto; 
+    }
+
+    .logos {
+        height: 9vw; 
+    }
+
+    .apoiadores{
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto; 
+    }
+}

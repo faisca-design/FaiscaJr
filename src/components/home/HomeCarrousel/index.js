@@ -1,35 +1,44 @@
-'use client';
-import React, { useState, useEffect } from "react";
-import dynamic from "next/dynamic";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-import styles from "./carousel.module.css";
+'use client'
 
+import React from 'react';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import dynamic from 'next/dynamic';
+import styles from './carousel.module.css';
 
-var $ = require("jquery");
-if (typeof window !== "undefined") {
-  window.$ = window.jQuery = require("jquery");
-}
-
-const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
-  ssr: false,
+const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
+    ssr: false,
 });
 
-const Slider = (props) => {
-  return (
-    <div>
-      <OwlCarousel>
-            <div className={styles.item}>
-                <h1>1</h1>
-            </div>
-            <div className={styles.item}>
-                <h1>2</h1>
-            </div>
-            <div className={styles.item}>
-                <h1>3</h1>
-            </div>
-      </OwlCarousel>
-    </div>
-  );
+const HomeCarousel = ({ depoimentos }) => {
+    const PartnersConfig = {
+        loop: true,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplaySpeed: 2000,
+        responsive: {
+            0: { items: 1 },
+            1000: { items: 1 },
+        },
+    };
+
+    return (
+        <div className={styles.depoimentos}>
+            <h2 className={styles.depoimentosTitle}>O QUE NOSSOS CLIENTES TEM A DIZER</h2>
+            <OwlCarousel className={styles.slider} {...PartnersConfig}>
+                {depoimentos.map((depoimento, index) => (
+                    <div key={index} className={styles.item}>
+                        <h2 className={styles.depoimentosText}>
+                            {depoimento.texto}
+                            <h2 className={styles.clientName}>{depoimento.cliente}</h2>
+                        </h2>
+                    </div>
+                ))}
+            </OwlCarousel>
+        </div>
+    );
 };
-export default Slider;
+
+export default HomeCarousel;

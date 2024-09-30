@@ -1,0 +1,62 @@
+.container {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container h1 {
+    color: white;
+    font-weight: 500;
+    font-size: 5vh;
+    margin-right: 10vh;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.row > *:nth-last-child(-n+5) {
+    justify-content: center;
+}
+
+.title {
+    color: white;
+    font-size: 2.7vw;
+    font-weight: 500;
+    margin-bottom: 2vh;
+    margin-left: 13%;
+}
+
+.subTittle {
+    color: white;
+    font-size: 1vw;
+    font-weight: 300;
+    margin-bottom: 5.5vh;
+    margin-left: 13%;
+}
+
+@media (max-width: 576px) {
+    .title {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .subTittle {
+        display: none;
+    }
+
+    .row {
+        justify-content: center; 
+        margin: 2%;
+    }
+}

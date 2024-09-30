@@ -22,11 +22,10 @@
 }
 
 .lowTxt {
-    font-size: 1.4vw;
-
+    font-size: 1vw;
 }
 .headerFormTxt > p {
-    font-size: 1.8vw;
+    font-size: 1.518vw;
     text-align: left;
     color: white;
 }
@@ -50,12 +49,11 @@
 
 
     .headerFormTxt > p {
-        font-size: 5vw;
+        font-size: 4.95vw;
     }
 
     .lowTxt {
-        font-size: 3.235vw;
+        font-size: 3.42vw;
     }
-
 
   }

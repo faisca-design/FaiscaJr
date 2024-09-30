@@ -1,0 +1,74 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 12vh;
+}
+
+.container h1 {
+    font-size: 2.7vw;
+    font-weight: 500;
+    width: 88%;
+}
+
+.container h2 {
+    font-size: 1.518vw;
+    font-weight: 100;
+    line-height: normal;
+}
+
+.container p {
+    font-size: 1vw;
+    line-height: normal;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1.9vw;
+    margin-top: 1.5vh;
+}
+
+.img {
+    width: 67.5%;
+    height: auto;
+}
+
+@media (max-width: 576px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 6vh;
+    }
+
+    .container h1 {
+        font-size: 6.58vw;
+        width: 100%;
+        text-align: right;
+        margin-top: 2vh;
+    }
+    
+    .container h2 {
+        font-size: 5.41vw;
+        text-align: right;
+    }
+    
+    .container p {
+        font-size: 3.52vw;
+        text-align: right;
+    }
+
+    .textContainer {
+        order: 2;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .img {
+        order: 1; 
+        width: 100%;
+        height: auto;
+    }
+
+
+
+}

@@ -12,8 +12,8 @@ function SobreNos(){
             <PurposeText />
             <AboutFaisca />
             <MembersArea />
-            <Structure />
-            <MEJ />
+            <Structure/> 
+            <MEJ/>
         </div>
     )
 }

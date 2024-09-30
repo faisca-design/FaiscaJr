@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: column;
     margin: auto;
+    padding-bottom: 25vh;
 }
 
 
@@ -25,10 +26,28 @@
 }
 
 .row input, .row select{
-    height: 70% !important; 
+    height: 75% !important; 
     width: 32%;
     box-sizing:content-box;
     background-color: #D9D9D9;
+}
+
+
+.row select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+.submit:disabled {
+    background-color: #cccccc; 
+    cursor: not-allowed; 
+    color: #666666; 
+}
+
+.row select::-ms-expand {
+    display: none;
 }
 
 .form ::placeholder{
@@ -40,9 +59,19 @@
 .row > input, .row > select, .form > input, .form > textarea{
     
     height: 7vh;
-    border-radius: 20px;
+    border-radius: 15px;
     border-style: hidden;
     background-color: #D9D9D9;
+    font-size: 1vw;
+    text-align: center;
+    font-family: 'Chillax', sans-serif !important;
+}
+
+.form.submitted input:invalid, .form.submitted textarea:invalid {
+    background-image: url(../../../../public/img/form/invalidForm.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 20px;
 }
 
 .form > textarea {
@@ -50,6 +79,13 @@
     min-width: 100%;
     min-height: 7vh;
     overflow-y: hidden;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+
+.form > textarea::placeholder {
+    line-height: 6vh;
 }
 
 .submit {
@@ -57,6 +93,7 @@
     margin-top: 3vh !important;
     color: white;
     height: 7vh;
+    transition: background-color 0.3s ease;
 
 }
 
@@ -105,6 +142,7 @@ input[type="date"]:not(.has-value):valid:before{
     line-height: 7vh;
     margin-left: 30%;
     font-size: 1vw;
+    display: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -112,17 +150,18 @@ input[type="date"]:not(.has-value):valid:before{
     .row{
         flex-direction: column;
         justify-content: center;
-        height: 20vh;
+        height: 30vh;
         width: 100%;
         align-items: center;
     }
 
 
     .row > input, .row > select, .form > input, .form > textarea{
-        height: 12vh !important;
+        height: 12vh;
         width: 100% ; 
         margin-top: 2vh;
         border-radius: 20px;
+        font-size: 3.72vw;
     }
 
     .form{
@@ -131,9 +170,13 @@ input[type="date"]:not(.has-value):valid:before{
         width: 80vw;
     }
 
+    .form > textarea{
+        height: 12vh;
+    }
+
     .submit {
         width: 70% !important;
-        height: 12vh;
+        height: 6vh !important;
     }
     
   }
