@@ -34,7 +34,8 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 4.3vh;
-    width: 75%;
+    width: 81%;
+    align-items: flex-end;
 }
 
 .imge {
@@ -44,7 +45,17 @@
 
 .logos {
     width: auto;
-    height: 4.5vw; 
+    height: 4.7vw; 
+}
+
+.nejpoa{
+    width: auto;
+    height: 3vw;
+}
+
+.fejers{
+    width: auto;
+    height: 4vw;
 }
 
 @media (max-width: 576px) {
@@ -73,17 +84,26 @@
     }
 
     .imge {
-        width: 80%; 
+        width: 90%; 
         height: auto; 
     }
 
     .logos {
-        height: 9vw; 
+        height: 9.3vw; 
+    }
+
+    .nejpoa{
+        height: 7vw;
+    }
+    
+    .fejers{
+        height: 8vw;
     }
 
     .apoiadores{
-        width: 85%;
+        width: 90%;
         margin-left: auto;
         margin-right: auto; 
+        margin-top: 2vh;
     }
 }
