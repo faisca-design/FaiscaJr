@@ -78,9 +78,16 @@ function Navbar() {
             </a>
           </li>
         </ul>
-
       </Container>
-      <Image src={faisca} alt="error" width={55} height={0} className={styles.iconFaisca} />
+      <Link href="/" aria-label="Ir para a página inicial">
+        <Image 
+          src={faisca} 
+          alt="Faísca Design Jr - Página Inicial" 
+          width={55} 
+          height={0} 
+          className={styles.iconFaisca} 
+        />
+      </Link>
     </nav>
   );
 }
