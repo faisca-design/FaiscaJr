@@ -1,14 +1,12 @@
 'use client';
-import React, { useState, useEffect } from "react";
+import React from "react";
 import dynamic from "next/dynamic";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import styles from './carousel.module.css'
 import Image from 'next/image';
-import proj1 from './../../../../public/img/projeto/projeto1.png'
-import proj2 from './../../../../public/img/projeto/projeto2.png'
-import proj3 from './../../../../public/img/projeto/projeto3.png'
-
+import Link from 'next/link';
+import { projetos } from './../../../data/carrosselProjectData'; 
 
 var $ = require("jquery");
 if (typeof window !== "undefined") {
@@ -19,7 +17,7 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
   ssr: false,
 });
 
-const Slider = (props) => {
+const Slider = () => {
   const PartnersConfig2 = {
     loop: true,
     nav: false,
@@ -44,23 +42,24 @@ const Slider = (props) => {
     },
   };
 
-    return (
-      <div className={styles.projetos}>
-        <h2 className={styles.projetosTitle}>confira outros projetos</h2>
-        <OwlCarousel   className={styles.slider}
-            {...PartnersConfig2}   >
-          <div className={styles.item}>
-            <Image className={styles.imgcarimbo} src={proj1} alt={'nome'}  />
+  return (
+    <div className={styles.projetos}>
+      <h2 className={styles.projetosTitle}>confira outros projetos</h2>
+      <OwlCarousel className={styles.slider} {...PartnersConfig2}>
+        {projetos.map((projeto, index) => (
+          <div key={index} className={styles.item}>
+            <Link href={projeto.link}>
+              <Image 
+                className={styles.img} 
+                src={projeto.imagem} 
+                alt={projeto.nome}
+              />
+            </Link>
           </div>
-          <div className={styles.item}>
-            <Image className={styles.imgcarimbo} src={proj2} alt={'nome'} />
-          </div>
-          <div className={styles.item}>
-            <Image className={styles.imgcarimbo} src={proj3} alt={'nome'}  />
-          </div>
-        </OwlCarousel>
-      </div>
-    );
-  };
+        ))}
+      </OwlCarousel>
+    </div>
+  );
+};
 
-  export default Slider;
+export default Slider;

@@ -23,6 +23,7 @@
 
 .iconFaisca{
     padding-right: 1em;
+    margin-right: 0.4em;
 }
 
 .item {
@@ -89,5 +90,8 @@
 
     .hidden {
         display: none;
+    }
+    .iconFaisca{
+        margin-right: 0.5em;
     }
 }

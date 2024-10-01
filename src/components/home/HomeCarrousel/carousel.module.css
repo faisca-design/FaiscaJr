@@ -1,6 +1,6 @@
 .depoimentos {
     margin: 0 auto;
-    width: 72%;
+    width: 69%;
     height: 70vh;
 }
 
@@ -37,6 +37,7 @@
     padding: 10vh;
     height: 10vh;
     background: transparent;
+    margin-right: 1.2vw;
     border: solid;
     border-width: 1px;
     border-color: white;

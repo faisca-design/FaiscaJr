@@ -80,7 +80,7 @@ function Navbar() {
         </ul>
 
       </Container>
-      <Image src={faisca} alt="error" width={65} height={0} className={styles.iconFaisca} />
+      <Image src={faisca} alt="error" width={55} height={0} className={styles.iconFaisca} />
     </nav>
   );
 }
