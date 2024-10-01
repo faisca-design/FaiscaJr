@@ -8,7 +8,7 @@ export default function ProjectPurpose({imagem, texto, erro}) {
           {texto}
          </h1>
       <Image
-        className={styles.imgcarimbo}
+        className={styles.img}
         src={imagem}
         alt={erro}
       />
