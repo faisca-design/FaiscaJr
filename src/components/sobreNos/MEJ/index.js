@@ -6,7 +6,7 @@ import NejPoa from "@img/sobreNos/MEJ/NejPOANova.png"
 import fejers from "@img/sobreNos/MEJ/fejers.png"
 import designUFRGS from "@img/sobreNos/MEJ/designUFRGS.png"
 
-function MEJO() {
+function MEJ() {
     return (
         <div className={styles.container}>
             <Image className={styles.imge} src={rectagle} alt={"error"} width={0} height={420} />
@@ -26,4 +26,4 @@ function MEJO() {
     )
 }
 
-export default MEJO;
+export default MEJ;
