@@ -17,7 +17,7 @@
     font-family: 'Allegin';
 }
 
-.imgcarimbo {
+.img {
     padding-top: 17.36vh; 
     margin: auto;
     display: block;
@@ -27,7 +27,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .imgcarimbo {
+    .img {
         padding-top: 6.94vh; 
         margin: auto;
         display: block;
@@ -42,7 +42,7 @@
         font-size: 6.50vw; 
         font-weight: 200;
         font-family: 'Chillax';
-        padding-top: 6.94vh; 
+        padding-top: 0; 
         padding-left: 1px;
         padding-right: 1px;
     }
