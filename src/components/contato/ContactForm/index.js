@@ -86,6 +86,7 @@ function Form() {
     const showSuccess = (e) => {
         e.preventDefault();
 
+        setIsSubmitted(true);
         if (areFieldsEmpty()) {
             setShowFailureMessage(true);
             setShowSuccessMessage(false);
@@ -106,18 +107,20 @@ function Form() {
     return (
         <div className={styles.mainDiv}>
             <HeaderForm />
-            <form className={`${styles.form} ${isSubmitted ? styles.submitted : ''}`} onSubmit={showSuccess}>
+            <form className={`${styles.form} ${isSubmitted ? styles.submitted : ''}`} onSubmit={showSuccess} onInvalid={showSuccess}>
                 <div className={styles.row}>
                     <input 
                         type="text" 
                         placeholder="Nome" 
                         name="name"
+                        required
                         onChange={handleInputChange}
                     />
                     <input 
                         type="email" 
                         placeholder="E-mail" 
                         name="email"
+                        required
                         onChange={handleInputChange}
                     />
                     <input
@@ -126,6 +129,7 @@ function Form() {
                         value={phone}
                         onChange={handlePhoneChange}
                         name="phone"
+                        required
                     />
                 </div>
 
@@ -146,6 +150,7 @@ function Form() {
                         placeholder="Prazo de Entrega:" 
                         id={styles.date}
                         name="deadline"
+                        required
                         onChange={handleInputChange}
                     />
 
@@ -166,6 +171,7 @@ function Form() {
                     placeholder="Nos conte mais detalhes sobre o seu projeto!"
                     name="projectDetails"
                     onChange={handleInputChange}
+                    required
                 ></textarea>
 
                 <input 
