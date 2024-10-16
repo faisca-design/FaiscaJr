@@ -119,50 +119,43 @@ collections:
     fields: 
       - {label: "Serviço", name: "servico", widget: "string"}
 
-  - name: "projetos" # Nome usado da rota
+  - name: "projetos"
     extension: "json"
     description: "Coleção que vai conter os projetos da Faísca."
-    label: "Projetos" # Nome usado na label do Netlify 
-    folder: "content/projetos" # Local da pasta onde vão estar os arquivos
-    create: true # Permite que usuários criem arquivos nesse local
+    label: "Projetos"
+    folder: "content/projetos"
+    create: true
     editor:
       preview: false
-    slug: "{{fields.nome_projeto}}" 
-    fields: 
+    slug: "{{fields.nome_projeto}}"
+    fields:
       - {label: "Nome do projeto", name: "nome_projeto", widget: "string"}
-      - {label: "Imagem do projeto", name: "imagem_projeto", widget: "image"}
-      - {label: "Propósito do projeto", name: "proposito_projeto", widget: "markdown"}
-      - label: "Serviços prestados"
-        name: 'servicos_projeto'
-        min: 3
-        max: 3
-        widget: "list"
-        fields:
-          - {label: "Serviço", name: "servico_projeto", widget: 'string' }
-
-      - label: "Características do projeto"
-        name: 'caracteristicas_projeto'
-        widget: "list"
-        min: 3
-        max: 3
-        fields:
-          - {label: "Característica", name: "caracteristica_projeto", widget: 'string' }
-
-      - {label: "Gerente do projeto", name: "gerente_projeto", widget: "relation", collection: "membros", search_fields: ["nome_membro"], value_field: "{{nome_membro}}", display_fields: ["{{nome_membro}} - {{cargo_membro}}"]}
-
+      - {label: "Imagem de capa", name: "imagemCapa", widget: "image"}
+      - {label: "Imagem sub-capa", name: "imagemSubCapa", widget: "image"}
+      - {label: "Propósito do projeto", name: "textoPurpose", widget: "markdown"}
+      - {label: "Serviço 1", name: "t1Services", widget: "string"}
+      - {label: "Serviço 2", name: "t2Services", widget: "string"}
+      - {label: "Serviço 3", name: "t3Services", widget: "string"}
+      - {label: "Imagem serviço esquerda", name: "imageLeftSer", widget: "image"}
+      - {label: "Imagem serviço direita", name: "imageRightSer", widget: "image"}
+      - {label: "Imagem serviço inferior", name: "imageBottomSer", widget: "image"}
+      - {label: "Valor 1", name: "t1Values", widget: "string"}
+      - {label: "Valor 2", name: "t2Values", widget: "string"}
+      - {label: "Valor 3", name: "t3Values", widget: "string"}
+      - {label: "Imagem valor esquerda", name: "imageLeftVal", widget: "image"}
+      - {label: "Imagem valor direita", name: "imageRightVal", widget: "image"}
+      - {label: "Gerente do projeto", name: "gerente", widget: "relation", collection: "membros", search_fields: ["nome_membro"], value_field: "{{nome_membro}}", display_fields: ["{{nome_membro}} - {{cargo_membro}}"]}
       - label: "Projetistas envolvidos"
-        name: 'projetistas_projeto'
+        name: 'projetistas'
+        widget: "list"
         min: 1
         max: 2
-        widget: "list"
-        fields:
-          - {label: "Projetista", name: "projetista_projeto", widget: "relation", collection: "membros", search_fields: ["nome_membro"], value_field: "{{nome_membro}}", display_fields: ["{{nome_membro}} - {{cargo_membro}}"]}
-
+        field: {label: "Projetista", name: "projetista", widget: "relation", collection: "membros", search_fields: ["nome_membro"], value_field: "{{nome_membro}}", display_fields: ["{{nome_membro}} - {{cargo_membro}}"]}
+      - {label: "Texto do botão", name: "bottonText", widget: "string", default: "veja mais no nosso behance!"}
+      - {label: "Link do Behance", name: "behanceLink", widget: "string"}
       - label: "Projetos relacionados (irão para o carrossel)"
         name: "relacionados_projetos"
-        collapsed: false
         widget: "list"
         min: 1
         max: 5
-        fields:
-          - {label: "Projeto", name: "projeto_carrossel", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}  {{imagem_projeto}}"]}
+        field: {label: "Projeto", name: "projeto_carrossel", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}  {{imagemCapa}}"]}
