@@ -1,4 +1,8 @@
 {
+  "t2Values": "energia vibrante",
+  "imageRightVal": "/uploads/valuerightci.png",
+  "t3Values": "vibrante",
+  "imagemCapa": "/uploads/capaci.png",
   "proposito_projeto": "Melhorar a acessibilidade e usabilidade de um site, tornando-o inclusivo para todos os usuários, independentemente de suas habilidades ou deficiências.",
   "Serviços prestados": [
     {
@@ -11,6 +15,8 @@
       "servico_projeto": "rótulo"
     }
   ],
+  "behanceLink": "https://www.behance.net/",
+  "gerente": "Felipe Faísca",
   "caracteristicas_projeto": [
     {
       "caracteristica_projeto": "a"
@@ -21,6 +27,10 @@
     {
       "caracteristica_projeto": "c"
     }
+  ],
+  "projetistas": [
+    "Fernanda Faísca",
+    "Fernanda Faísca"
   ],
   "gerente_projeto": "Felipe Faísca",
   "projetistas_projeto": [
@@ -40,6 +50,13 @@
       "servico_projeto": "c"
     }
   ],
+  "bottonText": "veja mais no nosso behance!",
+  "imageBottomSer": "/uploads/servicesbottonci.png",
+  "relacionados_projetos": [
+    "Projeto 5",
+    "Projeto 2",
+    "Projeto 1"
+  ],
   "Projetistas envolvidos": [
     {
       "projetista_projeto": "Felipe Faísca"
@@ -48,7 +65,15 @@
       "projetista_projeto": "Fernanda Faísca"
     }
   ],
-  "nome_projeto": "Projeto 1",
+  "t1Services": "site",
+  "t2Services": "identidade visual",
+  "textoPurpose": "<!--StartFragment-->\n\n# Promover transformação social através da força das raízes brasileiras, realçando sua energia moderna e vibrante.\n\n<!--EndFragment-->",
+  "nome_projeto": "ChamasDaInsignificancia",
+  "imagemSubCapa": "/uploads/subcapaci.png",
+  "t3Services": "rótulo",
+  "imageLeftSer": "/uploads/servicesleftci.png",
+  "t1Values": "força",
+  "imageRightSer": "/uploads/servicesrightci.png",
   "Características do projeto": [
     {
       "caracteristica_projeto": "força"
@@ -59,5 +84,6 @@
     {
       "caracteristica_projeto": "vibrante"
     }
-  ]
+  ],
+  "imageLeftVal": "/uploads/valueleftci.png"
 }
