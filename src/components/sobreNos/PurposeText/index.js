@@ -4,7 +4,7 @@ function PurpTxt(){
     return(
         <div className={styles.purpTxt}>
                 <p>  
-                nós projetamos <span className={styles.Allegin}>experiências valiosas </span> para ajudar empresas e pessoas a entregarem marcas, produtos e serviços incríveis! 
+                nós projetamos <span className={styles.bold}>experiências valiosas </span> para ajudar empresas e pessoas a entregarem marcas, produtos e serviços incríveis! 
                 </p>
         </div>
     )
