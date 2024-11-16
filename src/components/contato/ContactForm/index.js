@@ -62,7 +62,7 @@ function Form() {
             `
         };
 
-        emailjs.send('service_2v72mwx', 'template_5r4k3ch', templateParams, 'l6hYfXGiDRkFE0nwY')
+        emailjs.send('service_x868sz3', 'service_x868sz3', templateParams, 'LfWikGoCLCY_rlSMA')
             .then((result) => {
                 console.log('Email enviado:', result.text);
             }, (error) => {
