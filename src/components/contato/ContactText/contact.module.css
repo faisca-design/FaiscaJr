@@ -52,8 +52,8 @@
     padding-top: 17vh;
 }
 
-.Allegin{
-    font-family: Allegin;
+.bold{
+    font-weight: bold;
 }
 
 @media screen and (max-width: 600px) {

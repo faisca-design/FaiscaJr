@@ -5,7 +5,7 @@ function ContactText(){
 
     return(
         <div className={styles.contact}>
-                <p className={styles.highText}> empresas que investem em <span className={styles.Allegin}>design crescem</span> o dobro das líderes suas indústrias </p>
+                <p className={styles.highText}> empresas que investem em <span className={styles.bold}>design crescem</span> o dobro das líderes suas indústrias </p>
                 <div className={styles.lowTextAux}>
                     <p className={styles.lowText}> { TextLow } </p>
                 </div>
