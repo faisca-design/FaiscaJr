@@ -11,8 +11,12 @@ function Footer(){
         <footer className={`${styles.footer} ${pageStyles.footer}`}>
             <ul className={styles.social_list}>
                 <li>
-                    <a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer">
-                        <Image src={emailIcon} alt="emailIcon" width={24} height={24} />
+                    <a 
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=contato@faiscadesignjr.com.br" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        <Image src={emailIcon} alt="Email" width={24} height={24} />
                     </a>
                 </li>
                 <li>
