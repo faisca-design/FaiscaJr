@@ -21,7 +21,7 @@ export default function BannerFaisca() {
         </div>
         <div>
           <h2 className={styles.title2}>SOMOS <br></br>A FAÍSCA!</h2>
-          <h2 className={styles.title3}>UMA EMPRESA JÚNIOR DE DESIGN<br></br> VISUAL E DE PRODUTA DA UFRGS.</h2>
+          <h2 className={styles.title3}>UMA EMPRESA JÚNIOR DE DESIGN<br></br> VISUAL E DE PRODUTO DA UFRGS</h2>
         </div>
       </div>
     </div>
