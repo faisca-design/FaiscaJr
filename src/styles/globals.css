@@ -40,6 +40,13 @@
     font-style: normal;
   }
 
+  @font-face {
+    font-family: 'Allegin';
+    src: url('/fonts/Allegin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 :root{
     --header-size: ;
     --footer-size: ;
