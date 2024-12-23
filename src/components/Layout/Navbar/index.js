@@ -67,7 +67,7 @@ function Navbar() {
               contato
             </Link>
           </li>
-          <li>
+       {/*   <li>
             <a
               href="https://www.instagram.com/faiscadesignjr/"
               className={styles.link}
@@ -76,7 +76,7 @@ function Navbar() {
             >
               @faísca
             </a>
-          </li>
+          </li>*/}
         </ul>
       </Container>
       <Link href="/" aria-label="Ir para a página inicial">

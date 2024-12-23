@@ -21,7 +21,7 @@ function Footer(){
                     </a>
                 </li>
                 <li>
-                    <a href="https://br.linkedin.com/company/faiscadesignjr" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/company/faiscadesignjunior/" target="_blank" rel="noopener noreferrer">
                         <Image src={linkedinIcon} alt="linkedinIcon" width={24} height={24} /> 
                     </a>
                 </li>
