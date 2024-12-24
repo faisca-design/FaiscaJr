@@ -3,6 +3,7 @@ import LearnMoreSection from '@/components/home/LearnMoreSection';
 import OurServices from '@/components/home/OurServices';
 import Cases from "@/components/home/Cases";
 import HomeCarousel from '@/components/home/HomeCarrousel';
+import BannerHome from "@components/home/BannerHome"
 
 export default function Home() {
   const depoimentos = [
@@ -32,13 +33,14 @@ export default function Home() {
 
   return (
     <>
-      <BannerFaisca />
+   
+      <BannerHome />
       <LearnMoreSection />
       <OurServices />
       <Cases 
       leftTittle="CASES" 
       rightTittle="SELECIONADOS" />
-      <HomeCarousel depoimentos={depoimentos} />
+     <HomeCarousel depoimentos={depoimentos} />
     </>
   );
 }

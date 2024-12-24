@@ -1,0 +1,128 @@
+.bannerWrapper {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13vh;
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    width: 31%; /* Tamanho da logo para desktop */
+    height: auto;
+    margin-right: 5%;
+}
+
+.textContainer {
+    position: absolute;
+    left: 19.5%; /* Ajuste horizontal em relação à imagem */
+    top: 13%; /* Ajuste vertical em relação à imagem */
+    z-index: 2;
+}
+
+.text {
+    font-size: 1.7vw;
+    color: white;
+    width: 35%;
+    font-weight: 300;
+}
+
+.subTextContainer {
+    position: absolute;
+    right: 1%;
+    bottom: 14%;
+    z-index: 3;
+    text-align: left;
+}
+
+.subTextTitle {
+    font-size: 4vw;
+    color: white;
+    font-weight: 600;
+    width: 70%;
+}
+
+.subTextDescription {
+    font-size: 1.2vw;
+    color: white;
+    width: 60%;
+    font-weight: 300;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .bannerWrapper {
+        min-height: 80vh;
+        overflow-x: hidden;
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: column;
+        margin-top: 13vh;
+        width: 100%;
+        position: relative;
+    }
+
+    .image {
+        width: 60%;
+        height: auto;
+        position: absolute;
+        top: 45%;
+        right: -15%;
+        z-index: 1;
+    }
+
+    .textContainer {
+        position: relative;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        left: 0%; 
+    }
+
+    .text {
+        font-size: 4.5vw;
+        color: white;
+        width: 65%; /* Reduz um pouco a largura para melhor leitura */
+        font-weight: 300;
+        text-align: center;
+        margin: 0 auto; /* Centraliza o texto */
+    }
+
+    .subTextContainer {
+        position: relative;
+        width: 100%; /* Ocupa toda a largura */
+        margin-top: 1rem;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza horizontalmente */
+    }
+
+    .subTextTitle {
+        font-size: 16.5vw;
+        color: white;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        margin: 0 auto; /* Centraliza o texto */
+    }
+
+    .subTextDescription {
+        font-size: 4vw;
+        color: white;
+        width: 80%;
+        font-weight: 300;
+        margin: 0.5rem auto 0; /* Centraliza o texto e mantém espaço superior */
+        line-height: 1.5;
+        text-align: center;
+    }
+}
