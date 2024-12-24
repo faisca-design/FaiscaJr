@@ -33,14 +33,14 @@ export default function Home() {
 
   return (
     <>
-   
+      {/*<BannerFaisca />*/}
       <BannerHome />
       <LearnMoreSection />
       <OurServices />
       <Cases 
       leftTittle="CASES" 
       rightTittle="SELECIONADOS" />
-     <HomeCarousel depoimentos={depoimentos} />
+      <HomeCarousel depoimentos={depoimentos} />
     </>
   );
 }
