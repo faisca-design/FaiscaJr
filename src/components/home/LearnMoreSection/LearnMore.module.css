@@ -23,7 +23,7 @@
 
  @media (max-width: 576px) {
   .Container{
-    margin-top: -8vh;
+    margin-top: -12vh;
   }
   .textAbout{
     font-size: 8vw;
