@@ -57,7 +57,7 @@
     line-height: 1.5;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     .bannerWrapper {
         min-height: 80vh;
         overflow-x: hidden;
