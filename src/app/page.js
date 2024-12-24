@@ -40,7 +40,7 @@ export default function Home() {
       <Cases 
       leftTittle="CASES" 
       rightTittle="SELECIONADOS" />
-      <HomeCarousel depoimentos={depoimentos} />
+     <HomeCarousel depoimentos={depoimentos} />
     </>
   );
 }
