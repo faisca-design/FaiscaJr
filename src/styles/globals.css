@@ -126,24 +126,7 @@ div .owl-nav{
 
 
 @media (max-width: 576px) {
-    div .owl-nav{
-        align-items: center;
-    }
-    .owl-nav{
-        color: white !important;
-        display: flex; 
-        justify-content: center; 
-        align-items: center;
-        font-size: 60px;
-        font-weight: 300;
-        margin-top: -70px;
-    }
-
-    .owl-next {
-        margin-left: 100px; 
-    }
-
-    .owl-prev {
-        margin-right: 100px;
-    }
+  .owl-nav {
+      display: none !important;
+  }
 }

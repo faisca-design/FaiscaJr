@@ -30,10 +30,8 @@ const HomeCarousel = ({ depoimentos }) => {
             <OwlCarousel className={styles.slider} {...PartnersConfig}>
                 {depoimentos.map((depoimento, index) => (
                     <div key={index} className={styles.item}>
-                        <h2 className={styles.depoimentosText}>
-                            {depoimento.texto}
-                            <h2 className={styles.clientName}>{depoimento.cliente}</h2>
-                        </h2>
+                        <p className={styles.depoimentosText}>{depoimento.texto}</p>
+                        <p className={styles.clientName}>{depoimento.cliente}</p>
                     </div>
                 ))}
             </OwlCarousel>

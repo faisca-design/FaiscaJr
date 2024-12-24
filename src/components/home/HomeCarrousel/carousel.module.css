@@ -18,77 +18,70 @@
     font-family: Chillax;
     text-align: center;
     font-weight: 100;
+    width: 92%;
     color: white;
-    line-height: 35px;
+    line-height: normal;
     font-size: 1.265vw;
-    margin-bottom: 50px;
+   
 }
 
 .clientName {
     font-family: Chillax;
     color: white;
-    padding-top: 5px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1.265vw;
+    margin-top: 1rem;
 }
 
 .item {
-    padding: 10vh;
-    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 35vh;
     background: transparent;
     margin-right: 1.2vw;
     border: solid;
     border-width: 1px;
     border-color: white;
-    padding-bottom: 150px;
+    padding: 2rem;
 }
 
 @media only screen and (max-width: 600px) {
     .depoimentos {
         padding: 0px;
-        margin-top: 50px;
-        padding-bottom: 25vh
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        padding-bottom: 25vh;
+        width: 100%;
     }
 
     .depoimentosTitle {
         text-align: center;
         font-size: 5vh;
-        margin-bottom: -50px;
+        padding-bottom: 1vh;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .depoimentosText {
-        padding-right: -50px;
-        padding-left: -50px;
-        padding-top: 0px;
-        padding-bottom: 22vh;
-        border: none;
-        text-align: center;
+        font-size: 4vw;
+        padding: 0;
+        margin-bottom: 1rem;
+        width: 100%;
         font-weight: 100;
-        margin-bottom: 4.8vh;
-        font-size: 2.5vh;
     }
 
     .item {
-        padding: 2vh;
-        margin-bottom: 5vh;
-        height: 8vh;
-        margin-left: 1px;
-        margin-left: 1px;
-        padding-bottom: 50vh;
-        height: 10vh;
-        background: transparent;
-        border: solid;
         border-width: 0;
-        border-color: white;
     }
 
     .clientName {
-        font-family: Chillax;
-        color: white;
-        padding-top: 25px;
-        text-align: center;
-        font-weight: 400;
         font-size: 2.5vh;
+        padding-top: 0;
+        margin-top: 1rem;
+        font-weight: 400;
     }
 }
