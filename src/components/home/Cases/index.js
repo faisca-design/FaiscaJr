@@ -6,7 +6,7 @@ import Cases from './cases';
 import GenericButton from '@/components/GenericButton';
 import casesData from './../../../data/casesData.json';
 
-function CasesArea({ leftTittle, rightTittle }) {
+function CasesArea({ phraseCases, leftTittle, rightTittle, buttonphrase, buttonRoute }) {
     const [randomCases, setRandomCases] = useState([]);
 
     useEffect(() => {                                                                  //lógica para selecionar 6 cases aleatorios entre todos disponiveis
@@ -17,7 +17,7 @@ function CasesArea({ leftTittle, rightTittle }) {
     return (
         <section className={styles.container}>
             <h1 className={styles.phrase}>
-                encontramos <span className={styles.altText}>soluções ideais</span><br></br>para cada tipo de desafio
+                {phraseCases}
             </h1>
             <div className={styles.subTittle}>
                 <h1><span className={styles.altText}>{leftTittle}</span></h1>
@@ -35,7 +35,7 @@ function CasesArea({ leftTittle, rightTittle }) {
                 ))}
             </div>
             <div className={styles.moreProjects}>
-                <GenericButton ButtonText="Mais Projetos" pathWay="/portfolio" />
+                <GenericButton ButtonText={buttonphrase} pathWay={buttonRoute} />
             </div>
         </section>
     );

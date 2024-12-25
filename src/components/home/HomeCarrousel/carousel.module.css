@@ -52,7 +52,7 @@
     .depoimentos {
         padding: 0px;
         margin-top: 3vh;
-        margin-bottom: -9vh;
+        margin-bottom: -9vh;    /* TROCAR AQUI CASO A BARRA NO FUNDO DA HOME INCOMODE (CELULAR)*/
         padding-bottom: 25vh;
         width: 100%;
     }

@@ -1,13 +1,13 @@
 import styles from "./LearnMore.module.css";
 import GenericButton from "@components/GenericButton";
 
-function LearnMoreSection() {
+function LearnMoreSection({desc, buttonphrase, buttonRoute}) {
   return (
     <div className={styles.Container}>
       <h1 className={styles.textAbout}>
-        nós fazemos <span className={styles.altText}>design</span> <br></br>de um jeito que você <br></br> nunca viu
+        {desc}
       </h1>
-      <GenericButton ButtonText="Vem impulsionar sua marca" pathWay='/contato'/>
+      <GenericButton ButtonText={buttonphrase} pathWay={buttonRoute}/>
       <butao/>
 
     </div>

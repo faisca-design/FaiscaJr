@@ -1,10 +1,10 @@
 import styles from  './services.module.css'
 import Service from './Service'
 
-function Services(){
+function Services({tittleAllServices}){
     return(
         <div className={styles.services}>
-            <p>NOSSOS SERVIÇOS</p>
+            <p>{tittleAllServices}</p>
             <Service servico="IDENTIDADE VISUAL"/>
             <Service servico="DESIGN DE PRODUTO"/>
             <Service servico="EMBALAGEM"/>
