@@ -8,6 +8,7 @@ import HomeCarousel from '@/components/home/HomeCarrousel';
 async function getData() {
   const homeData = await handleJSONfile('./content/homePage/homePage.json');
   const reviewsData = await handleJSONfiles('./content/reviews');
+  const servicesData = await handleJSONfiles('./content/servicos');
 
   if (!homeData) {
     throw new Error('Failed to fetch home data');
@@ -15,12 +16,13 @@ async function getData() {
 
   return {
     homeData,
-    reviewsData
+    reviewsData,
+    servicesData
   };
 }
 
 export default async function Home() {
-  const { homeData, reviewsData } = await getData();
+  const { homeData, reviewsData, servicesData } = await getData();
   const { banner, learnMore, services, cases, reviews } = homeData;
 
   return (
@@ -40,6 +42,7 @@ export default async function Home() {
 
       <OurServices
         tittleAllServices={services.titleAllServices}
+        servicos={servicesData}
       />
 
       <Cases
