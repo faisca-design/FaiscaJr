@@ -16,59 +16,59 @@ search: false
 locale: 'pt'
 
 collections:
-  - name: "home"
-  extension: "json"
-  description: "Configurações da página principal"
-  label: "Página Principal"
-  folder: "content/homePage"
-  slug: "homePage"
-  create: true
-  editor:
-    preview: false
-  fields:
-    # BANNER
-    - label: "Banner Principal"
-      name: "banner"
-      widget: "object"
-      fields:
-        - {label: "Descrição do Propósito", name: "purpose", widget: "string", default: "PROPORCIONAMOS SOLUÇÕES CRIATIVAS PARA PROJETOS EXCLUSIVOS"}
-        - {label: "Logo Banner", name: "logo", widget: "image"}
-        - {label: "Título", name: "title", widget: "string", default: "SOMOS A FAÍSCA!"}
-        - {label: "Descrição da Empresa", name: "companyDesc", widget: "string", default: "UMA EMPRESA JÚNIOR DE DESIGN VISUAL E DE PRODUTO DA UFRGS"}
+    - name: "home"
+    extension: "json"
+    description: "Configurações da página principal"
+    label: "Página Principal"
+    folder: "content/homePage"
+    slug: "homePage"
+    create: true
+    editor:
+      preview: false
+    fields:
+      # BANNER
+      - label: "Banner Principal"
+        name: "banner"
+        widget: "object"
+        fields:
+          - {label: "Descrição do Propósito", name: "purpose", widget: "string", default: "PROPORCIONAMOS SOLUÇÕES CRIATIVAS PARA PROJETOS EXCLUSIVOS"}
+          - {label: "Logo Banner", name: "logo", widget: "image"}
+          - {label: "Título", name: "title", widget: "string", default: "SOMOS A FAÍSCA!"}
+          - {label: "Descrição da Empresa", name: "companyDesc", widget: "string", default: "UMA EMPRESA JÚNIOR DE DESIGN VISUAL E DE PRODUTO DA UFRGS"}
 
-    # LEARN MORE
-    - label: "Seção Learn More"
-      name: "learnMore"
-      widget: "object"
-      fields:
-        - {label: "O que fazemos", name: "desc", widget: "string", default: "nós fazemos design de um jeito que você nunca viu"}
-        - {label: "Frase do Botão", name: "buttonPhrase", widget: "string", default: "Vem impulsionar sua marca"}
-        - {label: "Rota do Botão", name: "buttonRoute", widget: "string", default: "/contato"}
+      # LEARN MORE
+      - label: "Seção Learn More"
+        name: "learnMore"
+        widget: "object"
+        fields:
+          - {label: "O que fazemos", name: "desc", widget: "string", default: "nós fazemos design de um jeito que você nunca viu"}
+          - {label: "Frase do Botão", name: "buttonPhrase", widget: "string", default: "Vem impulsionar sua marca"}
+          - {label: "Rota do Botão", name: "buttonRoute", widget: "string", default: "/contato"}
 
-    # NOSSOS SERVIÇOS
-    - label: "Seção Serviços"
-      name: "services"
-      widget: "object"
-      fields:
-        - {label: "Título da Seção", name: "titleAllServices", widget: "string", default: "NOSSOS SERVIÇOS"}
+      # NOSSOS SERVIÇOS
+      - label: "Seção Serviços"
+        name: "services"
+        widget: "object"
+        fields:
+          - {label: "Título da Seção", name: "titleAllServices", widget: "string", default: "NOSSOS SERVIÇOS"}
 
-    # CASES
-    - label: "Seção Cases"
-      name: "cases"
-      widget: "object"
-      fields:
-        - {label: "Frase Cases", name: "phraseCases", widget: "string", default: "encontramos soluções ideais para cada tipo de desafio"}
-        - {label: "Título Esquerda", name: "leftTitle", widget: "string", default: "CASES"}
-        - {label: "Título Direita", name: "rightTitle", widget: "string", default: "SELECIONADOS"}
-        - {label: "Texto Botão", name: "buttonPhrase", widget: "string", default: "Mais Projetos"}
-        - {label: "Rota Botão", name: "buttonRoute", widget: "string", default: "/portfolio"}
+      # CASES
+      - label: "Seção Cases"
+        name: "cases"
+        widget: "object"
+        fields:
+          - {label: "Frase Cases", name: "phraseCases", widget: "string", default: "encontramos soluções ideais para cada tipo de desafio"}
+          - {label: "Título Esquerda", name: "leftTitle", widget: "string", default: "CASES"}
+          - {label: "Título Direita", name: "rightTitle", widget: "string", default: "SELECIONADOS"}
+          - {label: "Texto Botão", name: "buttonPhrase", widget: "string", default: "Mais Projetos"}
+          - {label: "Rota Botão", name: "buttonRoute", widget: "string", default: "/portfolio"}
 
-    # DEPOIMENTOS
-    - label: "Seção Depoimentos"
-      name: "reviews"
-      widget: "object"
-      fields:
-        - {label: "Título Depoimentos", name: "titleReviews", widget: "string", default: "O QUE NOSSOS CLIENTES TEM A DIZER"}
+      # DEPOIMENTOS
+      - label: "Seção Depoimentos"
+        name: "reviews"
+        widget: "object"
+        fields:
+          - {label: "Título Depoimentos", name: "titleReviews", widget: "string", default: "O QUE NOSSOS CLIENTES TEM A DIZER"}
 
   - name: "portfolio" # Nome usado da rota
     extension: "json"
