@@ -1,6 +1,6 @@
 {
-    "id": "1",
-    "nomeProjeto": "Nome do Projeto",
-    "imagem": "/uploads/imagem-projeto.jpg",
-    "projectLink": "/portfolio/projeto"
-  }
+  "id": "1",
+  "nomeProjeto": "Nome do Projeto",
+  "imagem": "/uploads/bannerlogo.svg",
+  "projectLink": "/portfolio/projeto"
+}
