@@ -22,7 +22,8 @@ collections:
     label: "Página Principal"
     folder: "content/homePage"
     slug: "homePage"
-    create: true
+    create: false
+    identifier_field: "banner.tittle"
     editor:
       preview: false
     fields:
