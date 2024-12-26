@@ -74,7 +74,7 @@ collections:
   - name: "servicos"
     label: "Serviços"
     description: "Lista de serviços oferecidos"
-    folder: "content/services"
+    folder: "content/servicos"
     create: true
     extension: "json"
     identifier_field: "titulo"
@@ -84,6 +84,7 @@ collections:
     fields:
       - {label: "Ordem", name: "ordem", widget: "number", value_type: "int", min: 1}
       - {label: "Título do Serviço", name: "titulo", widget: "string"}
+    # - {label: "Descrição", name: "descricao", widget: "text"}
   
   - name: "depoimentos"
     label: "Depoimentos"
@@ -151,18 +152,6 @@ collections:
     slug: "{{fields.cargo}}" 
     fields: 
       - {label: "Cargo", name: "cargo", widget: "string"}
-
-  - name: "servicos" # Nome usado da rota
-    extension: "json"
-    description: "Coleção que vai conter todos os serviços ofertados pela Faísca."
-    label: "Serviços" # Nome usado na label do Netlify 
-    folder: "content/servicos" # Local da pasta onde vão estar os arquivos
-    create: true # Permite que usuários criem arquivos nesse local
-    editor:
-      preview: false
-    slug: "{{fields.servico}}" 
-    fields: 
-      - {label: "Serviço", name: "servico", widget: "string"}
 
   - name: "projetos"
     extension: "json"
