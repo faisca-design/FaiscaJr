@@ -5,6 +5,8 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import dynamic from 'next/dynamic';
 import styles from './carousel.module.css';
+import StyledText from "@/components/textoEstilizado/textoEstilizado"
+
 
 const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
     ssr: false,
@@ -51,7 +53,7 @@ const HomeCarousel = ({ tittleReviews }) => {
 
     return (
         <div className={styles.depoimentos}>
-            <h2 className={styles.depoimentosTitle}>{tittleReviews}</h2>
+            <h2 className={styles.depoimentosTitle}><StyledText text={tittleReviews}/></h2>
             <OwlCarousel className={styles.slider} {...PartnersConfig}>
                 {depoimentos.map((depoimento, index) => (
                     <div key={index} className={styles.item}>

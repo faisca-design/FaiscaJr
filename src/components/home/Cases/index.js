@@ -5,6 +5,8 @@ import styles from './layoutCases.module.css';
 import Cases from './cases';
 import GenericButton from '@/components/GenericButton';
 import casesData from './../../../data/casesData.json';
+import StyledText from "@/components/textoEstilizado/textoEstilizado"
+
 
 function CasesArea({ phraseCases, leftTittle, rightTittle, buttonphrase, buttonRoute }) {
     const [randomCases, setRandomCases] = useState([]);
@@ -17,12 +19,12 @@ function CasesArea({ phraseCases, leftTittle, rightTittle, buttonphrase, buttonR
     return (
         <section className={styles.container}>
             <h1 className={styles.phrase}>
-                {phraseCases}
+                <StyledText text={phraseCases} />
             </h1>
             <div className={styles.subTittle}>
-                <h1><span className={styles.altText}>{leftTittle}</span></h1>
+                <h1><span className={styles.altText}><StyledText text={leftTittle}/></span></h1>
                 <hr className={styles.line} />
-                <h1><span className={styles.altText}>{rightTittle}</span></h1>
+                <h1><span className={styles.altText}><StyledText text={rightTittle}/></span></h1>
             </div>
             <div className={styles.lista}>
                 {randomCases.map((DCase) => (

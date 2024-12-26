@@ -1,10 +1,11 @@
 import styles from  './services.module.css'
 import Service from './Service'
+import StyledText from "@/components/textoEstilizado/textoEstilizado"
 
 function Services({tittleAllServices}){
     return(
         <div className={styles.services}>
-            <p>{tittleAllServices}</p>
+            <p><StyledText text={tittleAllServices}/></p>
             <Service servico="IDENTIDADE VISUAL"/>
             <Service servico="DESIGN DE PRODUTO"/>
             <Service servico="EMBALAGEM"/>
