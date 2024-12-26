@@ -33,7 +33,7 @@ collections:
         fields:
           - {label: "Descrição do Propósito", name: "purpose", widget: "string", default: "PROPORCIONAMOS SOLUÇÕES CRIATIVAS PARA PROJETOS EXCLUSIVOS"}
           - {label: "Logo Banner", name: "logo", widget: "image"}
-          - {label: "Título", name: "title", widget: "string", default: "SOMOS A FAÍSCA!"}
+          - {label: "Título", name: "tittle", widget: "string", default: "SOMOS A FAÍSCA!"}
           - {label: "Descrição da Empresa", name: "companyDesc", widget: "string", default: "UMA EMPRESA JÚNIOR DE DESIGN VISUAL E DE PRODUTO DA UFRGS"}
 
       # LEARN MORE

@@ -1,45 +1,55 @@
+import { handleJSONfile } from './../utils/functions/jsonHandler.js'; 
+import BannerHome from "@components/home/BannerHome";
 import LearnMoreSection from '@/components/home/LearnMoreSection';
 import OurServices from '@/components/home/OurServices';
 import Cases from "@/components/home/Cases";
 import HomeCarousel from '@/components/home/HomeCarrousel';
-import BannerHome from "@components/home/BannerHome"
 
-import logobanner from "@img/home/BannerLogo.svg";
+async function getData() {
+  const homeData = await handleJSONfile('./content/homePage/homePage.json');
 
-export default function Home() {
+  if (!homeData) {
+    throw new Error('Failed to fetch home data');
+  }
+  
+  return homeData;
+}
 
+export default async function Home() {
+  const homeData = await getData();
+  const { banner, learnMore, services, cases, reviews } = homeData;
 
   return (
     <>
       <BannerHome 
-      purpose={"PROPORCIONAMOS SOLUÇÕES CRIATIVAS PARA PROJETOS EXCLUSIVOS"}
-      tittle={"SOMOS A FAÍSCA!"} 
-      companyDesc={"UMA EMPRESA JÚNIOR DE DESIGN VISUAL E DE PRODUTO DA UFRGS"} 
-      logo={logobanner} 
+        purpose={banner.purpose}
+        tittle={banner.tittle}
+        companyDesc={banner.companyDesc}
+        logo={banner.logo}
       />
 
       <LearnMoreSection 
-      desc={"nós fazemos design de um jeito que você nunca viu"} 
-      buttonphrase={"Vem impulsionar sua marca"} 
-      buttonRoute={'/contato'} 
+        desc={learnMore.desc}
+        buttonphrase={learnMore.buttonPhrase}
+        buttonRoute={learnMore.buttonRoute}
       />
 
       <OurServices 
-      tittleAllServices={"NOSSOS SERVIÇOS"} 
+        tittleAllServices={services.titleAllServices}
       />
 
       <Cases 
-      phraseCases={"encontramos soluções ideais para cada tipo de desafio"} 
-      leftTittle="CASES" 
-      rightTittle="SELECIONADOS"
-      buttonphrase={"Mais Projetos"} 
-      buttonRoute={'/portfolio'} 
+        phraseCases={cases.phraseCases}
+        leftTittle={cases.leftTitle}
+        rightTittle={cases.rightTitle}
+        buttonphrase={cases.buttonPhrase}
+        buttonRoute={cases.buttonRoute}
       />
 
       <HomeCarousel 
-      tittleReviews={"O QUE NOSSOS CLIENTES TEM A DIZER"} 
+        tittleReviews={reviews.titleReviews}
       />
-      
     </>
   );
 }
+

@@ -11,7 +11,7 @@ export default function BannerHome({purpose, tittle, companyDesc, logo}) {
                         {purpose}
                     </h1>
                 </div>
-                <Image className={styles.image} src={logo} alt="logo faísca" />
+                <Image className={styles.image} src={logo} width={0} height={0} alt="logo faísca" />
                 <div className={styles.subTextContainer}>
                     <h2 className={styles.subTextTitle}>{tittle}</h2>
                     <p className={styles.subTextDescription}>
