@@ -1,15 +1,15 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from '../Container';
 import styles from './Navbar.module.css';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
-import menu from "@img/mobileNavbarIcons/MenuNavbarCell.png"
-import close from "@img/mobileNavbarIcons/CloseNavbarCell.png"
-import faisca from "@img/mobileNavbarIcons/mobile_icon_header.png"
+import menu from "@img/mobileNavbarIcons/MenuNavbarCell.png";
+import close from "@img/mobileNavbarIcons/CloseNavbarCell.png";
+import faisca from "@img/mobileNavbarIcons/mobile_icon_header.png";
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,6 +18,11 @@ function Navbar() {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  // Fecha o menu automaticamente ao trocar de página
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   return (
     <nav className={`${styles.navbar} ${styles.fixedHeader}`}>
@@ -29,8 +34,8 @@ function Navbar() {
           <Image
             src={isMobileMenuOpen ? close : menu}
             alt={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
-            width={isMobileMenuOpen ? 25 : 40} 
-            height={0} 
+            width={isMobileMenuOpen ? 25 : 40}
+            height={0}
           />
         </button>
 
@@ -67,7 +72,7 @@ function Navbar() {
               contato
             </Link>
           </li>
-       {/*   <li>
+          {/* <li>
             <a
               href="https://www.instagram.com/faiscadesignjr/"
               className={styles.link}
@@ -76,7 +81,7 @@ function Navbar() {
             >
               @faísca
             </a>
-          </li>*/}
+          </li> */}
         </ul>
       </Container>
       <Link href="/" aria-label="Ir para a página inicial">
