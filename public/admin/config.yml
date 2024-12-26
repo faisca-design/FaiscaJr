@@ -71,7 +71,7 @@ collections:
         fields:
           - {label: "Título Depoimentos", name: "titleReviews", widget: "string", default: "O QUE NOSSOS CLIENTES TEM A DIZER"}
 
-    - name: "depoimentos"
+  - name: "depoimentos"
     label: "Depoimentos"
     description: "Coleção que vai conter os reviews dos clientes"
     folder: "content/reviews"
