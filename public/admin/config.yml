@@ -71,6 +71,19 @@ collections:
         fields:
           - {label: "Título Depoimentos", name: "titleReviews", widget: "string", default: "O QUE NOSSOS CLIENTES TEM A DIZER"}
 
+    - name: "depoimentos"
+    label: "Depoimentos"
+    description: "Coleção que vai conter os reviews dos clientes"
+    folder: "content/reviews"
+    create: true
+    extension: "json"
+    identifier_field: "cliente"
+    editor:
+      preview: false
+    fields:
+      - {label: "Texto do Depoimento", name: "texto", widget: "text"}
+      - {label: "Nome do Cliente", name: "cliente", widget: "string"}
+
   - name: "portfolio"
     extension: "json"
     description: "Coleção que vai conter as informação da pagina de portfólio do site da Faísca."
