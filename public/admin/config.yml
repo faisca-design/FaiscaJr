@@ -86,18 +86,17 @@ collections:
       - {label: "Título do Serviço", name: "titulo", widget: "string"}
     # - {label: "Descrição", name: "descricao", widget: "text"}
   
-  - name: "cases homee"
-    label: "Cases homee"
-    description: "sera se foi?"
+  - name: "cases"
+    label: "Cases"
+    description: "Portfolio de projetos"
     folder: "content/cases"
     create: true
     extension: "json"
     identifier_field: "nomeProjeto"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
     editor:
       preview: false
     fields:
-      - {label: "ID", name: "id", widget: "number"}
+      - {label: "ID", name: "id", widget: "string"}
       - {label: "Nome do Projeto", name: "nomeProjeto", widget: "string"}
       - {label: "Imagem", name: "imagem", widget: "image"}
       - {label: "Link do Projeto", name: "projectLink", widget: "string"}
