@@ -86,6 +86,21 @@ collections:
       - {label: "Título do Serviço", name: "titulo", widget: "string"}
     # - {label: "Descrição", name: "descricao", widget: "text"}
   
+  - name: "cases Home"
+    label: "Cases"
+    description: "Portfolio de projetos"
+    folder: "content/cases"
+    create: true
+    extension: "json"
+    identifier_field: "nomeProjeto"
+    editor:
+      preview: false
+    fields:
+      - {label: "ID", name: "id", widget: "string"}
+      - {label: "Nome do Projeto", name: "nomeProjeto", widget: "string"}
+      - {label: "Imagem", name: "imagem", widget: "image"}
+      - {label: "Link do Projeto", name: "projectLink", widget: "string"}
+
   - name: "depoimentos"
     label: "Depoimentos"
     description: "Coleção que vai conter os reviews dos clientes"
