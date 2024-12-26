@@ -86,13 +86,14 @@ collections:
       - {label: "Título do Serviço", name: "titulo", widget: "string"}
     # - {label: "Descrição", name: "descricao", widget: "text"}
   
-  - name: "cases home"
-    label: "Cases home"
+  - name: "cases homee"
+    label: "Cases homee"
+    description: "Portfolio de projetos"
     folder: "content/cases"
     create: true
     extension: "json"
     identifier_field: "nomeProjeto"
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
     editor:
       preview: false
     fields:
@@ -103,7 +104,7 @@ collections:
 
   - name: "depoimentos"
     label: "Depoimentos"
-    description: "Coleção que vai conter os reviews dos clientes"
+    description: "Reviews dos clientes"
     folder: "content/reviews"
     create: true
     extension: "json"
