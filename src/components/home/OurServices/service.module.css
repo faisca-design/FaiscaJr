@@ -4,38 +4,53 @@
     justify-content: left;
 }
 
-.service > p {
+.serviceHeader {
+    cursor: pointer;
+    width: 100%;
+}
+
+.serviceHeader > p {
     text-align: left;
     color: white;
     font-size: 1.518vw;
     height: 3vh;
     margin-top: 1vh;
     margin-bottom: 0;
-    
 }
 
-.service > hr {
+.serviceHeader > hr {
     margin-left: 0;
     width: 100%;
-    border-top: 1px #fff;
+    border-top: 1px solid #fff;
     margin-top: 5px;
 }
 
+.description {
+    color: white;
+    font-size: 1.2vw;
+    margin-top: 1vh;
+    margin-left: 2vw;
+    padding: 10px 0;
+}
 
 @media screen and (max-width: 600px) {
-    .service > hr {
-      display: none;
+    .serviceHeader > hr {
+        display: none;
     }
-
 
     .service {
         justify-content: center;
     }
 
-    .service > p {
+    .serviceHeader > p {
         text-align: center;
         margin-top: 2vh;
         font-size: 4.7vw;
     }
 
-  }
+    .description {
+        text-align: center;
+        margin-left: 0;
+        font-size: 4vw;
+    }
+}

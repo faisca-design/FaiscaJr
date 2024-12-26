@@ -10,7 +10,11 @@ function Services({tittleAllServices, servicos}){
         <div className={styles.services}>
             <p><StyledText text={tittleAllServices}/></p>
             {servicosOrdenados.map((servico, index) => (
-                <Service key={index} servico={servico.titulo}/>
+                <Service 
+                    key={index} 
+                    servico={servico.titulo}
+                    description={servico.descricao}
+                />
             ))}
         </div>
     )

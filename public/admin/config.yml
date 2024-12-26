@@ -84,7 +84,7 @@ collections:
     fields:
       - {label: "Ordem", name: "ordem", widget: "number", value_type: "int", min: 1}
       - {label: "Título do Serviço", name: "titulo", widget: "string"}
-    # - {label: "Descrição", name: "descricao", widget: "text"}
+      - {label: "Descrição", name: "descricao", widget: "text"}
   
   - name: "cases"
     label: "Cases"
