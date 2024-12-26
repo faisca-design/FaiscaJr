@@ -4,17 +4,15 @@ import { useState, useEffect } from 'react';
 import styles from './layoutCases.module.css';
 import Cases from './cases';
 import GenericButton from '@/components/GenericButton';
-import casesData from './../../../data/casesData.json';
 import StyledText from "@/components/textoEstilizado/textoEstilizado"
 
-
-function CasesArea({ phraseCases, leftTittle, rightTittle, buttonphrase, buttonRoute }) {
+function CasesArea({ phraseCases, leftTittle, rightTittle, buttonphrase, buttonRoute, casesData }) {
     const [randomCases, setRandomCases] = useState([]);
 
-    useEffect(() => {                                                                  //lógica para selecionar 6 cases aleatorios entre todos disponiveis
+    useEffect(() => {
         const shuffledCases = [...casesData].sort(() => 0.5 - Math.random());
         setRandomCases(shuffledCases.slice(0, 6));
-    }, []);
+    }, [casesData]);
 
     return (
         <section className={styles.container}>

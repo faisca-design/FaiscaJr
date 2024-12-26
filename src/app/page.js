@@ -1,4 +1,4 @@
-import { handleJSONfile, handleJSONfiles } from './../utils/functions/jsonHandler.js'; 
+import { handleJSONfile, handleJSONfiles } from './../utils/functions/jsonHandler.js';
 import BannerHome from "@components/home/BannerHome";
 import LearnMoreSection from '@/components/home/LearnMoreSection';
 import OurServices from '@/components/home/OurServices';
@@ -9,6 +9,7 @@ async function getData() {
   const homeData = await handleJSONfile('./content/homePage/homePage.json');
   const reviewsData = await handleJSONfiles('./content/reviews');
   const servicesData = await handleJSONfiles('./content/servicos');
+  const casesData = await handleJSONfiles('./content/cases');
 
   if (!homeData) {
     throw new Error('Failed to fetch home data');
@@ -17,12 +18,13 @@ async function getData() {
   return {
     homeData,
     reviewsData,
-    servicesData
+    servicesData,
+    casesData
   };
 }
 
 export default async function Home() {
-  const { homeData, reviewsData, servicesData } = await getData();
+  const { homeData, reviewsData, servicesData, casesData } = await getData();
   const { banner, learnMore, services, cases, reviews } = homeData;
 
   return (
@@ -51,6 +53,7 @@ export default async function Home() {
         rightTittle={cases.rightTitle}
         buttonphrase={cases.buttonPhrase}
         buttonRoute={cases.buttonRoute}
+        casesData={casesData}
       />
 
       <HomeCarousel
@@ -60,4 +63,3 @@ export default async function Home() {
     </>
   );
 }
-
