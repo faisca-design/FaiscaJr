@@ -73,7 +73,6 @@ collections:
 
   - name: "servicos"
     label: "Serviços"
-    description: "agora foi"
     description: "Lista de serviços oferecidos"
     folder: "content/servicos"
     create: true
@@ -89,7 +88,7 @@ collections:
   
   - name: "cases homee"
     label: "Cases homee"
-    description: "Portfolio de projetos"
+    description: "sera se foi?"
     folder: "content/cases"
     create: true
     extension: "json"
