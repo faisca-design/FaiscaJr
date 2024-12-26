@@ -73,6 +73,7 @@ collections:
 
   - name: "servicos"
     label: "Serviços"
+    description: "agora foi"
     description: "Lista de serviços oferecidos"
     folder: "content/servicos"
     create: true
@@ -97,7 +98,7 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: "ID", name: "id", widget: "string"}
+      - {label: "ID", name: "id", widget: "number"}
       - {label: "Nome do Projeto", name: "nomeProjeto", widget: "string"}
       - {label: "Imagem", name: "imagem", widget: "image"}
       - {label: "Link do Projeto", name: "projectLink", widget: "string"}
