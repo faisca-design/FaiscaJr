@@ -81,8 +81,8 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: "Texto do Depoimento", name: "texto", widget: "text"}
-      - {label: "Nome do Cliente", name: "cliente", widget: "string"}
+      - {label: "Depoimento", name: "texto", widget: "text"}
+      - {label: "Cliente", name: "cliente", widget: "string"}
 
   - name: "portfolio"
     extension: "json"
