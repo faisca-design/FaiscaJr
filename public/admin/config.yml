@@ -71,6 +71,20 @@ collections:
         fields:
           - {label: "Título Depoimentos", name: "titleReviews", widget: "string", default: "O QUE NOSSOS CLIENTES TEM A DIZER"}
 
+  - name: "servicos"
+    label: "Serviços"
+    description: "Lista de serviços oferecidos"
+    folder: "content/services"
+    create: true
+    extension: "json"
+    identifier_field: "titulo"
+    sortable_fields: ["ordem"] 
+    editor:
+      preview: false
+    fields:
+      - {label: "Ordem", name: "ordem", widget: "number", value_type: "int", min: 1}
+      - {label: "Título do Serviço", name: "titulo", widget: "string"}
+  
   - name: "depoimentos"
     label: "Depoimentos"
     description: "Coleção que vai conter os reviews dos clientes"
