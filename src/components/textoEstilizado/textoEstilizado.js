@@ -39,7 +39,7 @@ const textoEstilizado = ({ text }) => {
     });
   };
 
-  return <div>{renderStyledText()}</div>;
+  return <>{renderStyledText()}</>;
 };
 
 export default textoEstilizado;
