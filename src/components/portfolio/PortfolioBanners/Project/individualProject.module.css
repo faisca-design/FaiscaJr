@@ -10,13 +10,13 @@
   max-width: 100%;
   max-height: 80vh;
   object-fit: cover;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  /* efeito gradiente (transformação) */
+  transition: transform 0.3s ease;
+  /* Reduzimos o tempo da transição para ficar mais suave */
 }
 
 .imageContainer:hover .image {
-  transform: scale(1.03);
-  /* efeito de zoom */
+  transform: scale(1.02);
+  /* Reduzimos um pouco o zoom para ficar mais sutil */
 }
 
 .imageOverlay::before {
@@ -26,14 +26,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  /* efeito gradiente */
-  transition: opacity 0.5s ease-in-out;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  opacity: 0; /* Começa invisível */
+  transition: opacity 0.3s ease;
 }
 
-.imageOverlay:hover::before {
-  opacity: 0;
-  /* efeito gradiente */
+.imageContainer:hover .imageOverlay::before {
+  opacity: 1; /* Fica visível no hover */
 }
 
 .textContainer {
@@ -41,7 +40,14 @@
   top: 40%;
   left: 15%;
   text-align: left;
-  transition: opacity 0.5s ease-in-out;
+  opacity: 0; /* Começa invisível */
+  transform: translateY(20px); /* Começa um pouco abaixo */
+  transition: all 0.3s ease;
+}
+
+.imageContainer:hover .textContainer {
+  opacity: 1; /* Fica visível no hover */
+  transform: translateY(0); /* Move para a posição correta */
 }
 
 .textTitle {
@@ -61,11 +67,6 @@
   width: 60%;
 }
 
-.imageContainer:hover .textContainer {
-  opacity: 0;
-  /* texto desaparece */
-}
-
 @media (max-width: 576px) {
   .textTitle {
     font-size: 5.58vw;
@@ -77,5 +78,4 @@
     line-height: normal;
     width: 90%;
   }
-
 }
