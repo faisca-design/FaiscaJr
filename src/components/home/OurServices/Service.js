@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import styles from './service.module.css';
+import StyledText from "@/components/textoEstilizado/textoEstilizado"
 
 function Service(prop) {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,12 +19,12 @@ function Service(prop) {
                 role="button"
                 tabIndex={0}
             >
-                <p>{prop.servico}</p>
+                <p><StyledText text={prop.servico}/></p>
                 <hr />
             </div>
             {isOpen && (
                 <div className={styles.description}>
-                    {prop.description}
+                    <StyledText text={prop.description}/>
                 </div>
             )}
         </div>

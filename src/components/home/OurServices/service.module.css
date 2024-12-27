@@ -21,16 +21,18 @@
 .serviceHeader > hr {
     margin-left: 0;
     width: 100%;
-    border-top: 1px solid #fff;
+    border-top: normal solid #fff;
     margin-top: 5px;
 }
 
 .description {
     color: white;
     font-size: 1.2vw;
-    margin-top: 1vh;
-    margin-left: 2vw;
-    padding: 10px 0;
+    margin-top: .3vh;
+    margin-left: 1.5vw;
+    line-height: normal;
+    margin-bottom: 2.8vh;
+    font-weight: 200;
 }
 
 @media screen and (max-width: 600px) {
