@@ -21,7 +21,7 @@
 .serviceHeader > hr {
     margin-left: 0;
     width: 100%;
-    border-top: normal solid #fff;
+    border-top: .1vh solid #fff;
     margin-top: 5px;
 }
 
