@@ -72,7 +72,7 @@ collections:
           - {label: "Título Depoimentos", name: "titleReviews", widget: "string", default: "O QUE NOSSOS CLIENTES TEM A DIZER"}
 
   - name: "servicos"
-    label: "Serviços"
+    label: "Serviços (Home)"
     description: "Lista de serviços oferecidos"
     folder: "content/servicos"
     create: true
@@ -87,7 +87,7 @@ collections:
       - {label: "Descrição", name: "descricao", widget: "text"}
   
   - name: "cases"
-    label: "Cases"
+    label: "Cases (Home)"
     description: "Portfolio de projetos"
     folder: "content/cases"
     create: true
@@ -102,7 +102,7 @@ collections:
       - {label: "Link do Projeto", name: "projectLink", widget: "string"}
 
   - name: "depoimentos"
-    label: "Depoimentos"
+    label: "Depoimentos (Home)"
     description: "Reviews dos clientes"
     folder: "content/reviews"
     create: true
@@ -115,8 +115,8 @@ collections:
       - {label: "Cliente", name: "cliente", widget: "string"}
 
   - name: "banners"
-    label: "Banners do Portfólio"
-    description: "Projetos exibidos no portfólio"
+    label: "Banners (Portfólio)"
+    description: "Banners exibidos na página portfólio"
     folder: "content/banners"
     create: true
     extension: "json"
@@ -188,8 +188,8 @@ collections:
 
   - name: "projetos"
     extension: "json"
-    description: "Coleção que vai conter os projetos da Faísca."
-    label: "Projetos"
+    description: "Coleção que vai conter as paginas de projetos individuais."
+    label: "Projetos Individuais"
     folder: "content/projetos"
     create: true
     editor:
