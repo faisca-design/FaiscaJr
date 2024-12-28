@@ -114,6 +114,24 @@ collections:
       - {label: "Depoimento", name: "texto", widget: "text"}
       - {label: "Cliente", name: "cliente", widget: "string"}
 
+  - name: "banners"
+    label: "Banners do Portfólio"
+    description: "Projetos exibidos no portfólio"
+    folder: "content/banners"
+    create: true
+    extension: "json"
+    identifier_field: "titulo"
+    sortable_fields: ["ordem"]
+    editor:
+      preview: false
+    fields:
+      - {label: "Ordem", name: "ordem", widget: "number", value_type: "int", min: 1}
+      - {label: "Título do Projeto", name: "titulo", widget: "string"}
+      - {label: "Descrição", name: "desc", widget: "string"}
+      - {label: "Imagem do Projeto", name: "image", widget: "image"}
+      - {label: "Rota do Projeto", name: "path", widget: "string", pattern: ['^/portfolio/[a-zA-Z0-9-]+$', "Deve começar com /portfolio/"]}
+      - {label: "Mensagem de Erro", name: "erro", widget: "string", default: "Imagem não encontrada"}
+
   - name: "portfolio"
     extension: "json"
     description: "Coleção que vai conter as informação da pagina de portfólio do site da Faísca."
