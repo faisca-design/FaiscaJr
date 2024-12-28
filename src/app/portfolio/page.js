@@ -5,7 +5,7 @@ function Portfolio(){
   return (
     <>
       <PortfolioBanners/>
-      <PortfolioCarousel />
+      {/*<PortfolioCarousel />*/}
     </>
   )
 }
