@@ -120,8 +120,7 @@ collections:
     label: "Sobre Nós"
     folder: "content/sobreNos"
     slug: "sobreNosPage"
-    create: true
-    identifier_field: "purpose"
+    create: false
     editor:
       preview: false
     fields:
