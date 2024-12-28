@@ -1,12 +1,13 @@
 import styles from './cards.module.css'
 import MakeCard from './MakeCard';
 import membersData from './../../../data/membersData.json'
+import StyledText from "@/components/textoEstilizado/textoEstilizado"
 
-function Cards() {
+function Cards( {tittle, subTittle}) {
     return (
         <div>
-            <h2 className={styles.title}>Nossa Equipe</h2>
-            <h1 className={styles.subTittle}>Estas são as pessoas que fazem a Faísca acontecer.</h1>
+            <h2 className={styles.title}><StyledText text={tittle}/></h2>
+            <h1 className={styles.subTittle}><StyledText text={subTittle}/></h1>
             <section className={styles.container}>
                 <div className={styles.row}>
                     {membersData.map((DMembers) => (

@@ -102,7 +102,7 @@ collections:
       - {label: "Link do Projeto", name: "projectLink", widget: "string"}
 
   - name: "depoimentos"
-    label: "Depoimentos (Home)"
+    label: "Reviews (Home)"
     description: "Reviews dos clientes"
     folder: "content/reviews"
     create: true
@@ -113,6 +113,92 @@ collections:
     fields:
       - {label: "Depoimento", name: "texto", widget: "text"}
       - {label: "Cliente", name: "cliente", widget: "string"}
+
+  - name: "sobreNos"
+    extension: "json"
+    description: "Configurações estáticas da página Sobre Nós"
+    label: "Sobre Nós"
+    folder: "content/sobreNos"
+    slug: "sobreNosPage"
+    create: false
+    identifier_field: "purpose"
+    editor:
+      preview: false
+    fields:
+      # PROPÓSITO
+      - {label: "Propósito", name: "purpose", widget: "string"}
+
+      # SOBRE A FAÍSCA
+      - label: "Sobre a Faísca"
+        name: "aboutFaisca"
+        widget: "object"
+        fields:
+          - {label: "Primeiro Texto", name: "firstText", widget: "text"}
+          - {label: "Segundo Texto", name: "secondText", widget: "text"}
+          - {label: "Logo", name: "logo", widget: "image"}
+
+      # ÁREA DE MEMBROS
+      - label: "Área de Membros"
+        name: "membersArea"
+        widget: "object"
+        fields:
+          - {label: "Título", name: "tittle", widget: "string"}
+          - {label: "Subtítulo", name: "subTittle", widget: "string", required: false}
+
+      # ESTRUTURA
+      - label: "Estrutura"
+        name: "structure"
+        widget: "object"
+        fields:
+          - {label: "Título", name: "tittle", widget: "string"}
+          - {label: "Frase", name: "phrase", widget: "text"}
+          
+          - label: "card 1"
+            name: "sectionOne"
+            widget: "object"
+            fields:
+              - {label: "Imagem", name: "img", widget: "image"}
+              - {label: "Título", name: "subTittle", widget: "string"}
+              - {label: "Texto", name: "text", widget: "text"}
+
+          - label: "card 2"
+            name: "sectionTwo"
+            widget: "object"
+            fields:
+              - {label: "Imagem", name: "img", widget: "image"}
+              - {label: "Título", name: "subTittle", widget: "string"}
+              - {label: "Subtítulo", name: "subSubTittle", widget: "string", required: false}
+              - {label: "Texto", name: "text", widget: "text"}
+
+          - label: "card 3"
+            name: "sectionThree"
+            widget: "object"
+            fields:
+              - {label: "Imagem", name: "img", widget: "image"}
+              - {label: "Título", name: "subTittle", widget: "string"}
+              - {label: "Texto", name: "text", widget: "text"}
+
+          - label: "card 4"
+            name: "sectionFour"
+            widget: "object"
+            fields:
+              - {label: "Imagem", name: "img", widget: "image"}
+              - {label: "Título", name: "subTittle", widget: "string"}
+              - {label: "Subtítulo", name: "subSubTittle", widget: "string", required: false}
+              - {label: "Texto", name: "text", widget: "text"}
+
+      # MEJ
+      - label: "MEJ"
+        name: "mej"
+        widget: "object"
+        fields:
+          - {label: "Título", name: "tittle", widget: "string"}
+          - {label: "Frase", name: "phrase", widget: "text"}
+          - {label: "Imagem Principal", name: "mainImg", widget: "image"}
+          - {label: "Logo Brasil Jr", name: "brasilJrImg", widget: "image"}
+          - {label: "Logo Nej", name: "NejImg", widget: "image"}
+          - {label: "Logo Fejers", name: "fejersImg", widget: "image"}
+          - {label: "Logo Design UFRGS", name: "designUFRGSImg", widget: "image"}
 
   - name: "banners"
     label: "Banners (Portfólio)"

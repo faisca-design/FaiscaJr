@@ -1,10 +1,11 @@
 import styles from "./purpTxt.module.css"
+import StyledText from "@/components/textoEstilizado/textoEstilizado"
 
-function PurpTxt(){
+function PurpTxt({ purpose }){
     return(
         <div className={styles.purpTxt}>
                 <p>  
-                nós projetamos <span className={styles.bold}>experiências valiosas </span> para ajudar empresas e pessoas a entregarem marcas, produtos e serviços incríveis! 
+                <StyledText text={purpose}/>
                 </p>
         </div>
     )
