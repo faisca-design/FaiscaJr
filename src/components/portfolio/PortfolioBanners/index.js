@@ -1,17 +1,10 @@
 'use client'
 
 import { useState, useEffect } from 'react';
-import chamasDaInsignificancia from '@img/portfolio/chamas.jpg';
-import spotlight from '@img/portfolio/spotlight.jpg';
-import zakto from '@img/portfolio/zakto.jpg';
-import bakoBebidas from '@img/portfolio/bako.jpg';
-import bannerJK from '@img/portfolio/bannerJK.png';
-import bannerNI from '@img/portfolio/bannerNI.png';
-import bannerCN from '@img/portfolio/bannerCN.png';
 import Project from './Project';
 import styles from './allBanners.module.css';
 
-function BannersFaisca() {
+function BannersFaisca({ projects = [] }) {
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 5;
 
@@ -26,65 +19,16 @@ function BannersFaisca() {
     scrollToTop();
   }, [currentPage]);
 
-  const projects = [
-    {
-      path: "/portfolio/ChamasDaInsignificancia",
-      image: chamasDaInsignificancia,
-      erro: "Imagem não encontrada",
-      titulo: "CHAMAS DA INSIGNIFICÂNCIA",
-      desc: "DIAGRAMAÇÃO EDITORIAL"
-    },
-    {
-      path: "/portfolio/SpotLight",
-      image: spotlight,
-      erro: "Imagem não encontrada",
-      titulo: "SPOT LIGHT",
-      desc: "IDENTIDADE VISUAL APLICAÇÕES"
-    },
-    {
-      path: "/portfolio/Zakto",
-      image: zakto,
-      erro: "Imagem não encontrada",
-      titulo: "ZAKTO",
-      desc: "DIAGRAMAÇÃO EDITORIAL"
-    },
-    {
-      path: "/portfolio/BakoBebidas",
-      image: bakoBebidas,
-      erro: "Imagem não encontrada",
-      titulo: "BAKO BEBIDAS",
-      desc: "IDENTIDADE VISUAL APLICAÇÕES"
-    },
-    {
-      path: "/portfolio/Jeikoa",
-      image: bannerJK,
-      erro: "Imagem não encontrada",
-      titulo: "JEIKOA",
-      desc: "IDENTIDADE VISUAL APLICAÇÕES"
-    },
-    {
-      path: "/portfolio/NucleoImpulso",
-      image: bannerNI,
-      erro: "Imagem não encontrada",
-      titulo: "NÚCLEO IMPULSO",
-      desc: "IDENTIDADE VISUAL APLICAÇÕES"
-    },
-    {
-      path: "/portfolio/CocoNude",
-      image: bannerCN,
-      erro: "Imagem não encontrada",
-      titulo: "COCO NUDE",
-      desc: "IDENTIDADE VISUAL APLICAÇÕES"
-    },
-  ];
+  // Ordenar projetos pela ordem definida no CMS
+  const sortedProjects = [...projects].sort((a, b) => a.ordem - b.ordem);
 
   // Cálculo do total de páginas
-  const totalPages = Math.ceil(projects.length / projectsPerPage);
+  const totalPages = Math.ceil(sortedProjects.length / projectsPerPage);
 
   // Pegar os projetos da página atual
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
-  const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
+  const currentProjects = sortedProjects.slice(indexOfFirstProject, indexOfLastProject);
 
   // Mudar de página
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -105,7 +49,7 @@ function BannersFaisca() {
       pages.push(DOTS);
     }
 
-    // Páginas ao redor da página atual
+    // Páginas ao redor da página atual (+1 e -1)
     for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
       pages.push(i);
     }
@@ -127,7 +71,7 @@ function BannersFaisca() {
       <div className={styles.projectsGrid}>
         {currentProjects.map((project, index) => (
           <Project
-            key={index}
+            key={project.ordem}
             path={project.path}
             image={project.image}
             erro={project.erro}

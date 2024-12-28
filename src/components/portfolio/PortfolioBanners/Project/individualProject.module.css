@@ -11,12 +11,20 @@
   max-height: 80vh;
   object-fit: cover;
   transition: transform 0.3s ease;
-  /* Reduzimos o tempo da transição para ficar mais suave */
+  z-index: 1;
 }
 
 .imageContainer:hover .image {
   transform: scale(1.02);
-  /* Reduzimos um pouco o zoom para ficar mais sutil */
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 .imageOverlay::before {
@@ -27,12 +35,13 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-  opacity: 0; /* Começa invisível */
+  opacity: 0;
   transition: opacity 0.3s ease;
+  z-index: 2;
 }
 
 .imageContainer:hover .imageOverlay::before {
-  opacity: 1; /* Fica visível no hover */
+  opacity: 1;
 }
 
 .textContainer {
@@ -40,14 +49,15 @@
   top: 40%;
   left: 15%;
   text-align: left;
-  opacity: 0; /* Começa invisível */
-  transform: translateY(20px); /* Começa um pouco abaixo */
+  opacity: 0;
+  transform: translateY(20px);
   transition: all 0.3s ease;
+  z-index: 3;
 }
 
 .imageContainer:hover .textContainer {
-  opacity: 1; /* Fica visível no hover */
-  transform: translateY(0); /* Move para a posição correta */
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .textTitle {
@@ -64,7 +74,7 @@
   margin-top: 0.3vw;
   color: white;
   line-height: 1.5vw;
-  width: 60%;
+  width: 62%;
 }
 
 @media (max-width: 576px) {

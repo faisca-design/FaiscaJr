@@ -7,7 +7,7 @@ function Project({ path, image, erro, titulo, desc }) {
     <div className={styles.imageContainer}>
       <Link href={path}>
         <div className={styles.imageOverlay}>
-          <Image src={image} alt={erro} className={styles.image} />
+          <Image src={image} alt={erro} className={styles.image} width={3000} height={3000} />
         </div>
       </Link>
       <div className={styles.textContainer}>
