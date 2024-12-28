@@ -19,7 +19,7 @@ collections:
   - name: "home"
     extension: "json"
     description: "Configurações da página principal"
-    label: "Página Principal"
+    label: "Home"
     folder: "content/homePage"
     slug: "homePage"
     create: false
