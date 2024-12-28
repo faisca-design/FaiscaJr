@@ -126,15 +126,15 @@ collections:
       preview: false
     fields:
       # PROPÓSITO
-      - {label: "Propósito", name: "purpose", widget: "string"}
+      - {label: "Propósito", name: "purpose", widget: "text"}
 
       # SOBRE A FAÍSCA
       - label: "Sobre a Faísca"
         name: "aboutFaisca"
         widget: "object"
         fields:
-          - {label: "Primeiro Texto", name: "firstText", widget: "text"}
-          - {label: "Segundo Texto", name: "secondText", widget: "text"}
+          - {label: "Primeiro Parágrafo", name: "firstText", widget: "text"}
+          - {label: "Segundo Parágrafo", name: "secondText", widget: "text"}
           - {label: "Logo", name: "logo", widget: "image"}
 
       # ÁREA DE MEMBROS
@@ -151,7 +151,7 @@ collections:
         widget: "object"
         fields:
           - {label: "Título", name: "tittle", widget: "string"}
-          - {label: "Frase", name: "phrase", widget: "text"}
+          - {label: "Texto", name: "phrase", widget: "text"}
           
           - label: "card 1"
             name: "sectionOne"
