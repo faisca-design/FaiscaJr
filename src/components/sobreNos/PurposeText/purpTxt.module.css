@@ -20,9 +20,10 @@
 @media screen and (max-width: 576px) {
 
     .purpTxt > p {
-        width: 75%;
+        width: 85%;
         text-align: left;
         font-size: 7.4vw;
+        text-align: center;
     }
 
   }

@@ -1,5 +1,5 @@
 .preenchimento{
-    width: 73%;
+    width: 75%;
     justify-content: center;
     align-items: center;
     margin-left: auto;
@@ -24,7 +24,7 @@
 }
 
 .containerImagem{
-    margin-right: 10vh;
+    margin-right: 11vh;
     height: 35vh;
     width: auto;
 }
@@ -55,6 +55,7 @@
      
      .containerImagem{
         margin-right: 0;
+        margin-bottom: 2vh;
     }
 
     .paragrafo{
