@@ -1,0 +1,57 @@
+.card {
+    margin-left: 1.25%;
+    margin-bottom: 3%;
+    width: 100%;
+}
+  
+.cardImg {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+  
+.cardText {
+    background-color: #6C6060;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.imageContainer {
+    position: relative;
+}
+
+.memberImage {
+    transition: opacity 0.8s ease; /* Transição mais suave */
+}
+  
+.Nomes {
+    font-weight: 440;
+    font-size: 2.4vh;
+    margin-top: 3vh;
+    margin-bottom: .5vh;
+    transition: opacity 0.8s ease; /* Transição suave para o texto também */
+}
+  
+.Ciclo {
+    margin-bottom: 3vh;
+    font-size: 2.4vh;
+    font-weight: 100;
+    transition: opacity 0.8s ease; /* Transição suave para o texto também */
+}
+
+@media (max-width: 576px) {
+    .Nomes {
+        font-size: 2.4vh;
+    }
+
+    .Ciclo {
+        font-size: 2.4vh;
+    }
+ 
+    .card {
+        width: 40%;
+        margin: 3%;
+    }
+}

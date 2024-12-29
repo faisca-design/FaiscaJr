@@ -5,6 +5,7 @@ import MembersArea from "@components/sobreNos/MembersArea"
 import Structure from "@/components/sobreNos/Structure"
 import MEJ from "@components/sobreNos/MEJ"
 import { handleJSONfile } from '../../utils/functions/jsonHandler.js'
+import Members from "@components/sobreNos/Members"
 
 async function getData() {
     const sobreNosData = await handleJSONfile('content/sobreNos/sobreNosPage.json');
@@ -34,6 +35,8 @@ async function SobreNos() {
                 tittle={membersArea.tittle}
                 subTittle={membersArea.subTittle}
             />
+
+            <Members/>
 
             <Structure
                 tittle={structure.tittle}
