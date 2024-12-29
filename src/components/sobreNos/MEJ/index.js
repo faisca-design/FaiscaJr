@@ -6,7 +6,7 @@ import StyledText from "@/components/textoEstilizado/textoEstilizado"
 function MEJ({ tittle, phrase, mainImg, brasilJrImg, NejImg, fejersImg, designUFRGSImg}) {
     return (
         <div className={styles.container}>
-            <Image className={styles.imge} src={mainImg} alt={"error"} width={3000} height={3000} />
+            <Image className={styles.imge} src={mainImg} alt={"error"} width={944} height={1124} />
             <div className={styles.bar}></div>
             <div className={styles.rightContent}>
                 <h1><StyledText text={tittle}/></h1>

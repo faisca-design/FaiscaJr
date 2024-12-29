@@ -36,7 +36,7 @@ async function SobreNos() {
                 subTittle={membersArea.subTittle}
             />
 
-            <Members/>
+            {/*<Members/>*/}
 
             <Structure
                 tittle={structure.tittle}
