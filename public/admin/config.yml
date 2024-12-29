@@ -199,9 +199,8 @@ collections:
           - {label: "Logo Fejers", name: "fejersImg", widget: "image"}
           - {label: "Logo Design UFRGS", name: "designUFRGSImg", widget: "image"}
 
-  collections:
   - name: "membros"
-    label: "Membros"
+    label: "Membros (Sobre Nós)"
     folder: "content/membros"
     create: true
     extension: "json"
