@@ -1,9 +1,9 @@
 {
   "purpose": "nós projetamos ##experiências valiosas## para ajudar empresas e pessoas a entregarem marcas, produtos e serviços incríveis!",
   "aboutFaisca": {
-    "firstText": "A Faísca é uma empresa júnior de design da Universidade Federal do Rio Grande do Sul (UFRGS) que se destaca, no mercado, por sua combinação de ##criatividade## e ##eficiência##. Formada por estudantes universitários altamente capacitados em design, a Faísca tem como principal diferencial a capacidade de trabalhar em estreita ##colaboração## com o cliente desde o início do projeto, visando compreender suas necessidades e expectativas, a fim de criar ##soluções personalizadas## e que atendam aos seus objetivos.",
+    "firstText": "A Faísca é uma empresa júnior de design da Universidade Federal do Rio Grande do Sul (UFRGS) que se **destaca**, no mercado, por sua combinação de **criatividade** e **eficiência** Formada por estudantes universitários altamente capacitados em design, a Faísca tem como principal diferencial a capacidade de trabalhar em estreita **colaboração** com o cliente desde o início do projeto, visando compreender suas necessidades e expectativas, a fim de criar **soluções personalizadas** e que atendam aos seus objetivos.",
     "secondText": "Se você está em busca de uma empresa de design que oferece soluções criativas e eficientes, a Faísca é a escolha ideal. Conte conosco para ajudá-lo a alcançar seus objetivos e superar suas expectativas.",
-    "logo": "/uploads/Logo-Faisca-sobre-nos.png"
+    "logo": "/uploads/Logo-Faisca-sobre-nos.svg"
   },
   "membersArea": {
     "tittle": "Nossa Equipe",

@@ -24,7 +24,9 @@
 }
 
 .containerImagem{
-    margin-right: 6vh;
+    margin-right: 10vh;
+    height: 35vh;
+    width: auto;
 }
 
 .fraseDestaque{
