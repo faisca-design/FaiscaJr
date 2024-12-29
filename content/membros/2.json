@@ -1,0 +1,11 @@
+{
+  "id": "2",
+  "ordem": 2,
+  "members": [
+    {
+      "nome": "André Kallerman",
+      "ciclo": "diretor marketing",
+      "imagem": "/uploads/amandareis.jpg"
+    }
+  ]
+}
