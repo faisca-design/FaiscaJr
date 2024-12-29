@@ -31,12 +31,15 @@ async function SobreNos() {
                 logo={aboutFaisca.logo}
             />
 
-            <MembersArea
+           {/*<MembersArea
+                tittle={membersArea.tittle}
+                subTittle={membersArea.subTittle}
+            /> */} 
+
+            <Members                 
                 tittle={membersArea.tittle}
                 subTittle={membersArea.subTittle}
             />
-
-            {/*<Members/>*/}
 
             <Structure
                 tittle={structure.tittle}
