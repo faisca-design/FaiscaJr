@@ -52,11 +52,8 @@
     padding-top: 17vh;
 }
 
-.bold{
-    font-weight: bold;
-}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 576px) {
 
     .Separator {
         visibility: visible;
@@ -71,14 +68,15 @@
 
     .lowText {
         font-size: 4vw;
+        font-weight: 200;
     }
     
     .lowTextAux{
-        width: 70%;
+        width: 75%;
     }
 
     .highText {
-        width: 70%;
+        width: 75%;
     }
 
     .contact {

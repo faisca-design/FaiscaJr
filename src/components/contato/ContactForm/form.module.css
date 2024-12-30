@@ -145,7 +145,21 @@ input[type="date"]:not(.has-value):valid:before{
     display: none;
 }
 
-@media screen and (max-width: 600px) {
+#date {
+    box-sizing: border-box !important;
+    position: relative;
+    padding-right: 50px; /* Espaço para o ícone */
+    line-height: normal; /* Ajuda na centralização vertical */
+}
+
+#date::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza o ícone verticalmente */
+}
+
+@media screen and (max-width: 576px) {
 
     .row{
         flex-direction: column;

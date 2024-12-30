@@ -1,10 +1,13 @@
 import styles from "./headerForm.module.css"
+import StyledText from "@/components/textoEstilizado/textoEstilizado"
 
-function HeaderForm(){
+
+function HeaderForm({ text, info}){
     return(
         <div className={styles.headerForm}>
             <div className={styles.headerFormTxt}>
-                <p>entre em contato com a gente <br /> <spam className={styles.lowTxt}> retornamos sua mensagem em até 5 dias úteis.</spam></p>
+                <p><StyledText text={text}/></p>
+                <p className={styles.lowTxt}> <StyledText text={info}/></p>
             </div>
             <div className={styles.headerFormHR}>
                 <hr />

@@ -1,36 +1,36 @@
-.headerForm{
+.headerForm {
     display: flex;
     flex-direction: row;
     margin-top: 0;
+    margin-bottom: 4vh;
+    justify-content: flex-end; /* Alinha os itens à direita */
+    align-items: center; /* Alinha os itens verticalmente */
 }
 
-.headerFormTxt{
-    width: 40vw;
+.headerFormTxt {
+    width: auto; /* Ajusta para ocupar apenas o espaço necessário */
     display: flex;
-    justify-content: right;
-    
+    flex-direction: column;
+    font-size: 1.518vw;
+    color: white;
+    margin-right: 1.5vw; /* Espaçamento entre o texto e a linha */
 }
 
-.headerFormHR{
-    width: 60vw;
-    margin: auto;
-    margin-bottom: 6vh;
+.headerFormHR {
+    width: 60vw; 
 }
 
-.hr {
+.headerFormHR hr {
     background-color: black;
+    margin: 0; 
 }
 
 .lowTxt {
     font-size: 1vw;
-}
-.headerFormTxt > p {
-    font-size: 1.518vw;
-    text-align: left;
-    color: white;
+    margin-top: 1vh;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 576px) {
 
     .hr {
         display: none;
@@ -41,19 +41,23 @@
     }
 
     .headerFormTxt{
-        width: 100%;
+        width: 75%;
         display: flex;
         justify-content: center;
         
     }
+    .headerForm {
+        justify-content: center;
+        margin-bottom: 3vh;
+    }
 
-
-    .headerFormTxt > p {
+    .headerFormTxt{
         font-size: 4.95vw;
     }
 
     .lowTxt {
-        font-size: 3.42vw;
+        font-size: 3.2vw;
+        font-weight: 200;
     }
 
   }

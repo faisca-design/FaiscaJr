@@ -4,7 +4,7 @@ import styles from "./form.module.css";
 import emailjs from 'emailjs-com';
 import HeaderForm from './HeaderForm';
 
-function Form() {
+function Form({ headerText, headerSubText, nome, email, telefone, tipoProjeto, prazo, ondeConheceu, detalhes, enviar }) {
     const [phone, setPhone] = useState("");
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
     const [showFailureMessage, setShowFailureMessage] = useState(false);
@@ -106,26 +106,29 @@ function Form() {
 
     return (
         <div className={styles.mainDiv}>
-            <HeaderForm />
+            <HeaderForm 
+            text={headerText}
+            info={headerSubText}
+            />
             <form className={`${styles.form} ${isSubmitted ? styles.submitted : ''}`} onSubmit={showSuccess} onInvalid={showSuccess}>
                 <div className={styles.row}>
                     <input 
                         type="text" 
-                        placeholder="Nome" 
+                        placeholder={nome}
                         name="name"
                         required
                         onChange={handleInputChange}
                     />
                     <input 
                         type="email" 
-                        placeholder="E-mail" 
+                        placeholder={email}
                         name="email"
                         required
                         onChange={handleInputChange}
                     />
                     <input
                         type="tel"
-                        placeholder="Telefone"
+                        placeholder={telefone}
                         value={phone}
                         onChange={handlePhoneChange}
                         name="phone"
@@ -135,7 +138,7 @@ function Form() {
 
                 <div className={styles.row}>
                     <select name="projectType" id={styles.projects} onChange={handleInputChange}>
-                        <option value="" disabled selected>Qual tipo de projeto?</option>
+                        <option value="" disabled selected>{tipoProjeto}</option>
                         <option value="Identidade Visual">Identidade Visual</option>
                         <option value="Design de Produto">Design de Produto</option>
                         <option value="Embalagem">Embalagem</option>
@@ -147,7 +150,7 @@ function Form() {
 
                     <input 
                         type="date" 
-                        placeholder="Prazo de Entrega:" 
+                        placeholder={prazo}
                         id={styles.date}
                         name="deadline"
                         required
@@ -155,7 +158,7 @@ function Form() {
                     />
 
                     <select name="howDidUMeet" id={styles.howDidUMeet} onChange={handleInputChange}>
-                        <option value="" disabled selected>Como conheceu a Faísca?</option>
+                        <option value="" disabled selected>{ondeConheceu}</option>
                         <option value="Instagram">Instagram</option>
                         <option value="Facebook">Facebook</option>
                         <option value="Linkedin">Linkedin</option>
@@ -168,7 +171,7 @@ function Form() {
                 <textarea
                     className={styles.aboutProject}
                     rows="4"
-                    placeholder="Nos conte mais detalhes sobre o seu projeto!"
+                    placeholder={detalhes}
                     name="projectDetails"
                     onChange={handleInputChange}
                     required
@@ -177,7 +180,7 @@ function Form() {
                 <input 
                     className={styles.submit} 
                     type="submit" 
-                    value="Enviar" 
+                    value={enviar}
                     disabled={isDisabled}  // Desabilita o botão se isDisabled for true
                 />
             </form>
