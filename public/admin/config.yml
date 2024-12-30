@@ -239,7 +239,7 @@ collections:
 
   - name: "contato"
     extension: "json"
-    description: "Configurações da página de contato"
+    description: "Configurações estáticas da página de contato"
     label: "Contato"
     folder: "content/contato"
     slug: "contatoPage"
@@ -247,29 +247,26 @@ collections:
     editor:
       preview: false
     fields:
-      # Texto principal
       - label: "Texto Principal"
         name: "contactText"
         widget: "object"
         fields:
           - {label: "Frase Principal", name: "phrase", widget: "string", default: "empresas que investem em ##design crescem## o dobro das líderes suas indústrias"}
           - {label: "Subfrase", name: "subPhrase", widget: "string", default: "de acordo com o Instituto de Gestão de Design em Boston, EUA"}
-
-    # Formulário
-    - label: "Formulário"
-      name: "contactForm"
-      widget: "object"
-      fields:
-        - {label: "Título do Formulário", name: "headerText", widget: "string", default: "entre em contato com a gente"}
-        - {label: "Subtítulo do Formulário", name: "headerSubText", widget: "string", default: "retornamos sua mensagem em até 5 dias úteis."}
-        - {label: "Campo Nome", name: "nome", widget: "string", default: "Nome"}
-        - {label: "Campo Email", name: "email", widget: "string", default: "E-mail"}
-        - {label: "Campo Telefone", name: "telefone", widget: "string", default: "Telefone"}
-        - {label: "Campo Tipo de Projeto", name: "tipoProjeto", widget: "string", default: "Qual tipo de projeto?"}
-        - {label: "Campo Prazo", name: "prazo", widget: "string", default: "Prazo de Entrega:"}
-        - {label: "Campo Onde Conheceu", name: "ondeConheceu", widget: "string", default: "Como conheceu a Faísca?"}
-        - {label: "Campo Detalhes", name: "detalhes", widget: "string", default: "Nos conte mais detalhes sobre o seu projeto!"}
-        - {label: "Texto Botão Enviar", name: "enviar", widget: "string", default: "Enviar"}
+      - label: "Formulário"
+        name: "contactForm"
+        widget: "object"
+        fields:
+          - {label: "Título do Formulário", name: "headerText", widget: "string", default: "entre em contato com a gente"}
+          - {label: "Subtítulo do Formulário", name: "headerSubText", widget: "string", default: "retornamos sua mensagem em até 5 dias úteis."}
+          - {label: "Campo Nome", name: "nome", widget: "string", default: "Nome"}
+          - {label: "Campo Email", name: "email", widget: "string", default: "E-mail"}
+          - {label: "Campo Telefone", name: "telefone", widget: "string", default: "Telefone"}
+          - {label: "Campo Tipo de Projeto", name: "tipoProjeto", widget: "string", default: "Qual tipo de projeto?"}
+          - {label: "Campo Prazo", name: "prazo", widget: "string", default: "Prazo de Entrega:"}
+          - {label: "Campo Onde Conheceu", name: "ondeConheceu", widget: "string", default: "Como conheceu a Faísca?"}
+          - {label: "Campo Detalhes", name: "detalhes", widget: "string", default: "Nos conte mais detalhes sobre o seu projeto!"}
+          - {label: "Texto Botão Enviar", name: "enviar", widget: "string", default: "Enviar"}
 
   - name: "portfolio"
     extension: "json"
