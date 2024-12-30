@@ -3,14 +3,9 @@
   "ordem": 1,
   "members": [
     {
-      "nome": "gleydson campos",
-      "ciclo": "diretor marketing",
-      "imagem": "/uploads/1.png"
-    },
-    {
-      "nome": "Luca Boni",
-      "ciclo": "diretor marketing",
-      "imagem": "/uploads/amandacoradi.jpg"
+      "nome": "Lucas Oliveira",
+      "ciclo": "presidente",
+      "imagem": "/uploads/Lucas.jpg"
     }
   ]
 }

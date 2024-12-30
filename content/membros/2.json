@@ -3,9 +3,14 @@
   "ordem": 2,
   "members": [
     {
-      "nome": "André Kallerman",
+      "nome": "Hannah Lerm",
+      "ciclo": "diretora marketing",
+      "imagem": "/uploads/HannahLerm.jpg"
+    },
+    {
+      "nome": "Tiago Lo Prete",
       "ciclo": "diretor marketing",
-      "imagem": "/uploads/amandareis.jpg"
+      "imagem": "/uploads/TiagoLoPrete.jpg"
     }
   ]
 }
