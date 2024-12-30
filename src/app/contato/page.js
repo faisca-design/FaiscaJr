@@ -1,32 +1,43 @@
 import ContactText from "@/components/contato/ContactText"
 import ContactForm from "@/components/contato/ContactForm"
 import styles from "@styles/pages.module.css"
+import { handleJSONfile } from './../../utils/functions/jsonHandler';
 
-function Contato() {
-    return (
-        <div className={styles.withPadding}>
+async function getData() {
+  const contatoData = await handleJSONfile('./content/contato/contatoPage.json');
 
-            <ContactText
-                phrase={"empresas que investem em ##design crescem## o dobro das líderes suas indústrias"}
-                subPhrase={"de acordo com o Instituto de Gestão de Design em Boston, EUA"}
-            />
+  if (!contatoData) {
+    throw new Error('Failed to fetch contact data');
+  }
 
-            <ContactForm
-                headerText={"entre em contato com a gente"}
-                headerSubText={"retornamos sua mensagem em até 5 dias úteis."}
-                
-                nome={"Nome"}
-                email={"E-mail"}
-                telefone={"Telefone"}
-                tipoProjeto={"Qual tipo de projeto?"}
-                prazo={"Prazo de Entrega:"}
-                ondeConheceu={"Como conheceu a Faísca?"} 
-                detalhes={"Nos conte mais detalhes sobre o seu projeto!"} 
-                enviar={"Enviar"}
-            />
+  return contatoData;
+}
 
-        </div>
-    )
+async function Contato() {
+  const contatoData = await getData();
+  const { contactText, contactForm } = contatoData;
+
+  return (
+    <div className={styles.withPadding}>
+      <ContactText
+        phrase={contactText.phrase}
+        subPhrase={contactText.subPhrase}
+      />
+
+      <ContactForm
+        headerText={contactForm.headerText}
+        headerSubText={contactForm.headerSubText}
+        nome={contactForm.nome}
+        email={contactForm.email}
+        telefone={contactForm.telefone}
+        tipoProjeto={contactForm.tipoProjeto}
+        prazo={contactForm.prazo}
+        ondeConheceu={contactForm.ondeConheceu}
+        detalhes={contactForm.detalhes}
+        enviar={contactForm.enviar}
+      />
+    </div>
+  )
 }
 
 export default Contato
