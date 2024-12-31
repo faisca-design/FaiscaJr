@@ -31,7 +31,7 @@ export default function Layout({ children }) {
             icon: behanceIcon,
             link: "https://www.behance.net/FaiscaDesignJunior",
             altText: "Behance"
-        },
+        }
     ];
 
     return (
