@@ -30,9 +30,6 @@ collections:
       - {label: "Opção 2", name: "optionTwo", widget: "string", default: "sobre nós"}
       - {label: "Opção 3", name: "optionThree", widget: "string", default: "portfólio"}
       - {label: "Opção 4", name: "optionFour", widget: "string", default: "contato"}
-      - {label: "Logo Mobile", name: "logoMobile", widget: "image"}
-      - {label: "Ícone Menu", name: "menuIcon", widget: "image"}
-      - {label: "Ícone Fechar", name: "closeIcon", widget: "image"}
 
   - name: "home"
     extension: "json"
@@ -256,6 +253,47 @@ collections:
       - {label: "Rota do Projeto", name: "path", widget: "string", pattern: ['^/portfolio/[a-zA-Z0-9-]+$', "Deve começar com /portfolio/"]}
       - {label: "Mensagem de Erro", name: "erro", widget: "string", default: "Imagem não encontrada"}
 
+  - name: "projetos"
+    extension: "json"
+    description: "Coleção que vai conter as paginas de projetos individuais."
+    label: "Projetos Individuais"
+    folder: "content/projetos"
+    create: true
+    editor:
+      preview: false
+    slug: "{{fields.nome_projeto}}"
+    fields:
+      - {label: "Nome do projeto", name: "nome_projeto", widget: "string"}
+      - {label: "Imagem de capa", name: "imagemCapa", widget: "image"}
+      - {label: "Imagem sub-capa", name: "imagemSubCapa", widget: "image"}
+      - {label: "Propósito do projeto", name: "textoPurpose", widget: "markdown"}
+      - {label: "Serviço 1", name: "t1Services", widget: "string"}
+      - {label: "Serviço 2", name: "t2Services", widget: "string"}
+      - {label: "Serviço 3", name: "t3Services", widget: "string"}
+      - {label: "Imagem serviço esquerda", name: "imageLeftSer", widget: "image"}
+      - {label: "Imagem serviço direita", name: "imageRightSer", widget: "image"}
+      - {label: "Imagem serviço inferior", name: "imageBottomSer", widget: "image"}
+      - {label: "Valor 1", name: "t1Values", widget: "string"}
+      - {label: "Valor 2", name: "t2Values", widget: "string"}
+      - {label: "Valor 3", name: "t3Values", widget: "string"}
+      - {label: "Imagem valor esquerda", name: "imageLeftVal", widget: "image"}
+      - {label: "Imagem valor direita", name: "imageRightVal", widget: "image"}
+      - {label: "Gerente do projeto", name: "gerente", widget: "relation", collection: "membros", search_fields: ["nome_membro"], value_field: "{{nome_membro}}", display_fields: ["{{nome_membro}} - {{cargo_membro}}"]}
+      - label: "Projetistas envolvidos"
+        name: 'projetistas'
+        widget: "list"
+        min: 1
+        max: 2
+        field: {label: "Projetista", name: "projetista", widget: "relation", collection: "membros", search_fields: ["nome_membro"], value_field: "{{nome_membro}}", display_fields: ["{{nome_membro}} - {{cargo_membro}}"]}
+      - {label: "Texto do botão", name: "bottonText", widget: "string", default: "veja mais no nosso behance!"}
+      - {label: "Link do Behance", name: "behanceLink", widget: "string"}
+      - label: "Projetos relacionados (irão para o carrossel)"
+        name: "relacionados_projetos"
+        widget: "list"
+        min: 1
+        max: 5
+        field: {label: "Projeto", name: "projeto_carrossel", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}  {{imagemCapa}}"]}
+
   - name: "contato"
     extension: "json"
     description: "Configurações estáticas da página de contato"
@@ -355,44 +393,3 @@ collections:
     slug: "{{fields.cargo}}" 
     fields: 
       - {label: "Cargo", name: "cargo", widget: "string"}
-
-  - name: "projetos"
-    extension: "json"
-    description: "Coleção que vai conter as paginas de projetos individuais."
-    label: "Projetos Individuais"
-    folder: "content/projetos"
-    create: true
-    editor:
-      preview: false
-    slug: "{{fields.nome_projeto}}"
-    fields:
-      - {label: "Nome do projeto", name: "nome_projeto", widget: "string"}
-      - {label: "Imagem de capa", name: "imagemCapa", widget: "image"}
-      - {label: "Imagem sub-capa", name: "imagemSubCapa", widget: "image"}
-      - {label: "Propósito do projeto", name: "textoPurpose", widget: "markdown"}
-      - {label: "Serviço 1", name: "t1Services", widget: "string"}
-      - {label: "Serviço 2", name: "t2Services", widget: "string"}
-      - {label: "Serviço 3", name: "t3Services", widget: "string"}
-      - {label: "Imagem serviço esquerda", name: "imageLeftSer", widget: "image"}
-      - {label: "Imagem serviço direita", name: "imageRightSer", widget: "image"}
-      - {label: "Imagem serviço inferior", name: "imageBottomSer", widget: "image"}
-      - {label: "Valor 1", name: "t1Values", widget: "string"}
-      - {label: "Valor 2", name: "t2Values", widget: "string"}
-      - {label: "Valor 3", name: "t3Values", widget: "string"}
-      - {label: "Imagem valor esquerda", name: "imageLeftVal", widget: "image"}
-      - {label: "Imagem valor direita", name: "imageRightVal", widget: "image"}
-      - {label: "Gerente do projeto", name: "gerente", widget: "relation", collection: "membros", search_fields: ["nome_membro"], value_field: "{{nome_membro}}", display_fields: ["{{nome_membro}} - {{cargo_membro}}"]}
-      - label: "Projetistas envolvidos"
-        name: 'projetistas'
-        widget: "list"
-        min: 1
-        max: 2
-        field: {label: "Projetista", name: "projetista", widget: "relation", collection: "membros", search_fields: ["nome_membro"], value_field: "{{nome_membro}}", display_fields: ["{{nome_membro}} - {{cargo_membro}}"]}
-      - {label: "Texto do botão", name: "bottonText", widget: "string", default: "veja mais no nosso behance!"}
-      - {label: "Link do Behance", name: "behanceLink", widget: "string"}
-      - label: "Projetos relacionados (irão para o carrossel)"
-        name: "relacionados_projetos"
-        widget: "list"
-        min: 1
-        max: 5
-        field: {label: "Projeto", name: "projeto_carrossel", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}  {{imagemCapa}}"]}
