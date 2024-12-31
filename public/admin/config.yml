@@ -303,7 +303,6 @@ collections:
         fields:
           - {label: "Nome do Projeto", name: "nome", widget: "string"}
           - {label: "Imagem", name: "imagem", widget: "image"}
-          - {label: "Link", name: "link", widget: "string", pattern: ['^/portfolio/[a-zA-Z0-9-]+$', "Deve começar com /portfolio/"]}
         min: 3
         max: 5
 
