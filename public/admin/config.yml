@@ -16,6 +16,24 @@ search: false
 locale: 'pt'
 
 collections:
+  - name: "navbar"
+    extension: "json"
+    description: "Configurações da navegação"
+    label: "Navbar"
+    folder: "content/navbar"
+    slug: "navbarConfig"
+    create: false
+    editor:
+      preview: false
+    fields:
+      - {label: "Opção 1", name: "optionOne", widget: "string", default: "início"}
+      - {label: "Opção 2", name: "optionTwo", widget: "string", default: "sobre nós"}
+      - {label: "Opção 3", name: "optionThree", widget: "string", default: "portfólio"}
+      - {label: "Opção 4", name: "optionFour", widget: "string", default: "contato"}
+      - {label: "Logo Mobile", name: "logoMobile", widget: "image"}
+      - {label: "Ícone Menu", name: "menuIcon", widget: "image"}
+      - {label: "Ícone Fechar", name: "closeIcon", widget: "image"}
+
   - name: "home"
     extension: "json"
     description: "Configurações da página principal"
@@ -268,6 +286,21 @@ collections:
           - {label: "Campo Onde Conheceu", name: "ondeConheceu", widget: "string", default: "Como conheceu a Faísca?"}
           - {label: "Campo Detalhes", name: "detalhes", widget: "string", default: "Nos conte mais detalhes sobre o seu projeto!"}
           - {label: "Texto Botão Enviar", name: "enviar", widget: "string", default: "Enviar"}
+
+  - name: "footer"
+    label: "Footer"
+    folder: "content/footer"
+    create: true
+    extension: "json"
+    identifier_field: "altText"
+    sortable_fields: ["order"]
+    editor:
+      preview: false
+    fields:
+      - {label: "Ordem", name: "order", widget: "number", value_type: "int", min: 1}
+      - {label: "Nome/Alt Text", name: "altText", widget: "string"}
+      - {label: "Link", name: "link", widget: "string"}
+      - {label: "Ícone", name: "icon", widget: "image"}
 
   - name: "portfolio"
     extension: "json"
