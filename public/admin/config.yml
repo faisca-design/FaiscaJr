@@ -266,33 +266,46 @@ collections:
       - {label: "Nome do projeto", name: "nome_projeto", widget: "string"}
       - {label: "Imagem de capa", name: "imagemCapa", widget: "image"}
       - {label: "Imagem sub-capa", name: "imagemSubCapa", widget: "image"}
-      - {label: "Propósito do projeto", name: "textoPurpose", widget: "markdown"}
-      - {label: "Serviço 1", name: "t1Services", widget: "string"}
-      - {label: "Serviço 2", name: "t2Services", widget: "string"}
-      - {label: "Serviço 3", name: "t3Services", widget: "string"}
+      - {label: "Propósito do projeto", name: "textoPurpose", widget: "text"}
+      
+      # Serviços
+      - {label: "Título Serviço 1", name: "t1Services", widget: "string"}
+      - {label: "Título Serviço 2", name: "t2Services", widget: "string"}
+      - {label: "Título Serviço 3", name: "t3Services", widget: "string"}
       - {label: "Imagem serviço esquerda", name: "imageLeftSer", widget: "image"}
       - {label: "Imagem serviço direita", name: "imageRightSer", widget: "image"}
       - {label: "Imagem serviço inferior", name: "imageBottomSer", widget: "image"}
-      - {label: "Valor 1", name: "t1Values", widget: "string"}
-      - {label: "Valor 2", name: "t2Values", widget: "string"}
-      - {label: "Valor 3", name: "t3Values", widget: "string"}
+      
+      # Valores
+      - {label: "Título Valor 1", name: "t1Values", widget: "string"}
+      - {label: "Título Valor 2", name: "t2Values", widget: "string"}
+      - {label: "Título Valor 3", name: "t3Values", widget: "string"}
       - {label: "Imagem valor esquerda", name: "imageLeftVal", widget: "image"}
       - {label: "Imagem valor direita", name: "imageRightVal", widget: "image"}
-      - {label: "Gerente do projeto", name: "gerente", widget: "relation", collection: "membros", search_fields: ["nome_membro"], value_field: "{{nome_membro}}", display_fields: ["{{nome_membro}} - {{cargo_membro}}"]}
-      - label: "Projetistas envolvidos"
-        name: 'projetistas'
+      
+      # Equipe
+      - {label: "Gerente do projeto", name: "gerente", widget: "string"}
+      - label: "Projetistas"
+        name: "projetistas"
         widget: "list"
+        field: {label: "Nome do Projetista", name: "nome", widget: "string"}
         min: 1
-        max: 2
-        field: {label: "Projetista", name: "projetista", widget: "relation", collection: "membros", search_fields: ["nome_membro"], value_field: "{{nome_membro}}", display_fields: ["{{nome_membro}} - {{cargo_membro}}"]}
+        max: 3
+      
+      # Links
       - {label: "Texto do botão", name: "bottonText", widget: "string", default: "veja mais no nosso behance!"}
       - {label: "Link do Behance", name: "behanceLink", widget: "string"}
-      - label: "Projetos relacionados (irão para o carrossel)"
-        name: "relacionados_projetos"
+      
+      # Projetos Relacionados
+      - label: "Projetos Relacionados"
+        name: "relacionados"
         widget: "list"
-        min: 1
+        fields:
+          - {label: "Nome do Projeto", name: "nome", widget: "string"}
+          - {label: "Imagem", name: "imagem", widget: "image"}
+          - {label: "Link", name: "link", widget: "string", pattern: ['^/portfolio/[a-zA-Z0-9-]+$', "Deve começar com /portfolio/"]}
+        min: 3
         max: 5
-        field: {label: "Projeto", name: "projeto_carrossel", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}  {{imagemCapa}}"]}
 
   - name: "contato"
     extension: "json"

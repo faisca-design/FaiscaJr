@@ -1,15 +1,16 @@
 import styles from './project.module.css'
 import Image from 'next/image'
+import StyledText from "@/components/textoEstilizado/textoEstilizado"
 
 function Issue19({ titulo1, titulo2, titulo3, imageLeft, imageRight, imageBottom }) {
     return (
         <div>
             <div className={styles.containerText}>
-                <h1 className={styles.text}>{titulo1}</h1>
+                <h1 className={styles.text}><StyledText text={titulo1}/></h1>
                 <hr className={styles.bar} />
-                <h1 className={styles.text}>{titulo2}</h1>
+                <h1 className={styles.text}><StyledText text={titulo2}/></h1>
                 <hr className={styles.bar} />
-                <h1 className={styles.text}>{titulo3}</h1>
+                <h1 className={styles.text}><StyledText text={titulo3}/></h1>
             </div>
 
             <div className={styles.containerImages}>
