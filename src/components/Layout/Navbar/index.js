@@ -11,7 +11,7 @@ import menu from "@img/mobileNavbarIcons/MenuNavbarCell.png";
 import close from "@img/mobileNavbarIcons/CloseNavbarCell.png";
 import faisca from "@img/mobileNavbarIcons/mobile_icon_header.png";
 
-function Navbar() {
+function Navbar({ optionOne, optionTwo, optionThree, optionFour }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
@@ -45,7 +45,7 @@ function Navbar() {
               href="/"
               className={`${styles.link} ${pathname === '/' ? styles.bold : ''}`}
             >
-              início
+              {optionOne}
             </Link>
           </li>
           <li>
@@ -53,7 +53,7 @@ function Navbar() {
               href="/sobre-nos"
               className={`${styles.link} ${pathname === '/sobre-nos' ? styles.bold : ''}`}
             >
-              sobre nós
+              {optionTwo}
             </Link>
           </li>
           <li>
@@ -61,7 +61,7 @@ function Navbar() {
               href="/portfolio"
               className={`${styles.link} ${pathname === '/portfolio' ? styles.bold : ''}`}
             >
-              portfólio
+              {optionThree}
             </Link>
           </li>
           <li>
@@ -69,7 +69,7 @@ function Navbar() {
               href="/contato"
               className={`${styles.link} ${pathname === '/contato' ? styles.bold : ''}`}
             >
-              contato
+              {optionFour}
             </Link>
           </li>
           {/* <li>

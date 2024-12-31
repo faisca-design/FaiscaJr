@@ -1,5 +1,4 @@
 import PortfolioBanners from "@components/portfolio/PortfolioBanners"
-import PortfolioCarousel from "@components/portfolio/PortfolioCarousel"
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 
 async function getData() {
@@ -20,7 +19,6 @@ async function Portfolio(){
   return (
     <>
       <PortfolioBanners projects={bannersData}/>
-      {/*<PortfolioCarousel />*/}
     </>
   )
 }
