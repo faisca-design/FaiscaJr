@@ -1,0 +1,6 @@
+{
+  "icon": "/uploads/emailIcon.png",
+  "link": "https://mail.google.com/mail/?view=cm&fs=1&to=contato@faiscadesignjr.com.br",
+  "altText": "email",
+  "order": 1
+}
