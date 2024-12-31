@@ -1,0 +1,38 @@
+{
+  "t2Values": "energia vibrante",
+  "imageRightVal": "/uploads/valuerightci.png",
+  "t3Values": "vibrante",
+  "imagemCapa": "/uploads/capaci.png",
+  "behanceLink": "https://www.behance.net/gallery/106148143/Chamas-da-Insignificancia-Editorial",
+  "gerente": "Fulano da Silvinha Souza",
+  "projetistas": [
+    "Fulano da Silvinha Mendes",
+    "Ciclaninho dos santos"
+  ],
+  "relacionados": [
+    {
+      "nome": "Chamas da insignificância",
+      "imagem": "/uploads/projeto2.png"
+    },
+    {
+      "nome": "spot light",
+      "imagem": "/uploads/projeto1.png"
+    },
+    {
+      "nome": "bako bebidas",
+      "imagem": "/uploads/9.png"
+    }
+  ],
+  "bottonText": "veja mais no nosso behance!",
+  "imageBottomSer": "/uploads/servicesbottonci.png",
+  "t1Services": "site",
+  "t2Services": "identidade visual",
+  "textoPurpose": "Promover transformação social através da {{força}} das raízes brasileiras, realçando sua {{energia moderna}} e {{vibrante}}.",
+  "nome_projeto": "Chamas da Insiginificância",
+  "imagemSubCapa": "/uploads/subcapaci.png",
+  "t3Services": "rótulo",
+  "imageLeftSer": "/uploads/servicesleftci.png",
+  "t1Values": "força",
+  "imageRightSer": "/uploads/servicesrightci.png",
+  "imageLeftVal": "/uploads/valueleftci.png"
+}
