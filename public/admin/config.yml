@@ -22,7 +22,7 @@ collections:
     label: "Navbar"
     folder: "content/navbar"
     slug: "navbarConfig"
-    create: false
+    create: true
     editor:
       preview: false
     fields:
