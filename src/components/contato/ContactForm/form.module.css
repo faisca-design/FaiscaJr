@@ -1,4 +1,4 @@
-.form{
+.form {
     font-size: large;
     display: flex;
     flex-direction: column;
@@ -15,20 +15,21 @@
 }
 
 
-.row{
+.row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 10vh;
     width: 100%;
     align-items: center;
-    
+
 }
 
-.row input, .row select{
-    height: 75% !important; 
+.row input,
+.row select {
+    height: 75% !important;
     width: 32%;
-    box-sizing:content-box;
+    box-sizing: content-box;
     background-color: #D9D9D9;
 }
 
@@ -41,23 +42,26 @@
 }
 
 .submit:disabled {
-    background-color: #cccccc; 
-    cursor: not-allowed; 
-    color: #666666; 
+    background-color: #cccccc;
+    cursor: not-allowed;
+    color: #666666;
 }
 
 .row select::-ms-expand {
     display: none;
 }
 
-.form ::placeholder{
+.form ::placeholder {
     text-align: center;
     color: rgb(0, 0, 0);
 }
 
 
-.row > input, .row > select, .form > input, .form > textarea{
-    
+.row>input,
+.row>select,
+.form>input,
+.form>textarea {
+
     height: 7vh;
     border-radius: 15px;
     border-style: hidden;
@@ -67,14 +71,15 @@
     font-family: 'Chillax', sans-serif !important;
 }
 
-.form.submitted input:invalid, .form.submitted textarea:invalid {
+.form.submitted input:invalid,
+.form.submitted textarea:invalid {
     background-image: url(../../../../public/img/form/invalidForm.png);
     background-repeat: no-repeat;
     background-position: left;
     background-position-x: 20px;
 }
 
-.form > textarea {
+.form>textarea {
     max-width: 100%;
     min-width: 100%;
     min-height: 7vh;
@@ -84,7 +89,7 @@
 }
 
 
-.form > textarea::placeholder {
+.form>textarea::placeholder {
     line-height: 6vh;
 }
 
@@ -97,22 +102,25 @@
 
 }
 
-.form > input, .form > textarea {
+.form>input,
+.form>textarea {
     margin-top: 1.5vh;
 }
 
-#projects, #howDidUMeet, #date{
+#projects,
+#howDidUMeet,
+#date {
     text-align: center;
     color: black;
 }
 
 
-input[type="date"]:not(.has-value):before{
+input[type="date"]:not(.has-value):before {
     color: rgb(0, 0, 0);
     content: attr(placeholder);
 }
 
-input[type="date"]:not(.has-value):valid:before{
+input[type="date"]:not(.has-value):valid:before {
     content: attr(none);
 }
 
@@ -145,23 +153,60 @@ input[type="date"]:not(.has-value):valid:before{
     display: none;
 }
 
+#projects,
+#howDidUMeet {
+    box-sizing: border-box !important;
+    position: relative;
+    padding: 0 40px;
+    /* Aumentado o padding */
+    text-align: center;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4L6 8L10 4' stroke='rgba(0,0,0,0.5)' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+    /* Reduzida a opacidade para 0.5 */
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    /* Aumentado o espaçamento da borda */
+    background-size: 12px;
+    cursor: pointer;
+}
+
+#projects:focus,
+#howDidUMeet:focus {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4L6 8L10 4' stroke='rgba(0,0,0,0.5)' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+    /* Mesma opacidade no focus */
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+    outline: none;
+}
+
 #date {
     box-sizing: border-box !important;
     position: relative;
-    padding-right: 50px; /* Espaço para o ícone */
-    line-height: normal; /* Ajuda na centralização vertical */
+    padding: 0 40px;
+    /* Aumentado o padding para manter consistência */
+    text-align: center;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 #date::-webkit-calendar-picker-indicator {
     position: absolute;
-    right: 10px;
+    right: 15px;
+    /* Aumentado para manter alinhamento com as setas */
     top: 50%;
-    transform: translateY(-50%); /* Centraliza o ícone verticalmente */
+    transform: translateY(-50%);
+    opacity: 0.7;
+    /* Reduzida a opacidade para 0.5 */
+    cursor: pointer;
 }
 
 @media screen and (max-width: 576px) {
 
-    .row{
+    .row {
         flex-direction: column;
         justify-content: center;
         height: 30vh;
@@ -170,21 +215,24 @@ input[type="date"]:not(.has-value):valid:before{
     }
 
 
-    .row > input, .row > select, .form > input, .form > textarea{
+    .row>input,
+    .row>select,
+    .form>input,
+    .form>textarea {
         height: 12vh;
-        width: 100% ; 
+        width: 100%;
         margin-top: 2vh;
-        border-radius: 20px;
+        border-radius: 13px;
         font-size: 3.72vw;
     }
 
-    .form{
+    .form {
         margin: auto;
         align-items: center;
         width: 80vw;
     }
 
-    .form > textarea{
+    .form>textarea {
         height: 12vh;
     }
 
@@ -192,5 +240,29 @@ input[type="date"]:not(.has-value):valid:before{
         width: 70% !important;
         height: 6vh !important;
     }
-    
-  }
+
+    .form>textarea::placeholder {
+        text-align: center;
+        padding: 1.7vh;
+        line-height: normal;
+
+    }
+
+    .rectangleFailed{
+        width: 50%;
+        font-size: 3vw;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .rectangleSuccess {
+        width: 50%;
+        font-size: 3vw;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
