@@ -10,23 +10,45 @@ import ProjectValues from "@components/projeto/ProjectValues"
 import ProjectCarousel from "@components/projeto/ProjectCarousel";
 import GenericOutLink from "@/components/GenericButtonOutLink";
 import styles from "./styles.module.css";
-import { projectData } from "./../../../data/projectData"
-
+import { getProjeto } from './../../../utils/functions/api';
 
 export default function Page() {
   const params = useParams();
   const [projetoAtual, setProjetoAtual] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const nomeProjeto = params.projectName;
-    console.log("Nome do projeto:", nomeProjeto);
-    const projeto = projectData[nomeProjeto] || projectData["GBAdvocacia"];
-    setProjetoAtual(projeto);
-    console.log("Projeto atual:", projeto);
+    const loadProject = async () => {
+      try {
+        setLoading(true);
+        const projeto = await getProjeto(params.projectName);
+        if (projeto) {
+          setProjetoAtual(projeto);
+          setError(null);
+        } else {
+          setError('Projeto não encontrado');
+        }
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadProject();
   }, [params.projectName]);
 
-  if (!projetoAtual) {
+  if (loading) {
     return <div>Carregando...</div>;
+  }
+
+  if (error || !projetoAtual) {
+    return <div>
+      {error || 'Projeto não encontrado'}
+      <br />
+      Nome buscado: {params.projectName}
+    </div>;
   }
 
   return (
@@ -54,10 +76,16 @@ export default function Page() {
         imageRight={projetoAtual.imageRightVal}
       />
       <div className={styles.container}>
-        <ProManegers ProGerente={projetoAtual.gerente} projetista={projetoAtual.projetistas} />
-        <GenericOutLink buttonText={projetoAtual.bottonText} outLink={projetoAtual.behanceLink} />
+        <ProManegers
+          ProGerente={projetoAtual.gerente}
+          projetista={projetoAtual?.projetistas || []} // fallback
+        />
+        <GenericOutLink
+          buttonText={projetoAtual.bottonText}
+          outLink={projetoAtual.behanceLink}
+        />
       </div>
-      <ProjectCarousel />
+      <ProjectCarousel projetos={projetoAtual.relacionados} />
     </>
   );
 }

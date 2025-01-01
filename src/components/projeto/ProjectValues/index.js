@@ -15,8 +15,8 @@ function Issue20 ({titulo1, titulo2, titulo3, imageLeft, imageRight})
             </div>
             
             <div className={styles.containerImagens}>
-                <Image className={styles.imagem1} src={imageLeft}  alt="cartão de visitas"/>
-                <Image className={styles.imagem2} src={imageRight} alt="feed do instagram"/>
+                <Image className={styles.imagem1} src={imageLeft}  alt="cartão de visitas"width={2724} height={3140}/>
+                <Image className={styles.imagem2} src={imageRight} alt="feed do instagram"width={2724} height={3140}/>
             </div>
         </div>
     )
