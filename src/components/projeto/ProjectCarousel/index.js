@@ -56,8 +56,8 @@ const Slider = ({ projetos = [] }) => {
                 className={styles.img} 
                 src={projeto.imagem} 
                 alt={projeto.nome}
-                width={300}
-                height={200}
+                width={574}
+                height={574}
               />
             </Link>
           </div>

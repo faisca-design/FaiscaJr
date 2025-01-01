@@ -1,4 +1,3 @@
-import { join } from 'path';
 import ProManegers from "@components/projeto/ProjectManagers";
 import ProjectBanner from "@components/projeto/ProjectBanner";
 import ProjectPurpose from "@components/projeto/ProjectPurpose";

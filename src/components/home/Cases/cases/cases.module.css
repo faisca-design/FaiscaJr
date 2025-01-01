@@ -2,15 +2,17 @@
   display: block;
   text-decoration: none;
   color: inherit;
+  width: 100%;
 }
 
+
 .imageContainer {
-    position: relative;
-    width: 71vh;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
+  position: relative;
+  width: 100%; 
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 
   .imageContainer:hover {
     transform: scale(1.05);
