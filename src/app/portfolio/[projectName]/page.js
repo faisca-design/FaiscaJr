@@ -1,7 +1,4 @@
-'use client';
-
-import { useParams } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { join } from 'path';
 import ProManegers from "@components/projeto/ProjectManagers";
 import ProjectBanner from "@components/projeto/ProjectBanner";
 import ProjectPurpose from "@components/projeto/ProjectPurpose";
@@ -10,45 +7,59 @@ import ProjectValues from "@components/projeto/ProjectValues"
 import ProjectCarousel from "@components/projeto/ProjectCarousel";
 import GenericOutLink from "@/components/GenericButtonOutLink";
 import styles from "./styles.module.css";
-import { getProjeto } from './../../../utils/functions/api';
+import { handleJSONfiles } from '@/utils/functions/jsonHandler';
 
-export default function Page() {
-  const params = useParams();
-  const [projetoAtual, setProjetoAtual] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+function normalizeName(name) {
+  return decodeURIComponent(name)
+    .toLowerCase()
+    .replace(/\s+/g, '');
+}
 
-  useEffect(() => {
-    const loadProject = async () => {
-      try {
-        setLoading(true);
-        const projeto = await getProjeto(params.projectName);
-        if (projeto) {
-          setProjetoAtual(projeto);
-          setError(null);
-        } else {
-          setError('Projeto não encontrado');
-        }
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+async function getProjectData(projectName) {
+  try {
+    const projects = await handleJSONfiles('content/projetos');
+    
+    if (!projects || projects.length === 0) {
+      throw new Error('Nenhum projeto encontrado');
+    }
 
-    loadProject();
-  }, [params.projectName]);
+    console.log('Projetos encontrados:', projects.map(p => p.nome_projeto));
+    console.log('Buscando por:', projectName);
 
-  if (loading) {
-    return <div>Carregando...</div>;
+    // Normaliza tanto o nome buscado quanto o nome no JSON
+    const searchName = normalizeName(projectName);
+    const projeto = projects.find(p => 
+      normalizeName(p.nome_projeto) === searchName
+    );
+
+    if (!projeto) {
+      console.log('Projeto não encontrado');
+      return null;
+    }
+
+    return projeto;
+  } catch (error) {
+    console.error('Error fetching project:', error);
+    return null;
   }
+}
 
-  if (error || !projetoAtual) {
-    return <div>
-      {error || 'Projeto não encontrado'}
-      <br />
-      Nome buscado: {params.projectName}
-    </div>;
+export default async function Page({ params }) {
+  const projetoAtual = await getProjectData(params.projectName);
+
+  if (!projetoAtual) {
+    return (
+      <div className={styles.error}>
+        <h1>Projeto não encontrado</h1>
+        <p>Nome buscado: {params.projectName}</p>
+        <pre>
+          {JSON.stringify({
+            params,
+            projectName: params.projectName,
+          }, null, 2)}
+        </pre>
+      </div>
+    );
   }
 
   return (
@@ -76,13 +87,13 @@ export default function Page() {
         imageRight={projetoAtual.imageRightVal}
       />
       <div className={styles.container}>
-        <ProManegers
-          ProGerente={projetoAtual.gerente}
-          projetista={projetoAtual?.projetistas || []} // fallback
+        <ProManegers 
+          ProGerente={projetoAtual.gerente} 
+          projetista={projetoAtual.projetistas} 
         />
-        <GenericOutLink
-          buttonText={projetoAtual.bottonText}
-          outLink={projetoAtual.behanceLink}
+        <GenericOutLink 
+          buttonText={projetoAtual.bottonText} 
+          outLink={projetoAtual.behanceLink} 
         />
       </div>
       <ProjectCarousel projetos={projetoAtual.relacionados} />
