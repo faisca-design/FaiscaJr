@@ -61,7 +61,8 @@
   .lista {
     grid-template-columns: 1fr; 
     width: 80%; 
-
+    place-items: center;
+    margin: 7vh auto;
 }
 
   .line {
