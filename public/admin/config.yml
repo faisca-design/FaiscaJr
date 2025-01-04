@@ -18,7 +18,7 @@ locale: 'pt'
 collections:
   - name: "navbar"
     extension: "json"
-    description: "Configurações da navegação"
+    description: "Navbar com as abas do site"
     label: "Navbar"
     folder: "content/navbar"
     slug: "navbarConfig"
@@ -30,9 +30,6 @@ collections:
       - {label: "Opção 2", name: "optionTwo", widget: "string", default: "sobre nós"}
       - {label: "Opção 3", name: "optionThree", widget: "string", default: "portfólio"}
       - {label: "Opção 4", name: "optionFour", widget: "string", default: "contato"}
-      - {label: "Logo Mobile", name: "logoMobile", widget: "image"}
-      - {label: "Ícone Menu", name: "menuIcon", widget: "image"}
-      - {label: "Ícone Fechar", name: "closeIcon", widget: "image"}
 
   - name: "home"
     extension: "json"
@@ -96,11 +93,11 @@ collections:
     create: true
     extension: "json"
     identifier_field: "titulo"
-    sortable_fields: ["ordem"] 
+    sortable: true 
     editor:
       preview: false
     fields:
-      - {label: "Ordem", name: "ordem", widget: "number", value_type: "int", min: 1}
+      - {label: "Ordem", name: "ordem", widget: "hidden", value_type: "int", min: 1}
       - {label: "Título do Serviço", name: "titulo", widget: "string"}
       - {label: "Descrição", name: "descricao", widget: "text"}
   
@@ -223,13 +220,13 @@ collections:
     folder: "content/membros"
     create: true
     extension: "json"
-    identifier_field: "ordem"
-    sortable_fields: ["ordem"]
+    identifier_field: "nome"
+    sortable: true
     editor:
       preview: false
     fields:
       - {label: "ID (único)", name: "id", widget: "string", hint: "Identificador único do cargo (ex: presidente, marketing)"}
-      - {label: "Ordem de Exibição", name: "ordem", widget: "number", value_type: "int", min: 1}
+      - {label: "Ordem de Exibição", name: "ordem", widget: "hidden", value_type: "int", min: 1}
       - label: "Membro(s) do Cargo"
         name: "members"
         widget: "list"
@@ -245,16 +242,69 @@ collections:
     create: true
     extension: "json"
     identifier_field: "titulo"
-    sortable_fields: ["ordem"]
+    sortable: true
     editor:
       preview: false
     fields:
-      - {label: "Ordem", name: "ordem", widget: "number", value_type: "int", min: 1}
+      - {label: "Ordem", name: "ordem", widget: "hidden", value_type: "int", min: 1}
       - {label: "Título do Projeto", name: "titulo", widget: "string"}
       - {label: "Descrição", name: "desc", widget: "string"}
       - {label: "Imagem do Projeto", name: "image", widget: "image"}
       - {label: "Rota do Projeto", name: "path", widget: "string", pattern: ['^/portfolio/[a-zA-Z0-9-]+$', "Deve começar com /portfolio/"]}
       - {label: "Mensagem de Erro", name: "erro", widget: "string", default: "Imagem não encontrada"}
+
+  - name: "projetos"
+    extension: "json"
+    description: "Coleção que vai conter as paginas de projetos individuais."
+    label: "Projetos Individuais"
+    folder: "content/projetos"
+    create: true
+    editor:
+      preview: false
+    slug: "{{fields.nome_projeto}}"
+    fields:
+      - {label: "Nome do projeto", name: "nome_projeto", widget: "string"}
+      - {label: "Imagem de capa", name: "imagemCapa", widget: "image"}
+      - {label: "Imagem sub-capa", name: "imagemSubCapa", widget: "image"}
+      - {label: "Propósito do projeto", name: "textoPurpose", widget: "text"}
+      
+      # Serviços
+      - {label: "Título Serviço 1", name: "t1Services", widget: "string"}
+      - {label: "Título Serviço 2", name: "t2Services", widget: "string"}
+      - {label: "Título Serviço 3", name: "t3Services", widget: "string"}
+      - {label: "Imagem serviço esquerda", name: "imageLeftSer", widget: "image"}
+      - {label: "Imagem serviço direita", name: "imageRightSer", widget: "image"}
+      - {label: "Imagem serviço inferior", name: "imageBottomSer", widget: "image"}
+      
+      # Valores
+      - {label: "Título Valor 1", name: "t1Values", widget: "string"}
+      - {label: "Título Valor 2", name: "t2Values", widget: "string"}
+      - {label: "Título Valor 3", name: "t3Values", widget: "string"}
+      - {label: "Imagem valor esquerda", name: "imageLeftVal", widget: "image"}
+      - {label: "Imagem valor direita", name: "imageRightVal", widget: "image"}
+      
+      # Equipe
+      - {label: "Gerente do projeto", name: "gerente", widget: "string"}
+      - label: "Projetistas"
+        name: "projetistas"
+        widget: "list"
+        field: {label: "Nome do Projetista", name: "nome", widget: "string"}
+        min: 1
+        max: 6
+      
+      # Links
+      - {label: "Texto do botão", name: "bottonText", widget: "string", default: "veja mais no nosso behance!"}
+      - {label: "Link do Behance", name: "behanceLink", widget: "string"}
+      
+      # Projetos Relacionados
+      - label: "Projetos Relacionados"
+        name: "relacionados"
+        widget: "list"
+        fields:
+          - {label: "Nome do Projeto", name: "nome", widget: "string"}
+          - {label: "Imagem", name: "imagem", widget: "image"}
+        min: 3
+        max: 5
 
   - name: "contato"
     extension: "json"
@@ -293,106 +343,11 @@ collections:
     create: true
     extension: "json"
     identifier_field: "altText"
-    sortable_fields: ["order"]
+    sortable: true
     editor:
       preview: false
     fields:
-      - {label: "Ordem", name: "order", widget: "number", value_type: "int", min: 1}
+      - {label: "Ordem", name: "order", widget: "hidden", value_type: "int", min: 1}
       - {label: "Nome/Alt Text", name: "altText", widget: "string"}
       - {label: "Link", name: "link", widget: "string"}
       - {label: "Ícone", name: "icon", widget: "image"}
-
-  - name: "portfolio"
-    extension: "json"
-    description: "Coleção que vai conter as informação da pagina de portfólio do site da Faísca."
-    label: "Porfólio"
-    folder: "content/portfolio"
-    slug: "portfolioPage"
-    create: true
-    editor:
-      preview: false
-    fields:
-      - label: "Grandes projetos" 
-        name: "portfolio_projetos" 
-        widget: "list"
-        min: 4
-        max: 4
-        fields: 
-          - {label: "Nome do projeto", name: "projeto_destaque", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}"]}
-          - {label: "Título", name: "titulo_projeto", widget: "string"}
-          - {label: "Subtítulo", name: "subtitulo_projeto", widget: "string"}
-      
-      - label: "Projetos para o carrossel"
-        name: "portfolio_carrossel"
-        collapsed: false
-        widget: "list"
-        min: 1
-        max: 5
-        fields:
-          - {label: "Projeto", name: "projeto_carrossel", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}"]}
-  - name: "membros aa" # Nome usado da rota
-    extension: "json"
-    description: "Coleção que vai conter todos os membros da Faísca."
-    label: "Membros aa" # Nome usado na label do Netlify 
-    folder: "content/membros" # Local da pasta onde vão estar os arquivos
-    create: true # Permite que usuários criem arquivos nesse local
-    editor:
-      preview: false
-    slug: "{{fields.nome_membro}}" 
-    fields: 
-      - {label: "Nome", name: "nome_membro", widget: "string"}
-      - {label: "Cargo", name: "cargo_membro", widget: "relation", collection: "cargos", search_fields: ["cargo"], value_field: "{{cargo}}"}
-      - {label: "Foto", name: "foto_membro", widget: "image"}
-
-  - name: "cargos" # Nome usado da rota
-    extension: "json"
-    description: "Coleção que vai conter todos os cargos da Faísca."
-    label: "Cargos" # Nome usado na label do Netlify 
-    folder: "content/cargos" # Local da pasta onde vão estar os arquivos
-    create: true # Permite que usuários criem arquivos nesse local
-    editor:
-      preview: false
-    slug: "{{fields.cargo}}" 
-    fields: 
-      - {label: "Cargo", name: "cargo", widget: "string"}
-
-  - name: "projetos"
-    extension: "json"
-    description: "Coleção que vai conter as paginas de projetos individuais."
-    label: "Projetos Individuais"
-    folder: "content/projetos"
-    create: true
-    editor:
-      preview: false
-    slug: "{{fields.nome_projeto}}"
-    fields:
-      - {label: "Nome do projeto", name: "nome_projeto", widget: "string"}
-      - {label: "Imagem de capa", name: "imagemCapa", widget: "image"}
-      - {label: "Imagem sub-capa", name: "imagemSubCapa", widget: "image"}
-      - {label: "Propósito do projeto", name: "textoPurpose", widget: "markdown"}
-      - {label: "Serviço 1", name: "t1Services", widget: "string"}
-      - {label: "Serviço 2", name: "t2Services", widget: "string"}
-      - {label: "Serviço 3", name: "t3Services", widget: "string"}
-      - {label: "Imagem serviço esquerda", name: "imageLeftSer", widget: "image"}
-      - {label: "Imagem serviço direita", name: "imageRightSer", widget: "image"}
-      - {label: "Imagem serviço inferior", name: "imageBottomSer", widget: "image"}
-      - {label: "Valor 1", name: "t1Values", widget: "string"}
-      - {label: "Valor 2", name: "t2Values", widget: "string"}
-      - {label: "Valor 3", name: "t3Values", widget: "string"}
-      - {label: "Imagem valor esquerda", name: "imageLeftVal", widget: "image"}
-      - {label: "Imagem valor direita", name: "imageRightVal", widget: "image"}
-      - {label: "Gerente do projeto", name: "gerente", widget: "relation", collection: "membros", search_fields: ["nome_membro"], value_field: "{{nome_membro}}", display_fields: ["{{nome_membro}} - {{cargo_membro}}"]}
-      - label: "Projetistas envolvidos"
-        name: 'projetistas'
-        widget: "list"
-        min: 1
-        max: 2
-        field: {label: "Projetista", name: "projetista", widget: "relation", collection: "membros", search_fields: ["nome_membro"], value_field: "{{nome_membro}}", display_fields: ["{{nome_membro}} - {{cargo_membro}}"]}
-      - {label: "Texto do botão", name: "bottonText", widget: "string", default: "veja mais no nosso behance!"}
-      - {label: "Link do Behance", name: "behanceLink", widget: "string"}
-      - label: "Projetos relacionados (irão para o carrossel)"
-        name: "relacionados_projetos"
-        widget: "list"
-        min: 1
-        max: 5
-        field: {label: "Projeto", name: "projeto_carrossel", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}  {{imagemCapa}}"]}

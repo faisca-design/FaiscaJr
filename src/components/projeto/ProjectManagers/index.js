@@ -1,4 +1,5 @@
 import styles from './proManegers.module.css';
+import StyledText from "@/components/textoEstilizado/textoEstilizado"
 
 function ProManegers({ ProGerente, projetista }) {
   return (
@@ -11,7 +12,7 @@ function ProManegers({ ProGerente, projetista }) {
           </h1>
           <hr className={styles.line} />
         </div>
-        <h2 className={styles.manager}> {ProGerente} </h2>
+        <h2 className={styles.manager}> <StyledText text={ProGerente}/> </h2>
       </div>
 
       <div className={styles.TittlesProjects}>
@@ -25,7 +26,7 @@ function ProManegers({ ProGerente, projetista }) {
               key={index}
               style={{ marginBottom: index === array.length - 1 ? '35px' : '0' }}
             >
-              {projetista}
+              <StyledText text={projetista}/>
             </h2>
           ))}
         </div>

@@ -1,63 +1,47 @@
-import DynamicBackground from "@components/dynamicBackground";
+import BackgroundManager from "@/components/backgroundManager/index.js";
 import Footer from "@/components/Layout/Footer";
 import Navbar from "@/components/Layout/Navbar";
 import styles from "@styles/pages.module.css"
 import Script from "next/script";
 import "@styles/globals.css"
+import { handleJSONfile, handleJSONfiles } from '../utils/functions/jsonHandler.js';
 
-import emailIcon from '@img/footerIcons/emailIcon.png';
-import instagramIcon from '@img/footerIcons/instagramIcon.png';
-import linkedinIcon from '@img/footerIcons/linkedinIcon.png';
-import behanceIcon from '@img/footerIcons/behanceIcon.png';
+async function getData() {
+  const navbarData = await handleJSONfile('./content/navbar/navbar.json');
+  const socialMediaData = await handleJSONfiles('./content/footer');
 
-export default function Layout({ children }) {
-    const socialMedia = [
-        {
-            icon: emailIcon,
-            link: "https://mail.google.com/mail/?view=cm&fs=1&to=contato@faiscadesignjr.com.br",
-            altText: "Email"
-        },
-        {
-            icon: instagramIcon,
-            link: "https://www.instagram.com/faiscadesignjr/",
-            altText: "Instagram"
-        },
-        {
-            icon: linkedinIcon,
-            link: "https://www.linkedin.com/company/faiscadesignjunior/",
-            altText: "LinkedIn"
-        },
-        {
-            icon: behanceIcon,
-            link: "https://www.behance.net/FaiscaDesignJunior",
-            altText: "Behance"
-        }
-    ];
+  if (!navbarData || !socialMediaData) {
+    throw new Error('Failed to fetch layout data');
+  }
 
-    return (
-        <html lang="pt-br">
-            <head>
-                <title>Faísca</title>
-                <Script
-                    async
-                    src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-                />
-            </head>
-            <body style={{ margin: 0, padding: 0, backgroundColor: '#1E181A', minHeight: '100vh' }}>
-                <div style={{ position: 'relative', minHeight: '100vh' }}>
-                    <DynamicBackground />
-                    <Navbar 
-                        optionOne={"início"} 
-                        optionTwo={"sobre nós"} 
-                        optionThree={"portfólio"} 
-                        optionFour={"contato"} 
-                    />
-                    <div className={styles.page}>
-                        {children}
-                    </div>
-                    <Footer socialMedia={socialMedia} />
-                </div>
-            </body>
-        </html>
-    )
+  return {
+    navbarData,
+    socialMediaData
+  };
+}
+
+export default async function Layout({ children }) {
+  const { navbarData, socialMediaData } = await getData();
+
+  return (
+    <html lang="pt-br">
+      <head>
+        <title>Faísca</title>
+        <Script
+          async
+          src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        />
+      </head>
+      <body style={{ margin: 0, padding: 0, backgroundColor: '#1E181A', minHeight: '100vh' }}>
+        <div style={{ position: 'relative', minHeight: '100vh' }}>
+          <BackgroundManager />
+          <Navbar {...navbarData} />
+          <div className={styles.page}>
+            {children}
+          </div>
+          <Footer socialMedia={socialMediaData} />
+        </div>
+      </body>
+    </html>
+  );
 }
