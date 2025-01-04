@@ -18,7 +18,7 @@ locale: 'pt'
 collections:
   - name: "navbar"
     extension: "json"
-    description: "Navbar com as abas do site"
+    description: "Navbar com nome de todas as abas do site"
     label: "Navbar"
     folder: "content/navbar"
     slug: "navbarConfig"
