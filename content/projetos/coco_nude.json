@@ -1,0 +1,41 @@
+{
+  "t2Values": "energia vibrante",
+  "imageRightVal": "/uploads/valueRightCN.png",
+  "t3Values": "vibrante",
+  "imagemCapa": "/uploads/capaCN.png",
+  "behanceLink": "https://www.behance.net/gallery/75854003/Coco-Nude",
+  "gerente": "nome aqui",
+  "projetistas": [
+    "outro nome aqui"
+  ],
+  "relacionados": [
+    {
+      "nome": "chamas da insignificância",
+      "imagem": "/uploads/projeto2.png"
+    },
+    {
+      "nome": "spot light",
+      "imagem": "/uploads/projeto1.png"
+    },
+    {
+      "nome": "bako bebidas",
+      "imagem": "/uploads/9.png"
+    },
+    {
+      "nome": "nucleo impulso",
+      "imagem": "/uploads/caseNucleo.png"
+    }
+  ],
+  "bottonText": "veja mais no nosso behance!",
+  "imageBottomSer": "/uploads/servicesBottomCN.png",
+  "t1Services": "site",
+  "t2Services": "identidade visual",
+  "textoPurpose": "Promover transformação social através da {{força}} das raízes brasileiras, realçando sua {{energia moderna}} e {{vibrante}}.",
+  "nome_projeto": "Coco Nude",
+  "imagemSubCapa": "/uploads/subCapaCN.png",
+  "t3Services": "rótulo",
+  "imageLeftSer": "/uploads/servicesLeftCN.png",
+  "t1Values": "força",
+  "imageRightSer": "/uploads/servicesRightCN.png",
+  "imageLeftVal": "/uploads/valueLeftCN.png"
+}
