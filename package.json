@@ -31,5 +31,8 @@
     "fs": false,
     "path": false,
     "os": false
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^15.1.4"
   }
 }
