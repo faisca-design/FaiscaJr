@@ -10,7 +10,7 @@ const BackgroundManager = () => {
   //const isContactPage = pathname === '/contato';
   <h1>testando</h1>
   //return isContactPage ? <ContactBackground /> : <DynamicBackground />;
-)
+);
 };
 
 export default BackgroundManager;
