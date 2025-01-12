@@ -1,4 +1,4 @@
-import BackgroundManager from "@/components/backgroundManager"
+import BackgroundManager from "../components/backgroundManager"
 import Footer from "@/components/Layout/Footer";
 import Navbar from "@/components/Layout/Navbar";
 import styles from "@styles/pages.module.css"
