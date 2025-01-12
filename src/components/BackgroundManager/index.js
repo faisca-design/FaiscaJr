@@ -1,8 +1,8 @@
 'use client'
 
 import { usePathname } from 'next/navigation';
-import DynamicBackground from "@/components/dynamicBackground/index.js";
-import ContactBackground from "@/components/contactBackground/index";
+import DynamicBackground from "@/components/dynamicBackground";
+import ContactBackground from "@/components/contactBackground";
 
 const BackgroundManager = () => {
   const pathname = usePathname();

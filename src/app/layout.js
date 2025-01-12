@@ -1,5 +1,4 @@
-//import BackgroundManager from "@/components/backgroundManager/index.js"
-import DynamicBackground from "@/components/dynamicBackground/index.js";
+import BackgroundManager from "@/components/backgroundManager"
 import Footer from "@/components/Layout/Footer";
 import Navbar from "@/components/Layout/Navbar";
 import styles from "@styles/pages.module.css"
@@ -35,7 +34,7 @@ export default async function Layout({ children }) {
       </head>
       <body style={{ margin: 0, padding: 0, backgroundColor: '#1E181A', minHeight: '100vh' }}>
         <div style={{ position: 'relative', minHeight: '100vh' }}>
-          <DynamicBackground />
+          <BackgroundManager />
           <Navbar {...navbarData} />
           <div className={styles.page}>
             {children}
