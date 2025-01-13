@@ -5,12 +5,12 @@ import DynamicBackground from "@/components/dynamicBackground";
 import ContactBackground from "@/components/contactBackground";
 
 const BackgroundManager = () => {
-  return (
-  //const pathname = usePathname();
-  //const isContactPage = pathname === '/contato';
+  
+  const pathname = usePathname();
+  const isContactPage = pathname === '/contato';
   <h1>testando</h1>
-  //return isContactPage ? <ContactBackground /> : <DynamicBackground />;
-);
+  return isContactPage ? <ContactBackground /> : <DynamicBackground />;
+
 };
 
 export default BackgroundManager;
