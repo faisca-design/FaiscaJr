@@ -11,7 +11,7 @@ function CardLeftText({ imgPathLT, erroLT, tittleLT, subTittleLT, textLT }) {
                 <h2><StyledText text={subTittleLT} /></h2>
                 <p><StyledText text={textLT} /></p>
             </div>
-            <Image src={imgPathLT} alt={erroLT} className={styles.img} width={500} height={500} />
+            <Image src={imgPathLT} alt={erroLT} className={styles.img} width={3000} height={3000} />
         </div>
     )
 };
