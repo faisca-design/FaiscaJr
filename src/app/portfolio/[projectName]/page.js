@@ -48,7 +48,7 @@ export default async function Page({ params }) {
 
   if (!projetoAtual) {
     return (
-      <div className={styles.error}>
+      <div>
         <h1>Projeto não encontrado</h1>
         <p>Nome buscado: {params.projectName}</p>
         <pre>

@@ -1,0 +1,16 @@
+{
+  "id": "2",
+  "ordem": 2,
+  "members": [
+    {
+      "nome": "Hannah Lerm",
+      "ciclo": "diretora marketing",
+      "imagem": "/uploads/HannahLerm.jpg"
+    },
+    {
+      "nome": "Tiago Lo Prete",
+      "ciclo": "diretor marketing",
+      "imagem": "/uploads/TiagoLoPrete.jpg"
+    }
+  ]
+}

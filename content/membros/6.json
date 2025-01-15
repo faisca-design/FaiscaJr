@@ -1,0 +1,16 @@
+{
+  "id": "6",
+  "ordem": 6,
+  "members": [
+    {
+      "nome": "Luísa Reis",
+      "ciclo": "diretora projetos",
+      "imagem": "/uploads/LuisaReis.jpg"
+    },
+    {
+      "nome": "Eduarda Weyh",
+      "ciclo": "diretora projetos",
+      "imagem": "/uploads/DudaWeyh.jpg"
+    }
+  ]
+}
