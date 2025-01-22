@@ -1,7 +1,7 @@
 import ContactText from "@/components/contato/ContactText"
 import ContactForm from "@/components/contato/ContactForm"
 import styles from "@styles/pages.module.css"
-import { handleJSONfile } from './../../utils/functions/jsonHandler';
+import { handleJSONfile } from '../../utils/jsonHandler';
 
 async function getData() {
   const contatoData = await handleJSONfile('./content/contato/contatoPage.json');

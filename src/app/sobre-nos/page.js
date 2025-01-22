@@ -4,7 +4,7 @@ import AboutFaisca from "@components/sobreNos/AboutFaisca"
 import MembersArea from "@components/sobreNos/MembersArea"
 import Structure from "@/components/sobreNos/Structure"
 import MEJ from "@components/sobreNos/MEJ"
-import { handleJSONfile, handleJSONfiles } from '../../utils/functions/jsonHandler.js'
+import { handleJSONfile, handleJSONfiles } from '../../utils/jsonHandler.js'
 import Members from "@components/sobreNos/Members"
 
 async function getData() {

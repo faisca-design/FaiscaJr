@@ -6,7 +6,7 @@ import ProjectValues from "@components/projeto/ProjectValues"
 import ProjectCarousel from "@components/projeto/ProjectCarousel";
 import GenericOutLink from "@/components/GenericButtonOutLink";
 import styles from "./styles.module.css";
-import { handleJSONfiles } from '@/utils/functions/jsonHandler';
+import { handleJSONfiles } from '@/utils/jsonHandler';
 
 async function getProjectData(projectName) {
   try {

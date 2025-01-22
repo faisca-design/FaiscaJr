@@ -1,4 +1,4 @@
-import { handleJSONfile, handleJSONfiles } from './../utils/functions/jsonHandler.js';
+import { handleJSONfile, handleJSONfiles } from '../utils/jsonHandler.js';
 import BannerHome from "@components/home/BannerHome";
 import LearnMoreSection from '@/components/home/LearnMoreSection';
 import OurServices from '@/components/home/OurServices';
