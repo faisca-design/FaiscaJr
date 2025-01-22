@@ -8,10 +8,16 @@ import GenericOutLink from "@/components/GenericButtonOutLink";
 import styles from "./styles.module.css";
 import { handleJSONfiles } from '@/utils/jsonHandler';
 
+function normalizeName(name) {
+  return decodeURIComponent(name)
+    .toLowerCase()
+    .replace(/\s+/g, '');
+}
+
 async function getProjectData(projectName) {
   try {
     const projects = await handleJSONfiles('content/projetos');
-    
+
     if (!projects || projects.length === 0) {
       throw new Error('Nenhum projeto encontrado');
     }
@@ -19,7 +25,11 @@ async function getProjectData(projectName) {
     console.log('Projetos encontrados:', projects.map(p => p.nome_projeto));
     console.log('Buscando por:', projectName);
 
-    const projeto = projects.find(p => p.nome_projeto === projectName);
+    // Normaliza tanto o nome buscado quanto o nome no JSON
+    const searchName = normalizeName(projectName);
+    const projeto = projects.find(p => 
+      normalizeName(p.nome_projeto) === searchName
+    );
 
     if (!projeto) {
       console.log('Projeto não encontrado');
