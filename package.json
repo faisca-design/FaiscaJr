@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@netlify/plugin-nextjs": "^5.9.3",
     "emailjs-com": "^3.2.0",
     "eslint": "^8.57.1",
     "fs": "^0.0.1-security",
@@ -33,6 +32,7 @@
     "os": false
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.9.3",
     "@next/bundle-analyzer": "^15.1.4"
   }
 }
