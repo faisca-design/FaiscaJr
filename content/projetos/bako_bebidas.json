@@ -1,0 +1,38 @@
+{
+  "t2Values": "energia vibrante",
+  "imageRightVal": "/uploads/valueRightBB.png",
+  "t3Values": "vibrante",
+  "imagemCapa": "/uploads/capaBB.png",
+  "behanceLink": "https://www.behance.net/",
+  "gerente": "mais um teste",
+  "projetistas": [
+    "mais um",
+    "teste amigo"
+  ],
+  "relacionados": [
+    {
+      "nome": "Chamas da Insignificância",
+      "imagem": "/uploads/projeto2.png"
+    },
+    {
+      "nome": "spot light",
+      "imagem": "/uploads/projeto1.png"
+    },
+    {
+      "nome": "bako bebidas",
+      "imagem": "/uploads/9.png"
+    }
+  ],
+  "bottonText": "veja mais no nosso behance!",
+  "imageBottomSer": "/uploads/servicesBottomBB.png",
+  "t1Services": "site",
+  "t2Services": "identidade visual",
+  "textoPurpose": "Promover transformação social através da {{força}} das raízes brasileiras, realçando sua {{energia moderna}} e {{vibrante}}.",
+  "nome_projeto": "bako bebidas",
+  "imagemSubCapa": "/uploads/subCapaBB.png",
+  "t3Services": "rótulo",
+  "imageLeftSer": "/uploads/servicesLeftBB.png",
+  "t1Values": "força",
+  "imageRightSer": "/uploads/servicesRightBB.png",
+  "imageLeftVal": "/uploads/valueLeftBB.png"
+}

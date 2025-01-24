@@ -1,0 +1,45 @@
+{
+  "t2Values": "energia vibrante",
+  "imageRightVal": "/uploads/valueRightJK.png",
+  "t3Values": "vibrante",
+  "imagemCapa": "/uploads/capaJK.png",
+  "behanceLink": "https://www.behance.net/gallery/130692699/Jeikoa",
+  "gerente": "fulano ciclas",
+  "projetistas": [
+    "mais um nome"
+  ],
+  "relacionados": [
+    {
+      "nome": "chamas da insignificância",
+      "imagem": "/uploads/projeto2.png"
+    },
+    {
+      "nome": "bako bebidas",
+      "imagem": "/uploads/9.png"
+    },
+    {
+      "nome": "nucleo impulso",
+      "imagem": "/uploads/caseNucleo.png"
+    },
+    {
+      "nome": "spot light",
+      "imagem": "/uploads/projeto1.png"
+    },
+    {
+      "nome": "jeikoa",
+      "imagem": "/uploads/caseJeikoa.png"
+    }
+  ],
+  "bottonText": "veja mais no nosso behance!",
+  "imageBottomSer": "/uploads/servicesBottomJK.png",
+  "t1Services": "site",
+  "t2Services": "identidade visual",
+  "textoPurpose": "Promover transformação social através da ##força## das raízes brasileiras, realçando sua ##energia moderna## e ##vibrante##.",
+  "nome_projeto": "jeikoa",
+  "imagemSubCapa": "/uploads/subCapaJK.png",
+  "t3Services": "rótulo",
+  "imageLeftSer": "/uploads/servicesLeftJK.png",
+  "t1Values": "força",
+  "imageRightSer": "/uploads/servicesRightJK.png",
+  "imageLeftVal": "/uploads/valueLeftJK.png"
+}
