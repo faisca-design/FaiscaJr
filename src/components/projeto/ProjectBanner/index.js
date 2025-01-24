@@ -9,8 +9,6 @@ export default function ProjectBanner({imagem, erro}) {
         src={imagem} 
         alt={erro} 
         className={styles.bannerImage} 
-        width={7680}
-        height={5124}
       />
     </div>
   );
