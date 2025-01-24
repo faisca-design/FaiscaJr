@@ -18,7 +18,7 @@ locale: 'pt'
 collections:
   - name: "navbar"
     extension: "json"
-    description: "Configurações da navegação"
+    description: "Navbar com nome de todas as abas do site"
     label: "Navbar"
     folder: "content/navbar"
     slug: "navbarConfig"
@@ -93,11 +93,11 @@ collections:
     create: true
     extension: "json"
     identifier_field: "titulo"
-    sortable_fields: ["ordem"] 
+    sortable: true 
     editor:
       preview: false
     fields:
-      - {label: "Ordem", name: "ordem", widget: "number", value_type: "int", min: 1}
+      - {label: "Ordem", name: "ordem", widget: "hidden", value_type: "int", min: 1}
       - {label: "Título do Serviço", name: "titulo", widget: "string"}
       - {label: "Descrição", name: "descricao", widget: "text"}
   
@@ -220,13 +220,13 @@ collections:
     folder: "content/membros"
     create: true
     extension: "json"
-    identifier_field: "ordem"
-    sortable_fields: ["ordem"]
+    identifier_field: "nome"
+    sortable: true
     editor:
       preview: false
     fields:
       - {label: "ID (único)", name: "id", widget: "string", hint: "Identificador único do cargo (ex: presidente, marketing)"}
-      - {label: "Ordem de Exibição", name: "ordem", widget: "number", value_type: "int", min: 1}
+      - {label: "Ordem de Exibição", name: "ordem", widget: "hidden", value_type: "int", min: 1}
       - label: "Membro(s) do Cargo"
         name: "members"
         widget: "list"
@@ -242,11 +242,11 @@ collections:
     create: true
     extension: "json"
     identifier_field: "titulo"
-    sortable_fields: ["ordem"]
+    sortable: true
     editor:
       preview: false
     fields:
-      - {label: "Ordem", name: "ordem", widget: "number", value_type: "int", min: 1}
+      - {label: "Ordem", name: "ordem", widget: "hidden", value_type: "int", min: 1}
       - {label: "Título do Projeto", name: "titulo", widget: "string"}
       - {label: "Descrição", name: "desc", widget: "string"}
       - {label: "Imagem do Projeto", name: "image", widget: "image"}
@@ -290,7 +290,7 @@ collections:
         widget: "list"
         field: {label: "Nome do Projetista", name: "nome", widget: "string"}
         min: 1
-        max: 3
+        max: 6
       
       # Links
       - {label: "Texto do botão", name: "bottonText", widget: "string", default: "veja mais no nosso behance!"}
@@ -343,65 +343,11 @@ collections:
     create: true
     extension: "json"
     identifier_field: "altText"
-    sortable_fields: ["order"]
+    sortable: true
     editor:
       preview: false
     fields:
-      - {label: "Ordem", name: "order", widget: "number", value_type: "int", min: 1}
+      - {label: "Ordem", name: "order", widget: "hidden", value_type: "int", min: 1}
       - {label: "Nome/Alt Text", name: "altText", widget: "string"}
       - {label: "Link", name: "link", widget: "string"}
       - {label: "Ícone", name: "icon", widget: "image"}
-
-  - name: "portfolio"
-    extension: "json"
-    description: "Coleção que vai conter as informação da pagina de portfólio do site da Faísca."
-    label: "Porfólio"
-    folder: "content/portfolio"
-    slug: "portfolioPage"
-    create: true
-    editor:
-      preview: false
-    fields:
-      - label: "Grandes projetos" 
-        name: "portfolio_projetos" 
-        widget: "list"
-        min: 4
-        max: 4
-        fields: 
-          - {label: "Nome do projeto", name: "projeto_destaque", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}"]}
-          - {label: "Título", name: "titulo_projeto", widget: "string"}
-          - {label: "Subtítulo", name: "subtitulo_projeto", widget: "string"}
-      
-      - label: "Projetos para o carrossel"
-        name: "portfolio_carrossel"
-        collapsed: false
-        widget: "list"
-        min: 1
-        max: 5
-        fields:
-          - {label: "Projeto", name: "projeto_carrossel", widget: "relation", collection: "projetos", search_fields: ["nome_projeto"], value_field: "{{nome_projeto}}", display_fields: ["{{nome_projeto}}"]}
-  - name: "membros aa" # Nome usado da rota
-    extension: "json"
-    description: "Coleção que vai conter todos os membros da Faísca."
-    label: "Membros aa" # Nome usado na label do Netlify 
-    folder: "content/membros" # Local da pasta onde vão estar os arquivos
-    create: true # Permite que usuários criem arquivos nesse local
-    editor:
-      preview: false
-    slug: "{{fields.nome_membro}}" 
-    fields: 
-      - {label: "Nome", name: "nome_membro", widget: "string"}
-      - {label: "Cargo", name: "cargo_membro", widget: "relation", collection: "cargos", search_fields: ["cargo"], value_field: "{{cargo}}"}
-      - {label: "Foto", name: "foto_membro", widget: "image"}
-
-  - name: "cargos" # Nome usado da rota
-    extension: "json"
-    description: "Coleção que vai conter todos os cargos da Faísca."
-    label: "Cargos" # Nome usado na label do Netlify 
-    folder: "content/cargos" # Local da pasta onde vão estar os arquivos
-    create: true # Permite que usuários criem arquivos nesse local
-    editor:
-      preview: false
-    slug: "{{fields.cargo}}" 
-    fields: 
-      - {label: "Cargo", name: "cargo", widget: "string"}
