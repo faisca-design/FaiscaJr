@@ -15,11 +15,11 @@ function Issue19({ titulo1, titulo2, titulo3, imageLeft, imageRight, imageBottom
 
             <div className={styles.containerImages}>
                 <div className={styles.upperImages}>
-                    <Image className={styles.smallImage1} src={imageLeft} alt="cartão de visitas" />
-                    <Image className={styles.smallImage2} src={imageRight} alt="feed do instagram" />
+                    <Image className={styles.smallImage1} src={imageLeft} alt="cartão de visitas" width={2724} height={3140} />
+                    <Image className={styles.smallImage2} src={imageRight} alt="feed do instagram" width={2724} height={3140}/>
                 </div>
                 <div className={styles.lowerImages}>
-                    <Image className={styles.image} src={imageBottom} alt="cartão de visitas" />
+                    <Image className={styles.image} src={imageBottom} alt="cartão de visitas" width={5856} height={3628}/>
                 </div>
             </div>
         </div>

@@ -12,6 +12,8 @@ export default function ProjectPurpose({ imagem, texto, erro }) {
         className={styles.img}
         src={imagem}
         alt={erro}
+        width={7680}
+        height={5124}
       />
     </div>
   );

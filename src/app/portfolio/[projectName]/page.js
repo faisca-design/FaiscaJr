@@ -1,7 +1,3 @@
-'use client';
-
-import { useParams } from 'next/navigation';
-import { useState, useEffect } from 'react';
 import ProManegers from "@components/projeto/ProjectManagers";
 import ProjectBanner from "@components/projeto/ProjectBanner";
 import ProjectPurpose from "@components/projeto/ProjectPurpose";
@@ -10,23 +6,59 @@ import ProjectValues from "@components/projeto/ProjectValues"
 import ProjectCarousel from "@components/projeto/ProjectCarousel";
 import GenericOutLink from "@/components/GenericButtonOutLink";
 import styles from "./styles.module.css";
-import { projectData } from "./../../../data/projectData"
+import { handleJSONfiles } from '@/utils/functions/jsonHandler';
 
+function normalizeName(name) {
+  return decodeURIComponent(name)
+    .toLowerCase()
+    .replace(/\s+/g, '');
+}
 
-export default function Page() {
-  const params = useParams();
-  const [projetoAtual, setProjetoAtual] = useState(null);
+async function getProjectData(projectName) {
+  try {
+    const projects = await handleJSONfiles('content/projetos');
 
-  useEffect(() => {
-    const nomeProjeto = params.projectName;
-    console.log("Nome do projeto:", nomeProjeto);
-    const projeto = projectData[nomeProjeto] || projectData["GBAdvocacia"];
-    setProjetoAtual(projeto);
-    console.log("Projeto atual:", projeto);
-  }, [params.projectName]);
+    if (!projects || projects.length === 0) {
+      throw new Error('Nenhum projeto encontrado');
+    }
+
+    console.log('Projetos encontrados:', projects.map(p => p.nome_projeto));
+    console.log('Buscando por:', projectName);
+
+    // Normaliza tanto o nome buscado quanto o nome no JSON
+    const searchName = normalizeName(projectName);
+    const projeto = projects.find(p => 
+      normalizeName(p.nome_projeto) === searchName
+    );
+
+    if (!projeto) {
+      console.log('Projeto não encontrado');
+      return null;
+    }
+
+    return projeto;
+  } catch (error) {
+    console.error('Error fetching project:', error);
+    return null;
+  }
+}
+
+export default async function Page({ params }) {
+  const projetoAtual = await getProjectData(params.projectName);
 
   if (!projetoAtual) {
-    return <div>Carregando...</div>;
+    return (
+      <div>
+        <h1>Projeto não encontrado</h1>
+        <p>Nome buscado: {params.projectName}</p>
+        <pre>
+          {JSON.stringify({
+            params,
+            projectName: params.projectName,
+          }, null, 2)}
+        </pre>
+      </div>
+    );
   }
 
   return (
@@ -54,10 +86,16 @@ export default function Page() {
         imageRight={projetoAtual.imageRightVal}
       />
       <div className={styles.container}>
-        <ProManegers ProGerente={projetoAtual.gerente} projetista={projetoAtual.projetistas} />
-        <GenericOutLink buttonText={projetoAtual.bottonText} outLink={projetoAtual.behanceLink} />
+        <ProManegers 
+          ProGerente={projetoAtual.gerente} 
+          projetista={projetoAtual.projetistas} 
+        />
+        <GenericOutLink 
+          buttonText={projetoAtual.bottonText} 
+          outLink={projetoAtual.behanceLink} 
+        />
       </div>
-      <ProjectCarousel />
+      <ProjectCarousel projetos={projetoAtual.relacionados} />
     </>
   );
 }

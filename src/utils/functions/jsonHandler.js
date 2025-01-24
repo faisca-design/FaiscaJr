@@ -1,28 +1,33 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import { readFileSync, readdirSync } from 'fs';
+import { join, extname } from 'path';
 
 /**
  * @description função que coloca todos o JSONs de uma pasta dentro de um array, para conseguirmos manipular
  * @param filePath caminho do arquivo com base na raiz
  */
 export function handleJSONfiles(filePath) {
-  let posts = [];
-  const fs = require("fs");
-  const path = require("path");
+  try {
+    const fullPath = join(process.cwd(), filePath);
+    let posts = [];
 
-  const jsonsInDir = fs
-    .readdirSync(filePath)
-    .filter((file) => path.extname(file) === ".json");
+    const jsonsInDir = readdirSync(fullPath)
+      .filter((file) => extname(file) === ".json");
 
-  jsonsInDir.forEach((file) => {
-    const fileData = fs.readFileSync(path.join(filePath, file));
-    const json = JSON.parse(fileData.toString());
-    posts.push({
-      ...json,
-      fileName: file.split(".")[0]
+    jsonsInDir.forEach((file) => {
+      const fullFilePath = join(fullPath, file);
+      const fileData = readFileSync(fullFilePath, 'utf8');
+      const json = JSON.parse(fileData);
+      posts.push({
+        ...json,
+        fileName: file.split(".")[0]
+      });
     });
-  });
-  return posts;
+    
+    return posts;
+  } catch (error) {
+    console.error('Error in handleJSONfiles:', error);
+    return [];
+  }
 }
   
 /**
