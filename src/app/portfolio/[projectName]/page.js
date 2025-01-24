@@ -14,37 +14,18 @@ function normalizeName(name) {
     .replace(/\s+/g, '');
 }
 
-async function getProjectData(projectName) {
-  try {
-    const projects = await handleJSONfiles('content/projetos');
-
-    if (!projects || projects.length === 0) {
-      throw new Error('Nenhum projeto encontrado');
-    }
-
-    console.log('Projetos encontrados:', projects.map(p => p.nome_projeto));
-    console.log('Buscando por:', projectName);
-
-    // Normaliza tanto o nome buscado quanto o nome no JSON
-    const searchName = normalizeName(projectName);
-    const projeto = projects.find(p => 
-      normalizeName(p.nome_projeto) === searchName
-    );
-
-    if (!projeto) {
-      console.log('Projeto não encontrado');
-      return null;
-    }
-
-    return projeto;
-  } catch (error) {
-    console.error('Error fetching project:', error);
-    return null;
-  }
+async function generateStaticParams() {
+  const projetos = handleJSONfiles('content/projetos');
+  return projetos.map((projeto) => ({
+    projectName: projeto.nome_projeto,
+  }));
 }
 
 export default async function Page({ params }) {
-  const projetoAtual = await getProjectData(params.projectName);
+  const projetos = handleJSONfiles('./content/projetos');
+  const projetoAtual = projetos.find(p => 
+    normalizeName(p.nome_projeto) === normalizeName(params.projectName)
+  );
 
   if (!projetoAtual) {
     return (

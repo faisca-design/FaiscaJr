@@ -1,82 +1,79 @@
-import ProManegers from "@components/projeto/ProjectManagers";
-import ProjectBanner from "@components/projeto/ProjectBanner";
-import ProjectPurpose from "@components/projeto/ProjectPurpose";
-import ProjectServices from "@components/projeto/ProjectServices"
-import ProjectValues from "@components/projeto/ProjectValues"
-import ProjectCarousel from "@components/projeto/ProjectCarousel";
-import GenericOutLink from "@/components/GenericButtonOutLink";
-import styles from "./styles.module.css";
-import { handleJSONfiles } from '@/utils/jsonHandler';
+import styles from "@styles/pages.module.css"
+import PurposeText from "@/components/sobreNos/PurposeText"
+import AboutFaisca from "@components/sobreNos/AboutFaisca"
+import Structure from "@/components/sobreNos/Structure"
+import MEJ from "@components/sobreNos/MEJ"
+import { handleJSONfile, handleJSONfiles } from '../../utils/functions/jsonHandler.js'
+import Members from "@components/sobreNos/Members"
 
-function normalizeName(name) {
-  return decodeURIComponent(name)
-    .toLowerCase()
-    .replace(/\s+/g, '');
+async function getData() {
+    const sobreNosData = await handleJSONfile('content/sobreNos/sobreNosPage.json');
+    const membersData = await handleJSONfiles('content/membros');
+
+    if (!sobreNosData) {
+        throw new Error('Falha ao carregar dados da página sobre nós');
+    }
+
+    return {
+        sobreNosData,
+        membersData
+    };
 }
 
-async function generateStaticParams() {
-  const projetos = handleJSONfiles('content/projetos');
-  return projetos.map((projeto) => ({
-    projectName: projeto.nome_projeto,
-  }));
-}
+async function SobreNos() {
+    const { sobreNosData, membersData } = await getData();
+    const { purpose, aboutFaisca, membersArea, structure, mej } = sobreNosData;
 
-export default async function Page({ params }) {
-  const projetos = handleJSONfiles('./content/projetos');
-  const projetoAtual = projetos.find(p => 
-    normalizeName(p.nome_projeto) === normalizeName(params.projectName)
-  );
-
-  if (!projetoAtual) {
     return (
-      <div>
-        <h1>Projeto não encontrado</h1>
-        <p>Nome buscado: {params.projectName}</p>
-        <pre>
-          {JSON.stringify({
-            params,
-            projectName: params.projectName,
-          }, null, 2)}
-        </pre>
-      </div>
-    );
-  }
+        <div className={styles.withPadding}>
+            <PurposeText purpose={purpose} />
 
-  return (
-    <>
-      <ProjectBanner
-        imagem={projetoAtual.imagemCapa}
-      />
-      <ProjectPurpose
-        texto={projetoAtual.textoPurpose}
-        imagem={projetoAtual.imagemSubCapa}
-      />
-      <ProjectServices
-        titulo1={projetoAtual.t1Services}
-        titulo2={projetoAtual.t2Services}
-        titulo3={projetoAtual.t3Services}
-        imageLeft={projetoAtual.imageLeftSer}
-        imageRight={projetoAtual.imageRightSer}
-        imageBottom={projetoAtual.imageBottomSer}
-      />
-      <ProjectValues
-        titulo1={projetoAtual.t1Values}
-        titulo2={projetoAtual.t2Values}
-        titulo3={projetoAtual.t3Values}
-        imageLeft={projetoAtual.imageLeftVal}
-        imageRight={projetoAtual.imageRightVal}
-      />
-      <div className={styles.container}>
-        <ProManegers 
-          ProGerente={projetoAtual.gerente} 
-          projetista={projetoAtual.projetistas} 
-        />
-        <GenericOutLink 
-          buttonText={projetoAtual.bottonText} 
-          outLink={projetoAtual.behanceLink} 
-        />
-      </div>
-      <ProjectCarousel projetos={projetoAtual.relacionados} />
-    </>
-  );
+            <AboutFaisca
+                firstText={aboutFaisca.firstText}
+                secondText={aboutFaisca.secondText}
+                logo={aboutFaisca.logo}
+            />
+
+            <Members
+                tittle={membersArea.tittle}
+                subTittle={membersArea.subTittle}
+                membersData={membersData}
+            />
+
+            <Structure
+                tittle={structure.tittle}
+                phrase={structure.phrase}
+
+                imgOne={structure.sectionOne.img}
+                subTittleOne={structure.sectionOne.subTittle}
+                textOne={structure.sectionOne.text}
+
+                imgTwo={structure.sectionTwo.img}
+                subTittleTwo={structure.sectionTwo.subTittle}
+                subSubTittleTwo={structure.sectionTwo.subSubTittle}
+                textTwo={structure.sectionTwo.text}
+
+                imgThree={structure.sectionThree.img}
+                subTittleThree={structure.sectionThree.subTittle}
+                textThree={structure.sectionThree.text}
+
+                imgFour={structure.sectionFour.img}
+                subTittleFour={structure.sectionFour.subTittle}
+                subSubTittleFour={structure.sectionFour.subSubTittle}
+                textFour={structure.sectionFour.text}
+            />
+
+            <MEJ
+                tittle={mej.tittle}
+                phrase={mej.phrase}
+                mainImg={mej.mainImg}
+                brasilJrImg={mej.brasilJrImg}
+                NejImg={mej.NejImg}
+                fejersImg={mej.fejersImg}
+                designUFRGSImg={mej.designUFRGSImg}
+            />
+        </div>
+    )
 }
+
+export default SobreNos
