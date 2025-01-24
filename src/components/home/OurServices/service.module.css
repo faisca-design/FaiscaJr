@@ -1,9 +1,3 @@
-.service {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-}
-
 .serviceHeader {
     cursor: pointer;
     width: 100%;

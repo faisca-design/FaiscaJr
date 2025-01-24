@@ -8,7 +8,7 @@ function Cases({ imag, ProjectName, projectPath }) {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <Link href={projectPath} className={styles.projectLink}>
+        <Link href={projectPath}>
             <div 
                 className={styles.imageContainer}
                 onMouseEnter={() => setIsHovered(true)}
