@@ -6,22 +6,30 @@ import { join, extname } from 'path'
 * @param filePath caminho do arquivo com base na raiz
 */
 export async function handleJSONfiles(filePath) {
- if (process.env.NODE_ENV === 'development') {
-   let posts = []
-   const jsonsInDir = readdirSync(filePath).filter(file => extname(file) === '.json')
+  try {
+    if (process.env.NODE_ENV === 'development') {
+      let posts = []
+      const jsonsInDir = readdirSync(filePath).filter(file => extname(file) === '.json')
 
-   jsonsInDir.forEach(file => {
-     const fileData = readFileSync(join(filePath, file))
-     const json = JSON.parse(fileData.toString())
-     posts.push({ ...json, fileName: file.split('.')[0] })
-   })
+      jsonsInDir.forEach(file => {
+        const fileData = readFileSync(join(filePath, file))
+        const json = JSON.parse(fileData.toString())
+        posts.push({ ...json, fileName: file.split('.')[0] })
+      })
 
-   return posts
- } else {
-   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
-   const response = await fetch(`${baseUrl}/api/projetos`)
-   return response.json()
- }
+      return posts
+    } else {
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
+      const response = await fetch(`${baseUrl}/api/projetos`, {
+        headers: { 'Content-Type': 'application/json' }
+      })
+      if (!response.ok) throw new Error('Failed to fetch')
+      return response.json()
+    }
+  } catch (error) {
+    console.error('Error in handleJSONfiles:', error)
+    return []
+  }
 }
 
 /**
