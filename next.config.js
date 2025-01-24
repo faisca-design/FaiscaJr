@@ -2,10 +2,13 @@
 const webpack = require("webpack");
 
 const nextConfig = {
-  output: 'export',
-  images: {
-    unoptimized: true
+  experimental: {
+    outputFileTracingIncludes: {
+      '/api/**/*': ['content/**/*']
+    }
   },
+  reactStrictMode: true,
+  swcMinify: true,
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.plugins.push(
       new webpack.ProvidePlugin({

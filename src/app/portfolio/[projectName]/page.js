@@ -14,6 +14,13 @@ function normalizeName(name) {
     .replace(/\s+/g, '');
 }
 
+export async function generateStaticParams() {
+  const projetos = await handleJSONfiles('content/projetos')
+  return projetos.map((projeto) => ({
+    projectName: normalizeName(projeto.nome_projeto),
+  }))
+}
+
 async function getProjectData(projectName) {
   try {
     const projects = await handleJSONfiles('content/projetos');
