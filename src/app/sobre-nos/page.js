@@ -14,7 +14,15 @@ function normalizeName(name) {
     .replace(/\s+/g, '');
 }
 
-export default function Page({ projetos, params }) {
+async function generateStaticParams() {
+  const projetos = handleJSONfiles('content/projetos');
+  return projetos.map((projeto) => ({
+    projectName: projeto.nome_projeto,
+  }));
+}
+
+export default async function Page({ params }) {
+  const projetos = handleJSONfiles('./content/projetos');
   const projetoAtual = projetos.find(p => 
     normalizeName(p.nome_projeto) === normalizeName(params.projectName)
   );
@@ -71,27 +79,4 @@ export default function Page({ projetos, params }) {
       <ProjectCarousel projetos={projetoAtual.relacionados} />
     </>
   );
-}
-
-export async function getStaticProps({ params }) {
-  const projetos = handleJSONfiles('./content/projetos');
-  
-  return {
-    props: { 
-      projetos,
-      params
-    },
-  };
-}
-
-export async function getStaticPaths() {
-  const projetos = handleJSONfiles('content/projetos');
-  const paths = projetos.map(projeto => ({
-    params: { projectName: projeto.nome_projeto }
-  }));
-
-  return {
-    paths,
-    fallback: false
-  };
 }
