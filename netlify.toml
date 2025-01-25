@@ -1,13 +1,13 @@
 [
 build
 ]
-  command = "next build"
-  publish = "out"
+command = "next build"
+publish = "out"
 
 [[
 redirects
 ]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = true
+from = "/*"
+to = "/index.html"
+status = 200
+force = true
