@@ -1,13 +1,12 @@
 [
 build
 ]
-command = "next build"
-publish = "out"
+  command = "npm run build"
+  publish = "out"
 
 [[
 redirects
 ]]
-from = "/*"
-to = "/index.html"
-status = 200
-force = true
+  from = "/*"
+  to = "/index.html"
+  status = 200
