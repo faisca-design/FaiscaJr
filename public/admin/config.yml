@@ -220,16 +220,16 @@ collections:
     folder: "content/membros"
     create: true
     extension: "json"
-    identifier_field: "nome"
+    identifier_field: "members.nome"
     sortable: true
     editor:
       preview: false
     fields:
       - {label: "ID (único)", name: "id", widget: "string", hint: "Identificador único do cargo (ex: presidente, marketing)"}
-      - {label: "Ordem de Exibição", name: "ordem", widget: "hidden", value_type: "int", min: 1}
       - label: "Membro(s) do Cargo"
         name: "members"
         widget: "list"
+        summary: "{{fields.nome}}"
         fields:
           - {label: "Nome", name: "nome", widget: "string"}
           - {label: "Cargo/Ciclo", name: "ciclo", widget: "string"}
