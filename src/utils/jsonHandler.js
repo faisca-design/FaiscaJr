@@ -6,28 +6,23 @@ import { join, extname } from 'path';
  * @param filePath caminho do arquivo com base na raiz
  */
 export function handleJSONfiles(filePath) {
-  try {
-    const fullPath = join(process.cwd(), filePath);
-    let posts = [];
+  let posts = [];
+  const fs = require("fs");
+  const path = require("path");
 
-    const jsonsInDir = readdirSync(fullPath)
-      .filter((file) => extname(file) === ".json");
+  const jsonsInDir = fs
+    .readdirSync(filePath)
+    .filter((file) => path.extname(file) === ".json");
 
-    jsonsInDir.forEach((file) => {
-      const fullFilePath = join(fullPath, file);
-      const fileData = readFileSync(fullFilePath, 'utf8');
-      const json = JSON.parse(fileData);
-      posts.push({
-        ...json,
-        fileName: file.split(".")[0]
-      });
+  jsonsInDir.forEach((file) => {
+    const fileData = fs.readFileSync(path.join(filePath, file));
+    const json = JSON.parse(fileData.toString());
+    posts.push({
+      ...json,
+      fileName: file.split(".")[0]
     });
-    
-    return posts;
-  } catch (error) {
-    console.error('Error in handleJSONfiles:', error);
-    return [];
-  }
+  });
+  return posts;
 }
   
 /**
