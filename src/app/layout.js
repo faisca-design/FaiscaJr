@@ -4,7 +4,7 @@ import Navbar from "@/components/Layout/Navbar";
 import styles from "@styles/pages.module.css"
 import Script from "next/script";
 import "@styles/globals.css"
-import { handleJSONfile, handleJSONfiles } from '../utils/functions/jsonHandler';
+import { handleJSONfile, handleJSONfiles } from '../utils/jsonHandler';
 
 async function getData() {
   const navbarData = await handleJSONfile('./content/navbar/navbar.json');

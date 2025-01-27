@@ -7,7 +7,7 @@ import ProjectCarousel from "@components/projeto/ProjectCarousel";
 import GenericOutLink from "@/components/GenericButtonOutLink";
 import ClientRefreshWrapper from "@/components/ClientRefreshWrapper";
 import styles from "./styles.module.css";
-import { handleJSONfiles } from '@/utils/functions/jsonHandler';
+import { handleJSONfiles } from '@/utils/jsonHandler';
 
 function normalizeName(name) {
   return decodeURIComponent(name)
