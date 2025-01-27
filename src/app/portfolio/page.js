@@ -1,5 +1,5 @@
 import PortfolioBanners from "@components/portfolio/PortfolioBanners"
-import { handleJSONfiles } from '@/utils/jsonHandler'
+import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 
 async function getData() {
   const bannersData = await handleJSONfiles('./content/banners');

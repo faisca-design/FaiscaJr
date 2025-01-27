@@ -3,7 +3,7 @@ import PurposeText from "@/components/sobreNos/PurposeText"
 import AboutFaisca from "@components/sobreNos/AboutFaisca"
 import Structure from "@/components/sobreNos/Structure"
 import MEJ from "@components/sobreNos/MEJ"
-import { handleJSONfile, handleJSONfiles } from '../../utils/jsonHandler.js'
+import { handleJSONfile, handleJSONfiles } from '../../utils/functions/jsonHandler.js'
 import Members from "@components/sobreNos/Members"
 
 async function getData() {
