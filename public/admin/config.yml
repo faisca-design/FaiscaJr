@@ -16,7 +16,7 @@ search: false
 locale: 'pt'
 
 collections:
-  - name: "navbar"
+  - name: "teste teste teste"
     extension: "json"
     description: "Navbar com nome de todas as abas do site"
     label: "Navbar"
