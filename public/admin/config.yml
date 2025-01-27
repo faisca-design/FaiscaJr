@@ -220,7 +220,7 @@ collections:
     folder: "content/membros"
     create: true
     extension: "json"
-    identifier_field: "{members.nome}"
+    identifier_field: "members.nome"
     sortable: true
     editor:
       preview: false
