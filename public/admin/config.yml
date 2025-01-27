@@ -16,10 +16,10 @@ search: false
 locale: 'pt'
 
 collections:
-  - name: "teste teste teste"
+  - name: "navbar"
     extension: "json"
-    description: "Navbar com nome de todas as abas do site"
-    label: "Navbar"
+    description: "testando se ta funfando"
+    label: "testeteteste"
     folder: "content/navbar"
     slug: "navbarConfig"
     create: false
