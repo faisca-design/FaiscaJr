@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 
-const DynamicBackground = () => {
+const PageBackground = () => {
   const containerRef = useRef(null);
   const [numBolas, setNumBolas] = useState(5);
 
@@ -79,4 +79,4 @@ const DynamicBackground = () => {
   );
 };
 
-export default DynamicBackground;
+export default PageBackground;

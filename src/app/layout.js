@@ -1,10 +1,10 @@
-import BackgroundManager from "../components/background"
+import BackgroundManager from "@components/background/backgroundManager"
 import Footer from "@/components/Layout/Footer";
 import Navbar from "@/components/Layout/Navbar";
 import styles from "@styles/pages.module.css"
 import Script from "next/script";
 import "@styles/globals.css"
-import { handleJSONfile, handleJSONfiles } from '../utils/jsonHandler.js';
+import { handleJSONfile, handleJSONfiles } from '../utils/functions/jsonHandler';
 
 async function getData() {
   const navbarData = await handleJSONfile('./content/navbar/navbar.json');

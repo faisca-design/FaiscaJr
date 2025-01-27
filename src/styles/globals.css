@@ -1,118 +1,118 @@
 @font-face {
-    font-family: 'Chillax';
-    src: url('/fonts/Chillax-Regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Chillax';
-    src: url('/fonts/Chillax-Bold.otf') format('opentype');
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Chillax';
-    src: url('/fonts/Chillax-Light.otf') format('opentype');
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Chillax';
-    src: url('/fonts/Chillax-Medium.otf') format('opentype');
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Chillax';
-    src: url('/fonts/Chillax-Semibold.otf') format('opentype');
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Chillax';
-    src: url('/fonts/Chillax-Extralight.otf') format('opentype');
-    font-weight: 200;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Allegin';
-    src: url('/fonts/Allegin.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'LexendDeca';
-    src: url('/fonts/LexendDeca-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'LexendDeca';
-    src: url('/fonts/LexendDeca-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'LexendDeca';
-    src: url('/fonts/LexendDeca-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'LexendDeca';
-    src: url('/fonts/LexendDeca-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'LexendDeca';
-    src: url('/fonts/LexendDeca-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'LexendDeca';
-    src: url('/fonts/LexendDeca-ExtraLight.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Extralight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'LexendDeca';
-    src: url('/fonts/LexendDeca-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
+  font-family: 'Allegin';
+  src: url('/fonts/Allegin.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'LexendDeca';
-    src: url('/fonts/LexendDeca-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
+  font-family: 'LexendDeca';
+  src: url('/fonts/LexendDeca-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'LexendDeca';
-    src: url('/fonts/LexendDeca-Thin.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
+  font-family: 'LexendDeca';
+  src: url('/fonts/LexendDeca-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LexendDeca';
+  src: url('/fonts/LexendDeca-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LexendDeca';
+  src: url('/fonts/LexendDeca-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LexendDeca';
+  src: url('/fonts/LexendDeca-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LexendDeca';
+  src: url('/fonts/LexendDeca-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LexendDeca';
+  src: url('/fonts/LexendDeca-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LexendDeca';
+  src: url('/fonts/LexendDeca-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LexendDeca';
+  src: url('/fonts/LexendDeca-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
 }
 
 :root{
-    --header-size: ;
-    --footer-size: ;
+  --header-size: ;
+  --footer-size: ;
 }
 
 html, body, div, span, applet, object, iframe, p, blockquote, pre,
@@ -137,7 +137,7 @@ vertical-align: baseline;
 }
 
 h1,h2,h3,h4,h5,h6{
-    margin: 0;
+  margin: 0;
 }
 
 article, aside, details, figcaption, figure,
@@ -166,33 +166,33 @@ border-spacing: 0;
 }
 
 html {
-  scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 div .owl-nav{
-    align-items: center;
+  align-items: center;
 }
 .owl-nav{
-    color: white !important;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-    font-size: 60px;
-    font-weight: 300;
-    margin-top: -20vh;
+  color: white !important;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  font-size: 60px;
+  font-weight: 300;
+  margin-top: -20vh;
 }
 
 .owl-next {
-    margin-left: 40vw; 
+  margin-left: 40vw; 
 }
 
 .owl-prev {
-    margin-right: 40vw;
+  margin-right: 40vw;
 }
 
 
 @media (max-width: 576px) {
-  .owl-nav {
-      display: none !important;
-  }
+.owl-nav {
+    display: none !important;
+}
 }
