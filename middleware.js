@@ -1,4 +1,3 @@
-// middleware.js
 import { NextResponse } from 'next/server';
 
 export function middleware(request) {
@@ -6,7 +5,7 @@ export function middleware(request) {
   const url = new URL(request.url);
   
   // Verifica se é uma rota de projeto
-  if (url.pathname.includes('/projetos/')) {
+  if (url.pathname.includes('/portfolio/')) {
     // Verifica se é um refresh (F5)
     const isRefresh = request.headers.get('cache-control')?.includes('no-cache');
     
@@ -25,5 +24,5 @@ export function middleware(request) {
 
 // Configura em quais rotas o middleware vai rodar
 export const config = {
-  matcher: '/projetos/:path*'
+  matcher: '/portfolio/:path*'
 }
