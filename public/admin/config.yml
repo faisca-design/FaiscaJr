@@ -18,8 +18,8 @@ locale: 'pt'
 collections:
   - name: "navbar"
     extension: "json"
-    description: "testando se ta funfando"
-    label: "testeteteste"
+    description: "Navbar com nome de todas as abas do site"
+    label: "Navbar"
     folder: "content/navbar"
     slug: "navbarConfig"
     create: false
@@ -220,7 +220,7 @@ collections:
     folder: "content/membros"
     create: true
     extension: "json"
-    identifier_field: "nome"
+    identifier_field: "{members.nome}"
     sortable: true
     editor:
       preview: false
