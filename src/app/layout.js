@@ -1,7 +1,6 @@
 import BackgroundManager from "@components/background/backgroundManager"
 import Footer from "@/components/Layout/Footer";
 import Navbar from "@/components/Layout/Navbar";
-import RefreshHandler from "@/components/RefreshHandler"
 import styles from "@styles/pages.module.css"
 import Script from "next/script";
 import "@styles/globals.css"
@@ -35,7 +34,6 @@ export default async function Layout({ children }) {
       </head>
       <body style={{ margin: 0, padding: 0, backgroundColor: '#1E181A', minHeight: '100vh' }}>
         <div style={{ position: 'relative', minHeight: '100vh' }}>
-          <RefreshHandler />
           <BackgroundManager />
           <Navbar {...navbarData} />
           <div className={styles.page}>

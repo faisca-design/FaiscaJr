@@ -5,6 +5,7 @@ import ProjectServices from "@components/projeto/ProjectServices"
 import ProjectValues from "@components/projeto/ProjectValues"
 import ProjectCarousel from "@components/projeto/ProjectCarousel";
 import GenericOutLink from "@/components/GenericButtonOutLink";
+import ClientRefreshWrapper from "@/components/ClientRefreshWrapper";
 import styles from "./styles.module.css";
 import { handleJSONfiles } from '@/utils/functions/jsonHandler';
 
@@ -27,7 +28,7 @@ async function getProjectData(projectName) {
 
     // Normaliza tanto o nome buscado quanto o nome no JSON
     const searchName = normalizeName(projectName);
-    const projeto = projects.find(p => 
+    const projeto = projects.find(p =>
       normalizeName(p.nome_projeto) === searchName
     );
 
@@ -49,6 +50,7 @@ export default async function Page({ params }) {
   if (!projetoAtual) {
     return (
       <div>
+        <ClientRefreshWrapper />
         <h1>Projeto não encontrado</h1>
         <p>Nome buscado: {params.projectName}</p>
         <pre>
@@ -63,6 +65,7 @@ export default async function Page({ params }) {
 
   return (
     <>
+      <ClientRefreshWrapper />
       <ProjectBanner
         imagem={projetoAtual.imagemCapa}
       />
@@ -86,13 +89,13 @@ export default async function Page({ params }) {
         imageRight={projetoAtual.imageRightVal}
       />
       <div className={styles.container}>
-        <ProManegers 
-          ProGerente={projetoAtual.gerente} 
-          projetista={projetoAtual.projetistas} 
+        <ProManegers
+          ProGerente={projetoAtual.gerente}
+          projetista={projetoAtual.projetistas}
         />
-        <GenericOutLink 
-          buttonText={projetoAtual.bottonText} 
-          outLink={projetoAtual.behanceLink} 
+        <GenericOutLink
+          buttonText={projetoAtual.bottonText}
+          outLink={projetoAtual.behanceLink}
         />
       </div>
       <ProjectCarousel projetos={projetoAtual.relacionados} />
