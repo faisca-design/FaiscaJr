@@ -7,11 +7,19 @@ export default function RefreshHandler() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const normalizeUrl = (url) => {
+  const toggleUrlCase = (url) => {
     const parts = url.split('/');
     const projectName = parts[parts.length - 1];
-    const normalizedName = projectName.toLowerCase();
-    parts[parts.length - 1] = normalizedName;
+    
+    // Se tem alguma letra maiúscula, converte tudo para minúscula
+    if (projectName !== projectName.toLowerCase()) {
+      parts[parts.length - 1] = projectName.toLowerCase();
+    } 
+    // Se está tudo em minúsculo, capitaliza a primeira letra
+    else {
+      parts[parts.length - 1] = projectName.charAt(0).toUpperCase() + projectName.slice(1).toLowerCase();
+    }
+    
     return parts.join('/');
   };
 
@@ -20,13 +28,11 @@ export default function RefreshHandler() {
       if (e.key === 'F5' || (e.ctrlKey && e.key === 'r')) {
         e.preventDefault();
         
-        // Apenas normaliza a URL sem refresh
-        const normalizedPath = normalizeUrl(pathname);
+        // Alterna entre as versões
+        const newPath = toggleUrlCase(pathname);
         
-        // Usa o router.replace para não adicionar nova entrada no histórico
-        if (pathname !== normalizedPath) {
-          router.replace(normalizedPath);
-        }
+        // Usa replace para não adicionar ao histórico
+        router.replace(newPath);
       }
     };
 
