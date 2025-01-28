@@ -1,44 +1,38 @@
-import path from 'path';
+import { readFileSync, readdirSync } from 'fs';
+import { join, extname } from 'path';
 
 /**
- * @description função que coleta todos os JSONs de uma pasta em um array
+ * @description função que coloca todos o JSONs de uma pasta dentro de um array, para conseguirmos manipular
  * @param filePath caminho do arquivo com base na raiz
  */
-export async function handleJSONfiles(filePath) {
-  try {
-    const fs = require('fs').promises; // Usando a versão com promises
-    const fullPath = path.join(process.cwd(), filePath);
-    
-    const files = await fs.readdir(fullPath);
-    const jsonsInDir = files.filter(file => path.extname(file) === '.json');
-    
-    const posts = await Promise.all(
-      jsonsInDir.map(async (file) => {
-        const fileData = await fs.readFile(path.join(fullPath, file), 'utf8');
-        const json = JSON.parse(fileData);
-        return {
-          ...json,
-          fileName: file.split('.')[0]
-        };
-      })
-    );
-    
-    return posts;
-  } catch (error) {
-    console.error('Error reading files:', error);
-    return [];
-  }
-}
+export function handleJSONfiles(filePath) {
+  let posts = [];
+  const fs = require("fs");
+  const path = require("path");
 
+  const jsonsInDir = fs
+    .readdirSync(filePath)
+    .filter((file) => path.extname(file) === ".json");
+
+  jsonsInDir.forEach((file) => {
+    const fileData = fs.readFileSync(path.join(filePath, file));
+    const json = JSON.parse(fileData.toString());
+    posts.push({
+      ...json,
+      fileName: file.split(".")[0]
+    });
+  });
+  return posts;
+}
+  
 /**
  * @description função que carrega um único JSON de um caminho
  * @param filePath caminho do arquivo com base na raiz
  */
-export async function handleJSONfile(filePath) {
+export function handleJSONfile(filePath) {
+  const fullPath = join(process.cwd(), filePath);
   try {
-    const fs = require('fs').promises;
-    const fullPath = path.join(process.cwd(), filePath);
-    const fileContents = await fs.readFile(fullPath, 'utf8');
+    const fileContents = readFileSync(fullPath, 'utf8');
     return JSON.parse(fileContents);
   } catch (error) {
     console.error('Error reading file:', error);
