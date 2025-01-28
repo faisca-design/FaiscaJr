@@ -9,13 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@netlify/plugin-nextjs": "4.36.1",
+    "@netlify/plugin-nextjs": "^5.9.4",
     "emailjs-com": "^3.2.0",
     "eslint": "^8.0.0",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "jquery": "^3.7.1",
-    "next": "^13.5.8",
+    "next": "^14.0.0",
     "owl.carousel": "^2.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
