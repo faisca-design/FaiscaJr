@@ -221,9 +221,15 @@ collections:
     create: true
     extension: "json"
     identifier_field: "display_name"
+    summary: "{{display_name}}"
     sortable: true
-    editor:
-      preview: false
+    view_filters:
+      - label: "Membros Ativos"
+        field: display_name
+        pattern: "."
+    view_groups:
+      - label: Todos os Membros
+        field: display_name
     fields:
       - {label: "Nome para Exibição", name: "display_name", widget: "string", hint: "Nome que aparecerá no painel administrativo"}
       - {label: "ID (único)", name: "id", widget: "string", hint: "Identificador único do cargo (ex: presidente, marketing)"}
