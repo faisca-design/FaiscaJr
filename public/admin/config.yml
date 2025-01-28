@@ -220,13 +220,15 @@ collections:
     folder: "content/membros"
     create: true
     extension: "json"
-    identifier_field: "nome"
-    sortable: true
+    identifier_field: "display_name"
+    sortable_fields: ["ordem"]
+    sort: {field: "ordem", direction: "asc"}
     editor:
       preview: false
     fields:
+      - {label: "Nome para Exibição", name: "display_name", widget: "string", hint: "Nome que aparecerá no painel administrativo"}
       - {label: "ID (único)", name: "id", widget: "string", hint: "Identificador único do cargo (ex: presidente, marketing)"}
-      - {label: "Ordem de Exibição", name: "ordem", widget: "hidden", value_type: "int", min: 1}
+      - {label: "Ordem", name: "ordem", widget: "number", default: 1}
       - label: "Membro(s) do Cargo"
         name: "members"
         widget: "list"
