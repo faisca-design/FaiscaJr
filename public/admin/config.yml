@@ -97,7 +97,7 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: "Ordem", name: "ordem", widget: "hidden", value_type: "int", min: 1}
+      - {label: "Ordem", name: "ordem", widget: "number", value_type: "int", min: 1}
       - {label: "Título do Serviço", name: "titulo", widget: "string"}
       - {label: "Descrição", name: "descricao", widget: "text"}
   
@@ -221,20 +221,18 @@ collections:
     create: true
     extension: "json"
     identifier_field: "display_name"
-    format: "json"
+    editor:
+      preview: false
     fields:
-      - label: "Membros"
+      - {label: "Nome para Exibição", name: "display_name", widget: "string", hint: "Nome que aparecerá no painel administrativo"}
+      - {label: "ID (único)", name: "id", widget: "string", hint: "Identificador único do cargo (ex: presidente, marketing)"}
+      - label: "Membro(s) do Cargo"
         name: "members"
         widget: "list"
-        label_singular: "Membro"
-        summary: "{{nome}}"
         fields:
           - {label: "Nome", name: "nome", widget: "string"}
           - {label: "Cargo/Ciclo", name: "ciclo", widget: "string"}
           - {label: "Foto", name: "imagem", widget: "image"}
-      - {label: "ID (único)", name: "id", widget: "string", hint: "Identificador único do cargo (ex: presidente, marketing)"}
-      - {label: "Nome para Exibição", name: "display_name", widget: "string", hint: "Nome que aparecerá no painel administrativo"}
-      - {label: "Ordem", name: "ordem", widget: "hidden", default: 1}
 
   - name: "banners"
     label: "Portfólio"
@@ -247,7 +245,7 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: "Ordem", name: "ordem", widget: "hidden", value_type: "int", min: 1}
+      - {label: "Ordem", name: "ordem", widget: "number", value_type: "int", min: 1}
       - {label: "Título do Projeto", name: "titulo", widget: "string"}
       - {label: "Descrição", name: "desc", widget: "string"}
       - {label: "Imagem do Projeto", name: "image", widget: "image"}
@@ -348,7 +346,7 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: "Ordem", name: "order", widget: "hidden", value_type: "int", min: 1}
+      - {label: "Ordem", name: "order", widget: "number", value_type: "int", min: 1}
       - {label: "Nome/Alt Text", name: "altText", widget: "string"}
       - {label: "Link", name: "link", widget: "string"}
       - {label: "Ícone", name: "icon", widget: "image"}
