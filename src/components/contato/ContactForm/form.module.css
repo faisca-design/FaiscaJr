@@ -157,7 +157,6 @@ input[type="date"]:not(.has-value):valid:before {
 #howDidUMeet {
     box-sizing: border-box !important;
     position: relative;
-    padding: 0 40px;
     /* Aumentado o padding */
     text-align: center;
     appearance: none;
