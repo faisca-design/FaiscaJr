@@ -29,7 +29,7 @@
     font-weight: 200;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 576px) {
     .serviceHeader > hr {
         display: none;
     }
