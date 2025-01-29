@@ -1,6 +1,6 @@
 /* desktop */
 
-@media (min-width: 769px) {
+@media (min-width: 577px) {
     .mobileMenuButton {
         display: none;
     }
@@ -51,7 +51,7 @@
 
 /* mobile */
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     
     .mobileMenuButton {
         font-size: 30px;
