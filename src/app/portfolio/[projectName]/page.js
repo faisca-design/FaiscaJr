@@ -12,40 +12,38 @@ import { handleJSONfiles } from '@/utils/functions/jsonHandler';
 function normalizeName(name) {
   return decodeURIComponent(name)
     .toLowerCase()
-    .replace(/\s+/g, '');
+    .replace(/\s+/g, '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
 }
 
-async function getProjectData(projectName) {
+// Carrega TODOS os projetos durante o BUILD
+async function getAllProjects() {
   try {
     const projects = await handleJSONfiles('content/projetos');
-
-    if (!projects || projects.length === 0) {
-      throw new Error('Nenhum projeto encontrado');
-    }
-
-    console.log('Projetos encontrados:', projects.map(p => p.nome_projeto));
-    console.log('Buscando por:', projectName);
-
-    // Normaliza tanto o nome buscado quanto o nome no JSON
-    const searchName = normalizeName(projectName);
-    const projeto = projects.find(p =>
-      normalizeName(p.nome_projeto) === searchName
-    );
-
-    if (!projeto) {
-      console.log('Projeto não encontrado');
-      return null;
-    }
-
-    return projeto;
+    return projects || [];
   } catch (error) {
-    console.error('Error fetching project:', error);
-    return null;
+    console.error('Error loading projects:', error);
+    return [];
   }
 }
 
+// Gera os paths estáticos
+export async function generateStaticParams() {
+  const projects = await getAllProjects();
+  
+  return projects.map((projeto) => ({
+    projectName: normalizeName(projeto.nome_projeto),
+  }));
+}
+
+// Componente principal
 export default async function Page({ params }) {
-  const projetoAtual = await getProjectData(params.projectName);
+  const projects = await getAllProjects();
+  const projectNameNormalized = normalizeName(params.projectName);
+  const projetoAtual = projects.find(p => 
+    normalizeName(p.nome_projeto) === projectNameNormalized
+  );
 
   if (!projetoAtual) {
     return (
@@ -53,12 +51,6 @@ export default async function Page({ params }) {
         <ClientRefreshWrapper />
         <h1>Projeto não encontrado</h1>
         <p>Nome buscado: {params.projectName}</p>
-        <pre>
-          {JSON.stringify({
-            params,
-            projectName: params.projectName,
-          }, null, 2)}
-        </pre>
       </div>
     );
   }
@@ -66,13 +58,8 @@ export default async function Page({ params }) {
   return (
     <>
       <ClientRefreshWrapper />
-      <ProjectBanner
-        imagem={projetoAtual.imagemCapa}
-      />
-      <ProjectPurpose
-        texto={projetoAtual.textoPurpose}
-        imagem={projetoAtual.imagemSubCapa}
-      />
+      <ProjectBanner imagem={projetoAtual.imagemCapa} />
+      <ProjectPurpose texto={projetoAtual.textoPurpose} imagem={projetoAtual.imagemSubCapa} />
       <ProjectServices
         titulo1={projetoAtual.t1Services}
         titulo2={projetoAtual.t2Services}

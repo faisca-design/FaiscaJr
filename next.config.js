@@ -4,6 +4,11 @@ const webpack = require("webpack");
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  output: 'export', // Adicione esta linha
+  trailingSlash: true, // Recomendado para SSG
+  images: {
+    unoptimized: true, // Necessário para 'output: export'
+  },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.plugins.push(
       new webpack.ProvidePlugin({
@@ -16,4 +21,4 @@ const nextConfig = {
   }
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;
