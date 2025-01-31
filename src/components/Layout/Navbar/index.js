@@ -51,7 +51,7 @@ function Navbar({ optionOne, optionTwo, optionThree, optionFour }) {
           <li>
             <Link
               href="/sobre-nos"
-              className={`${styles.link} ${pathname === '/sobre-nos' ? styles.bold : ''}`}
+              className={`${styles.link} ${pathname === '/sobre-nos/' ? styles.bold : ''}`}
             >
               {optionTwo}
             </Link>
@@ -59,7 +59,7 @@ function Navbar({ optionOne, optionTwo, optionThree, optionFour }) {
           <li>
             <Link
               href="/portfolio"
-              className={`${styles.link} ${pathname === '/portfolio' ? styles.bold : ''}`}
+              className={`${styles.link} ${pathname === '/portfolio/' ? styles.bold : ''}`}
             >
               {optionThree}
             </Link>
@@ -67,7 +67,7 @@ function Navbar({ optionOne, optionTwo, optionThree, optionFour }) {
           <li>
             <Link
               href="/contato"
-              className={`${styles.link} ${pathname === '/contato' ? styles.bold : ''}`}
+              className={`${styles.link} ${pathname === '/contato/' ? styles.bold : ''}`}
             >
               {optionFour}
             </Link>

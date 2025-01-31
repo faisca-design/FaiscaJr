@@ -48,7 +48,6 @@ export default async function Page({ params }) {
   if (!projetoAtual) {
     return (
       <div>
-        <ClientRefreshWrapper />
         <h1>Projeto não encontrado</h1>
         <p>Nome buscado: {params.projectName}</p>
       </div>
@@ -57,7 +56,6 @@ export default async function Page({ params }) {
 
   return (
     <>
-      <ClientRefreshWrapper />
       <ProjectBanner imagem={projetoAtual.imagemCapa} />
       <ProjectPurpose texto={projetoAtual.textoPurpose} imagem={projetoAtual.imagemSubCapa} />
       <ProjectServices
