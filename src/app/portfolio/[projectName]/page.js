@@ -5,7 +5,6 @@ import ProjectServices from "@components/projeto/ProjectServices"
 import ProjectValues from "@components/projeto/ProjectValues"
 import ProjectCarousel from "@components/projeto/ProjectCarousel";
 import GenericOutLink from "@/components/GenericButtonOutLink";
-import ClientRefreshWrapper from "@/components/ClientRefreshWrapper";
 import styles from "./styles.module.css";
 import { handleJSONfiles } from '@/utils/functions/jsonHandler';
 
