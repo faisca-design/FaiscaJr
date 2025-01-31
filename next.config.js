@@ -4,7 +4,7 @@ const webpack = require("webpack");
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  output: 'export', // Adicione esta linha
+  output: 'export',
   trailingSlash: true, // Recomendado para SSG
   images: {
     unoptimized: true, // Necessário para 'output: export'
