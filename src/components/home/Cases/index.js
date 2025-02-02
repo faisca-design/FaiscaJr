@@ -4,7 +4,15 @@ import { useState, useEffect } from 'react';
 import styles from './layoutCases.module.css';
 import Cases from './cases';
 import GenericButton from '@/components/GenericButton';
-import StyledText from "@/components/textoEstilizado/textoEstilizado"
+import StyledText from "@/components/textoEstilizado/textoEstilizado";
+
+function normalizeName(name) {
+    return decodeURIComponent(name)
+        .toLowerCase()
+        .replace(/\s+/g, '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '');
+}
 
 function CasesArea({ phraseCases, leftTittle, rightTittle, buttonphrase, buttonRoute, casesData }) {
     const [randomCases, setRandomCases] = useState([]);
@@ -20,9 +28,9 @@ function CasesArea({ phraseCases, leftTittle, rightTittle, buttonphrase, buttonR
                 <StyledText text={phraseCases} />
             </h1>
             <div className={styles.subTittle}>
-                <h1><span className={styles.altText}><StyledText text={leftTittle}/></span></h1>
+                <h1><span className={styles.altText}><StyledText text={leftTittle} /></span></h1>
                 <hr className={styles.line} />
-                <h1><span className={styles.altText}><StyledText text={rightTittle}/></span></h1>
+                <h1><span className={styles.altText}><StyledText text={rightTittle} /></span></h1>
             </div>
             <div className={styles.lista}>
                 {randomCases.map((DCase) => (
@@ -30,7 +38,7 @@ function CasesArea({ phraseCases, leftTittle, rightTittle, buttonphrase, buttonR
                         key={DCase.id}
                         imag={DCase.imagem}
                         ProjectName={DCase.nomeProjeto}
-                        projectPath={DCase.projectLink}
+                        projectPath={normalizeName(DCase.projectLink)}
                     />
                 ))}
             </div>
