@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import styles from './carousel.module.css'
+import styles from './carousel.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -15,6 +15,14 @@ if (typeof window !== "undefined") {
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
   ssr: false,
 });
+
+function normalizeName(name) {
+  return decodeURIComponent(name)
+    .toLowerCase()
+    .replace(/\s+/g, '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+}
 
 const Slider = ({ projetos = [] }) => {
   const PartnersConfig2 = {
@@ -51,7 +59,7 @@ const Slider = ({ projetos = [] }) => {
       <OwlCarousel className={styles.slider} {...PartnersConfig2}>
         {projetos.map((projeto, index) => (
           <div key={index} className={styles.item}>
-            <Link href={`/portfolio/${projeto.nome.toLowerCase().replace(/\s+/g, '')}`}>
+            <Link href={`/portfolio/${normalizeName(projeto.nome)}`}>
               <Image 
                 className={styles.img} 
                 src={projeto.imagem} 
