@@ -7,11 +7,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
-import menu from "@img/mobileNavbarIcons/MenuNavbarCell.png";
-import close from "@img/mobileNavbarIcons/CloseNavbarCell.png";
-import faisca from "@img/mobileNavbarIcons/mobile_icon_header.png";
-
-function Navbar({ optionOne, optionTwo, optionThree, optionFour }) {
+function Navbar({ optionOne, optionTwo, optionThree, optionFour, menuOpenIcon, menuCloseIcon, mobileLogoIcon }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
@@ -19,7 +15,6 @@ function Navbar({ optionOne, optionTwo, optionThree, optionFour }) {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // Fecha o menu automaticamente ao trocar de página
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [pathname]);
@@ -32,7 +27,7 @@ function Navbar({ optionOne, optionTwo, optionThree, optionFour }) {
           onClick={toggleMobileMenu}
         >
           <Image
-            src={isMobileMenuOpen ? close : menu}
+            src={isMobileMenuOpen ? menuCloseIcon : menuOpenIcon}
             alt={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
             width={isMobileMenuOpen ? 25 : 40}
             height={0}
@@ -72,21 +67,11 @@ function Navbar({ optionOne, optionTwo, optionThree, optionFour }) {
               {optionFour}
             </Link>
           </li>
-          {/* <li>
-            <a
-              href="https://www.instagram.com/faiscadesignjr/"
-              className={styles.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @faísca
-            </a>
-          </li> */}
         </ul>
       </Container>
       <Link href="/" aria-label="Ir para a página inicial">
         <Image 
-          src={faisca} 
+          src={mobileLogoIcon} 
           alt="Faísca Design Jr - Página Inicial" 
           width={55} 
           height={0} 
