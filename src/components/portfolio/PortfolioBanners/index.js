@@ -76,7 +76,7 @@ function BannersFaisca({ projects = [] }) {
         {currentProjects.map((project, index) => (
           <Project
             key={project.ordem}
-            path={normalizeName(project.path)}
+            path={`/portfolio/${normalizeName(project.path)}`}
             image={project.image}
             erro={project.erro}
             titulo={project.titulo}
