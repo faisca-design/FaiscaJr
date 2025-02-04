@@ -38,7 +38,7 @@ function CasesArea({ phraseCases, leftTittle, rightTittle, buttonphrase, buttonR
                         key={DCase.id}
                         imag={DCase.imagem}
                         ProjectName={DCase.nomeProjeto}
-                        projectPath={normalizeName(DCase.projectLink)}
+                        projectPath={`/portfolio/${normalizeName(DCase.projectLink)}`}
                     />
                 ))}
             </div>
