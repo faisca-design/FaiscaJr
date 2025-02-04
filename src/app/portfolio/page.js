@@ -1,4 +1,4 @@
-import PortfolioBanners from "@components/portfolio/PortfolioBanners"
+import PortfolioBanners from "@components/portfolio"
 import { handleJSONfiles } from '@/utils/functions/jsonHandler'
 
 async function getData() {
