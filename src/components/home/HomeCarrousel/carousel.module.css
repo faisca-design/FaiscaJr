@@ -1,7 +1,7 @@
 .depoimentos {
     margin: 0 auto;
     width: 70%;
-    height: 70vh;
+    height: auto;
 }
 
 .depoimentosTitle {
@@ -52,8 +52,7 @@
     .depoimentos {
         padding: 0px;
         margin-top: 3vh;
-        margin-bottom: -9vh;    /* TROCAR AQUI CASO A BARRA NO FUNDO DA HOME INCOMODE (CELULAR)*/
-        padding-bottom: 25vh;
+        padding-bottom: 20vh;
         width: 100%;
     }
 
