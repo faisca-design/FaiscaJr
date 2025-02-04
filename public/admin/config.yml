@@ -253,7 +253,7 @@ collections:
       - {label: "Título do Projeto", name: "titulo", widget: "string"}
       - {label: "Descrição", name: "desc", widget: "string"}
       - {label: "Imagem do Projeto", name: "image", widget: "image"}
-      - {label: "Nome Projeto (Path)", name: "path", widget: "string", pattern: ['^/portfolio/[a-zA-Z0-9-]+$', "Deve começar com /portfolio/"]}
+      - {label: "Nome Projeto (Path)", name: "path", widget: "string"}
       - {label: "Mensagem de Erro", name: "erro", widget: "string", default: "Imagem não encontrada"}
 
   - name: "projetos"
