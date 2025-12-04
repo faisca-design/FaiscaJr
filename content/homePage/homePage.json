@@ -6,22 +6,22 @@
     "logo": "/uploads/vector.png"
   },
   "learnMore": {
-    "desc": "nós fazemos design de um jeito que você nunca viu",
-    "buttonPhrase": "Vem impulsionar sua marca",
+    "desc": "#SOMOS A# FAÍSCA #QUE FALTA NO SEU# PROJETO",
+    "buttonPhrase": "#Entre em contato!#",
     "buttonRoute": "/contato"
   },
   "services": {
-    "titleAllServices": "NOSSOS SERVIÇOS"
+    "titleAllServices": "##NOSSOS SERVIÇOS##"
   },
   "cases": {
     "phraseCases": "encontramos soluções ideais para cada tipo de desafio",
-    "leftTitle": "CASES",
-    "rightTitle": "SELECIONADOS",
-    "buttonPhrase": "Mais Projetos",
+    "leftTitle": "NOSSOS",
+    "rightTitle": "PROJETOS",
+    "buttonPhrase": "#Mais projetos#",
     "buttonRoute": "/portfolio"
   },
   "reviews": {
-    "titleReviews": "O QUE NOSSOS CLIENTES TEM A DIZER"
+    "titleReviews": "#Feedbacks#"
   },
   "display_name": "Informações estáticas"
 }
