@@ -6,8 +6,8 @@
     "logo": "/uploads/vector.png"
   },
   "learnMore": {
-    "desc": "#SOMOS A# FAÍSCA #QUE FALTA NO SEU# PROJETO",
-    "buttonPhrase": "#Entre em contato!#",
+    "desc": "###SOMOS A### FAÍSCA ###QUE FALTA NO SEU### PROJETO",
+    "buttonPhrase": "###Entre em contato!###",
     "buttonRoute": "/contato"
   },
   "services": {
@@ -17,11 +17,11 @@
     "phraseCases": "encontramos soluções ideais para cada tipo de desafio",
     "leftTitle": "NOSSOS",
     "rightTitle": "PROJETOS",
-    "buttonPhrase": "#Mais projetos#",
+    "buttonPhrase": "###Mais projetos###",
     "buttonRoute": "/portfolio"
   },
   "reviews": {
-    "titleReviews": "#Feedbacks#"
+    "titleReviews": "###Feedbacks###"
   },
   "display_name": "Informações estáticas"
 }
