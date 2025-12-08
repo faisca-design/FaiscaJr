@@ -14,9 +14,9 @@
     "titleAllServices": "##NOSSOS SERVIÇOS##"
   },
   "cases": {
-    "phraseCases": "ENCONTRAMOS SOLUÇÕES IDEAIS PARA CADA TIPO DE SOLUÇÃO",
-    "leftTitle": "##NOSSOS##",
-    "rightTitle": "PROJETOS",
+    "phraseCases": "ENCONTRAMOS SOLUÇÕES IDEAIS PARA CADA TIPO DE PROJETO",
+    "leftTitle": "##Nossos##",
+    "rightTitle": "##Projetos##",
     "buttonPhrase": "MAIS PROJETOS",
     "buttonRoute": "/portfolio"
   },
