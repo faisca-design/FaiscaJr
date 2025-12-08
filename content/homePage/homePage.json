@@ -7,17 +7,17 @@
   },
   "learnMore": {
     "desc": "##SOMOS A## FAÍSCA ##QUE FALTA NO SEU## PROJETO",
-    "buttonPhrase": "##Entre em contato!##",
+    "buttonPhrase": "ENTRE EM CONTATO!",
     "buttonRoute": "/contato"
   },
   "services": {
     "titleAllServices": "##NOSSOS SERVIÇOS##"
   },
   "cases": {
-    "phraseCases": "encontramos soluções ideais para cada tipo de desafio",
-    "leftTitle": "NOSSOS",
+    "phraseCases": "ENCONTRAMOS SOLUÇÕES IDEAIS PARA CADA TIPO DE SOLUÇÃO",
+    "leftTitle": "##NOSSOS##",
     "rightTitle": "PROJETOS",
-    "buttonPhrase": "##Mais projetos##",
+    "buttonPhrase": "MAIS PROJETOS",
     "buttonRoute": "/portfolio"
   },
   "reviews": {
