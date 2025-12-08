@@ -5,15 +5,15 @@
   },
   "contactForm": {
     "headerSubText": "##retornamos sua mensagem em até 5 dias úteis.##",
-    "telefone": "##Telefone##",
+    "telefone": "Telefone",
     "enviar": "ENVIAR",
-    "tipoProjeto": "##Qual tipo de projeto?##",
-    "ondeConheceu": "##Como conheceu a Faísca?##",
-    "prazo": "##Prazo de Entrega:##",
-    "detalhes": "##Nos conte mais detalhes sobre o seu projeto!##",
-    "nome": "##Nome##",
-    "headerText": "##Entre em contato com a gente!##",
-    "email": "##E-mail##"
+    "tipoProjeto": "Qual tipo de projeto?",
+    "ondeConheceu": "Como conheceu a Faísca?",
+    "prazo": "Prazo de Entrega:",
+    "detalhes": "Nos conte mais detalhes sobre o seu projeto!",
+    "nome": "Nome",
+    "headerText": "##Entre em contato com a gente!",
+    "email": "E-mail"
   },
   "display_name": "Informações estáticas"
 }
