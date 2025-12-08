@@ -3,10 +3,10 @@
   "ordem": 10,
   "members": [
     {
-      "nome": "Carlos E. Vargas",
+      "nome": "Alice Meira",
       "ciclo": "membro",
-      "imagem": "/uploads/CarlosVargas.jpg"
+      "imagem": "/uploads/alice.jpg"
     }
   ],
-  "display_name": "Carlos E. Vargas"
+  "display_name": "Alice Meira"
 }
