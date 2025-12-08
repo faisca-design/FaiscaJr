@@ -3,15 +3,15 @@
   "ordem": 2,
   "members": [
     {
-      "nome": "Hannah Lerm",
+      "nome": "Laura Beninca",
       "ciclo": "diretora marketing",
-      "imagem": "/uploads/HannahLerm.jpg"
+      "imagem": "/uploads/laura_b.jpg"
     },
     {
-      "nome": "Tiago Lo Prete",
+      "nome": "Vinícius Torres Nunes",
       "ciclo": "diretor marketing",
-      "imagem": "/uploads/TiagoLoPrete.jpg"
+      "imagem": "/uploads/vinicius.jpg"
     }
   ],
-  "display_name": "Dir. Marketing - Hannah e Tiago "
+  "display_name": "Dir. Marketing - Laura e Vinícius"
 }
