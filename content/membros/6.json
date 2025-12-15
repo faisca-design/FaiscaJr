@@ -3,15 +3,10 @@
   "ordem": 6,
   "members": [
     {
-      "nome": "Luísa Reis",
+      "nome": "Nicole Mello",
       "ciclo": "diretora projetos",
-      "imagem": "/uploads/LuisaReis.jpg"
-    },
-    {
-      "nome": "Eduarda Weyh",
-      "ciclo": "diretora projetos",
-      "imagem": "/uploads/DudaWeyh.jpg"
+      "imagem": "/uploads/nicole_m.jpg"
     }
   ],
-  "display_name": "dir. projetos - Luísa e Eduarda "
+  "display_name": "dir. projetos - Nicole Mello"
 }
