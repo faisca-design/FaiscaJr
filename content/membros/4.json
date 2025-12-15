@@ -1,12 +1,12 @@
 {
-  "id": "4",
+  "id": "comercial",
   "ordem": 4,
   "members": [
     {
-      "nome": "Ana Chedid",
+      "nome": "Arthur Bosco",
       "ciclo": "diretor comercial",
-      "imagem": "/uploads/AnaChedid.jpg"
+      "imagem": "/uploads/arthur.jpg"
     }
   ],
-  "display_name": "dir. comercial - Ana Chedid"
+  "display_name": "dir. comercial - Arthur Bosco"
 }
