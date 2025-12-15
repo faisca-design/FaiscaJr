@@ -21,7 +21,7 @@
     "buttonRoute": "/portfolio"
   },
   "reviews": {
-    "titleReviews": "##Feedbacks##"
+    "titleReviews": "##FEEDBACKS##"
   },
   "display_name": "Informações estáticas"
 }
