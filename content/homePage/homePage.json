@@ -15,13 +15,13 @@
   },
   "cases": {
     "phraseCases": "ENCONTRAMOS SOLUÇÕES IDEAIS PARA CADA TIPO DE PROJETO",
-    "leftTitle": "##Nossos##",
-    "rightTitle": "##Projetos##",
+    "leftTitle": "##NOSSOS##",
+    "rightTitle": "##PROJETOS##",
     "buttonPhrase": "MAIS PROJETOS",
     "buttonRoute": "/portfolio"
   },
   "reviews": {
-    "titleReviews": "###Feedbacks###"
+    "titleReviews": "#Feedbacks#"
   },
   "display_name": "Informações estáticas"
 }
