@@ -1,11 +1,11 @@
 {
   "display_name": "Dir. Presidência - Isabela Schorn",
-  "id": "1",
+  "id": "presidente",
   "ordem": 1,
   "members": [
     {
       "nome": "Isabela Schorn",
-      "ciclo": "Presidente Administrativo",
+      "ciclo": "Presidente",
       "imagem": "/uploads/isabela.jpg"
     }
   ]
