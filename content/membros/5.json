@@ -1,12 +1,12 @@
 {
-  "id": "5",
+  "id": "pessoas",
   "ordem": 5,
   "members": [
     {
-      "nome": "Ana Salgueiro",
+      "nome": "Manoela Arnold",
       "ciclo": "diretora pessoas",
-      "imagem": "/uploads/AnaSalgueiro.jpg"
+      "imagem": "/uploads/manoela_a.jpg"
     }
   ],
-  "display_name": "dir. pessoas - Ana Salgueiro"
+  "display_name": "dir. pessoas - Manoela Arnold"
 }
