@@ -4,12 +4,12 @@
   "members": [
     {
       "nome": "Laura Beninca",
-      "ciclo": "co-diretora marketing",
+      "ciclo": "diretora marketing",
       "imagem": "/uploads/laura_b.jpg"
     },
     {
       "nome": "Vinícius Torres Nunes",
-      "ciclo": "co-diretor marketing",
+      "ciclo": "diretor marketing",
       "imagem": "/uploads/vinicius.jpg"
     }
   ],
