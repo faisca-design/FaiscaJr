@@ -29,14 +29,14 @@
       "img": "/uploads/rectangle.png"
     },
     "sectionFour": {
-      "subTittle": "LabMod",
+      "subTittle": "LABMOD",
       "subSubTittle": "LABORATÓRIO INTERDESCIPLINAR DE MODELAGEM",
       "text": "##Entregamos protótipos e estudamos formas para melhor atender as suas necessidades. Para isso contamos com um laboratório completo de impressoras 3D.##",
       "img": "/uploads/rectangle.png"
     }
   },
   "mej": {
-    "tittle": "MOVIMENTO EMPRESA JR",
+    "tittle": "O MOVIMENTO EMPRESA JR",
     "phrase": "##Nossa missão é formar, por meio da vivência empresarial, lideranças comprometidas e capazes de transformar o país em um brasil empreendedor. Desde 2010, o MEJ já impactou mais de R$ 70.000.000,00 na economia brasileira, que são integralmente reinvestidos na educação empreendedora dos estudantes.##",
     "mainImg": "/uploads/rectangleMEJ.png",
     "brasilJrImg": "/uploads/brasilJrLogo.png",
