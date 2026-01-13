@@ -3,14 +3,14 @@
   "ordem": 2,
   "members": [
     {
-      "nome": "Laura Beninca",
+      "nome": "Poliana Genssler",
       "ciclo": "diretora marketing",
-      "imagem": "/uploads/laura_b.jpg"
+      "imagem": "/uploads/poliana_g.jpg"
     },
     {
-      "nome": "Vinícius Torres",
+      "nome": "Rodrigo Baimler",
       "ciclo": "diretor marketing",
-      "imagem": "/uploads/vinicius.jpg"
+      "imagem": "/uploads/rodrigo_b.jpg"
     }
   ],
   "display_name": "Dir. Marketing - Laura e Vinícius"
