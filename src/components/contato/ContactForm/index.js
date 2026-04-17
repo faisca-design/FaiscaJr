@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 import styles from "./form.module.css";
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import HeaderForm from './HeaderForm';
 
 function Form({ headerText, headerSubText, nome, email, telefone, tipoProjeto, prazo, ondeConheceu, detalhes, enviar }) {
@@ -62,7 +62,7 @@ function Form({ headerText, headerSubText, nome, email, telefone, tipoProjeto, p
             `
         };
 
-        emailjs.send('service_x868sz3', 'service_x868sz3', templateParams, 'LfWikGoCLCY_rlSMA')
+        emailjs.send('service_x868sz3', 'template_zu48qux', templateParams, 'LfWikGoCLCY_rlSMA')
             .then((result) => {
                 console.log('Email enviado:', result.text);
             }, (error) => {
