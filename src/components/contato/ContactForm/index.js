@@ -4,6 +4,8 @@ import styles from "./form.module.css";
 import emailjs from '@emailjs/browser';
 import HeaderForm from './HeaderForm';
 
+
+//se isso aq parar de funcionar, vejam se a lib n mudou de nome, se o emailjs ta configurado certo no site(as vezes o email desconecta) e se o ID do emailjs n trocou sozinho
 function Form({ headerText, headerSubText, nome, email, telefone, tipoProjeto, prazo, ondeConheceu, detalhes, enviar }) {
     const [phone, setPhone] = useState("");
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
