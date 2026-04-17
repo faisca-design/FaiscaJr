@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 import styles from "./form.module.css";
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import HeaderForm from './HeaderForm';
 
 function Form({ headerText, headerSubText, nome, email, telefone, tipoProjeto, prazo, ondeConheceu, detalhes, enviar }) {
